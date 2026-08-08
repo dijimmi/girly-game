@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ckjywq7d7pc5d"]
+
+[ext_resource type="Script" uid="uid://wuw2s1svek8l" path="res://src/UI/drawing_frame.gd" id="1_oyy67"]
+
+[node name="DrawingFrame" type="ColorRect" unique_id=614917709 node_paths=PackedStringArray("label")]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oyy67")
+label = NodePath("Label")
+
+[node name="Delay" type="Timer" parent="." unique_id=1755273271]
+one_shot = true
+
+[node name="Label" type="Label" parent="." unique_id=512359382]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -37.0
+offset_top = 4.0
+offset_right = 37.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+
+[node name="Warning" type="Label" parent="." unique_id=1572558902]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 91.0
+offset_right = 100.0
+offset_bottom = 114.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "character not recognised"
