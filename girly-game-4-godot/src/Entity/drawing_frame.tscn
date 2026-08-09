@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckjywq7d7pc5d"]
 
-[ext_resource type="Script" uid="uid://cs1ljelp2v3bc" path="res://src/UI/drawing_frame.gd" id="1_oyy67"]
+[ext_resource type="Script" uid="uid://cs1ljelp2v3bc" path="res://src/Entity/drawing_frame.gd" id="1_oyy67"]
 
 [node name="DrawingFrame" type="ColorRect" unique_id=614917709]
 clip_contents = true

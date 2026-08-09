@@ -104,4 +104,3 @@ func _reset_meta_colors(col : Color, meta : Variant = null) -> void:
 	else:
 		regex.compile("(\\[url=\"" + meta + "\"\\])\\[color=[^\\]]+\\]")
 		textbox.text = regex.sub(textbox.text, "$1" + new_color_str, true)
-	

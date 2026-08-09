@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://c6ojot2ko0pnp"]
 
-[ext_resource type="PackedScene" uid="uid://ckjywq7d7pc5d" path="res://src/UI/drawing_frame.tscn" id="1_063aq"]
+[ext_resource type="PackedScene" uid="uid://ckjywq7d7pc5d" path="res://src/Entity/drawing_frame.tscn" id="1_063aq"]
+[ext_resource type="Script" uid="uid://bhrvdg5ftyble" path="res://src/UI/minigame_draw_hiragana.gd" id="1_rkhbs"]
 
-[node name="Control" type="Control" unique_id=2074376187]
+[node name="DrawHiragana" type="Control" unique_id=2074376187]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_rkhbs")
 
 [node name="DrawingFrame" parent="." unique_id=614917709 node_paths=PackedStringArray("label") instance=ExtResource("1_063aq")]
 custom_minimum_size = Vector2(384, 384)

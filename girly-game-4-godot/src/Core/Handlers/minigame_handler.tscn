@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://m1k7do2jgq4y"]
+
+[ext_resource type="Script" uid="uid://bvtxp0s53mehc" path="res://src/Core/Handlers/minigame_handler.gd" id="1_bnn44"]
+[ext_resource type="PackedScene" uid="uid://c6ojot2ko0pnp" path="res://src/UI/minigame_draw_hiragana.tscn" id="1_c2nxf"]
+[ext_resource type="PackedScene" uid="uid://d4k7pnnfsyxn" path="res://src/UI/minigame_match.tscn" id="3_8m5hw"]
+[ext_resource type="PackedScene" uid="uid://cxyaa0trgk0vy" path="res://src/UI/minigame_listen_exercise.tscn" id="4_nte6b"]
+
+[node name="MinigameHandler" type="Node" unique_id=1857577767]
+script = ExtResource("1_bnn44")
+
+[node name="DrawHiragana" parent="." unique_id=2074376187 instance=ExtResource("1_c2nxf")]
+
+[node name="Match" parent="." unique_id=1569849493 instance=ExtResource("3_8m5hw")]
+
+[node name="ListenExercise" parent="." unique_id=325933703 instance=ExtResource("4_nte6b")]
