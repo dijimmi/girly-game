@@ -7,13 +7,12 @@
 script = ExtResource("1_dc83p")
 category = "lolita"
 category_name = NodePath("CategoryName")
-product_grid = NodePath("ProductGrid")
+product_grid = NodePath("ProductsList")
 product_thumbnail = ExtResource("1_lybnk")
 
 [node name="CategoryName" type="Label" parent="." unique_id=1584273606]
 layout_mode = 2
 text = "FEATURED PRODUCTS"
 
-[node name="ProductGrid" type="GridContainer" parent="." unique_id=892241780]
+[node name="ProductsList" type="GridContainer" parent="." unique_id=1940305566]
 layout_mode = 2
-columns = 3
