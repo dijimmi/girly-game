@@ -2,8 +2,8 @@ class_name DrawingFrame extends Control
 
 @export_category("Characters")
 @export var hiragana_dictionary : Dictionary = {
-	["horizontal", "vertical", "curved2"] : "あ",
-	["horizontal", "vertical", "curved3"] : "あ",
+	["horizontal", "vertical", "curved4"] : "あ",
+	["horizontal", "vertical", "curved4"] : "あ",
 	["curved2", "vertical", "vertical"] : "か",
 	["curved1", "vertical", "vertical"] : "か",
 	["horizontal", "curved1", "horizontal"]  : "さ",
@@ -69,9 +69,64 @@ class_name DrawingFrame extends Control
 	["horizontal", "curved2", "curve1"] : "を",
 	["curved3"] : "ん"
 }
+@export var hiragana_picture : Dictionary[String, HiraganaFrames] = {
+	"あ": null,
+	"か": null,
+	"さ": null,
+	"た": null,
+	"な": null,
+	"は": null,
+	"ま": null, 
+	"や": null,
+	"ら": null,
+	"わ": null, 
+	
+	"い": null,
+	"き": null,
+	"し": null,
+	"ち": null,
+	"に": null,
+	"ひ": null,
+	"み": null,
+	"り": null,
+	
+	"う" : null,
+	"く" : null,
+	"す" : null,
+	"つ" : null,
+	"ぬ" : null,
+	"ふ" : null,
+	"む" : null,
+	"ゆ" : null,
+	"る" : null,
+
+	"え" : null,
+	"け" : null,
+	"せ" : null,
+	"て" : null,
+	"ね" : null,
+	"へ" : null,
+	"め" : null,
+	"れ" : null,
+	
+	"お" : null,
+	"こ" : null,
+	"そ" : null,
+	"と" : null,
+	"の" : null,
+	"ほ" : null,
+	"も" : null,
+	"よ" : null,
+	"ろ" : null,
+	"を" : null,
+	
+	"ん" : null
+}
 @export var label : Label
 @export_category("Drawing")
 @export var max_point_distance : float = 5.5
+
+signal verify_line(line : String)
 
 func _ready() -> void:
 	$Delay.timeout.connect(_recognise_symbol)
@@ -84,7 +139,9 @@ func _gui_input(event: InputEvent) -> void:
 			_draw_new_line()
 			$Delay.start()
 	elif event.is_action_released("draw"):
-		_detect_current_line_shape()
+		if get_parent().difficulty == 0:
+			_detect_current_line_shape()
+			get_parent().verify_line(lines[-1])
 		current_line = null
 
 var lines : Array = []
@@ -93,6 +150,7 @@ func _draw_new_line() -> void:
 	if current_line == null:
 		current_line = Line2D.new()
 		current_line.default_color = Color(0,0,0)
+		current_line.add_to_group("Lines")
 		add_child(current_line)
 	
 	if current_line.points.size()-1 == -1:
@@ -178,19 +236,24 @@ func _detect_current_line_shape() -> void:
 		return
 	lines.append(_detect_curve_points())
 #________________-SYMBOLS-________________#
-func _recognise_symbol() -> void:
-	var result : String = ""
+func _recognise_symbol():
+	if get_parent().difficulty == 0:
+		return
+	
+	var result = ""
 	var character = null
 	if lines in hiragana_dictionary:
 		character = hiragana_dictionary[lines]
 
 	if character != null:
 		result = character
+		if get_parent().verify_symbol(result):
+			_update_label(result)
 		print("character recognised ! ",character," ",lines)
 	else:
+		result = lines
 		print("character not recognised ", lines)
-	_update_label(result) 
-	clear_frame()
+
 func _update_label(text : String) -> void:
 	if !label:
 		return
@@ -213,7 +276,7 @@ func _mark_point(point : Vector2, n :int) -> void:
 	new_marker.texture = PlaceholderTexture2D.new()
 	new_marker.scale = Vector2(5,5)
 	new_marker.z_index = 10
-	add_child(new_marker)
+	current_line.add_child(new_marker)
 	new_marker.position = point
 	match n:
 		1 :
