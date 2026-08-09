@@ -7,10 +7,5 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_name_prompt_text_changed(new_text: String) -> void:
 	name_list.verify_match(new_text)

@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://dukm4lj7n65b" path="res://src/MainMenuUI/name_widget.gd" id="1_p178a"]
 [ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="1_xc8fy"]
 [ext_resource type="Texture2D" uid="uid://bg57fpq2v6tbh" path="res://image.png" id="3_n66r4"]
+[ext_resource type="Script" uid="uid://bxrrqcn1gd5oh" path="res://src/MainMenuUI/name_popup.gd" id="4_n66r4"]
 
-[node name="NameWidget" type="PanelContainer" unique_id=915354676 node_paths=PackedStringArray("name_label", "lover_icon", "friend_icon", "president_icon")]
+[node name="NameWidget" type="PanelContainer" unique_id=915354676 node_paths=PackedStringArray("name_label", "lover_icon", "friend_icon", "president_icon", "popup_layer")]
 custom_minimum_size = Vector2(200, 50)
 anchors_preset = 8
 anchor_left = 0.5
@@ -23,6 +24,7 @@ name_label = NodePath("WidgetRow/NameLabel")
 lover_icon = NodePath("WidgetRow/LoverIcon")
 friend_icon = NodePath("WidgetRow/FriendIcon")
 president_icon = NodePath("WidgetRow/PresidentIcon")
+popup_layer = NodePath("NamePopup")
 
 [node name="WidgetRow" type="HBoxContainer" parent="." unique_id=721608203]
 layout_mode = 2
@@ -62,3 +64,30 @@ texture_normal = ExtResource("1_xc8fy")
 texture_disabled = ExtResource("3_n66r4")
 ignore_texture_size = true
 stretch_mode = 4
+
+[node name="NamePopup" type="CanvasLayer" parent="." unique_id=1652263417 node_paths=PackedStringArray("name_in_popup", "popup_panel")]
+visible = false
+script = ExtResource("4_n66r4")
+name_in_popup = NodePath("PanelContainer/Label")
+popup_panel = NodePath("PanelContainer")
+
+[node name="PanelContainer" type="PanelContainer" parent="NamePopup" unique_id=77725787]
+custom_minimum_size = Vector2(150, 50)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.0
+offset_right = 75.0
+offset_bottom = 50.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="NamePopup/PanelContainer" unique_id=2044186765]
+layout_mode = 2
+text = "Voiced by:"
+
+[connection signal="mouse_entered" from="WidgetRow/LoverIcon" to="." method="_on_lover_icon_hover"]
+[connection signal="mouse_exited" from="WidgetRow/LoverIcon" to="." method="_on_lover_icon_mouse_exited"]
+[connection signal="mouse_entered" from="WidgetRow/FriendIcon" to="." method="_on_friend_icon_hover"]
+[connection signal="mouse_exited" from="WidgetRow/FriendIcon" to="." method="_on_friend_icon_mouse_exited"]
+[connection signal="mouse_entered" from="WidgetRow/PresidentIcon" to="." method="_on_president_icon_mouse_entered"]
+[connection signal="mouse_exited" from="WidgetRow/PresidentIcon" to="." method="_on_president_icon_mouse_exited"]

@@ -5,6 +5,8 @@ extends PanelContainer
 @export var friend_icon : TextureButton
 @export var president_icon : TextureButton
 
+@export var popup_layer : CanvasLayer
+
 @export var is_default : bool
 
 static var visible_names = 0
@@ -25,6 +27,7 @@ func setup(name_dict : Dictionary, default : bool):
 	president_icon.disabled = not 'president' in name_dict["voiced_by"]
 	
 	is_default = default
+
 
 func verify_match(text : String):
 	var was_visible : bool = visible
@@ -47,6 +50,53 @@ func verify_match(text : String):
 		else:
 			visible_names -= 1
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func _on_lover_icon_hover() -> void:
+	print("Lover hovered!")
+	popup_layer.visible = true
+	
+	var pos = lover_icon.global_position
+	pos.x += lover_icon.size.x / 2 
+	pos.x -= popup_layer.get_size().x / 2
+	pos.y -= lover_icon.size.y
+	popup_layer.move_to(pos)
+	
+	popup_layer.setup("Lover", !lover_icon.disabled)
+
+
+func _on_friend_icon_hover() -> void:
+	print("Friend hovered!")
+	popup_layer.visible = true
+	
+	var pos = friend_icon.global_position
+	pos.x += friend_icon.size.x / 2 
+	pos.x -= popup_layer.get_size().x / 2
+	pos.y -= friend_icon.size.y
+	popup_layer.move_to(pos)
+	
+	popup_layer.setup("Friend", !friend_icon.disabled)
+
+
+func _on_president_icon_mouse_entered() -> void:
+	print("President hovered!")
+	popup_layer.visible = true
+	
+	var pos = president_icon.global_position
+	pos.x += president_icon.size.x / 2 
+	pos.x -= popup_layer.get_size().x / 2
+	pos.y -= president_icon.size.y
+	popup_layer.move_to(pos)
+	
+	popup_layer.setup("President", !president_icon.disabled)
+
+
+func _on_lover_icon_mouse_exited() -> void:
+	popup_layer.visible = false
+
+
+func _on_friend_icon_mouse_exited() -> void:
+	popup_layer.visible = false
+
+
+func _on_president_icon_mouse_exited() -> void:
+	popup_layer.visible = false
