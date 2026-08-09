@@ -21,8 +21,8 @@ func _ready() -> void:
 func setup(name_dict : Dictionary, default : bool):
 	name_label.text = name_dict['name']
 	lover_icon.disabled = not 'lover' in name_dict["voiced_by"]
-	lover_icon.disabled = not 'friend' in name_dict["voiced_by"]
-	lover_icon.disabled = not 'president' in name_dict["voiced_by"]
+	friend_icon.disabled = not 'friend' in name_dict["voiced_by"]
+	president_icon.disabled = not 'president' in name_dict["voiced_by"]
 	
 	is_default = default
 
@@ -31,7 +31,7 @@ func verify_match(text : String):
 	
 	if is_default:
 		print(visible_names)
-		if visible_names <= 1:
+		if visible_names < 1:
 			name_label.text = text
 			visible = true
 		else:
