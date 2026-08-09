@@ -29,10 +29,8 @@ func _on_start_text() -> void:
 	_reset_meta_colors(text_color)
 
 func _on_meta_hovered_started(meta : Variant) -> void:
-	current_color = base_color
 	_tween_meta_colors(hover_color, meta)
 func _on_meta_hovered_ended(meta : Variant) -> void:
-	current_color = hover_color
 	_tween_meta_colors(base_color, meta)
 func _on_meta_clicked(meta : Variant) -> void:
 	EventBus.minigame_start.emit(meta)
@@ -41,20 +39,23 @@ func _on_meta_clicked(meta : Variant) -> void:
 var text_color  : Color #text color
 var base_color  : Color #glossary color
 var current_color : Color
+
+var goal_color : Color
 func _tween_meta_colors(col : Color, meta : Variant = null) -> void:
-	var speed : float = 0.001
+	goal_color = col
+	var speed : float = 0.003
 	
-	var color_dif_r = abs(current_color.r - col.r)
-	var color_dif_g = abs(current_color.g - col.g)
-	var color_dif_b = abs(current_color.b - col.b)
+	var color_dif_r = abs(current_color.r - goal_color.r)
+	var color_dif_g = abs(current_color.g - goal_color.g)
+	var color_dif_b = abs(current_color.b - goal_color.b)
 
 	var total_time : float = 0.0
 	while color_dif_r + color_dif_b + color_dif_g > 0.15:
 		await get_tree().process_frame
 		total_time += speed
-		var new_color_r = lerpf(current_color.r, col.r, total_time)
-		var new_color_g = lerpf(current_color.g, col.g, total_time)
-		var new_color_b = lerpf(current_color.b, col.b, total_time)
+		var new_color_r = lerpf(current_color.r, goal_color.r, total_time)
+		var new_color_g = lerpf(current_color.g, goal_color.g, total_time)
+		var new_color_b = lerpf(current_color.b, goal_color.b, total_time)
 		var new_color_step = Color(new_color_r,new_color_g,new_color_b,1).to_html(false)
 		var new_color_str = "[color="+str(new_color_step)+"]"
 		
@@ -66,15 +67,20 @@ func _tween_meta_colors(col : Color, meta : Variant = null) -> void:
 			regex.compile("(\\[url=\"" + meta + "\"\\])\\[color=[^\\]]+\\]")
 			textbox.text = regex.sub(textbox.text, "$1" + new_color_str, true)
 		current_color = Color(new_color_r,new_color_g,new_color_b)
-		color_dif_r = abs(current_color.r - col.r)
-		color_dif_g = abs(current_color.g - col.g)
-		color_dif_b = abs(current_color.b - col.b)
-	#print(textbox.text)
-func _reset_meta_colors(col : Color) -> void:
-		var regex = RegEx.new()
+		color_dif_r = abs(current_color.r - goal_color.r)
+		color_dif_g = abs(current_color.g - goal_color.g)
+		color_dif_b = abs(current_color.b - goal_color.b)
+	_reset_meta_colors(goal_color)
+func _reset_meta_colors(col : Color, meta : Variant = null) -> void:
+	var regex = RegEx.new()
+	regex.compile(r"\[color=[^\]]+\]")
+	
+	var new_color = col.to_html(false)
+	var new_color_str = "[color="+str(new_color)+"]"
+	
+	if meta == null:
 		regex.compile(r"\[color=[^\]]+\]")
-		
-		var new_color = col.to_html(false)
-		var new_color_str = "[color="+str(new_color)+"]"
-		
 		textbox.text = regex.sub(textbox.text, new_color_str, true)
+	else:
+		regex.compile("(\\[url=\"" + meta + "\"\\])\\[color=[^\\]]+\\]")
+		textbox.text = regex.sub(textbox.text, "$1" + new_color_str, true)
