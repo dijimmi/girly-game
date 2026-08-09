@@ -11,27 +11,66 @@ config_version=5
 [application]
 
 config/name="girly-game4-godot"
-run/main_scene="uid://ckjywq7d7pc5d"
+run/main_scene="uid://duxsksmi5w7p6"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+EventBus="*uid://6k2yk4tqekh"
 
 [dialogic]
 
 directories/dch_directory={
-"unit_test_character": "res://src/_Tests/Resources/unit_test_character.dch"
+"character": "res://src/_Tests/character.dch",
+"character2": "res://src/_Tests/character2.dch"
 }
-directories/dtl_directory={}
+directories/dtl_directory={
+"test_timeline": "res://src/_Tests/test_timeline.dtl"
+}
 layout/style_directory={
-"": "res://src/UI/Dialogue.tres",
-"Dialogue": "res://src/UI/Dialogue.tres"
+"": "res://src/Resources/CustomDialogicFiles/custom_dialogue.tres",
+"CustomDialogue": "res://src/Resources/CustomDialogicFiles/custom_dialogue.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://src/UI/Dialogue.tres"]
-layout/default_style="res://src/UI/Dialogue.tres"
+layout/style_list=["res://src/Resources/CustomDialogicFiles/custom_dialogue.tres"]
+layout/default_style="res://src/Resources/CustomDialogicFiles/custom_dialogue.tres"
+variables={}
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+glossary/glossary_files=["uid://rnmvjf3y0l2v"]
+glossary/default_color=Color(0.81960785, 0.36078432, 0.78039217, 1)
 
 [display]
 

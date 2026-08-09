@@ -27,6 +27,7 @@ func _load_state(load_flag := LoadFlags.FULL_LOAD) -> void:
 
 	if get_extra_state().get("active_layout", false):
 		load_style(style)
+		print("AAAAHAHDHAZOHDBZA: ",style)
 
 
 func _pack_extra_state() -> Dictionary:

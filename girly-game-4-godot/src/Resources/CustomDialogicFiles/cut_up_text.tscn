@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://di3b40ivq0iro"]
+
+[ext_resource type="Script" uid="uid://sfagmk3guf86" path="res://src/Resources/CustomDialogicFiles/cut_up_text.gd" id="1_idfd5"]
+[ext_resource type="Resource" uid="uid://rnmvjf3y0l2v" path="res://src/Resources/CustomDialogicFiles/glossary_words.tres" id="2_idfd5"]
+
+[node name="CutUpText" type="Node" unique_id=412244657]
+script = ExtResource("1_idfd5")
+dictionary = ExtResource("2_idfd5")
