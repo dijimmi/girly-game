@@ -20,10 +20,10 @@ class_name DrawingFrame extends Control
 	["vertical", "curved1", "vertical"]   : "や",
 	["vertical", "curved1", "horizontal"] : "や",
 	#["horizontal", "curved2"] : "ら",
-	#["vertical", "curved4"] : "わ", 
+	["vertical", "curved4"] : "わ", 
 	
-	["curved1, vertical"] : "い",
-	["vertical, vertical"] : "い",
+	["curved1", "vertical"] : "い",
+	["vertical", "vertical"] : "い",
 	["horizontal", "horizontal", "curved1", "curved1"] : "き",
 	["horizontal", "horizontal", "curved1", "horizontal"] : "き",
 	["horizontal", "horizontal", "vertical", "curved1"] : "き",
@@ -66,7 +66,7 @@ class_name DrawingFrame extends Control
 	#["horizontal", "horizontal", "curved2"] : "も",
 	["curved2", "horizontal"] : "よ",
 	#["curved3"] : "ろ",
-	["horizontal", "curved2", "curve1"] : "を"
+	["horizontal", "curved2", "curve1"] : "を",
 	["curved3"] : "ん"
 }
 @export var label : Label

@@ -25,7 +25,13 @@ directories/dch_directory={
 "unit_test_character": "res://src/_Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={}
-layout/style_directory={}
+layout/style_directory={
+"": "res://src/UI/Dialogue.tres",
+"Dialogue": "res://src/UI/Dialogue.tres"
+}
+glossary/default_case_sensitive=true
+layout/style_list=["res://src/UI/Dialogue.tres"]
+layout/default_style="res://src/UI/Dialogue.tres"
 
 [display]
 
