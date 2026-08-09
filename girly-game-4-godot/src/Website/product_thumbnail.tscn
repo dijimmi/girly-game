@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://drxjnq3fmknhi"]
+
+[ext_resource type="Script" uid="uid://col1e77wbqaxe" path="res://src/Website/product_thumbnail.gd" id="1_31fjj"]
+
+[node name="ProductThumbnail" type="VBoxContainer" unique_id=1907573936 node_paths=PackedStringArray("image", "title")]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 100.0
+offset_bottom = 100.0
+script = ExtResource("1_31fjj")
+image = NodePath("Image")
+title = NodePath("Description")
+
+[node name="Image" type="TextureButton" parent="." unique_id=579847658]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="Description" type="RichTextLabel" parent="." unique_id=1984189260]
+layout_mode = 2
+text = "amazing girly wolf"
+fit_content = true
+scroll_active = false

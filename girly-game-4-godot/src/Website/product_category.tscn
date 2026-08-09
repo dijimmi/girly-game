@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bb21jci4ag116"]
+
+[ext_resource type="Script" uid="uid://cjq7bgam8osyw" path="res://src/Website/product_category.gd" id="1_dc83p"]
+[ext_resource type="PackedScene" uid="uid://drxjnq3fmknhi" path="res://src/Website/product_thumbnail.tscn" id="1_lybnk"]
+
+[node name="Category" type="VBoxContainer" unique_id=1200025618 node_paths=PackedStringArray("category_name", "product_grid")]
+script = ExtResource("1_dc83p")
+category = "lolita"
+category_name = NodePath("CategoryName")
+product_grid = NodePath("ProductGrid")
+product_thumbnail = ExtResource("1_lybnk")
+
+[node name="CategoryName" type="Label" parent="." unique_id=1584273606]
+layout_mode = 2
+text = "FEATURED PRODUCTS"
+
+[node name="ProductGrid" type="GridContainer" parent="." unique_id=892241780]
+layout_mode = 2
+columns = 3
