@@ -5,6 +5,8 @@ extends Node
 @export var layer : DialogicLayoutLayer
 var word_dictionary : Array
 
+signal _color_tween_finished
+
 func _ready() -> void:
 	assert(textbox != null, "CutUpText Node's textbox isn't set properly")
 	assert(dictionary != null, "CutUpText Node's word_dictionary isn't set properly")
@@ -28,22 +30,39 @@ func _on_finished_text() -> void:
 func _on_start_text() -> void:
 	_reset_meta_colors(text_color)
 
+var _hovered : Variant
+var clicked : bool = false
 func _on_meta_hovered_started(meta : Variant) -> void:
-	_tween_meta_colors(hover_color, meta)
+	_hovered = meta
+	if !clicked:
+		_tween_meta_colors(hover_color, meta,0.001)
 func _on_meta_hovered_ended(meta : Variant) -> void:
-	_tween_meta_colors(base_color, meta)
+	_hovered = null
+	if !clicked:
+		_tween_meta_colors(base_color, meta,0.001)
 func _on_meta_clicked(meta : Variant) -> void:
+	clicked = true
+	
+	_tween_meta_colors(clicked_color, meta)
+	await  _color_tween_finished
+	if _hovered != null:
+		_tween_meta_colors(hover_color, meta,0.001)
+	else:
+		_tween_meta_colors(base_color, meta,0.001)
 	EventBus.minigame_start.emit(meta)
+	
+	await  _color_tween_finished
+	clicked = false
 
+@export var clicked_color : Color = Color(0.563, 0.21, 0.387, 1.0)
 @export var hover_color : Color = Color(1.0, 1.0, 1.0, 1.0)
 var text_color  : Color #text color
 var base_color  : Color #glossary color
 var current_color : Color
 
 var goal_color : Color
-func _tween_meta_colors(col : Color, meta : Variant = null) -> void:
+func _tween_meta_colors(col : Color, meta : Variant = null, speed : float = 0.05) -> void:
 	goal_color = col
-	var speed : float = 0.003
 	
 	var color_dif_r = abs(current_color.r - goal_color.r)
 	var color_dif_g = abs(current_color.g - goal_color.g)
@@ -70,6 +89,7 @@ func _tween_meta_colors(col : Color, meta : Variant = null) -> void:
 		color_dif_r = abs(current_color.r - goal_color.r)
 		color_dif_g = abs(current_color.g - goal_color.g)
 		color_dif_b = abs(current_color.b - goal_color.b)
+	_color_tween_finished.emit()
 	_reset_meta_colors(goal_color)
 func _reset_meta_colors(col : Color, meta : Variant = null) -> void:
 	var regex = RegEx.new()
@@ -84,3 +104,4 @@ func _reset_meta_colors(col : Color, meta : Variant = null) -> void:
 	else:
 		regex.compile("(\\[url=\"" + meta + "\"\\])\\[color=[^\\]]+\\]")
 		textbox.text = regex.sub(textbox.text, "$1" + new_color_str, true)
+	

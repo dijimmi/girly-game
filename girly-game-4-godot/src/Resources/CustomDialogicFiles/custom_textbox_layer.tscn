@@ -342,3 +342,5 @@ name_label_root = NodePath("..")
 [node name="CutUpText" parent="." unique_id=412244657 node_paths=PackedStringArray("textbox", "layer") instance=ExtResource("11_42cdl")]
 textbox = NodePath("../Anchor/AnimationParent/Sizer/DialogTextPanel/DialogicNode_DialogText")
 layer = NodePath("..")
+clicked_color = Color(0.7123783, 0.25801823, 0.53260756, 1)
+hover_color = Color(1, 0.79607844, 1, 1)
