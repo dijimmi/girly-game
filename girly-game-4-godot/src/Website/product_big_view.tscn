@@ -13,7 +13,7 @@ base_img = NodePath("ProductImage/BaseImage")
 tint_img = NodePath("ProductImage/TintImage")
 top_img = NodePath("ProductImage/TopImage")
 color_option = ExtResource("5_el67g")
-colors = NodePath(".")
+colors = NodePath("ColorOptions")
 
 [node name="ProductImage" type="PanelContainer" parent="." unique_id=1549824024]
 layout_mode = 2
