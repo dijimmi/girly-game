@@ -1,6 +1,6 @@
 extends Node
 
-var rounds : int = 5
+var rounds : int = 1
 var current_rounds : int = 0
 var word_to_learn : String = ""
 

@@ -3,7 +3,7 @@ class_name DrawingFrame extends Control
 @export_category("Characters")
 @export var hiragana_dictionary : Dictionary = {
 	["horizontal", "vertical", "curved4"] : "あ",
-	["horizontal", "vertical", "curved4"] : "あ",
+	["curve1", "vertical", "curved3"]     : "あ",
 	["curved2", "vertical", "vertical"] : "か",
 	["curved1", "vertical", "vertical"] : "か",
 	["horizontal", "curved1", "horizontal"]  : "さ",
@@ -53,7 +53,9 @@ class_name DrawingFrame extends Control
 	#["vertical", "curved3"] : "め",
 	#["vertical", "curved4"] : "め",
 	#["vertical", "curved4"] : "れ",
-	["horizontal", "curved3", "horizontal"] : "お",
+	
+	["horizontal", "curved4", "horizontal"] : "お",
+	["horizontal", "curved3", "vertical"] : "お",
 	["horizontal", "horizontal"] : "こ",
 	["horizontal", "curved1"]    : "こ",
 	["curved4"] : "そ",
@@ -126,10 +128,54 @@ class_name DrawingFrame extends Control
 @export_category("Drawing")
 @export var max_point_distance : float = 5.5
 
-signal verify_line(line : String)
-
 func _ready() -> void:
-	$Delay.timeout.connect(_recognise_symbol)
+	$Delay.timeout.connect(get_parent().verify_symbol)
+	pass
+#________________-SYMBOLS-________________#
+func recognise_line(i : int = get_parent().current_line) -> bool:
+	var result = false
+	var total_lines = []
+	var value_to_look_for = get_parent().word_to_teach[get_parent().current_symbol]
+	
+	for line in hiragana_dictionary:
+		
+		if hiragana_dictionary[line] == value_to_look_for:
+			total_lines.append(line[i])
+
+	if total_lines.has(lines[i]):
+		result = true
+	else:
+		print("[drawing_frame] : character not recognised. Possible line : ", total_lines," recognised line : ", lines[i])
+	return result
+func recognise_character():
+	var value_to_look_for = get_parent().word_to_teach[get_parent().current_symbol]
+	var nbr_of_lines = hiragana_dictionary.find_key(value_to_look_for).size()
+	if nbr_of_lines > lines.size():
+		return null
+	
+	for i in nbr_of_lines:
+		if recognise_line(i) == false:
+			return false
+	
+	return true
+
+func update_label(text : String) -> void:
+	if !label:
+		return
+	if text == "":
+		$Warning.show()
+		print("DRAWING FRAME - character not recognised : ",lines)
+		await get_tree().create_timer(1).timeout
+		$Warning.hide()
+	else:
+		label.text += text
+func clear_label() -> void:
+	label.text = ""
+func clear_frame() -> void:
+	lines.clear()
+	for child in get_children():
+		if child.is_class("Line2D") or child.is_class("Sprite2D"):
+			child.queue_free()
 
 #________________-DRAWING-________________#
 var mouse_pos : Vector2 = Vector2.ZERO
@@ -139,9 +185,9 @@ func _gui_input(event: InputEvent) -> void:
 			_draw_new_line()
 			$Delay.start()
 	elif event.is_action_released("draw"):
+		_detect_current_line_shape()
 		if get_parent().difficulty == 0:
-			_detect_current_line_shape()
-			get_parent().verify_line(lines[-1])
+			get_parent().verify_line()
 		current_line = null
 
 var lines : Array = []
@@ -161,13 +207,6 @@ func _draw_new_line() -> void:
 			current_line.set_point_position(last_pi, mouse_pos)
 		else:
 			current_line.add_point(mouse_pos)
-		
-		#detect if the rect of this point+last point is overlaping with any other stroke's rect
-		#if it's overlaping with a stroke's rect keep
-	#get the first point's position
-	#go through every point and add their direction from first point's position
-	#if the total curve is higher than idk 180 then add a curve point (latest point)
-	#reset total curve and follow that point's position now
 
 var curve_points : Array = []
 var total_curve : float = 0.0
@@ -235,41 +274,7 @@ func _detect_current_line_shape() -> void:
 	if !current_line:
 		return
 	lines.append(_detect_curve_points())
-#________________-SYMBOLS-________________#
-func _recognise_symbol():
-	if get_parent().difficulty == 0:
-		return
-	
-	var result = ""
-	var character = null
-	if lines in hiragana_dictionary:
-		character = hiragana_dictionary[lines]
 
-	if character != null:
-		result = character
-		if get_parent().verify_symbol(result):
-			_update_label(result)
-		print("character recognised ! ",character," ",lines)
-	else:
-		result = lines
-		print("character not recognised ", lines)
-
-func _update_label(text : String) -> void:
-	if !label:
-		return
-	if text == "":
-		$Warning.show()
-		print("DRAWING FRAME - character not recognised : ",lines)
-		await get_tree().create_timer(1).timeout
-		$Warning.hide()
-	else:
-		label.text += text
-
-func clear_frame() -> void:
-	lines.clear()
-	for child in get_children():
-		if child.is_class("Line2D") or child.is_class("Sprite2D"):
-			child.queue_free()
 #________________-DEBUGGING-________________#
 func _mark_point(point : Vector2, n :int) -> void:
 	var new_marker := Sprite2D.new()

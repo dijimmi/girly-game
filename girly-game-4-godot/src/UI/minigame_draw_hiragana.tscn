@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://1ojsd4utoky5" path="res://import/Art/UIArt/o_2.png" id="9_vq1jy"]
 [ext_resource type="Texture2D" uid="uid://ckedbldjb6ap4" path="res://import/Art/UIArt/o_3.png" id="10_bhuj0"]
 [ext_resource type="Texture2D" uid="uid://6n1452p4o2c6" path="res://import/Art/UIArt/o_full.png" id="11_6a5rr"]
+[ext_resource type="Texture2D" uid="uid://bjqv567gklwfr" path="res://import/Art/UIArt/hiragana_writing_background.png" id="12_vq1jy"]
 
 [sub_resource type="Resource" id="Resource_rkhbs"]
 script = ExtResource("3_100ai")
@@ -105,6 +106,17 @@ hiragana_picture = Dictionary[String, ExtResource("3_100ai")]({
 })
 label = NodePath("../Label")
 max_point_distance = 3.0
+
+[node name="BG" type="TextureRect" parent="DrawingFrame" unique_id=309078595]
+self_modulate = Color(0.23459998, 0.37881005, 0.69, 0.28627452)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_vq1jy")
+expand_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="DrawingFrame" unique_id=793827942]
 self_modulate = Color(1, 1, 1, 0.21960784)
