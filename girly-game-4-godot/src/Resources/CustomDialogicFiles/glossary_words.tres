@@ -6,6 +6,7 @@
 script = ExtResource("1_b736j")
 entries = {
 "あお": {
+"case_sensitive": true,
 "name": "あお"
 }
 }

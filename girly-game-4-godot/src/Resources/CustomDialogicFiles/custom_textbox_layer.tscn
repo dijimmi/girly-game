@@ -11,6 +11,7 @@
 [ext_resource type="StyleBox" uid="uid://m7gyepkysu83" path="res://src/Resources/CustomDialogicFiles/vn_textbox_name_label_panel.tres" id="9_d7l8y"]
 [ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="10_rcfc2"]
 [ext_resource type="PackedScene" uid="uid://di3b40ivq0iro" path="res://src/Resources/CustomDialogicFiles/cut_up_text.tscn" id="11_42cdl"]
+[ext_resource type="PackedScene" uid="uid://m1k7do2jgq4y" path="res://src/Core/Handlers/minigame_handler.tscn" id="12_3auj7"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
 length = 0.001
@@ -344,3 +345,5 @@ textbox = NodePath("../Anchor/AnimationParent/Sizer/DialogTextPanel/DialogicNode
 layer = NodePath("..")
 clicked_color = Color(0.7123783, 0.25801823, 0.53260756, 1)
 hover_color = Color(1, 0.79607844, 1, 1)
+
+[node name="MinigameHandler" parent="." unique_id=1857577767 instance=ExtResource("12_3auj7")]

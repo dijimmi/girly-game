@@ -2,6 +2,36 @@
 
 [ext_resource type="PackedScene" uid="uid://ckjywq7d7pc5d" path="res://src/Entity/drawing_frame.tscn" id="1_063aq"]
 [ext_resource type="Script" uid="uid://bhrvdg5ftyble" path="res://src/UI/minigame_draw_hiragana.gd" id="1_rkhbs"]
+[ext_resource type="Script" uid="uid://d07ct3l8h0lsp" path="res://src/Core/hiragana_frames.gd" id="3_100ai"]
+[ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/UIArt/a_1.png" id="4_h822r"]
+[ext_resource type="Texture2D" uid="uid://bqfrwslqyop7t" path="res://import/Art/UIArt/a_2.png" id="5_oocyl"]
+[ext_resource type="Texture2D" uid="uid://b2rq0v36lsn7n" path="res://import/Art/UIArt/a_3.png" id="6_jlcit"]
+[ext_resource type="Texture2D" uid="uid://c4gxfoas8b2un" path="res://import/Art/UIArt/a_full.png" id="7_nyum8"]
+[ext_resource type="Texture2D" uid="uid://26cg4o4boygv" path="res://import/Art/UIArt/o_1.png" id="8_07tgw"]
+[ext_resource type="Texture2D" uid="uid://1ojsd4utoky5" path="res://import/Art/UIArt/o_2.png" id="9_vq1jy"]
+[ext_resource type="Texture2D" uid="uid://ckedbldjb6ap4" path="res://import/Art/UIArt/o_3.png" id="10_bhuj0"]
+[ext_resource type="Texture2D" uid="uid://6n1452p4o2c6" path="res://import/Art/UIArt/o_full.png" id="11_6a5rr"]
+[ext_resource type="Texture2D" uid="uid://bjqv567gklwfr" path="res://import/Art/UIArt/hiragana_writing_background.png" id="12_vq1jy"]
+
+[sub_resource type="Resource" id="Resource_rkhbs"]
+script = ExtResource("3_100ai")
+frames = Dictionary[String, Texture2D]({
+"1": ExtResource("4_h822r"),
+"2": ExtResource("5_oocyl"),
+"3": ExtResource("6_jlcit"),
+"full": ExtResource("7_nyum8")
+})
+metadata/_custom_type_script = "uid://d07ct3l8h0lsp"
+
+[sub_resource type="Resource" id="Resource_100ai"]
+script = ExtResource("3_100ai")
+frames = Dictionary[String, Texture2D]({
+"1": ExtResource("8_07tgw"),
+"2": ExtResource("9_vq1jy"),
+"3": ExtResource("10_bhuj0"),
+"full": ExtResource("11_6a5rr")
+})
+metadata/_custom_type_script = "uid://d07ct3l8h0lsp"
 
 [node name="DrawHiragana" type="Control" unique_id=2074376187]
 layout_mode = 3
@@ -26,8 +56,78 @@ offset_top = -222.0
 offset_right = 192.0
 offset_bottom = 162.0
 mouse_default_cursor_shape = 2
+hiragana_picture = Dictionary[String, ExtResource("3_100ai")]({
+"あ": SubResource("Resource_rkhbs"),
+"い": null,
+"う": null,
+"え": null,
+"お": SubResource("Resource_100ai"),
+"か": null,
+"き": null,
+"く": null,
+"け": null,
+"こ": null,
+"さ": null,
+"し": null,
+"す": null,
+"せ": null,
+"そ": null,
+"た": null,
+"ち": null,
+"つ": null,
+"て": null,
+"と": null,
+"な": null,
+"に": null,
+"ぬ": null,
+"ね": null,
+"の": null,
+"は": null,
+"ひ": null,
+"ふ": null,
+"へ": null,
+"ほ": null,
+"ま": null,
+"み": null,
+"む": null,
+"め": null,
+"も": null,
+"や": null,
+"ゆ": null,
+"よ": null,
+"ら": null,
+"り": null,
+"る": null,
+"れ": null,
+"ろ": null,
+"わ": null,
+"を": null,
+"ん": null
+})
 label = NodePath("../Label")
 max_point_distance = 3.0
+
+[node name="BG" type="TextureRect" parent="DrawingFrame" unique_id=309078595]
+self_modulate = Color(0.23459998, 0.37881005, 0.69, 0.28627452)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_vq1jy")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="DrawingFrame" unique_id=793827942]
+self_modulate = Color(1, 1, 1, 0.21960784)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_h822r")
+expand_mode = 2
 
 [node name="Label" type="Label" parent="." unique_id=758819483]
 layout_mode = 1

@@ -1,6 +1,6 @@
 extends Node
 
-var player_exp : Dictionary ={
+var player_exp : Dictionary[String, float] ={
 	"あ" : 0.0,
 	"か" : 0.0,
 	"さ" : 0.0,
@@ -54,5 +54,8 @@ var player_exp : Dictionary ={
 func add_player_exp(key : String, value : float):
 	if key in player_exp:
 		player_exp[key] += value
-func get_player_exp(key : String) -> int:
-	return player_exp[key]
+func get_player_exp(key : String) -> float:
+	var result : float = 0.0
+	if key in player_exp:
+		result = player_exp[key]
+	return result
