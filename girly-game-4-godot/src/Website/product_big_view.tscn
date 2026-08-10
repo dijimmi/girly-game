@@ -19,19 +19,18 @@ colors = NodePath("ColorOptions")
 layout_mode = 2
 
 [node name="BaseImage" type="TextureRect" parent="ProductImage" unique_id=27718934]
-modulate = Color(0.30249536, 0.3024954, 0.3024954, 1)
 layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("2_el67g")
 
 [node name="TintImage" type="TextureRect" parent="ProductImage" unique_id=1106551516]
-modulate = Color(1, 0.34901962, 0.34901962, 1)
+modulate = Color(0.8291007, 0.8965092, 0.9761612, 1)
 layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("3_6oldi")
 
 [node name="TopImage" type="TextureRect" parent="ProductImage" unique_id=507152058]
-modulate = Color(0.78039217, 0, 0, 1)
+modulate = Color(0.41549835, 0.62718534, 0.9946385, 1)
 layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("4_v3h7l")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Product" format=3 uid="uid://bmj102tjprevx"]
+
+[ext_resource type="Texture2D" uid="uid://bgdkg5inwbms5" path="res://import/Art/ShopIcons/a_outfit_base.png" id="1_blwn8"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="2_a3cdw"]
+[ext_resource type="Texture2D" uid="uid://xy7cyx23tjet" path="res://import/Art/ShopIcons/a_outfit_tint.png" id="3_t16om"]
+[ext_resource type="Texture2D" uid="uid://whhh5a6787uv" path="res://import/Art/ShopIcons/a_outfit_top.png" id="4_7vqe6"]
+
+[resource]
+script = ExtResource("2_a3cdw")

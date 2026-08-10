@@ -1,18 +1,48 @@
 [gd_scene format=3 uid="uid://drxjnq3fmknhi"]
 
 [ext_resource type="Script" uid="uid://col1e77wbqaxe" path="res://src/Website/product_thumbnail.gd" id="1_31fjj"]
+[ext_resource type="Texture2D" uid="uid://bgdkg5inwbms5" path="res://import/Art/ShopIcons/a_outfit_base.png" id="2_7a55x"]
+[ext_resource type="Texture2D" uid="uid://xy7cyx23tjet" path="res://import/Art/ShopIcons/a_outfit_tint.png" id="3_ln4rx"]
+[ext_resource type="Texture2D" uid="uid://whhh5a6787uv" path="res://import/Art/ShopIcons/a_outfit_top.png" id="4_fdbig"]
 
-[node name="ProductThumbnail" type="VBoxContainer" unique_id=1907573936 node_paths=PackedStringArray("image", "title")]
+[node name="ProductThumbnail" type="VBoxContainer" unique_id=1907573936 node_paths=PackedStringArray("title", "base_img", "tint_img", "top_img")]
 custom_minimum_size = Vector2(100, 100)
 offset_right = 100.0
 offset_bottom = 100.0
 script = ExtResource("1_31fjj")
-image = NodePath("Image")
 title = NodePath("Description")
+base_img = NodePath("PanelContainer/BaseImage")
+tint_img = NodePath("PanelContainer/TintImage")
+top_img = NodePath("PanelContainer/TopImage")
 
-[node name="Image" type="TextureButton" parent="." unique_id=579847658]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=31477571]
+layout_mode = 2
+
+[node name="BaseImage" type="TextureRect" parent="PanelContainer" unique_id=1623537157]
+modulate = Color(0.30249536, 0.3024954, 0.3024954, 1)
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_7a55x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TintImage" type="TextureRect" parent="PanelContainer" unique_id=1915498628]
+modulate = Color(1, 0.34901962, 0.34901962, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_ln4rx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TopImage" type="TextureRect" parent="PanelContainer" unique_id=1326590614]
+modulate = Color(0.78039217, 0, 0, 1)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_fdbig")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="Description" type="RichTextLabel" parent="." unique_id=1984189260]
@@ -21,4 +51,4 @@ text = "amazing girly wolf"
 fit_content = true
 scroll_active = false
 
-[connection signal="pressed" from="Image" to="." method="_on_image_pressed"]
+[connection signal="gui_input" from="PanelContainer" to="." method="_on_photo_pressed"]
