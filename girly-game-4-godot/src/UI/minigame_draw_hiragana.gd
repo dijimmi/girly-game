@@ -26,7 +26,7 @@ func end_minigame() -> void:
 func _calculate_difficulty() -> Array[int]:
 	var result : Array[int] = []
 	var instances : float = _get_instances()
-	var player_level : float = 1#_get_mid_exp(word_to_teach.rsplit())
+	var player_level : float = _get_mid_exp(word_to_teach.rsplit())
 	
 	var _max : int = 2
 	var _min : int = 0
@@ -36,7 +36,7 @@ func _calculate_difficulty() -> Array[int]:
 		_max = 1
 		count = 2
 	elif player_level >= 2.0/3.0:
-		_min = 2
+		_min = 1
 		count = 5
 	else:
 		count = 3
