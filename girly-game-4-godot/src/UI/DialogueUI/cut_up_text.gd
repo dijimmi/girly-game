@@ -3,22 +3,19 @@ extends Node
 @export var textbox : DialogicNode_DialogText
 @export var dictionary : DialogicGlossary
 @export var layer : DialogicLayoutLayer
-var word_dictionary : Array
+
 
 signal _color_tween_finished
 
 func _ready() -> void:
 	assert(textbox != null, "CutUpText Node's textbox isn't set properly")
-	assert(dictionary != null, "CutUpText Node's word_dictionary isn't set properly")
 	assert(layer != null, "CutUpText Node's layer isn't set properly")
 	textbox.finished_revealing_text.connect(_on_finished_text)
 	textbox.started_revealing_text.connect(_on_start_text)
 	textbox.meta_hover_started.connect(_on_meta_hovered_started)
 	textbox.meta_hover_ended.connect(_on_meta_hovered_ended)
 	textbox.meta_clicked.connect(_on_meta_clicked)
-	
-	word_dictionary = dictionary.entries.keys()
-	
+		
 	text_color = layer.text_custom_color
 	base_color = ProjectSettings.get_setting('dialogic/glossary/default_color')
 	

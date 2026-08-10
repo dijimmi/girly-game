@@ -59,3 +59,5 @@ func get_player_exp(key : String) -> float:
 	if key in player_exp:
 		result = player_exp[key]
 	return result
+
+var can_pause : bool = true

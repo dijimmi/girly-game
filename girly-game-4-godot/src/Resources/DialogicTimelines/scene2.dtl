@@ -1,0 +1,25 @@
+[background arg="res://image.png" fade="0.3" wait="true"]
+[style name="CustomDialogue"]
+join friend center [animation="Fade In" length="0.2"]
+Come on, it’s gonna be fun!
+update friend right [move_time="0.5"]
+join main_character center
+main_character: But I’m not interested in your fashion kei whatever, {FriendName}!
+friend: But you'd look so kawaiiii, you’ve said it yourself
+main_character: Yeah, but it’s not something I’m going to wear
+main_character: Are there even fashion trends for men?
+friend: {PlayerName} you ‘ve asked me that before, of course there are!
+main_character: Ugh… I don’t want to…
+friend: Don’t you want to learn more japanese? You can meet japanese people in here!
+friend: Maybe even find a kanojo~
+[wait time="0.5" hide_text="false" skippable="true"]
+main_character: Yeah right...
+friend: Was that a slight smile I saw…
+friend: Seems like your face changed when I mentioned kanojo…
+friend: You def want a nihonjin kanojo, don’t you?
+main_character: Leave me alone
+friend: So you’re gonna join?
+main_character: ...
+main_character: Alright fine. But only to learn Japanese, not for any other reasons…
+update friend [animation="Bounce" length="0.4"]
+friend: やった！

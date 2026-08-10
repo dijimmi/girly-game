@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://m1k7do2jgq4y"]
 
 [ext_resource type="Script" uid="uid://bvtxp0s53mehc" path="res://src/Core/Handlers/minigame_handler.gd" id="1_bnn44"]
-[ext_resource type="PackedScene" uid="uid://c6ojot2ko0pnp" path="res://src/UI/minigame_draw_hiragana.tscn" id="1_c2nxf"]
+[ext_resource type="PackedScene" uid="uid://c6ojot2ko0pnp" path="res://src/UI/MinigameUI/minigame_draw_hiragana.tscn" id="1_c2nxf"]
 
 [node name="MinigameHandler" type="CanvasLayer" unique_id=906300315]
 layer = 20

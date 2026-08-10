@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://db4o5620hkek7"]
+
+[ext_resource type="PackedScene" uid="uid://b7hvnddcex42v" path="res://src/Worlds/Cutscenes/cutscene_intro.tscn" id="1_qgnmd"]
+[ext_resource type="Script" uid="uid://ctddrvp6ln0u6" path="res://src/Worlds/Cutscenes/cutscene_intro.gd" id="2_55vae"]
+[ext_resource type="PackedScene" uid="uid://coewybkmll6s4" path="res://src/Core/Handlers/level_handler.tscn" id="2_dixjx"]
+
+[node name="Game" type="Node" unique_id=1306341400]
+
+[node name="CutsceneIntro" parent="." unique_id=1675380007 instance=ExtResource("1_qgnmd")]
+script = ExtResource("2_55vae")
+
+[node name="LevelHandler" parent="." unique_id=186740295 instance=ExtResource("2_dixjx")]

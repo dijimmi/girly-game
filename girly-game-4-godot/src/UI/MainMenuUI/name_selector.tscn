@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://co20vnddnt84h"]
 
-[ext_resource type="Script" uid="uid://gvuhitylof43" path="res://src/MainMenuUI/name_selector.gd" id="1_vn2a0"]
-[ext_resource type="PackedScene" uid="uid://4ak7h6oyiwh5" path="res://src/MainMenuUI/name_list.tscn" id="2_n24wy"]
+[ext_resource type="Script" uid="uid://gvuhitylof43" path="res://src/UI/MainMenuUI/name_selector.gd" id="1_vn2a0"]
+[ext_resource type="PackedScene" uid="uid://4ak7h6oyiwh5" path="res://src/UI/MainMenuUI/name_list.tscn" id="2_n24wy"]
 
 [node name="NameSelector" type="Control" unique_id=566193423 node_paths=PackedStringArray("name_list")]
 layout_mode = 3

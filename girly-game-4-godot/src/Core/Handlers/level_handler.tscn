@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://coewybkmll6s4"]
+
+[ext_resource type="Script" uid="uid://cw2ru4khhs3fd" path="res://src/Core/Handlers/level_handler.gd" id="1_rnf1n"]
+[ext_resource type="PackedScene" uid="uid://cjya42uw7j128" path="res://src/Worlds/scene1.tscn" id="2_q84wo"]
+[ext_resource type="PackedScene" uid="uid://b87xryrg3eybu" path="res://src/UI/MainMenuUI/main_menu.tscn" id="3_sipf8"]
+
+[sub_resource type="Animation" id="Animation_3mgl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_rnf1n"]
+resource_name = "trans_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_q84wo"]
+resource_name = "trans_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.8666667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sipf8"]
+_data = {
+&"RESET": SubResource("Animation_3mgl7"),
+&"trans_in": SubResource("Animation_rnf1n"),
+&"trans_out": SubResource("Animation_q84wo")
+}
+
+[node name="LevelHandler" type="Node2D" unique_id=186740295]
+script = ExtResource("1_rnf1n")
+scene_array = Dictionary[String, PackedScene]({
+"main menu": ExtResource("3_sipf8"),
+"scene1": ExtResource("2_q84wo")
+})
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1557219362]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1110529816]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13077214, 0.13077214, 0.13077211, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect" unique_id=1096707647]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -11.5
+offset_right = 155.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "our super cool loading/transition screen"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=16945664]
+libraries/ = SubResource("AnimationLibrary_sipf8")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1837929909]

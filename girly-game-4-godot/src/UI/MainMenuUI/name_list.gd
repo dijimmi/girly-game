@@ -53,8 +53,3 @@ func add_name_widget(index : int):
 func verify_match(text : String):
 	for name_widget in name_list.get_children():
 		name_widget.verify_match(text)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

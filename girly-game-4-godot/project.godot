@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="girly-game4-godot"
-run/main_scene="uid://duxsksmi5w7p6"
+run/main_scene="uid://db4o5620hkek7"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,20 +25,29 @@ Global="*uid://clvrqagm1kgiq"
 
 directories/dch_directory={
 "character": "res://src/_Tests/character.dch",
-"character2": "res://src/_Tests/character2.dch"
+"character2": "res://src/_Tests/character2.dch",
+"friend": "res://src/Resources/DialogicCharacters/friend.dch",
+"main_character": "res://src/Resources/DialogicCharacters/main_character.dch",
+"narrator": "res://src/Resources/DialogicCharacters/narrator.dch"
 }
 directories/dtl_directory={
+"scene1_narration": "res://src/Resources/DialogicTimelines/scene1_narration.dtl",
+"scene2": "res://src/Resources/DialogicTimelines/scene2.dtl",
 "test_timeline": "res://src/_Tests/test_timeline.dtl"
 }
 layout/style_directory={
-"": "res://src/Resources/CustomDialogicFiles/custom_dialogue.tres",
-"CustomDialogue": "res://src/Resources/CustomDialogicFiles/custom_dialogue.tres"
+"": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
+"CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
+"narration_style_dialogue": "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://src/Resources/CustomDialogicFiles/custom_dialogue.tres"]
-layout/default_style="res://src/Resources/CustomDialogicFiles/custom_dialogue.tres"
-variables={}
-text/letter_speed=0.01
+layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres", "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"]
+layout/default_style="res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
+variables={
+"FriendName": "Aoi",
+"PlayerName": "Player"
+}
+text/letter_speed=0.015
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
@@ -70,8 +79,9 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-glossary/glossary_files=["uid://rnmvjf3y0l2v"]
+glossary/glossary_files=["uid://ctu427wqr6fj4"]
 glossary/default_color=Color(0.81960785, 0.36078432, 0.78039217, 1)
+text/autocolor_names=true
 
 [display]
 
@@ -109,6 +119,11 @@ dialogic_default_action={
 draw={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+confirm={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 

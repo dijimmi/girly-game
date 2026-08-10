@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b87xryrg3eybu"]
+
+[ext_resource type="Script" uid="uid://cwn1o0ihthao8" path="res://src/UI/MainMenuUI/main_menu.gd" id="1_t6xyb"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1050728028]
+script = ExtResource("1_t6xyb")
+
+[node name="Control" type="Control" parent="." unique_id=2097571675]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Control" unique_id=1478045997]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 21.0
+offset_right = 64.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="NewSaveButton" type="Button" parent="Control/Buttons" unique_id=881936273]
+custom_minimum_size = Vector2(128, 24)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "New Save"
+
+[node name="SettingsButton2" type="Button" parent="Control/Buttons" unique_id=2005764265]
+visible = false
+custom_minimum_size = Vector2(128, 24)
+layout_mode = 2
+text = "Load Save"
+
+[node name="SettingsButton" type="Button" parent="Control/Buttons" unique_id=1243679909]
+custom_minimum_size = Vector2(128, 24)
+layout_mode = 2
+disabled = true
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="Control/Buttons" unique_id=1270837940]
+custom_minimum_size = Vector2(128, 24)
+layout_mode = 2
+disabled = true
+text = "Quit"
+
+[node name="Title" type="Label" parent="Control" unique_id=1411201216]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -182.0
+offset_right = 20.0
+offset_bottom = -159.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Title"
+horizontal_alignment = 1
+
+[node name="BG" type="ColorRect" parent="Control" unique_id=1205139622]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.41215247, 0.41215247, 0.41215247, 1)
+
+[connection signal="pressed" from="Control/Buttons/NewSaveButton" to="." method="_on_new_save_button_pressed"]

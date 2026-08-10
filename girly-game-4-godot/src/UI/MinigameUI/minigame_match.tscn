@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d4k7pnnfsyxn"]
 
-[ext_resource type="Script" uid="uid://mq78tlq6ml6j" path="res://src/UI/minigame_match.gd" id="1_04ca3"]
+[ext_resource type="Script" uid="uid://mq78tlq6ml6j" path="res://src/UI/MinigameUI/minigame_match.gd" id="1_huaos"]
 
 [node name="Match" type="Control" unique_id=1569849493]
 layout_mode = 3
@@ -9,4 +9,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_04ca3")
+script = ExtResource("1_huaos")

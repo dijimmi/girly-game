@@ -1,0 +1,14 @@
+[background arg="#000000ff" fade="0.0"]
+[style name="narration_style_dialogue"]
+I’ve recently become intersted in learning Japanese since I’ve grown closer to my friend {FriendName}
+She was born in Japan despite her parents being foreigners.
+I met her in high school a few years ago when she moved away from home into the US,
+But it wasn’t until college that I decided to learn more japanese.
+Having been a few years away from home, my friend wanted to go back to Japan with an exchange program
+And she invited me to tag along, which I thought was a great idea!
+[wait time="1.0" hide_text="false" skippable="true"]
+narrator: but {FriendName} has talked to them about me a couple of times and I’ve talked with them through video chat before, so we’re good friends.
+[wait time="1.0" skippable="true"]
+narrator: Just as we entered college, my friend saw there was a fashion club which she immediately joined.
+She’s been really into J-fashion ever since I met her, it’s almost like her trademark.
+jump scene2/
