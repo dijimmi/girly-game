@@ -3,7 +3,7 @@
 join friend center [animation="Fade In" length="0.2"]
 Come on, it’s gonna be fun!
 update friend right [move_time="0.5"]
-join main_character center
+join main_character left [mirrored="true"]
 main_character: But I’m not interested in your fashion kei whatever, {FriendName}!
 friend: But you'd look so kawaiiii, you’ve said it yourself
 main_character: Yeah, but it’s not something I’m going to wear
@@ -23,3 +23,4 @@ main_character: ...
 main_character: Alright fine. But only to learn Japanese, not for any other reasons…
 update friend [animation="Bounce" length="0.4"]
 friend: やった！
+do Global.set_next_scene("cutscene fashion club")

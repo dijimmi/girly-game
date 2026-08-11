@@ -12,14 +12,14 @@
 },
 &"default_portrait": "Default",
 &"description": "",
-&"display_name": "Character",
+&"display_name": "PresName",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
 "Default": {
 "export_overrides": {
-"image": "\"res://icon.svg\""
+"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

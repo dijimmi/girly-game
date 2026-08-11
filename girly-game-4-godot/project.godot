@@ -20,19 +20,20 @@ config/icon="res://icon.svg"
 Dialogic="*uid://ds2q0uclmolvu"
 EventBus="*uid://6k2yk4tqekh"
 Global="*uid://clvrqagm1kgiq"
+Dialogue="*uid://2x6dsbwluld7"
 
 [dialogic]
 
 directories/dch_directory={
-"character": "res://src/_Tests/character.dch",
-"character2": "res://src/_Tests/character2.dch",
 "friend": "res://src/Resources/DialogicCharacters/friend.dch",
 "main_character": "res://src/Resources/DialogicCharacters/main_character.dch",
-"narrator": "res://src/Resources/DialogicCharacters/narrator.dch"
+"narrator": "res://src/Resources/DialogicCharacters/narrator.dch",
+"pres": "res://src/Resources/DialogicCharacters/pres.dch"
 }
 directories/dtl_directory={
 "scene1_narration": "res://src/Resources/DialogicTimelines/scene1_narration.dtl",
 "scene2": "res://src/Resources/DialogicTimelines/scene2.dtl",
+"scene3": "res://src/Resources/DialogicTimelines/scene3.dtl",
 "test_timeline": "res://src/_Tests/test_timeline.dtl"
 }
 layout/style_directory={
@@ -45,7 +46,8 @@ layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres
 layout/default_style="res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
 variables={
 "FriendName": "Aoi",
-"PlayerName": "Player"
+"PlayerName": "Player",
+"PresName": "Club President"
 }
 text/letter_speed=0.015
 text/initial_text_reveal_skippable=true

@@ -6,10 +6,11 @@ extends Node2D
 func _ready() -> void:
 	assert(scene_array.size() != 0,"[level_handler] no scenes in scene_array")
 	EventBus.load_scene.connect(_load_scene)
+	Dialogic.timeline_ended.connect(_load_scene)
 
 var cur_level
 var cur_level_name
-func _load_scene(cue : String):
+func _load_scene(cue : String = Global.next_scene):
 	if !(cue in scene_array.keys()):
 		print("[level_handler] ",cue," isn't in the scene_array : ",scene_array.keys())
 		return

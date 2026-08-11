@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://w0xct215t6of"]
+
+[ext_resource type="Script" uid="uid://b3r0bmisgxq7a" path="res://src/Worlds/Cutscenes/cutscene_fashion_club.gd" id="1_djoak"]
+
+[sub_resource type="Animation" id="Animation_osaa5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+
+[sub_resource type="Animation" id="Animation_gs8y3"]
+resource_name = "cutscene"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["cool cutscene with different zooms on the fashion club background"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vtsys"]
+_data = {
+&"RESET": SubResource("Animation_osaa5"),
+&"cutscene": SubResource("Animation_gs8y3")
+}
+
+[node name="CutsceneFashionClub" type="Control" unique_id=1072741678 node_paths=PackedStringArray("animationPlayer")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_djoak")
+animationPlayer = NodePath("AnimationPlayer")
+metadata/_custom_type_script = "uid://ygtkg1tswi38"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1823480902]
+libraries/ = SubResource("AnimationLibrary_vtsys")
+autoplay = &"cutscene"
+
+[node name="Label" type="Label" parent="." unique_id=748065565]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2

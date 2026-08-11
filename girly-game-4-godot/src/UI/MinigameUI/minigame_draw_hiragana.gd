@@ -110,9 +110,11 @@ func update_guide(hint : String = "") -> void:
 	elif hint in frames_dict.keys():
 		$DrawingFrame/TextureRect.texture = frames_dict[hint]
 		return
-	
-	
+	if !$DrawingFrame.hiragana_picture[current_letter]:
+		print($DrawingFrame.hiragana_picture[current_letter]," ", current_letter)
+		return
 	frames_dict = $DrawingFrame.hiragana_picture[current_letter].frames
+	
 	var frame : Texture2D = Texture2D.new()
 	match difficulty:
 		0:

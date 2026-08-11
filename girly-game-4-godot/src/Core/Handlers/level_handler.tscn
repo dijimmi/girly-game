@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cw2ru4khhs3fd" path="res://src/Core/Handlers/level_handler.gd" id="1_rnf1n"]
 [ext_resource type="PackedScene" uid="uid://cjya42uw7j128" path="res://src/Worlds/scene1.tscn" id="2_q84wo"]
 [ext_resource type="PackedScene" uid="uid://b87xryrg3eybu" path="res://src/UI/MainMenuUI/main_menu.tscn" id="3_sipf8"]
+[ext_resource type="PackedScene" uid="uid://w0xct215t6of" path="res://src/Worlds/Cutscenes/cutscene_fashion_club.tscn" id="4_1yjvo"]
 
 [sub_resource type="Animation" id="Animation_3mgl7"]
 length = 0.001
@@ -59,6 +60,7 @@ _data = {
 [node name="LevelHandler" type="Node2D" unique_id=186740295]
 script = ExtResource("1_rnf1n")
 scene_array = Dictionary[String, PackedScene]({
+"cutscene fashion club": ExtResource("4_1yjvo"),
 "main menu": ExtResource("3_sipf8"),
 "scene1": ExtResource("2_q84wo")
 })

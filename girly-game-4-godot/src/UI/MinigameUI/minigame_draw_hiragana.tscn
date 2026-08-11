@@ -1,162 +1,9 @@
 [gd_scene format=3 uid="uid://c6ojot2ko0pnp"]
 
+[ext_resource type="Script" uid="uid://bhrvdg5ftyble" path="res://src/UI/MinigameUI/minigame_draw_hiragana.gd" id="1_k6yt4"]
 [ext_resource type="PackedScene" uid="uid://ckjywq7d7pc5d" path="res://src/Entity/drawing_frame.tscn" id="2_vhj4k"]
-[ext_resource type="Script" path="res://src/Core/class_hiragana_frames.gd" id="3_h6ceu"]
 [ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/UIArt/a_1.png" id="4_lkbmo"]
-[ext_resource type="Texture2D" uid="uid://bqfrwslqyop7t" path="res://import/Art/UIArt/a_2.png" id="5_cuidq"]
-[ext_resource type="Texture2D" uid="uid://b2rq0v36lsn7n" path="res://import/Art/UIArt/a_3.png" id="6_htn4v"]
-[ext_resource type="Texture2D" uid="uid://c4gxfoas8b2un" path="res://import/Art/UIArt/a_full.png" id="7_ouafh"]
-[ext_resource type="Texture2D" uid="uid://26cg4o4boygv" path="res://import/Art/UIArt/o_1.png" id="8_6rvel"]
-[ext_resource type="Texture2D" uid="uid://1ojsd4utoky5" path="res://import/Art/UIArt/o_2.png" id="9_rj12n"]
-[ext_resource type="Texture2D" uid="uid://ckedbldjb6ap4" path="res://import/Art/UIArt/o_3.png" id="10_wetbb"]
-[ext_resource type="Texture2D" uid="uid://6n1452p4o2c6" path="res://import/Art/UIArt/o_full.png" id="11_j63fh"]
 [ext_resource type="Texture2D" uid="uid://bjqv567gklwfr" path="res://import/Art/UIArt/hiragana_writing_background.png" id="12_2lagt"]
-
-[sub_resource type="GDScript" id="GDScript_lp4k3"]
-script/source = "extends Control
-
-var difficulty : int = 0
-var word_to_teach : String = \"\"
-
-func start_minigame(meta : String) -> void:
-	if meta == \"\" or meta == null:
-		return
-	word_to_teach = meta
-	difficulty = _calculate_difficulty()[get_parent().current_rounds]
-	
-	current_symbol = 0
-	current_line = 0
-	update_guide()
-	self.show()
-
-func end_minigame() -> void:
-	update_guide(\"null\")
-	await get_tree().create_timer(0.5).timeout
-	self.hide()
-	$DrawingFrame.clear_frame()
-	$DrawingFrame.clear_label()
-	EventBus.minigame_round_end.emit()
-	for letter in word_to_teach.rsplit():
-		Global.add_player_exp(letter, 0.01)
-func _calculate_difficulty() -> Array[int]:
-	var result : Array[int] = []
-	var instances : float = _get_instances()
-	var player_level : float = _get_mid_exp(word_to_teach.rsplit())
-	
-	var _max : int = 2
-	var _min : int = 0
-	var count = 1
-	
-	if player_level <= 1.0/3.0:
-		_max = 1
-		count = 2
-	elif player_level >= 2.0/3.0:
-		_min = 1
-		count = 5
-	else:
-		count = 3
-	for i in instances:
-		var step : int = round(i * count / 5)
-		step = clamp(step, _min, _max)
-		result.append(step)
-	return result
-
-func _get_instances() -> int:
-	var result : int = 0
-	for rounds in get_parent().minigame_order:
-		if rounds == self:
-			result += 1
-	return result
-func _get_mid_exp(letters : PackedStringArray) -> float:
-	var result : float = 0.0
-	var m : float = 0.0
-	for letter in letters:
-		m += Global.get_player_exp(letter)
-	result = m / letters.size()
-	return result
-
-
-#_______-DIFFICULTY 0-_______#
-var current_symbol : int = 0
-var current_line : int = 0
-func verify_line() -> void:
-	var current_letter = word_to_teach[current_symbol]
-	var lines_dict = $DrawingFrame.hiragana_dictionary.find_key(current_letter)
-
-	if $DrawingFrame.recognise_line():
-		if current_line == lines_dict.size()-1:
-			current_line = 0
-			next_symbol()
-		else:
-			current_line += 1
-			update_guide()
-	else:
-		var lines = get_tree().get_nodes_in_group(\"Lines\")
-		lines[-1].queue_free()
-		$DrawingFrame.lines.pop_back()
-
-#______-DIFFICULTY 1-2-______#
-func verify_symbol() -> void:
-	if difficulty == 0:
-		return 
-	if $DrawingFrame.recognise_character():
-		await get_tree().create_timer(0.1).timeout
-		next_symbol()
-	elif $DrawingFrame.recognise_character() == false:
-		$DrawingFrame.clear_frame()
-	elif $DrawingFrame.recognise_character() == null:
-		return
-func next_symbol() -> void:
-	$DrawingFrame.clear_frame()
-	$DrawingFrame.update_label(word_to_teach[current_symbol])
-	current_symbol += 1
-	if current_symbol >= word_to_teach.length():
-		end_minigame()
-	else:
-		update_guide()
-func update_guide(hint : String = \"\") -> void:
-	var frames_dict : Dictionary = {}
-	var current_letter : String
-	if current_symbol < word_to_teach.length():
-		current_letter = word_to_teach[current_symbol]
-	if hint != \"\":
-		$DrawingFrame/TextureRect.texture = Texture2D.new()
-		return
-	elif hint in frames_dict.keys():
-		$DrawingFrame/TextureRect.texture = frames_dict[hint]
-		return
-	
-	
-	frames_dict = $DrawingFrame.hiragana_picture[current_letter].frames
-	var frame : Texture2D = Texture2D.new()
-	match difficulty:
-		0:
-			frame = frames_dict[str(current_line+1)]
-		1:
-			frame = frames_dict[\"full\"]
-
-	$DrawingFrame/TextureRect.texture = frame
-"
-
-[sub_resource type="Resource" id="Resource_rkhbs"]
-script = ExtResource("3_h6ceu")
-frames = Dictionary[String, Texture2D]({
-"1": ExtResource("4_lkbmo"),
-"2": ExtResource("5_cuidq"),
-"3": ExtResource("6_htn4v"),
-"full": ExtResource("7_ouafh")
-})
-metadata/_custom_type_script = "uid://d07ct3l8h0lsp"
-
-[sub_resource type="Resource" id="Resource_100ai"]
-script = ExtResource("3_h6ceu")
-frames = Dictionary[String, Texture2D]({
-"1": ExtResource("8_6rvel"),
-"2": ExtResource("9_rj12n"),
-"3": ExtResource("10_wetbb"),
-"full": ExtResource("11_j63fh")
-})
-metadata/_custom_type_script = "uid://d07ct3l8h0lsp"
 
 [node name="DrawHiragana" type="Control" unique_id=2074376187]
 layout_mode = 3
@@ -166,7 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = SubResource("GDScript_lp4k3")
+script = ExtResource("1_k6yt4")
 
 [node name="DrawingFrame" parent="." unique_id=614917709 node_paths=PackedStringArray("label") instance=ExtResource("2_vhj4k")]
 custom_minimum_size = Vector2(384, 384)
@@ -181,54 +28,6 @@ offset_top = -222.0
 offset_right = 192.0
 offset_bottom = 162.0
 mouse_default_cursor_shape = 2
-hiragana_picture = Dictionary[String, ExtResource("3_h6ceu")]({
-"あ": SubResource("Resource_rkhbs"),
-"い": null,
-"う": null,
-"え": null,
-"お": SubResource("Resource_100ai"),
-"か": null,
-"き": null,
-"く": null,
-"け": null,
-"こ": null,
-"さ": null,
-"し": null,
-"す": null,
-"せ": null,
-"そ": null,
-"た": null,
-"ち": null,
-"つ": null,
-"て": null,
-"と": null,
-"な": null,
-"に": null,
-"ぬ": null,
-"ね": null,
-"の": null,
-"は": null,
-"ひ": null,
-"ふ": null,
-"へ": null,
-"ほ": null,
-"ま": null,
-"み": null,
-"む": null,
-"め": null,
-"も": null,
-"や": null,
-"ゆ": null,
-"よ": null,
-"ら": null,
-"り": null,
-"る": null,
-"れ": null,
-"ろ": null,
-"わ": null,
-"を": null,
-"ん": null
-})
 label = NodePath("../Label")
 max_point_distance = 3.0
 

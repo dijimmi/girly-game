@@ -61,3 +61,5 @@ func get_player_exp(key : String) -> float:
 	return result
 
 var can_pause : bool = true
+
+var next_scene : String = ""

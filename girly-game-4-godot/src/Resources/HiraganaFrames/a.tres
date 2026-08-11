@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="HiraganaFrames" format=3 uid="uid://6y86iuh0ujy5"]
+
+[ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/UIArt/a_1.png" id="1_js568"]
+[ext_resource type="Texture2D" uid="uid://bqfrwslqyop7t" path="res://import/Art/UIArt/a_2.png" id="2_3ukiu"]
+[ext_resource type="Texture2D" uid="uid://b2rq0v36lsn7n" path="res://import/Art/UIArt/a_3.png" id="3_c2euj"]
+[ext_resource type="Texture2D" uid="uid://c4gxfoas8b2un" path="res://import/Art/UIArt/a_full.png" id="4_nkir7"]
+[ext_resource type="Script" uid="uid://d07ct3l8h0lsp" path="res://src/Core/class_hiragana_frames.gd" id="5_fapnx"]
+
+[resource]
+script = ExtResource("5_fapnx")
+frames = Dictionary[String, Texture2D]({
+"1": ExtResource("1_js568"),
+"2": ExtResource("2_3ukiu"),
+"3": ExtResource("3_c2euj"),
+"full": ExtResource("4_nkir7")
+})
+metadata/_custom_type_script = "uid://d07ct3l8h0lsp"

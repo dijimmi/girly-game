@@ -1,0 +1,8 @@
+[background arg="res://image.png" fade="0.0"]
+join pres center
+pres: こんにちわ！ Nice to meet ya
+pres: Are you guys interested in joining the club ?
+update pres left [move_time="0.5" move_trans="cubic"]
+join friend right
+friend: うん！
+main_character: I guess so
