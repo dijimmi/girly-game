@@ -27,7 +27,7 @@ func _on_product_clicked_from_thumbnail(product):
 
 func add_category(_name):
 	var new_cat = category_scene.instantiate()
-	new_cat.category = "[url=%s]%s[/url]" % [_name, _name]
+	new_cat.category = ProductInfo.make_clickable(_name)
 	new_cat.product_clicked_from_thumbnail.connect(_on_product_clicked_from_thumbnail)
 	products_list.add_child(new_cat)
 
@@ -37,6 +37,13 @@ func hide_all_products():
 	
 	for product in list:
 		product.visible = false
+
+
+func show_all_products():
+	var list = get_all_products()
+	
+	for product in list:
+		product.visible = true
 
 
 func get_all_products():

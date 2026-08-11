@@ -1,7 +1,9 @@
 extends VBoxContainer
 
-@export var product_name : Label
+@export var product_name : RichTextLabel
 @export var product_description : RichTextLabel
+
+var meta_text = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,15 +11,45 @@ func _ready() -> void:
 
 
 func setup(product):
+	var description : String = product.description
+	for word in product.description.split(" "):
+		description = description.replace(word, ProductInfo.make_clickable(word))
+	
 	var dict = {
-		"description": product.description,
-		"collection": product.category,
-		"substyle":product.substyle,
-		"type": product.accesory_type,
+		"description": description,
+		"collection": ProductInfo.make_clickable(product.category),
+		"substyle": ProductInfo.make_clickable(product.substyle),
+		"type": ProductInfo.make_clickable(product.accesory_type),
 	}
 	
 	var desc_template = "{description}\nCollection: {collection}\nSubstyle: {substyle}\nAccesory Type: {type}\n
 	".format(dict)
 	
-	product_name.text = product.product_name
+	var product_name_str : String = product.product_name
+	for word in product.product_name.split(" "):
+		product_name_str = product_name_str.replace(word, ProductInfo.make_clickable(word))
+	
+	product_name.text = product_name_str
 	product_description.text = desc_template
+
+
+func _on_product_categories_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_RIGHT:
+			# Check if the mouse is currently hovering over a meta item
+			if meta_text != null:
+				_on_meta_right_clicked(meta_text)
+
+
+func _on_meta_right_clicked(meta: Variant) -> void:
+	print("Right-clicked meta: ", meta)
+	DisplayServer.clipboard_set(meta)
+
+
+func _on_product_categories_meta_hover_started(meta: Variant) -> void:
+	meta_text = meta
+	print('hovering')
+
+
+func _on_product_categories_meta_hover_ended(meta: Variant) -> void:
+	meta_text = null

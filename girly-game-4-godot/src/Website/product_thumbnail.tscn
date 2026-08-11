@@ -47,6 +47,7 @@ stretch_mode = 5
 
 [node name="Description" type="RichTextLabel" parent="." unique_id=1984189260]
 layout_mode = 2
+bbcode_enabled = true
 text = "amazing girly wolf"
 fit_content = true
 scroll_active = false

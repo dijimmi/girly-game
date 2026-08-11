@@ -160,14 +160,17 @@ script = ExtResource("8_j4fsc")
 product_name = NodePath("ProductName")
 product_description = NodePath("ProductCategories")
 
-[node name="ProductName" type="Label" parent="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo" unique_id=366098813]
+[node name="ProductName" type="RichTextLabel" parent="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo" unique_id=236749281]
 layout_mode = 2
-size_flags_horizontal = 0
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
 text = "Ultra Girly Pet Fox"
+fit_content = true
+scroll_active = false
 
 [node name="ProductCategories" type="RichTextLabel" parent="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo" unique_id=1577815605]
 layout_mode = 2
+bbcode_enabled = true
 text = "it's peak it's all i gotta say"
 fit_content = true
 scroll_active = false
@@ -300,8 +303,12 @@ stretch_mode = 5
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Undo" to="." method="_on_undo_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Redo" to="." method="_on_redo_pressed"]
+[connection signal="text_changed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_changed"]
 [connection signal="text_submitted" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_submitted"]
 [connection signal="pressed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchButton" to="VBoxContainer/ShopPageSearchBar" method="_on_search_button_pressed"]
+[connection signal="gui_input" from="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo/ProductCategories" to="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo" method="_on_product_categories_gui_input"]
+[connection signal="meta_hover_ended" from="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo/ProductCategories" to="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo" method="_on_product_categories_meta_hover_ended"]
+[connection signal="meta_hover_started" from="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo/ProductCategories" to="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo" method="_on_product_categories_meta_hover_started"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo/BuyButton" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_buy_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/Yes" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_yes_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/No" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_no_pressed"]

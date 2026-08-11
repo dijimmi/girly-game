@@ -28,5 +28,11 @@ func get_keywords():
 	keyword_list.append(product_name)
 	keyword_list.append(category)
 	keyword_list.append(substyle)
+	keyword_list.append(accesory_type)
+	
 	
 	return keyword_list
+
+
+func convert_colors_to_string():
+	pass
