@@ -4,7 +4,11 @@ extends Resource
 @export var product_name : String = "Default Lolita Dress"
 @export var description : String = "Buy this now :D"
 @export var category : String = "lolita"
+@export var accesory_type : String = "Dress"
+@export var substyle : String = "sweet"
 @export var featured : bool = true
+
+@export var keywords : Array[String] = [str(product_name)]
 
 @export var base_texture : Texture2D = preload("res://import/Art/ShopIcons/a_outfit_base.png")
 @export var tint_texture : Texture2D = preload("res://import/Art/ShopIcons/a_outfit_tint.png")

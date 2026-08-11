@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d2fxf1wskw5g0" path="res://src/Website/website_1.gd" id="1_22k47"]
 [ext_resource type="Texture2D" uid="uid://bg57fpq2v6tbh" path="res://image.png" id="1_g8ui5"]
 [ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="2_7tgyq"]
+[ext_resource type="Script" uid="uid://clukmb2c5y1na" path="res://src/Website/shop_page_search_bar.gd" id="2_g3asw"]
 [ext_resource type="PackedScene" uid="uid://bb21jci4ag116" path="res://src/Website/product_category.tscn" id="3_7tgyq"]
 [ext_resource type="Script" uid="uid://bkraxeylrsb6q" path="res://src/Website/products_page.gd" id="4_qv1vs"]
 [ext_resource type="Script" uid="uid://cwfpbg0nle6jm" path="res://src/Website/view_product_page.gd" id="6_ns1kw"]
@@ -18,12 +19,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_22k47")
-shop_page = NodePath("VBoxContainer/ShopPage")
+shop_page = NodePath("VBoxContainer/ShopPageBG")
 shop_page_seach_bar = NodePath("VBoxContainer/ShopPageSearchBar")
-products_page = NodePath("VBoxContainer/ShopPage/ProductsPage")
-view_product_page = NodePath("VBoxContainer/ShopPage/ViewProductPage")
-product_big_view = NodePath("VBoxContainer/ShopPage/ViewProductPage/ProductBigView")
-homepage = NodePath("VBoxContainer/HomePage")
+products_page = NodePath("VBoxContainer/ShopPageBG/ProductsList")
+view_product_page = NodePath("VBoxContainer/ShopPageBG/BigProductPage")
+product_big_view = NodePath("VBoxContainer/ShopPageBG/BigProductPage/ProductBigView")
+homepage = NodePath("VBoxContainer/HomePageBG")
 undo = NodePath("VBoxContainer/AddressBarBG/AddressBar/Undo")
 redo = NodePath("VBoxContainer/AddressBarBG/AddressBar/Redo")
 
@@ -62,22 +63,23 @@ size_flags_horizontal = 3
 [node name="ShopPageSearchBar" type="PanelContainer" parent="VBoxContainer" unique_id=70517041]
 visible = false
 layout_mode = 2
+script = ExtResource("2_g3asw")
 
 [node name="TopBar" type="HBoxContainer" parent="VBoxContainer/ShopPageSearchBar" unique_id=1729806456]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=82008103]
+[node name="WebsiteLogo" type="TextureRect" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=82008103]
 layout_mode = 2
 texture = ExtResource("1_g8ui5")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="LineEdit" type="LineEdit" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=540348501]
+[node name="SearchBar" type="LineEdit" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=540348501]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=1138462698]
+[node name="SearchButton" type="TextureButton" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=1138462698]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture_normal = ExtResource("2_7tgyq")
@@ -92,98 +94,90 @@ text = "Sign Up"
 layout_mode = 2
 text = "Log In"
 
-[node name="ShopPage" type="PanelContainer" parent="VBoxContainer" unique_id=1604782043]
+[node name="ShopPageBG" type="PanelContainer" parent="VBoxContainer" unique_id=1604782043]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ProductsPage" type="ScrollContainer" parent="VBoxContainer/ShopPage" unique_id=132185964 node_paths=PackedStringArray("products_list")]
+[node name="ProductsList" type="ScrollContainer" parent="VBoxContainer/ShopPageBG" unique_id=132185964 node_paths=PackedStringArray("products_list")]
 layout_mode = 2
 script = ExtResource("4_qv1vs")
 products_list = NodePath("VBoxContainer")
+category_scene = ExtResource("3_7tgyq")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ShopPage/ProductsPage" unique_id=664245952]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ShopPageBG/ProductsList" unique_id=664245952]
 layout_mode = 2
 
-[node name="Category" parent="VBoxContainer/ShopPage/ProductsPage/VBoxContainer" unique_id=1200025618 instance=ExtResource("3_7tgyq")]
-layout_mode = 2
-category = "Featured Products"
-
-[node name="Category2" parent="VBoxContainer/ShopPage/ProductsPage/VBoxContainer" unique_id=2139915822 instance=ExtResource("3_7tgyq")]
-layout_mode = 2
-category = "decora"
-
-[node name="Category3" parent="VBoxContainer/ShopPage/ProductsPage/VBoxContainer" unique_id=1250819114 instance=ExtResource("3_7tgyq")]
-layout_mode = 2
-
-[node name="Ads" type="VBoxContainer" parent="VBoxContainer/ShopPage" unique_id=882573998]
+[node name="Ads" type="VBoxContainer" parent="VBoxContainer/ShopPageBG" unique_id=882573998]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/ShopPage/Ads" unique_id=802286943]
+[node name="Label" type="Label" parent="VBoxContainer/ShopPageBG/Ads" unique_id=802286943]
 layout_mode = 2
 text = "Ads"
 horizontal_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/ShopPage/Ads" unique_id=1751329107]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/ShopPageBG/Ads" unique_id=1751329107]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("2_7tgyq")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/ShopPage/Ads" unique_id=661095678]
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/ShopPageBG/Ads" unique_id=661095678]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("2_7tgyq")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/ShopPage/Ads" unique_id=1002809411]
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/ShopPageBG/Ads" unique_id=1002809411]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("2_7tgyq")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="ViewProductPage" type="HBoxContainer" parent="VBoxContainer/ShopPage" unique_id=1542293147 node_paths=PackedStringArray("buy_popup", "product_big_view", "product_info")]
+[node name="BigProductPage" type="HBoxContainer" parent="VBoxContainer/ShopPageBG" unique_id=1542293147 node_paths=PackedStringArray("buy_popup", "product_big_view", "product_info")]
 visible = false
 layout_mode = 2
 script = ExtResource("6_ns1kw")
-buy_popup = NodePath("../ComfirmPurchase")
+buy_popup = NodePath("../ConfirmPurchase")
 product_big_view = NodePath("ProductBigView")
 product_info = NodePath("ProductInfo")
 
-[node name="ProductBigView" parent="VBoxContainer/ShopPage/ViewProductPage" unique_id=2119791306 instance=ExtResource("6_qv1vs")]
+[node name="ProductBigView" parent="VBoxContainer/ShopPageBG/BigProductPage" unique_id=2119791306 instance=ExtResource("6_qv1vs")]
 layout_mode = 2
 
-[node name="ProductInfo" type="VBoxContainer" parent="VBoxContainer/ShopPage/ViewProductPage" unique_id=508150080 node_paths=PackedStringArray("product_name", "product_description")]
+[node name="ProductInfo" type="VBoxContainer" parent="VBoxContainer/ShopPageBG/BigProductPage" unique_id=508150080 node_paths=PackedStringArray("product_name", "product_description")]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 size_flags_vertical = 4
 script = ExtResource("8_j4fsc")
 product_name = NodePath("ProductName")
 product_description = NodePath("ProductCategories")
 
-[node name="ProductName" type="Label" parent="VBoxContainer/ShopPage/ViewProductPage/ProductInfo" unique_id=366098813]
+[node name="ProductName" type="Label" parent="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo" unique_id=366098813]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 32
 text = "Ultra Girly Pet Fox"
 
-[node name="ProductCategories" type="RichTextLabel" parent="VBoxContainer/ShopPage/ViewProductPage/ProductInfo" unique_id=1577815605]
+[node name="ProductCategories" type="RichTextLabel" parent="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo" unique_id=1577815605]
 layout_mode = 2
 text = "it's peak it's all i gotta say"
 fit_content = true
+scroll_active = false
 
-[node name="BuyButton" type="Button" parent="VBoxContainer/ShopPage/ViewProductPage/ProductInfo" unique_id=203481252]
+[node name="BuyButton" type="Button" parent="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo" unique_id=203481252]
 layout_mode = 2
 text = "Buy"
 
-[node name="ComfirmPurchase" type="CanvasLayer" parent="VBoxContainer/ShopPage" unique_id=420345878]
+[node name="ConfirmPurchase" type="CanvasLayer" parent="VBoxContainer/ShopPageBG" unique_id=420345878]
 visible = false
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/ShopPage/ComfirmPurchase" unique_id=1775439935]
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/ShopPageBG/ConfirmPurchase" unique_id=1775439935]
 custom_minimum_size = Vector2(300, 300)
 anchors_preset = 8
 anchor_left = 0.5
@@ -199,65 +193,65 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ShopPage/ComfirmPurchase/PanelContainer" unique_id=1479388893]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer" unique_id=1479388893]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/ShopPage/ComfirmPurchase/PanelContainer/VBoxContainer" unique_id=155960221]
+[node name="Label" type="Label" parent="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer" unique_id=155960221]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Are you sure you want to buy this?"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ShopPage/ComfirmPurchase/PanelContainer/VBoxContainer" unique_id=1322921900]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer" unique_id=1322921900]
 layout_mode = 2
 alignment = 1
 
-[node name="Yes" type="Button" parent="VBoxContainer/ShopPage/ComfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1833424111]
+[node name="Yes" type="Button" parent="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1833424111]
 layout_mode = 2
 text = "yes"
 
-[node name="No" type="Button" parent="VBoxContainer/ShopPage/ComfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer" unique_id=628658462]
+[node name="No" type="Button" parent="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer" unique_id=628658462]
 layout_mode = 2
 text = "no"
 
-[node name="HomePage" type="PanelContainer" parent="VBoxContainer" unique_id=1566243328 node_paths=PackedStringArray("grid")]
+[node name="HomePageBG" type="PanelContainer" parent="VBoxContainer" unique_id=1566243328 node_paths=PackedStringArray("grid")]
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("9_s3gt3")
 grid = NodePath("VBoxContainer/GridContainer")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HomePage" unique_id=1166477260]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HomePageBG" unique_id=1166477260]
 layout_mode = 2
 
-[node name="BookMarks" type="PanelContainer" parent="VBoxContainer/HomePage/VBoxContainer" unique_id=1909946765]
+[node name="BookMarks" type="PanelContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=1909946765]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HomePage/VBoxContainer/BookMarks" unique_id=1505256674]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks" unique_id=1505256674]
 layout_mode = 2
 
-[node name="BigView" type="Button" parent="VBoxContainer/HomePage/VBoxContainer/BookMarks/HBoxContainer" unique_id=1113590106]
+[node name="BigView" type="Button" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1113590106]
 layout_mode = 2
 toggle_mode = true
 text = "big view"
 
-[node name="Game1" type="LinkButton" parent="VBoxContainer/HomePage/VBoxContainer/BookMarks/HBoxContainer" unique_id=1031569832]
+[node name="Game1" type="LinkButton" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1031569832]
 layout_mode = 2
 text = "game"
 uri = "https://jillsplades.itch.io/my-little-bento-shop"
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HomePage/VBoxContainer" unique_id=388935697]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=388935697]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 columns = 3
 
-[node name="Website1" type="TextureButton" parent="VBoxContainer/HomePage/VBoxContainer/GridContainer" unique_id=205117791]
+[node name="Website1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/GridContainer" unique_id=205117791]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 texture_normal = ExtResource("1_g8ui5")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="GameThumbnail1" type="TextureButton" parent="VBoxContainer/HomePage/VBoxContainer/GridContainer" unique_id=1613849403]
+[node name="GameThumbnail1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/GridContainer" unique_id=1613849403]
 visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
@@ -304,9 +298,9 @@ stretch_mode = 5
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Undo" to="." method="_on_undo_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Redo" to="." method="_on_redo_pressed"]
-[connection signal="pressed" from="VBoxContainer/ShopPage/ViewProductPage/ProductInfo/BuyButton" to="VBoxContainer/ShopPage/ViewProductPage" method="_on_buy_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ShopPage/ComfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/Yes" to="VBoxContainer/ShopPage/ViewProductPage" method="_on_yes_pressed"]
-[connection signal="pressed" from="VBoxContainer/ShopPage/ComfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/No" to="VBoxContainer/ShopPage/ViewProductPage" method="_on_no_pressed"]
-[connection signal="toggled" from="VBoxContainer/HomePage/VBoxContainer/BookMarks/HBoxContainer/BigView" to="VBoxContainer/HomePage" method="_on_big_view_toggled"]
-[connection signal="pressed" from="VBoxContainer/HomePage/VBoxContainer/GridContainer/Website1" to="." method="_on_website_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/HomePage/VBoxContainer/GridContainer/GameThumbnail1" to="VBoxContainer/HomePage" method="_on_game_thumbnail_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo/BuyButton" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/Yes" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_yes_pressed"]
+[connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/No" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_no_pressed"]
+[connection signal="toggled" from="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer/BigView" to="VBoxContainer/HomePageBG" method="_on_big_view_toggled"]
+[connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/Website1" to="." method="_on_website_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/GameThumbnail1" to="VBoxContainer/HomePageBG" method="_on_game_thumbnail_1_pressed"]

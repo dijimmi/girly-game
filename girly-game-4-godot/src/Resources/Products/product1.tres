@@ -9,11 +9,7 @@
 script = ExtResource("2_g2745")
 product_name = "Astrolo uwu"
 description = "omg buy this"
-category = "lolita"
-featured = true
-base_texture = ExtResource("1_tu7ad")
-tint_texture = ExtResource("3_rno5k")
-top_texture = ExtResource("4_ffp4n")
-base_colors = Array[Color]([Color(0.96629757, 0.7803342, 0.6509524, 1)])
-tint_colors = Array[Color]([Color(0.9578343, 0.7495059, 0.99060017, 1)])
-top_colors = Array[Color]([Color(0.97601026, 0.67829454, 0.7944711, 1)])
+keywords = null
+base_colors = Array[Color]([Color(0.96629757, 0.7803342, 0.6509524, 1), Color(1, 1, 1, 1)])
+tint_colors = Array[Color]([Color(0.9578343, 0.7495059, 0.99060017, 1), Color(0.81924945, 0.709145, 0.9227487, 1)])
+top_colors = Array[Color]([Color(0.97601026, 0.67829454, 0.7944711, 1), Color(0.16318431, 0.0012440475, 0.24307337, 1)])
