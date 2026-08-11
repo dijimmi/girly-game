@@ -95,3 +95,5 @@ text = "our super cool loading/transition screen"
 libraries/ = SubResource("AnimationLibrary_sipf8")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1837929909]
+
+[node name="Cutscenes" type="CanvasLayer" parent="." unique_id=524578417]
