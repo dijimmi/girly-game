@@ -27,6 +27,14 @@ func add_all_products():
 			add_product(product)
 
 
+func get_products():
+	var list = []
+	for child in product_grid.get_children():
+		list.append(child)
+		
+	return list
+
+
 func add_product(product_res):
 	var product = product_thumbnail.instantiate()
 	product.setup(product_res)

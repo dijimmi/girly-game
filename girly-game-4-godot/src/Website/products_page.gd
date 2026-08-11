@@ -7,6 +7,8 @@ signal product_clicked_from_category(product)
 
 var categories_names = []
 
+var unique_products = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().process_frame
@@ -28,3 +30,27 @@ func add_category(_name):
 	new_cat.category = "[url=%s]%s[/url]" % [_name, _name]
 	new_cat.product_clicked_from_thumbnail.connect(_on_product_clicked_from_thumbnail)
 	products_list.add_child(new_cat)
+
+
+func hide_all_products():
+	var list = get_all_products()
+	
+	for product in list:
+		product.visible = false
+
+
+func get_all_products():
+	var list = []
+	for category in products_list.get_children():
+		for product in category.get_products():
+			list.append(product)
+		
+	return list
+
+
+func get_categories():
+	var list = []
+	for category in products_list.get_children():
+		list.append(category)
+		
+	return list

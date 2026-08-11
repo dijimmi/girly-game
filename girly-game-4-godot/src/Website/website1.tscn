@@ -60,10 +60,12 @@ text = "redo"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ShopPageSearchBar" type="PanelContainer" parent="VBoxContainer" unique_id=70517041]
+[node name="ShopPageSearchBar" type="PanelContainer" parent="VBoxContainer" unique_id=70517041 node_paths=PackedStringArray("search_bar", "products_list")]
 visible = false
 layout_mode = 2
 script = ExtResource("2_g3asw")
+search_bar = NodePath("TopBar/SearchBar")
+products_list = NodePath("../ShopPageBG/ProductsList")
 
 [node name="TopBar" type="HBoxContainer" parent="VBoxContainer/ShopPageSearchBar" unique_id=1729806456]
 layout_mode = 2
@@ -298,6 +300,8 @@ stretch_mode = 5
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Undo" to="." method="_on_undo_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Redo" to="." method="_on_redo_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_submitted"]
+[connection signal="pressed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchButton" to="VBoxContainer/ShopPageSearchBar" method="_on_search_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo/BuyButton" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_buy_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/Yes" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_yes_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/No" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_no_pressed"]

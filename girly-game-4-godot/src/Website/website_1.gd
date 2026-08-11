@@ -29,8 +29,10 @@ func init_products():
 	const path = "res://src/Resources/Products/"
 	
 	var files = DirAccess.get_files_at(path)
+	var id = 0
 	for file_name in files:
 		var loaded_product = load(path + file_name)
+		loaded_product.id = id
 		ProductInfo.products.append(loaded_product)
 
 
