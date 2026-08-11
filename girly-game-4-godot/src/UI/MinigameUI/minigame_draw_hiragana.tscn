@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bhrvdg5ftyble" path="res://src/UI/MinigameUI/minigame_draw_hiragana.gd" id="1_k6yt4"]
 [ext_resource type="PackedScene" uid="uid://ckjywq7d7pc5d" path="res://src/Entity/drawing_frame.tscn" id="2_vhj4k"]
+[ext_resource type="Texture2D" uid="uid://btqi3441eaut5" path="res://import/Art/UIArt/handakuten.png" id="3_217i8"]
+[ext_resource type="Texture2D" uid="uid://cocu2tg20h3di" path="res://import/Art/UIArt/dakuten.png" id="4_f73qd"]
 [ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/UIArt/a_1.png" id="4_lkbmo"]
 [ext_resource type="Texture2D" uid="uid://bjqv567gklwfr" path="res://import/Art/UIArt/hiragana_writing_background.png" id="12_2lagt"]
 
@@ -28,6 +30,10 @@ offset_top = -222.0
 offset_right = 192.0
 offset_bottom = 162.0
 mouse_default_cursor_shape = 2
+ten_pictures = Dictionary[String, Texture2D]({
+"dakuten": ExtResource("4_f73qd"),
+"handakuten": ExtResource("3_217i8")
+})
 label = NodePath("../Label")
 max_point_distance = 3.0
 
@@ -51,6 +57,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_lkbmo")
+expand_mode = 2
+
+[node name="TextureRectMini" type="TextureRect" parent="DrawingFrame" unique_id=2142908196]
+self_modulate = Color(1, 1, 1, 0.21960784)
+custom_minimum_size = Vector2(192, 192)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -192.0
+grow_horizontal = 0
+grow_vertical = 0
+expand_mode = 2
+
+[node name="TextureRectParticle" type="TextureRect" parent="DrawingFrame" unique_id=912643335]
+self_modulate = Color(1, 1, 1, 0.21960784)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 expand_mode = 2
 
 [node name="Label" type="Label" parent="." unique_id=758819483]

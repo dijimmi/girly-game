@@ -7,10 +7,11 @@ func start_minigame(meta : String) -> void:
 	if meta == "" or meta == null:
 		return
 	word_to_teach = meta
-	difficulty = _calculate_difficulty()[get_parent().current_rounds]
+	difficulty = 0 #_calculate_difficulty()[get_parent().current_rounds]
 	
 	current_symbol = 0
 	current_line = 0
+	update_current_character()
 	update_guide()
 	self.show()
 
@@ -63,9 +64,10 @@ func _get_mid_exp(letters : PackedStringArray) -> float:
 
 #_______-DIFFICULTY 0-_______#
 var current_symbol : int = 0
+var current_character  : String = ""
 var current_line : int = 0
 func verify_line() -> void:
-	var current_letter = word_to_teach[current_symbol]
+	var current_letter = current_character
 	var lines_dict = $DrawingFrame.hiragana_dictionary.find_key(current_letter)
 
 	if $DrawingFrame.recognise_line():
@@ -79,7 +81,11 @@ func verify_line() -> void:
 		var lines = get_tree().get_nodes_in_group("Lines")
 		lines[-1].queue_free()
 		$DrawingFrame.lines.pop_back()
-
+func update_current_character(hint : String = ""):
+	if current_symbol < word_to_teach.length():
+		current_character = word_to_teach[current_symbol]
+	if hint != "":
+		current_character = hint
 #______-DIFFICULTY 1-2-______#
 func verify_symbol() -> void:
 	if difficulty == 0:
@@ -95,23 +101,45 @@ func next_symbol() -> void:
 	$DrawingFrame.clear_frame()
 	$DrawingFrame.update_label(word_to_teach[current_symbol])
 	current_symbol += 1
+	update_current_character()
 	if current_symbol >= word_to_teach.length():
 		end_minigame()
-	else:
-		update_guide()
+		return
+	if word_to_teach[current_symbol] in $DrawingFrame.mini_hiragana_dictionary:
+		update_current_character($DrawingFrame.mini_hiragana_dictionary[word_to_teach[current_symbol]])
+	elif word_to_teach[current_symbol] in $DrawingFrame.dakuten_hiragana_dictionary:
+		update_current_character($DrawingFrame.dakuten_hiragana_dictionary[word_to_teach[current_symbol]])
+	elif word_to_teach[current_symbol] in $DrawingFrame.handakuten_hiragana_dictionary:
+		update_current_character($DrawingFrame.handakuten_hiragana_dictionary[word_to_teach[current_symbol]])
+	update_guide()
 func update_guide(hint : String = "") -> void:
 	var frames_dict : Dictionary = {}
 	var current_letter : String
+	var texture_rect = $DrawingFrame/TextureRect
+	
 	if current_symbol < word_to_teach.length():
 		current_letter = word_to_teach[current_symbol]
+		
 	if hint != "":
-		$DrawingFrame/TextureRect.texture = Texture2D.new()
+		texture_rect.texture = Texture2D.new()
 		return
-	elif hint in frames_dict.keys():
-		$DrawingFrame/TextureRect.texture = frames_dict[hint]
+		
+	$DrawingFrame/TextureRectMini.texture = Texture2D.new()
+	$DrawingFrame/TextureRect.texture = Texture2D.new()
+	
+	if word_to_teach[current_symbol] in $DrawingFrame.mini_hiragana_dictionary:
+		texture_rect = $DrawingFrame/TextureRectMini
+		current_letter = $DrawingFrame.mini_hiragana_dictionary[current_letter]
+	elif word_to_teach[current_symbol] in $DrawingFrame.dakuten_hiragana_dictionary:
+		current_letter = $DrawingFrame.dakuten_hiragana_dictionary[current_letter]
+	elif word_to_teach[current_symbol] in $DrawingFrame.handakuten_hiragana_dictionary:
+		current_letter = $DrawingFrame.handakuten_hiragana_dictionary[current_letter]
+	
+	if hint in frames_dict.keys():
+		texture_rect.texture = frames_dict[hint]
 		return
+		
 	if !$DrawingFrame.hiragana_picture[current_letter]:
-		print($DrawingFrame.hiragana_picture[current_letter]," ", current_letter)
 		return
 	frames_dict = $DrawingFrame.hiragana_picture[current_letter].frames
 	
@@ -121,5 +149,4 @@ func update_guide(hint : String = "") -> void:
 			frame = frames_dict[str(current_line+1)]
 		1:
 			frame = frames_dict["full"]
-
-	$DrawingFrame/TextureRect.texture = frame
+	texture_rect.texture = frame

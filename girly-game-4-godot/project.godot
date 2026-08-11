@@ -46,7 +46,8 @@ layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres
 layout/default_style="res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
 variables={
 "FriendName": "Aoi",
-"PlayerName": "Player",
+"PlayerName": "あき",
+"PlayerNameJP": "あき",
 "PresName": "Club President"
 }
 text/letter_speed=0.015

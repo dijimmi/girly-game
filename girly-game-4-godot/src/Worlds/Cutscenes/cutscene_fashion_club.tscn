@@ -40,6 +40,7 @@ _data = {
 }
 
 [node name="CutsceneFashionClub" type="Control" unique_id=1072741678 node_paths=PackedStringArray("animationPlayer")]
+custom_minimum_size = Vector2(1152, 648)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,6 +54,15 @@ metadata/_custom_type_script = "uid://ygtkg1tswi38"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1823480902]
 libraries/ = SubResource("AnimationLibrary_vtsys")
 autoplay = &"cutscene"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1972750276]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07815645, 0.07815645, 0.07815645, 1)
 
 [node name="Label" type="Label" parent="." unique_id=748065565]
 layout_mode = 1

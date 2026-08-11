@@ -18,6 +18,7 @@ func _start_minigames(meta : String) -> void:
 		minigame.start_minigame(meta)
 		await EventBus.minigame_round_end
 		current_rounds += 1
+	EventBus.minigame_end.emit()
 func _choose_minigame_order() -> void:
 	minigame_order.clear()
 	for i in rounds:

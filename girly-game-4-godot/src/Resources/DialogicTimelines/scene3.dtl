@@ -6,3 +6,12 @@ update pres left [move_time="0.5" move_trans="cubic"]
 join friend right
 friend: うん！
 main_character: I guess so
+do Dialogue.start_minigame(Dialogic.VAR.PlayerNameJP)
+pres: サンキュー!
+pres: You can look around and hang out, we’ll be starting our meeting soon
+main_character: Thank you
+friend: はい~
+main_character: Alright so... I joined, now I can leave, right?
+friend: Eh? マジ?!!
+main_character: I’m just messing with you.
+main_character: Anyway, it looks like there’s a few people around, I don’t want to interrupt them…

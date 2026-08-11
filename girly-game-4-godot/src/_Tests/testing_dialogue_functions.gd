@@ -6,5 +6,6 @@ var i = "いきしちにひみり"
 var u = "うくすつぬふむゆる"
 var e = "えけせてねへめれ"
 var o = "おこそとのほもよろをん"
+
 func _ready() -> void:
-	Dialogue.start_minigame(a+i, 1)
+	Dialogue.start_minigame(o, 1)

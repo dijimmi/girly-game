@@ -12,7 +12,7 @@ class_name DrawingFrame extends Control
 	["horizontal", "curved1up", "curved1right"] : "さ",
 	["horizontal", "vertical", "curved1up"]     : "さ",
 	["horizontal", "vertical", "horizontal", "horizontal"]   : "た",
-	["horizontal", "vertical", "horizontal", "curved1right"] : "た",
+	["horizontal", "vertical", "curved1right", "curved1right"] : "た",
 	["horizontal", "vertical", "horizontal", "curved3rightloop1"] : "な", 
 	["horizontal", "vertical", "curved1left", "curved2rightloop1"] : "な",
 	["horizontal", "vertical", "curved1left", "curved2downloop1"] : "な",
@@ -27,6 +27,8 @@ class_name DrawingFrame extends Control
 	["horizontal", "horizontal", "curved3rightloop1"] : "ま",
 	["curved2left", "horizontal", "vertical"]   : "や",
 	["curved1left", "vertical", "vertical"] : "や",
+	["curved2up", "horizontal", "vertical"]   : "や",
+	["curved1up", "vertical", "vertical"] : "や",
 	["curved1left", "curved2left"] : "ら",
 	["curved1down", "curved3left"] : "ら",
 	["curved1down", "curved3up"] : "ら",
@@ -44,7 +46,9 @@ class_name DrawingFrame extends Control
 	["horizontal", "horizontal", "curved1left", "curved1right"] : "き",
 	["horizontal", "horizontal", "vertical", "horizontal"]      : "き",
 	["curved1up"] : "し",
+	["curved2up"] : "し",
 	["horizontal", "curved3left"]: "ち",
+	["horizontal", "curved2left"]: "ち",
 	["curved1up", "horizontal","horizontal"]: "に",
 	["curved1right", "horizontal","curved1right"]: "に",
 	["curved5right"]      : "ひ",
@@ -62,13 +66,33 @@ class_name DrawingFrame extends Control
 	["vertical","curved1left"]: "り",
 	["curved1up","vertical"]: "り",
 	["curved1right","vertical"]: "り",
+	
+
+	
+	["horizontal", "curved1left"] : "う",
+	["horizontal", "curved1up"] : "う",
+	["horizontal", "curved2left"] : "う",
+	["curved1rightku"] : "く",
+	["curved1downku"]  : "く",
+	["horizontal","curved2leftloop1"] : "す",
+	["horizontal","curved3leftloop1"] : "す",
+	["horizontal","curved3leftloop4"] : "す",
+	["horizontal","curved4leftloop1"] : "す",
+	["horizontal","curved4leftloop2"] : "す",
 	["curved1left"] : "つ",
-	["horizontal", "curved5loopright"] : "ぬ",
-	["vertical", "curved5loopdown"]   : "ぬ",
-	["curved1", "curved4loopright"]    : "ぬ",
-	["curved1down", "curved1left", "vertical", "horizontal"] : "ふ",
-	["curved1left", "curved1left", "vertical", "horizontal"] : "ふ",
+	["curved2left"] : "つ",
+	["horizontal", "curved6downloop5"]  : "ぬ",
+	["vertical", "curved5downloop2"]    : "ぬ",
+	["vertical", "curved5rightloop3"]        : "ぬ",
+	["vertical", "curved5downloop2"]    : "ぬ",
+	["curved1down", "curved6downloop2"] : "ぬ",
+	["curved1down", "curved1left", "curved1right", "vertical"] : "ふ",
+	["curved1left", "cureved1up", "curved1up", "horizontal"]   : "ふ",
 	["horizontal", "curved4uploop1", "horizontal"] : "む",
+	["horizontal", "curved5uploop1", "horizontal"] : "む",
+	["horizontal", "curved5uploop2", "horizontal"] : "む",
+	["horizontal", "curved6downloop2", "horizontal"] : "む",
+	["horizontal", "curved4tleftloop1", "vertical"] : "む",
 	["curved3left", "vertical"]     : "ゆ",
 	["curved4left", "vertical"]     : "ゆ",
 	["curved4leftloop1","vertical"] :"ゆ",
@@ -78,40 +102,113 @@ class_name DrawingFrame extends Control
 	["curved4downloop1"] : "る",
 	["curved5downloop1"] : "る",
 	["curved6downloop1"] : "る",
+	["curved4downloop2"] : "る",
+	["curved5downloop2"] : "る",
+	["curved6downloop2"] : "る",
+	["curved6downloop3"] : "る",
+	
 	["horizontal", "curved3rightloop1"] : "え",
 	["horizontal", "curved4rightloop1"]  : "え",
 	["horizontal", "curved3rightloop2"] : "え",
 	["horizontal", "curved4rightloop2"]  : "え",
+	["horizontal", "curved4right"]  : "え",
 	["curved1up", "horizontal","curved1down"] : "け",
-	["vertical", "horizontal","curved1left"] : "け",
-	["horizontal", "vertical", "curved1right"]  : "せ",
-	["curved2"] : "て",
-	["curved2loop1"] : "て",
-	["vertical", "curved5loop2"] : "ね",
-	["vertical", "curved6loop2"] : "ね",
-	["curved1down"] : "へ",
-	["vertical", "curved4loop1"] : "め",
-	["horizontal", "curved5loop1"] : "め",
+	["curved1right", "horizontal","curved1left"] : "け",
+	["vertical", "horizontal","vertical"] : "け",
+	["horizontal", "curved1left", "curved1right"]  : "せ",
+	["curved2right"] : "て",
+	["curved3right"] : "て",
+	["curved2rightloop1"] : "て",
+	["vertical", "curved5downloop1"] : "ね",
+	["vertical", "curved5downloop2"] : "ね",
+	["vertical", "curved5downloop4"] : "ね",
+	["vertical", "curved6downloop1"] : "ね",
+	["vertical", "curved6downloop2"] : "ね",
+	["vertical", "curved6downloop3"] : "ね",
+	["vertical", "curved6downloop4"] : "ね",
+	["vertical", "curved6downloop5"] : "ね",
+	["vertical", "curved6downloop6"] : "ね",
+	["curved1downhe"] : "へ",
+	["curved1righthe"] : "へ",
+	["vertical", "curve3leftloop1"] : "め",
+	["vertical", "curved4leftloop1"] : "め",
+	["horizontal", "curved5leftloop1"] : "め",
 	["vertical", "curved4up"] : "れ",
 	["vertical", "curved4uploop1"] : "れ",
 	
-	["horizontal", "curved4loop1", "horizontal"] : "お",
-	["horizontal", "curved3loop1", "vertical"] : "お",
-	["horizontal", "horizontal"] : "こ",
-	["horizontal", "curved1"]    : "こ",
-	["curved4"] : "そ",
-	["vertical", "curved1"]   : "と",
-	["horizontal", "curved1"] : "と",
-	["curved4loop1"] : "の",
-	["curved3loop1"] : "の",
-	["curved1", "horizontal", "horizontal", "curved2loop1"] : "ほ",
-	["vertical", "horizontal", "horizontal", "curved2loop2"] : "ほ",
-	["horizontal", "horizontal", "curved1"] : "も",
-	["horizontal", "horizontal", "curved2"] : "も",
-	["curved2loop1", "horizontal"] : "よ",
-	["curved3"] : "ろ",
-	["horizontal", "curved2", "curve1"] : "を",
-	["curved2loop2"] : "ん"
+	["horizontal", "curved4leftloop1", "horizontal"] : "お",
+	["horizontal", "curved3leftloop1", "vertical"] : "お",
+	["horizontal", "curved3leftloop1", "curved1down"] : "お",
+	["curved1left", "horizontal"] : "こ",
+	["curved1left", "curved1right"]    : "こ",
+	["curved4right"]      : "そ",
+	["curved4rightloop4"] : "そ",
+	["curved5rightloop2"] : "そ",
+	["curved5rightloop1"] : "そ",
+	["curved5right"]      : "そ",
+	["vertical", "curved1right"]   : "と",
+	["horizontal", "curved2right"] : "と",
+	["curved4left"]      : "の",
+	["curved4leftloop1"] : "の",
+	["curved4leftloop2"] : "の",
+	["curved3leftloop1"] : "の",
+	["curved1up", "horizontal", "horizontal", "curved2downloop1"] : "ほ",
+	["curved1right", "horizontal", "horizontal", "curved2downloop2"] : "ほ",
+	["curved1up", "horizontal", "horizontal", "curved2rightloop1"] : "ほ",
+	["curved1right", "horizontal", "horizontal", "curved2rightloop2"] : "ほ",
+	["curved2up", "horizontal", "horizontal"] : "も",
+	["curved2left", "horizontal", "horizontal"] : "も",
+	["horizontal","curved2rightloop1"] : "よ",
+	["horizontal","curved3rightloop1"] : "よ",
+	["horizontal","curved3downloop1"] : "よ",
+	["curved4left"] : "ろ",
+	["curved4leftloop1"] : "ろ",
+	["horizontal", "curved2down", "curved1right"]      : "を",
+	["horizontal", "curved2downloop1", "curved2right"] : "を",
+	["curved4down"] : "ん",
+	["curved2downloop2"] : "ん",
+	["curved3up"] : "ん",
+	["curved3left"] : "ん",
+	["curved3down"] : "ん",
+}
+@export var dakuten_hiragana_dictionary : Dictionary = {
+	"が" : "か",
+	"ぎ" : "き",
+	"ぐ" : "く",
+	"げ" : "け",
+	"ご" : "こ",
+	
+	"ば" : "は",
+	"び" : "ひ",
+	"ぶ" : "ふ",
+	"べ" : "へ",
+	"ぼ" : "ほ",
+	
+	"だ" : "た",
+	"ぢ" : "ち", #dji/ji
+	"づ" : "つ", #dzu/zu
+	"で" : "て",
+	"ど" : "と",
+	
+	"ざ" : "さ",
+	"じ" : "し", #ji
+	"ず" : "す",
+	"ぜ" : "せ",
+	"ぞ" : "そ",
+}
+@export var handakuten_hiragana_dictionary : Dictionary = {
+	"ぱ" : "は",
+	"ぴ" : "ひ",
+	"ぷ" : "ふ",
+	"ぺ" : "へ",
+	"ぽ" : "ほ",
+}
+@export var mini_hiragana_dictionary : Dictionary = {
+	"っ" : "つ",
+	"ゅ": "ゆ",
+	"ぇ": "え",
+	"ゃ": "や",
+	"ょ": "よ",
 }
 @export var hiragana_picture : Dictionary[String, HiraganaFrames] = {
 	"あ": null,
@@ -166,9 +263,13 @@ class_name DrawingFrame extends Control
 	
 	"ん" : null
 }
+@export var ten_pictures : Dictionary[String, Texture2D] = {
+	"handakuten" : null,
+	"dakuten" : null,
+}
 @export var label : Label
 @export_category("Drawing")
-@export var max_point_distance : float = 0.1 #5.5
+@export var max_point_distance : float = 5.5
 
 
 func _ready() -> void:
@@ -177,11 +278,15 @@ func _ready() -> void:
 
 #________________-SYMBOLS-________________#
 func recognise_line(i : int = get_parent().current_line) -> bool:
+	
 	var result = false
 	var total_lines = []
 
-	var value_to_look_for = get_parent().word_to_teach[get_parent().current_symbol]
-	
+	var value_to_look_for = get_parent().current_character
+	if current_line == null:
+		return result
+	if current_line.points.size() < 10:
+		return result
 	for line in hiragana_dictionary:
 		
 		if hiragana_dictionary[line] == value_to_look_for:
@@ -193,7 +298,7 @@ func recognise_line(i : int = get_parent().current_line) -> bool:
 		print("[drawing_frame] : character not recognised. Possible line : ", total_lines," recognised line : ", lines[i])
 	return result
 func recognise_character():
-	var value_to_look_for = get_parent().word_to_teach[get_parent().current_symbol]
+	var value_to_look_for = get_parent().current_character
 	var nbr_of_lines = hiragana_dictionary.find_key(value_to_look_for).size()
 	if nbr_of_lines > lines.size():
 		return null
@@ -237,21 +342,22 @@ func _gui_input(event: InputEvent) -> void:
 
 var lines : Array = []
 var current_line : Line2D = null
+var last_comitted_point : Vector2
 func _draw_new_line() -> void:
 	if current_line == null:
 		current_line = Line2D.new()
 		current_line.default_color = Color(0,0,0)
 		current_line.add_to_group("Lines")
 		add_child(current_line)
-	
-	if current_line.points.size()-1 == -1:
 		current_line.add_point(mouse_pos)
+		last_comitted_point = mouse_pos
+	
+	if mouse_pos.distance_to(last_comitted_point) >= max_point_distance:
+		current_line.add_point(mouse_pos)
+		last_comitted_point = mouse_pos
 	else:
-		var last_pi = current_line.get_point_count()-1
-		if mouse_pos.distance_to(current_line.get_point_position(last_pi)) < max_point_distance:
-			current_line.set_point_position(last_pi, mouse_pos)
-		else:
-			current_line.add_point(mouse_pos)
+		var last_pi  = current_line.get_point_count() -1
+		current_line.set_point_position(last_pi ,mouse_pos)
 
 var curve_points : Array = []
 var total_curve : float = 0.0
@@ -286,7 +392,12 @@ func _detect_curve_points() -> String:
 	if curve_points.size() == 0:
 		result = _h_or_v()
 	else:
-		result = "curved" + str(curve_points.size()) + _detect_last_direction() + _detect_loop()
+		result = (
+			"curved" + str(curve_points.size()) + 
+			_detect_last_direction() + 
+			_detect_loop() +
+			_is_it_he_or_ku()
+		)
 	
 	return result
 
@@ -329,7 +440,6 @@ func _detect_loop()-> String:
 func _detect_last_direction() -> String:
 	var result : String = ""
 	var p_direction = current_line.points[-2].direction_to(current_line.points[-1])
-	
 	if abs(p_direction.x) > abs(p_direction.y):
 		if p_direction.x > 0:
 			result = "right"
@@ -340,9 +450,20 @@ func _detect_last_direction() -> String:
 			result = "down"
 		else:
 			result = "up"
+
 	
 	return result
-
+func _is_it_he_or_ku() -> String:
+	var result = ""
+	var symbol_to_teach = get_parent().current_character
+	if lines.size() == 0 && (symbol_to_teach == "へ" or symbol_to_teach == "く"):
+		var fpoint = current_line.points[0]
+		var lpoint = current_line.points[-1]
+		if fpoint.x > size.x/2 and lpoint.x > size.x/2:
+			result = "ku"
+		if fpoint.y > size.y/2 and lpoint.y > size.y/2:
+			result = "he"
+	return result
 func _detect_current_line_shape() -> void:
 	if !current_line:
 		return

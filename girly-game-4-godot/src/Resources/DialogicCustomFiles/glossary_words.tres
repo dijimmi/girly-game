@@ -7,9 +7,16 @@ script = ExtResource("1_l5idx")
 entries = {
 "あお": {
 "alternatives": ["あおい"],
+"case_sensitive": true,
 "name": "あお"
 },
 "あおい": "あお",
+"うん": {
+"name": "うん"
+},
+"はい": {
+"name": "はい"
+},
 "やった": {
 "name": "やった"
 }

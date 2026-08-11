@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c6ojot2ko0pnp" path="res://src/UI/MinigameUI/minigame_draw_hiragana.tscn" id="1_c2nxf"]
 
 [node name="MinigameHandler" type="CanvasLayer" unique_id=906300315]
-layer = 20
+layer = 1000
 script = ExtResource("1_bnn44")
 
 [node name="DrawHiragana" parent="." unique_id=2074376187 instance=ExtResource("1_c2nxf")]

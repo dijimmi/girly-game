@@ -9,7 +9,7 @@ var default_name = {
 	}
 	
 var names = [
-	{"name": "Itachi",
+	{"name": "さとう",
 	"voiced_by" : ["lover","friend","president"]
 	},
 	{"name": "Evil Itachi",
