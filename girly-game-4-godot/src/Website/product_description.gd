@@ -13,13 +13,13 @@ func _ready() -> void:
 func setup(product):
 	var description : String = product.description
 	for word in product.description.split(" "):
-		description = description.replace(word, ProductInfo.make_clickable(word))
+		description = description.replace(word, ProductInfo.make_clickable(product_description, word))
 	
 	var dict = {
 		"description": description,
-		"collection": ProductInfo.make_clickable(product.category),
-		"substyle": ProductInfo.make_clickable(product.substyle),
-		"type": ProductInfo.make_clickable(product.accesory_type),
+		"collection": ProductInfo.make_clickable(product_description, product.category),
+		"substyle": ProductInfo.make_clickable(product_description, product.substyle),
+		"type": ProductInfo.make_clickable(product_description, product.accesory_type),
 	}
 	
 	var desc_template = "{description}\nCollection: {collection}\nSubstyle: {substyle}\nAccesory Type: {type}\n
@@ -27,7 +27,7 @@ func setup(product):
 	
 	var product_name_str : String = product.product_name
 	for word in product.product_name.split(" "):
-		product_name_str = product_name_str.replace(word, ProductInfo.make_clickable(word))
+		product_name_str = product_name_str.replace(word, ProductInfo.make_clickable(product_name, word))
 	
 	product_name.text = product_name_str
 	product_description.text = desc_template

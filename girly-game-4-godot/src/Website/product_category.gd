@@ -14,6 +14,10 @@ func _ready() -> void:
 	await get_tree().process_frame
 	if category != "":
 		category_name.text = category
+		if ProductInfo.FEATURED in category:
+			category_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		else:
+			category_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	add_all_products()
 
 
@@ -35,9 +39,9 @@ func get_products():
 	return list
 
 
-func add_product(product_res):
+func add_product(product_res, p_size : String = "M"):
 	var product = product_thumbnail.instantiate()
-	product.setup(product_res)
+	product.setup(product_res, p_size)
 	product_grid.add_child(product)
 	product.product_clicked.connect(_on_product_clicked)
 

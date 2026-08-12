@@ -35,4 +35,5 @@ func _on_search_button_pressed() -> void:
 
 
 func _on_search_bar_text_changed(new_text: String) -> void:
-	_on_search_prompted(new_text)
+	#_on_search_prompted(new_text)
+	pass

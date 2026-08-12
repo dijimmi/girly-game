@@ -1,11 +1,13 @@
 extends Control
 
 @export var shop_page : PanelContainer
-@export var shop_page_seach_bar : PanelContainer
-
-@export var products_page : ScrollContainer
+@export var products_list_page : ScrollContainer
 @export var view_product_page : HBoxContainer
 @export var product_big_view : VBoxContainer
+@export var featured_page : PanelContainer
+
+@export var shop_page_seach_bar : PanelContainer
+
 @export var homepage : PanelContainer
 
 @export var undo : Button
@@ -20,7 +22,7 @@ var stack = [
 func _ready() -> void:
 	init_products()
 	
-	products_page.product_clicked_from_category.connect(view_product)
+	shop_page.product_clicked_from_category.connect(view_product)
 	product_big_view.color_changed.connect(_on_color_changed)
 	toggle_undo_and_redo()
 
@@ -37,10 +39,14 @@ func init_products():
 
 
 func view_product(dict, index = 0, from_redo = false):
+	shop_page.visible = true
 	view_product_page.visible = true
 	
-	products_page.visible = false
+	products_list_page.visible = false
 	shop_page_seach_bar.visible = false
+	featured_page.visible = false
+	# TODO: MAKE THIS BETTER, CURRRENTLY THE FEATURED PAGE DISAPPEARS
+	# AFTER CLICKING ON A PRODUCT AND IT'S GONE FOREVER
 	
 	if not from_redo:
 		stack.clear()
@@ -68,8 +74,9 @@ func _on_undo_pressed() -> void:
 
 func view_webpage():
 	shop_page.visible = true
-	products_page.visible = true
+	products_list_page.visible = true
 	shop_page_seach_bar.visible = true
+	
 	
 	view_product_page.visible = false
 	homepage.visible = false

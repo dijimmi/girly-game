@@ -1,7 +1,9 @@
-extends ScrollContainer
+extends PanelContainer
 
 @export var products_list : VBoxContainer
 @export var category_scene : PackedScene
+@export var featured_products : PanelContainer
+
 
 signal product_clicked_from_category(product)
 
@@ -25,11 +27,21 @@ func _on_product_clicked_from_thumbnail(product):
 	product_clicked_from_category.emit(product)
 
 
-func add_category(_name):
+func add_category(category_name):
 	var new_cat = category_scene.instantiate()
-	new_cat.category = ProductInfo.make_clickable(_name)
+	new_cat.category = ProductInfo.make_clickable(new_cat.category_name, category_name)
 	new_cat.product_clicked_from_thumbnail.connect(_on_product_clicked_from_thumbnail)
-	products_list.add_child(new_cat)
+	
+	if category_name == ProductInfo.FEATURED:
+		add_featured_category(new_cat)
+	else:
+		products_list.add_child(new_cat)
+
+
+func add_featured_category(category_node : Container):
+	category_node.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	category_node.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	featured_products.add_child(category_node)
 
 
 func hide_all_products():

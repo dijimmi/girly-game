@@ -6,6 +6,7 @@ extends VBoxContainer
 
 @export var color_option : PackedScene
 @export var colors : HBoxContainer
+@export var image_bg : PanelContainer
 
 var current_product : Resource
 var current_color_index : int = 0
@@ -17,19 +18,23 @@ func _ready() -> void:
 	pass
 
 
-func setup(product, index):
+func setup(product : Product, index):
 	current_product = product
+	image_bg.custom_minimum_size = Vector2(450,450)
 	
-	base_img.texture = product.base_texture
-	tint_img.texture = product.tint_texture
-	top_img.texture = product.top_texture
+	for rect in image_bg.get_children():
+		rect.queue_free()
+	
+	var textures = product.get_texture_rect_list()
+	for texture in textures:
+		image_bg.add_child(texture)
 	
 	change_color(product, index)
 	
 	for color in colors.get_children():
 		color.queue_free()
 	
-	for i in product.base_colors.size():
+	for i in product.color_set1.size():
 		add_button(product, i)
 
 
@@ -38,8 +43,8 @@ func add_button(product, index):
 	btn.id = index
 	
 	var style : StyleBoxFlat = btn.get_theme_stylebox("normal").duplicate(true)
-	style.bg_color = product.tint_colors[index]
-	style.border_color = product.base_colors[index]
+	style.bg_color = get_color_set(product, index)[0]
+	style.border_color = get_color_set(product, index)[1]
 	
 	btn.add_theme_stylebox_override("normal", style)
 	btn.pressed_id.connect(_on_color_option_presed)
@@ -47,13 +52,30 @@ func add_button(product, index):
 	colors.add_child(btn)
 
 
-func change_color(product, index):
+func change_color(product : Product, index):
 	current_color_index = index
 	color_changed.emit(index)
 	
-	base_img.modulate = product.base_colors[index]
-	tint_img.modulate = product.tint_colors[index]
-	top_img.modulate = product.top_colors[index]
+	var color_count = product.get_texture_rect_list().size()
+	
+	for i in color_count:
+		var texture : TextureRect = image_bg.get_child(i)
+		
+		if get_color_set(product, index).size() <= i:
+			texture.modulate = product.default_color
+			continue
+		
+		texture.modulate = get_color_set(product, index)[i]
+
+
+func get_color_set(product : Product, index : int):
+	match index:
+		0:
+			return product.color_set1
+		1:
+			return product.color_set2
+		2:
+			return product.color_set3
 
 
 func _on_color_option_presed(index):

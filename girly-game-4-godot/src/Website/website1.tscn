@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://clng3ve2espro" path="res://src/Website/product_description.gd" id="8_j4fsc"]
 [ext_resource type="Script" uid="uid://orx1kc0prqx3" path="res://src/Website/home_page.gd" id="9_s3gt3"]
 
-[node name="Website1" type="Control" unique_id=1482182095 node_paths=PackedStringArray("shop_page", "shop_page_seach_bar", "products_page", "view_product_page", "product_big_view", "homepage", "undo", "redo")]
+[node name="Website1" type="Control" unique_id=1482182095 node_paths=PackedStringArray("shop_page", "products_list_page", "view_product_page", "product_big_view", "featured_page", "shop_page_seach_bar", "homepage", "undo", "redo")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,10 +20,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_22k47")
 shop_page = NodePath("VBoxContainer/ShopPageBG")
-shop_page_seach_bar = NodePath("VBoxContainer/ShopPageSearchBar")
-products_page = NodePath("VBoxContainer/ShopPageBG/ProductsList")
+products_list_page = NodePath("VBoxContainer/ShopPageBG/ProductsList")
 view_product_page = NodePath("VBoxContainer/ShopPageBG/BigProductPage")
 product_big_view = NodePath("VBoxContainer/ShopPageBG/BigProductPage/ProductBigView")
+featured_page = NodePath("VBoxContainer/ShopPageBG/FeaturedProducts")
+shop_page_seach_bar = NodePath("VBoxContainer/ShopPageSearchBar")
 homepage = NodePath("VBoxContainer/HomePageBG")
 undo = NodePath("VBoxContainer/AddressBarBG/AddressBar/Undo")
 redo = NodePath("VBoxContainer/AddressBarBG/AddressBar/Redo")
@@ -60,8 +61,54 @@ text = "redo"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ShopPageSearchBar" type="PanelContainer" parent="VBoxContainer" unique_id=70517041 node_paths=PackedStringArray("search_bar", "products_list")]
+[node name="HomePageBG" type="PanelContainer" parent="VBoxContainer" unique_id=1566243328 node_paths=PackedStringArray("grid")]
 visible = false
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("9_s3gt3")
+grid = NodePath("VBoxContainer/GridContainer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HomePageBG" unique_id=1166477260]
+layout_mode = 2
+
+[node name="BookMarks" type="PanelContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=1909946765]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks" unique_id=1505256674]
+layout_mode = 2
+
+[node name="BigView" type="Button" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1113590106]
+layout_mode = 2
+toggle_mode = true
+text = "big view"
+
+[node name="Game1" type="LinkButton" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1031569832]
+layout_mode = 2
+text = "game"
+uri = "https://jillsplades.itch.io/my-little-bento-shop"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=388935697]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+columns = 3
+
+[node name="Website1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/GridContainer" unique_id=205117791]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture_normal = ExtResource("1_g8ui5")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="GameThumbnail1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/GridContainer" unique_id=1613849403]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture_normal = ExtResource("2_7tgyq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ShopPageSearchBar" type="PanelContainer" parent="VBoxContainer" unique_id=70517041 node_paths=PackedStringArray("search_bar", "products_list")]
 layout_mode = 2
 script = ExtResource("2_g3asw")
 search_bar = NodePath("TopBar/SearchBar")
@@ -88,24 +135,29 @@ texture_normal = ExtResource("2_7tgyq")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Button" type="Button" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=1222659261]
-layout_mode = 2
-text = "Sign Up"
-
-[node name="Button2" type="Button" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=1464678767]
-layout_mode = 2
-text = "Log In"
-
-[node name="ShopPageBG" type="PanelContainer" parent="VBoxContainer" unique_id=1604782043]
-visible = false
+[node name="ShopPageBG" type="PanelContainer" parent="VBoxContainer" unique_id=1604782043 node_paths=PackedStringArray("products_list", "featured_products")]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="ProductsList" type="ScrollContainer" parent="VBoxContainer/ShopPageBG" unique_id=132185964 node_paths=PackedStringArray("products_list")]
-layout_mode = 2
 script = ExtResource("4_qv1vs")
-products_list = NodePath("VBoxContainer")
+products_list = NodePath("ProductsList/VBoxContainer")
 category_scene = ExtResource("3_7tgyq")
+featured_products = NodePath("FeaturedProducts")
+
+[node name="FeaturedProducts" type="PanelContainer" parent="VBoxContainer/ShopPageBG" unique_id=1860977486]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/ShopPageBG/FeaturedProducts" unique_id=1735584603]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "If you're looking for something else, feel free to use the search bar!"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="ProductsList" type="ScrollContainer" parent="VBoxContainer/ShopPageBG" unique_id=132185964]
+visible = false
+layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ShopPageBG/ProductsList" unique_id=664245952]
 layout_mode = 2
@@ -218,52 +270,6 @@ text = "yes"
 layout_mode = 2
 text = "no"
 
-[node name="HomePageBG" type="PanelContainer" parent="VBoxContainer" unique_id=1566243328 node_paths=PackedStringArray("grid")]
-layout_mode = 2
-size_flags_vertical = 3
-script = ExtResource("9_s3gt3")
-grid = NodePath("VBoxContainer/GridContainer")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HomePageBG" unique_id=1166477260]
-layout_mode = 2
-
-[node name="BookMarks" type="PanelContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=1909946765]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks" unique_id=1505256674]
-layout_mode = 2
-
-[node name="BigView" type="Button" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1113590106]
-layout_mode = 2
-toggle_mode = true
-text = "big view"
-
-[node name="Game1" type="LinkButton" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1031569832]
-layout_mode = 2
-text = "game"
-uri = "https://jillsplades.itch.io/my-little-bento-shop"
-
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=388935697]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-columns = 3
-
-[node name="Website1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/GridContainer" unique_id=205117791]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-texture_normal = ExtResource("1_g8ui5")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="GameThumbnail1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/GridContainer" unique_id=1613849403]
-visible = false
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-texture_normal = ExtResource("2_7tgyq")
-ignore_texture_size = true
-stretch_mode = 5
-
 [node name="TaskBarBG" type="PanelContainer" parent="VBoxContainer" unique_id=527215838]
 layout_mode = 2
 size_flags_vertical = 8
@@ -303,6 +309,9 @@ stretch_mode = 5
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Undo" to="." method="_on_undo_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Redo" to="." method="_on_redo_pressed"]
+[connection signal="toggled" from="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer/BigView" to="VBoxContainer/HomePageBG" method="_on_big_view_toggled"]
+[connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/Website1" to="." method="_on_website_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/GameThumbnail1" to="VBoxContainer/HomePageBG" method="_on_game_thumbnail_1_pressed"]
 [connection signal="text_changed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_changed"]
 [connection signal="text_submitted" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_submitted"]
 [connection signal="pressed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchButton" to="VBoxContainer/ShopPageSearchBar" method="_on_search_button_pressed"]
@@ -312,6 +321,3 @@ stretch_mode = 5
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/BigProductPage/ProductInfo/BuyButton" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_buy_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/Yes" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_yes_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/No" to="VBoxContainer/ShopPageBG/BigProductPage" method="_on_no_pressed"]
-[connection signal="toggled" from="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer/BigView" to="VBoxContainer/HomePageBG" method="_on_big_view_toggled"]
-[connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/Website1" to="." method="_on_website_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/GameThumbnail1" to="VBoxContainer/HomePageBG" method="_on_game_thumbnail_1_pressed"]

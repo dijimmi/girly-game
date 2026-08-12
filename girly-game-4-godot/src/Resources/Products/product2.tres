@@ -1,19 +1,11 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://b6uepykbi27af"]
 
-[ext_resource type="Texture2D" uid="uid://bgdkg5inwbms5" path="res://import/Art/ShopIcons/a_outfit_base.png" id="1_dgxjc"]
 [ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="2_cnsq6"]
-[ext_resource type="Texture2D" uid="uid://xy7cyx23tjet" path="res://import/Art/ShopIcons/a_outfit_tint.png" id="3_vhhwm"]
-[ext_resource type="Texture2D" uid="uid://whhh5a6787uv" path="res://import/Art/ShopIcons/a_outfit_top.png" id="4_t63jh"]
 
 [resource]
 script = ExtResource("2_cnsq6")
-product_name = "Chii"
+product_name = "ブランド2"
 description = "omg buy this"
-category = "lolita"
 featured = true
-base_texture = ExtResource("1_dgxjc")
-tint_texture = ExtResource("3_vhhwm")
-top_texture = ExtResource("4_t63jh")
-base_colors = Array[Color]([Color(1, 1, 1, 1)])
-tint_colors = Array[Color]([Color(0.5914475, 0.88574797, 0.97477156, 1)])
-top_colors = Array[Color]([Color(0.35928494, 0.79390806, 0.8297075, 1)])
+textures_path = "res://import/Art/shop/capelet/"
+color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

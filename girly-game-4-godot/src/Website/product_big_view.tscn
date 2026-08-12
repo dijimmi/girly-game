@@ -1,39 +1,20 @@
 [gd_scene format=3 uid="uid://dtf43equp8j4p"]
 
 [ext_resource type="Script" uid="uid://bxjkyey0ljtc5" path="res://src/Website/product_big_view.gd" id="1_w3iv3"]
-[ext_resource type="Texture2D" uid="uid://bgdkg5inwbms5" path="res://import/Art/ShopIcons/a_outfit_base.png" id="2_el67g"]
-[ext_resource type="Texture2D" uid="uid://xy7cyx23tjet" path="res://import/Art/ShopIcons/a_outfit_tint.png" id="3_6oldi"]
-[ext_resource type="Texture2D" uid="uid://whhh5a6787uv" path="res://import/Art/ShopIcons/a_outfit_top.png" id="4_v3h7l"]
 [ext_resource type="PackedScene" uid="uid://cqjldnlnjjm50" path="res://src/Website/color_option.tscn" id="5_el67g"]
 
-[node name="Product" type="VBoxContainer" unique_id=2119791306 node_paths=PackedStringArray("base_img", "tint_img", "top_img", "colors")]
+[node name="Product" type="VBoxContainer" unique_id=2119791306 node_paths=PackedStringArray("base_img", "tint_img", "top_img", "colors", "image_bg")]
 size_flags_vertical = 4
 script = ExtResource("1_w3iv3")
-base_img = NodePath("ProductImage/BaseImage")
-tint_img = NodePath("ProductImage/TintImage")
-top_img = NodePath("ProductImage/TopImage")
+base_img = NodePath("")
+tint_img = NodePath("")
+top_img = NodePath("")
 color_option = ExtResource("5_el67g")
 colors = NodePath("ColorOptions")
+image_bg = NodePath("ProductImage")
 
 [node name="ProductImage" type="PanelContainer" parent="." unique_id=1549824024]
 layout_mode = 2
-
-[node name="BaseImage" type="TextureRect" parent="ProductImage" unique_id=27718934]
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("2_el67g")
-
-[node name="TintImage" type="TextureRect" parent="ProductImage" unique_id=1106551516]
-modulate = Color(0.8291007, 0.8965092, 0.9761612, 1)
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("3_6oldi")
-
-[node name="TopImage" type="TextureRect" parent="ProductImage" unique_id=507152058]
-modulate = Color(0.41549835, 0.62718534, 0.9946385, 1)
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("4_v3h7l")
 
 [node name="ColorOptions" type="HBoxContainer" parent="." unique_id=633142424]
 layout_mode = 2
