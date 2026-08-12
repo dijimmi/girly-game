@@ -1,30 +1,50 @@
 extends Control
 
-@export var shop_page : PanelContainer
+@export var my_vbox : VBoxContainer
+
+@export var address_bar : PanelContainer
+@export var task_bar : PanelContainer
+
+@export var shop_page_seach_bar : PanelContainer
+
+@export var shop_page : ShopPage
 @export var products_list_page : ScrollContainer
 @export var view_product_page : HBoxContainer
 @export var product_big_view : VBoxContainer
 @export var featured_page : PanelContainer
-
-@export var shop_page_seach_bar : PanelContainer
+@export var ads : VBoxContainer
 
 @export var homepage : PanelContainer
 
 @export var undo : Button
 @export var redo : Button
 
-var stack_idx = -1
+
+var pages : Dictionary[String, Array] = {}
+
+var stack_idx = 0
 
 var stack = [
+	ProductInfo.HOME
 ]
+
+var active_page : String = ProductInfo.HOME
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	pages = {
+		ProductInfo.HOME:             [homepage],
+		ProductInfo.SHOP_PAGE_SEARCH: [shop_page, shop_page_seach_bar, products_list_page],
+		ProductInfo.FEATURED_PAGE:    [shop_page_seach_bar, shop_page, featured_page],
+		ProductInfo.SHOP_PAGE_BUY:    [shop_page_seach_bar, shop_page, view_product_page]
+	}
+	
 	init_products()
 	
+	shop_page_seach_bar.search_prompted.connect(_on_search_prompted)
+	shop_page_seach_bar.pressed_logo_from_search_bar.connect(_on_website_1_pressed)
 	shop_page.product_clicked_from_category.connect(view_product)
-	product_big_view.color_changed.connect(_on_color_changed)
-	toggle_undo_and_redo()
 
 
 func init_products():
@@ -39,36 +59,12 @@ func init_products():
 
 
 func view_product(dict, index = 0, from_redo = false):
-	shop_page.visible = true
-	view_product_page.visible = true
-	
-	products_list_page.visible = false
-	shop_page_seach_bar.visible = false
-	featured_page.visible = false
-	# TODO: MAKE THIS BETTER, CURRRENTLY THE FEATURED PAGE DISAPPEARS
-	# AFTER CLICKING ON A PRODUCT AND IT'S GONE FOREVER
-	
-	if not from_redo:
-		stack.clear()
-		stack_idx = 0
-		stack.append([dict, index])
+	change_page(ProductInfo.SHOP_PAGE_BUY)
 		
 	view_product_page.setup_page(dict, index)
 	
 	print("normal view pressed: %s" % stack_idx)
 	
-	toggle_undo_and_redo()
-
-
-func _on_color_changed(index):
-	await get_tree().process_frame
-	stack[stack_idx][1] = index
-
-
-func _on_undo_pressed() -> void:
-	stack_idx -= 1
-	print("undo pressed: %s" % stack_idx)
-	view_webpage()
 	toggle_undo_and_redo()
 
 
@@ -83,26 +79,84 @@ func view_webpage():
 
 
 func toggle_undo_and_redo():
-	redo.disabled = stack_idx >= (stack.size() - 1)
-	undo.disabled = stack_idx < 0
+	pass
+	#redo.disabled = stack_idx >= (stack.size() - 1)
+	#undo.disabled = stack_idx < 0
+
+
+func change_page(page : String, new = true):
+	active_page = page
+	if new:
+		stack.resize(stack_idx + 1)
+		save_state(page)
+	
+	for node in my_vbox.get_children():
+		if node in pages[page] or node == address_bar or node == task_bar:
+			node.visible = true
+		else:
+			node.visible = false
+	
+	for sub_node in shop_page.get_children():
+		if sub_node in pages[page] or sub_node == ads:
+			sub_node.visible = true
+		else:
+			sub_node.visible = false
+
+
+func save_state(page):
+	for node : Container in pages[page]:
+		if node in my_vbox.get_children():
+			if node.has_method("save_state"):
+				node.save_state(page, stack.count(page))
+				stack.append(page)
+				stack_idx += 1
+				
+				print(stack)
+				print("\n")
+				print("state saved: ", page, "pages count: ", stack.count(page))
+				return
+
+
+func load_state(from_undo : bool):
+	var page = stack[stack_idx]
+	
+	for node : Container in pages[page]:
+		if node in my_vbox.get_children():
+			if node.has_method("load_state"):
+				node.load_state(page, from_undo)
+				change_page(page, false)
+				
+				print("state loaded: ", page)
+				return
+
+
+func _on_undo_pressed() -> void:
+	if stack_idx > 0:
+		stack_idx -= 1
+		load_state(true)
+		
+	print("undo pressed: %s" % stack_idx)
 
 
 func _on_redo_pressed() -> void:
-	stack_idx += 1
-	print("redo pressed: %s" % stack_idx)
-	if stack_idx < stack.size():
+	if stack_idx < stack.size() - 1:
+		stack_idx += 1
+		load_state(false)
 		
-		var product = stack[stack_idx][0]
-		var index = stack[stack_idx][1]
+	print("redo pressed: %s" % stack_idx)
 
-		view_product(product, index, true)
+
+func _on_search_prompted(text):
+	text = text.strip_edges().to_lower()
+	shop_page.clear_search_results()
+	shop_page.add_category(text, "keyword")
+	
+	change_page(ProductInfo.SHOP_PAGE_SEARCH)
 
 
 func _on_website_1_pressed() -> void:
-	view_webpage()
+	change_page(ProductInfo.FEATURED_PAGE)
 
 
 func _on_home_pressed() -> void:
-	homepage.visible = true
-	shop_page.visible = false
-	shop_page_seach_bar.visible = false
+	change_page(ProductInfo.HOME)

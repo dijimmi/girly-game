@@ -1,3 +1,4 @@
+class_name ViewProductPage
 extends HBoxContainer
 
 @export var buy_popup : CanvasLayer
@@ -7,6 +8,10 @@ extends HBoxContainer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+
+
+func get_state():
+	return product_big_view.get_state()
 
 
 func setup_page(product, index = 0):

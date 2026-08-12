@@ -1,7 +1,10 @@
 extends PanelContainer
 
 @export var search_bar : LineEdit
-@export var products_list : ScrollContainer
+@export var shop_page : ShopPage
+
+signal pressed_logo_from_search_bar
+signal search_prompted(text)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,21 +12,7 @@ func _ready() -> void:
 
 
 func _on_search_prompted(text : String):
-	text = text.strip_edges().to_lower()
-	products_list.hide_all_products()
-	
-	if text == "":
-		products_list.show_all_products()
-		return
-	
-	var list = products_list.get_all_products()
-	
-	for product in list:
-		for keyword : String in product.product_dict.get_keywords():
-			if keyword.to_lower().contains(text):
-				product.visible = true
-				print("SHOW IT")
-				break
+	search_prompted.emit(text)
 
 
 func _on_search_bar_text_submitted(new_text: String) -> void:
@@ -32,6 +21,12 @@ func _on_search_bar_text_submitted(new_text: String) -> void:
 
 func _on_search_button_pressed() -> void:
 	_on_search_prompted(search_bar.text)
+
+
+func _on_website_logo_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			pressed_logo_from_search_bar.emit()
 
 
 func _on_search_bar_text_changed(new_text: String) -> void:

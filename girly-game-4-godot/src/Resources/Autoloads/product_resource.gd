@@ -29,7 +29,6 @@ func get_keywords():
 	keyword_list.append(substyle)
 	keyword_list.append(accesory_type)
 	
-	
 	return keyword_list
 
 
@@ -49,7 +48,7 @@ func get_texture_rect_list() -> Array[TextureRect]:
 		texture_rect.expand_mode = TextureRect.EXPAND_FIT_HEIGHT_PROPORTIONAL
 		list.append(texture_rect)
 	
-	print("Product: %s, Textures %d" % [product_name, texture_files.size()])
+	#print("Product: %s, Textures %d" % [product_name, texture_files.size()])
 	return list
 
 

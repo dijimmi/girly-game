@@ -7,6 +7,14 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
+func save_state(_page, _undo):
+	pass
+
+
+func load_state(_page, _undo):
+	pass
+
+
 func _on_big_view_toggled(toggled_on: bool) -> void:
 	for child in grid.get_children():
 		if child.name.begins_with("Game"):

@@ -8,7 +8,7 @@ extends VBoxContainer
 @export var colors : HBoxContainer
 @export var image_bg : PanelContainer
 
-var current_product : Resource
+var current_product : Resource = load("res://src/Resources/Products/product3.tres")
 var current_color_index : int = 0
 
 signal color_changed(index : int)
@@ -18,8 +18,13 @@ func _ready() -> void:
 	pass
 
 
+func get_state():
+	return [current_product, current_color_index]
+
+
 func setup(product : Product, index):
 	current_product = product
+	current_color_index = index
 	image_bg.custom_minimum_size = Vector2(450,450)
 	
 	for rect in image_bg.get_children():
@@ -29,6 +34,7 @@ func setup(product : Product, index):
 	for texture in textures:
 		image_bg.add_child(texture)
 	
+	await get_tree().process_frame
 	change_color(product, index)
 	
 	for color in colors.get_children():
@@ -53,8 +59,9 @@ func add_button(product, index):
 
 
 func change_color(product : Product, index):
+	
+	print("start getting colored")
 	current_color_index = index
-	color_changed.emit(index)
 	
 	var color_count = product.get_texture_rect_list().size()
 	
@@ -63,8 +70,10 @@ func change_color(product : Product, index):
 		
 		if get_color_set(product, index).size() <= i:
 			texture.modulate = product.default_color
+			print("REDDDDDDDD")
 			continue
 		
+		print("Colored SUCCESS")
 		texture.modulate = get_color_set(product, index)[i]
 
 

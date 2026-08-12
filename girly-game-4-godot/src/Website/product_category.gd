@@ -1,3 +1,4 @@
+class_name ProductCategory
 extends VBoxContainer
 
 @export var category : String
@@ -18,10 +19,13 @@ func _ready() -> void:
 			category_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		else:
 			category_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	add_all_products()
 
 
-func add_all_products():
+func set_category(text : String):
+	category = text
+
+
+func add_products_by_category():
 	for product in ProductInfo.products:
 		if ProductInfo.FEATURED in category and product.featured:
 			add_product(product)
@@ -29,6 +33,16 @@ func add_all_products():
 			
 		if product.category in category:
 			add_product(product)
+
+
+func add_products_by_keywords(text : String):
+	for product in ProductInfo.products:
+		for keyword in product.get_keywords():
+			#print("Curr keyword: %s, target: %s" % [keyword, text])
+			if text in keyword:
+				add_product(product)
+				#print("product added: %s" % product.product_name)
+				break
 
 
 func get_products():
