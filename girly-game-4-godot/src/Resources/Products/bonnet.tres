@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Product" format=3 uid="uid://c4yeixpws6cus"]
+
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_bcjjk"]
+
+[resource]
+script = ExtResource("1_bcjjk")
+product_name = "ブランド1"
+level = 0
+accesory_type = "ボンネット"
+featured = true
+textures_path = "res://import/Art/shop/bonnet"
+color_set1 = Array[Color]([Color(1, 0.9652279, 0.93821573, 1), Color(1, 0.8666667, 0.7607843, 1), Color(1, 0.9123663, 0.84354013, 1), Color(2.6471912e-06, 0.6228534, 0.3202492, 1)])
+color_set2 = Array[Color]([Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 0, 1)])
+color_set3 = Array[Color]([Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 0, 1)])

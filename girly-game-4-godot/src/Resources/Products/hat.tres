@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://b3qllwfh67nhj"]
 
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="2_g2745"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_8gtbp"]
 
 [resource]
-script = ExtResource("2_g2745")
+script = ExtResource("1_8gtbp")
 product_name = "ブランド5"
+level = 0
 accesory_type = "ぼうし"
+featured = true
 winner = true
 textures_path = "res://import/Art/shop/hat"
 color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://bxwn15shq0k77"]
 
 [ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="1_llbsw"]
+[ext_resource type="Shader" uid="uid://ch1u5euemkya5" path="res://src/UI/inventory/scrolling.gdshader" id="1_vqbv0"]
+[ext_resource type="Texture2D" uid="uid://bgdkg5inwbms5" path="res://import/Art/ShopIcons/a_outfit_base.png" id="2_vqbv0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5y7bv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_86jij"]
+shader = ExtResource("1_vqbv0")
+shader_parameter/speed = 0.1
 
 [node name="InventoryScreen" type="Control" unique_id=1976150385]
 layout_mode = 3
@@ -17,6 +25,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5y7bv")
+
+[node name="TextureRect" type="TextureRect" parent="InventoryBG" unique_id=785723008]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_86jij")
+layout_mode = 2
+texture = ExtResource("2_vqbv0")
+expand_mode = 3
+stretch_mode = 1
 
 [node name="WordsContainer" type="PanelContainer" parent="InventoryBG" unique_id=1095729773]
 custom_minimum_size = Vector2(500, 0)

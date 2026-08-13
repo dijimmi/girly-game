@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Product" format=3 uid="uid://5ifqv686wkoo"]
+
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_6l5qq"]
+
+[resource]
+script = ExtResource("1_6l5qq")
+product_name = "ブランド4"
+level = 0
+accesory_type = "ヘアリボン"
+textures_path = "res://import/Art/shop/hair_ribbon"
+color_set1 = Array[Color]([Color(1, 1, 1, 1), Color(0.19793725, 0.19793725, 0.19793719, 1), Color(0.22959322, 0.22959325, 0.22959319, 1), Color(0, 0, 0, 1)])
+color_set2 = Array[Color]([Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 0, 1)])
+color_set3 = Array[Color]([Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 0, 1)])

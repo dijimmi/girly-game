@@ -1,15 +1,11 @@
 extends VBoxContainer
 
-@export var base_img : TextureRect
-@export var tint_img : TextureRect
-@export var top_img : TextureRect
-
 @export var color_option : PackedScene
 @export var colors : HBoxContainer
 @export var image_bg : PanelContainer
 
 #should probably use uid instead so that we can move around folders if needed
-var current_product : Resource = load("res://src/Resources/Products/product4.tres")
+var current_product : Product = load("uid://dr06sukifi4iv")
 var current_color_index : int = 0
 
 @warning_ignore("unused_signal")
@@ -42,7 +38,7 @@ func setup(product : Product, index):
 	for color in colors.get_children():
 		color.queue_free()
 	
-	for i in product.color_set1.size():
+	for i in product.color_set_count:
 		add_button(product, i)
 
 

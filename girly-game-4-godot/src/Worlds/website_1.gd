@@ -48,15 +48,17 @@ func _ready() -> void:
 	
 	change_page(ProductInfo.HOME)
 
+
 func init_products():
 	const path = "res://src/Resources/Products/"
 	
 	var files = DirAccess.get_files_at(path)
 	var id = 0
 	for file_name in files:
-		var loaded_product = load(path + file_name)
+		var loaded_product : Product = load(path + file_name)
 		loaded_product.id = id
-		ProductInfo.products.append(loaded_product)
+		if loaded_product.level == ProductInfo.Level.ONE:
+			ProductInfo.products.append(loaded_product)
 
 
 func view_product(dict, index = 0, _from_redo = false):

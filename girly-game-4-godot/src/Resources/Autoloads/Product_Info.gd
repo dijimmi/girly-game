@@ -8,7 +8,7 @@ const SHOP_PAGE_BUY = "shop_page_buy"
 
 var products : Array[Product]
 var meta_text = null
-
+enum Level {ONE, TWO, THREE, FOUR}
 
 func make_clickable(node : RichTextLabel, text : String) -> String:
 	if not node.meta_hover_started.is_connected(_on_meta_hover_started):
