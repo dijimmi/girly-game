@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @export var scene_array: Dictionary[String, PackedScene]
 @export var main_menu  : PackedScene

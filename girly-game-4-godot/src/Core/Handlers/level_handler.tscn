@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cjya42uw7j128" path="res://src/Worlds/scene1.tscn" id="2_q84wo"]
 [ext_resource type="PackedScene" uid="uid://b87xryrg3eybu" path="res://src/UI/MainMenuUI/main_menu.tscn" id="3_sipf8"]
 [ext_resource type="PackedScene" uid="uid://w0xct215t6of" path="res://src/Worlds/Cutscenes/cutscene_fashion_club.tscn" id="4_1yjvo"]
+[ext_resource type="PackedScene" uid="uid://3gbqc8g1x28u" path="res://src/Worlds/website1.tscn" id="5_j1ikt"]
 
 [sub_resource type="Animation" id="Animation_3mgl7"]
 length = 0.001
@@ -57,12 +58,19 @@ _data = {
 &"trans_out": SubResource("Animation_q84wo")
 }
 
-[node name="LevelHandler" type="Node2D" unique_id=186740295]
+[node name="LevelHandler" type="Control" unique_id=1058136623]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_rnf1n")
 scene_array = Dictionary[String, PackedScene]({
 "cutscene fashion club": ExtResource("4_1yjvo"),
 "main menu": ExtResource("3_sipf8"),
-"scene1": ExtResource("2_q84wo")
+"scene1": ExtResource("2_q84wo"),
+"website1": ExtResource("5_j1ikt")
 })
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1557219362]

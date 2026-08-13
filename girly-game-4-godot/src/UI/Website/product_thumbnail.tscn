@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drxjnq3fmknhi"]
 
-[ext_resource type="Script" uid="uid://col1e77wbqaxe" path="res://src/Website/product_thumbnail.gd" id="1_31fjj"]
+[ext_resource type="Script" uid="uid://col1e77wbqaxe" path="res://src/UI/Website/product_thumbnail.gd" id="1_31fjj"]
 
 [node name="ProductThumbnail" type="VBoxContainer" unique_id=1907573936 node_paths=PackedStringArray("title", "image_bg", "base_img", "tint_img", "top_img")]
 offset_right = 100.0

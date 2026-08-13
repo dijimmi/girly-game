@@ -28,7 +28,7 @@ func _on_website_logo_gui_input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			pressed_logo_from_search_bar.emit()
 
-
+@warning_ignore("unused_parameter")
 func _on_search_bar_text_changed(new_text: String) -> void:
 	#_on_search_prompted(new_text)
 	pass

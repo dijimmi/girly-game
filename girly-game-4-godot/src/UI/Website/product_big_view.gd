@@ -8,9 +8,11 @@ extends VBoxContainer
 @export var colors : HBoxContainer
 @export var image_bg : PanelContainer
 
-var current_product : Resource = load("res://src/Resources/Products/product3.tres")
+#should probably use uid instead so that we can move around folders if needed
+var current_product : Resource = load("res://src/Resources/Products/product4.tres")
 var current_color_index : int = 0
 
+@warning_ignore("unused_signal")
 signal color_changed(index : int)
 
 # Called when the node enters the scene tree for the first time.

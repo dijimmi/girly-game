@@ -34,11 +34,16 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "New Save"
 
-[node name="SettingsButton2" type="Button" parent="Control/Buttons" unique_id=2005764265]
+[node name="LoadSaveButton" type="Button" parent="Control/Buttons" unique_id=2005764265]
 visible = false
 custom_minimum_size = Vector2(128, 24)
 layout_mode = 2
 text = "Load Save"
+
+[node name="PlaytestButton" type="Button" parent="Control/Buttons" unique_id=1202402097]
+custom_minimum_size = Vector2(128, 24)
+layout_mode = 2
+text = "Playtest"
 
 [node name="SettingsButton" type="Button" parent="Control/Buttons" unique_id=1243679909]
 custom_minimum_size = Vector2(128, 24)
@@ -80,3 +85,4 @@ mouse_filter = 2
 color = Color(0.41215247, 0.41215247, 0.41215247, 1)
 
 [connection signal="pressed" from="Control/Buttons/NewSaveButton" to="." method="_on_new_save_button_pressed"]
+[connection signal="pressed" from="Control/Buttons/PlaytestButton" to="." method="_on_playtest_button_pressed"]

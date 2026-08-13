@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bb21jci4ag116"]
 
-[ext_resource type="Script" uid="uid://cjq7bgam8osyw" path="res://src/Website/product_category.gd" id="1_dc83p"]
-[ext_resource type="PackedScene" uid="uid://drxjnq3fmknhi" path="res://src/Website/product_thumbnail.tscn" id="1_lybnk"]
+[ext_resource type="Script" uid="uid://cjq7bgam8osyw" path="res://src/UI/Website/product_category.gd" id="1_dc83p"]
+[ext_resource type="PackedScene" uid="uid://drxjnq3fmknhi" path="res://src/UI/Website/product_thumbnail.tscn" id="1_lybnk"]
 
 [node name="Category" type="VBoxContainer" unique_id=1200025618 node_paths=PackedStringArray("category_name", "product_grid")]
 anchors_preset = 8

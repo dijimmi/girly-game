@@ -59,7 +59,7 @@ func init_products():
 		ProductInfo.products.append(loaded_product)
 
 
-func view_product(dict, index = 0, from_redo = false):
+func view_product(dict, index = 0, _from_redo = false):
 	change_page(ProductInfo.SHOP_PAGE_BUY)
 		
 	view_product_page.setup_page(dict, index)

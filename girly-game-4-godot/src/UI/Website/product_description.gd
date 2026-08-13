@@ -51,5 +51,5 @@ func _on_product_categories_meta_hover_started(meta: Variant) -> void:
 	print('hovering')
 
 
-func _on_product_categories_meta_hover_ended(meta: Variant) -> void:
+func _on_product_categories_meta_hover_ended(_meta: Variant) -> void:
 	meta_text = null
