@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="1_llbsw"]
 [ext_resource type="Shader" uid="uid://ch1u5euemkya5" path="res://src/UI/inventory/scrolling.gdshader" id="1_vqbv0"]
-[ext_resource type="Texture2D" uid="uid://bgdkg5inwbms5" path="res://import/Art/ShopIcons/a_outfit_base.png" id="2_vqbv0"]
+[ext_resource type="Texture2D" uid="uid://dswwkiwydm0ko" path="res://import/Art/ui_tex/ui_tex_rabbit_soft.png" id="2_vqbv0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5y7bv"]
 
@@ -28,6 +28,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_5y7bv")
 
 [node name="TextureRect" type="TextureRect" parent="InventoryBG" unique_id=785723008]
+modulate = Color(0.9999998, 0.95488137, 0.8514231, 1)
 texture_repeat = 2
 material = SubResource("ShaderMaterial_86jij")
 layout_mode = 2
