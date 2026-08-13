@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b7sq5gc84cm"]
+
+[ext_resource type="Texture2D" uid="uid://b584g8jg7i6yo" path="res://samples/assets_girlyjam/portrait/Portrait_Head.png" id="1_vv137"]
+[ext_resource type="Texture2D" uid="uid://djh22sndm65ni" path="res://samples/assets_girlyjam/portrait/outfit_set_a/portrait_acc_a_tint.png" id="2_o2tx3"]
+[ext_resource type="Texture2D" uid="uid://dxhnc5ehf3xs4" path="res://samples/assets_girlyjam/portrait/outfit_set_a/portrait_acc_a_base.png" id="3_sldtp"]
+[ext_resource type="Texture2D" uid="uid://ipof2v0833db" path="res://samples/assets_girlyjam/portrait/outfit_set_a/portrait_acc_a_top.png" id="4_x6twg"]
+[ext_resource type="Texture2D" uid="uid://bbclrn4tn0d7b" path="res://samples/assets_girlyjam/portrait/outfit_set_a/portrait_outfit_a_base.png" id="5_adt5g"]
+[ext_resource type="Texture2D" uid="uid://g7uohhfaeggk" path="res://samples/assets_girlyjam/portrait/outfit_set_a/portrait_outfit_a_tint.png" id="6_qqceq"]
+[ext_resource type="Texture2D" uid="uid://355gdp4nx6fl" path="res://samples/assets_girlyjam/portrait/outfit_set_a/portrait_outfit_a_top.png" id="7_e8ool"]
+[ext_resource type="Texture2D" uid="uid://lu1ep1rmly6u" path="res://samples/assets_girlyjam/portrait/outfit_set_a/portrait_choker_a_base.png" id="8_0gt30"]
+[ext_resource type="Texture2D" uid="uid://ck6jtehqi00" path="res://samples/assets_girlyjam/portrait/outfit_set_a/portrait_choker_a_tint.png" id="9_j7iyy"]
+[ext_resource type="Texture2D" uid="uid://ba75ply888gnx" path="res://samples/assets_girlyjam/portrait/outfit_set_a/portrait_choker_a_top.png" id="10_d31ik"]
+
+[node name="PortraitSample" type="Node2D" unique_id=219636739]
+
+[node name="PortraitHead" type="Sprite2D" parent="." unique_id=2067500521]
+texture = ExtResource("1_vv137")
+
+[node name="Accessory" type="Node2D" parent="." unique_id=2048116749]
+
+[node name="PortraitAccATint" type="Sprite2D" parent="Accessory" unique_id=1752606999]
+modulate = Color(0.8117647, 0.8784314, 1, 1)
+texture = ExtResource("2_o2tx3")
+
+[node name="PortraitAccABase" type="Sprite2D" parent="Accessory" unique_id=708797236]
+texture = ExtResource("3_sldtp")
+
+[node name="PortraitAccATop" type="Sprite2D" parent="Accessory" unique_id=1373162072]
+texture = ExtResource("4_x6twg")
+
+[node name="Outfit" type="Node2D" parent="." unique_id=2088460912]
+
+[node name="PortraitOutfitABase" type="Sprite2D" parent="Outfit" unique_id=303967349]
+texture = ExtResource("5_adt5g")
+
+[node name="PortraitOutfitATint" type="Sprite2D" parent="Outfit" unique_id=1575548896]
+modulate = Color(0.8117647, 0.8784314, 1, 1)
+texture = ExtResource("6_qqceq")
+
+[node name="PortraitOutfitATop" type="Sprite2D" parent="Outfit" unique_id=400928535]
+texture = ExtResource("7_e8ool")
+
+[node name="Choker" type="Node2D" parent="." unique_id=323068615]
+
+[node name="PortraitChokerABase" type="Sprite2D" parent="Choker" unique_id=21203356]
+texture = ExtResource("8_0gt30")
+
+[node name="PortraitChokerATint" type="Sprite2D" parent="Choker" unique_id=261738138]
+modulate = Color(0.8117647, 0.8784314, 1, 1)
+texture = ExtResource("9_j7iyy")
+
+[node name="PortraitChokerATop" type="Sprite2D" parent="Choker" unique_id=1700139662]
+texture = ExtResource("10_d31ik")

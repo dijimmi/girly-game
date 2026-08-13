@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dtf43equp8j4p"]
+
+[ext_resource type="Script" uid="uid://bxjkyey0ljtc5" path="res://src/Website/product_big_view.gd" id="1_w3iv3"]
+[ext_resource type="PackedScene" uid="uid://cqjldnlnjjm50" path="res://src/Website/color_option.tscn" id="5_el67g"]
+
+[node name="Product" type="VBoxContainer" unique_id=2119791306 node_paths=PackedStringArray("base_img", "tint_img", "top_img", "colors", "image_bg")]
+size_flags_vertical = 4
+script = ExtResource("1_w3iv3")
+base_img = NodePath("")
+tint_img = NodePath("")
+top_img = NodePath("")
+color_option = ExtResource("5_el67g")
+colors = NodePath("ColorOptions")
+image_bg = NodePath("ProductImage")
+
+[node name="ProductImage" type="PanelContainer" parent="." unique_id=1549824024]
+layout_mode = 2
+
+[node name="ColorOptions" type="HBoxContainer" parent="." unique_id=633142424]
+layout_mode = 2
+alignment = 1

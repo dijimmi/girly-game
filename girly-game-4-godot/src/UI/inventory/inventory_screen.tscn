@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://bxwn15shq0k77"]
+
+[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="1_llbsw"]
+
+[node name="InventoryScreen" type="Control" unique_id=1976150385]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryBG" type="PanelContainer" parent="." unique_id=185851596]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WordsContainer" type="PanelContainer" parent="InventoryBG" unique_id=1095729773]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryBG/WordsContainer" unique_id=845507190]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InventoryBG/WordsContainer/VBoxContainer" unique_id=1828014079]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InventoryBG/WordsContainer/VBoxContainer/HBoxContainer" unique_id=1773252926]
+layout_mode = 2
+bbcode_enabled = true
+text = "All words:"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="CheckBox" type="CheckBox" parent="InventoryBG/WordsContainer/VBoxContainer/HBoxContainer" unique_id=228381235]
+layout_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="InventoryBG/WordsContainer/VBoxContainer/HBoxContainer" unique_id=1322201054]
+layout_mode = 2
+bbcode_enabled = true
+text = "Show unknown"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="InventoryBG/WordsContainer/VBoxContainer" unique_id=862629560]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryBG/WordsContainer/VBoxContainer/ScrollContainer" unique_id=1251301450]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="InventoryBG/WordsContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=652668016]
+layout_mode = 2
+text = "word me out"
+
+[node name="DisplayContainer" type="PanelContainer" parent="InventoryBG" unique_id=202077620]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryBG/DisplayContainer" unique_id=1199855683]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="InventoryBG/DisplayContainer/VBoxContainer" unique_id=1776276588]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("1_llbsw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InventoryBG/DisplayContainer/VBoxContainer" unique_id=575775751]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InventoryBG/DisplayContainer/VBoxContainer/HBoxContainer" unique_id=2000438289]
+layout_mode = 2
+text = "word me out"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="InventoryBG/DisplayContainer/VBoxContainer/HBoxContainer" unique_id=849342606]
+layout_mode = 2
+text = "copy"
+
+[node name="Button2" type="Button" parent="InventoryBG/DisplayContainer/VBoxContainer/HBoxContainer" unique_id=1153424186]
+layout_mode = 2
+text = "sound"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InventoryBG/DisplayContainer/VBoxContainer" unique_id=394478176]
+layout_mode = 2
+text = "description of the word uwu"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="practice" type="Button" parent="InventoryBG/DisplayContainer/VBoxContainer" unique_id=118372648]
+layout_mode = 2
+text = "practice writing"

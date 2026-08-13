@@ -26,6 +26,7 @@ func setup(name_dict : Dictionary, default : bool):
 	
 	is_default = default
 
+
 func verify_match(text : String):
 	var was_visible : bool = visible
 	
