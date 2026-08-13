@@ -3,11 +3,14 @@ extends Control
 @export var name_widget_scene : PackedScene
 @export var name_list : VBoxContainer
 
+signal name_pressed_from_widget(cname : String)
+
 var default_name = {
 	"name": "default",
 	"voiced_by" : []
 	}
-	
+
+
 var names = [
 	{"name": "さとう",
 	"voiced_by" : ["lover","friend","president"]
@@ -35,6 +38,13 @@ func _ready() -> void:
 		add_name_widget(i)
 		
 	add_name_widget_default()
+	
+	for widget in name_list.get_children():
+		widget.name_pressed.connect(_on_name_pressed)
+
+
+func _on_name_pressed(cname):
+	name_pressed_from_widget.emit(cname)
 
 
 func add_name_widget_default():
