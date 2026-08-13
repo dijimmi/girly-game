@@ -7,6 +7,7 @@ script = ExtResource("1_8gtbp")
 product_name = "ブランド5"
 level = 0
 accesory_type = "ぼうし"
+substyle = "クラシックロリー"
 featured = true
 winner = true
 textures_path = "res://import/Art/shop/hat"

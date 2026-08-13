@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Product" format=3 uid="uid://cna2hxshp32i5"]
-
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="2_g2745"]
-
-[resource]
-script = ExtResource("2_g2745")
-product_name = "ブランド8"
-textures_path = "res://import/Art/shop/outfit_b"
-color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])
