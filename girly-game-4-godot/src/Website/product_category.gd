@@ -43,6 +43,8 @@ func add_products_by_keywords(text : String):
 				add_product(product)
 				#print("product added: %s" % product.product_name)
 				break
+	
+	set_category("\"%s\" の けんさく けっか" % category)
 
 
 func get_products():

@@ -5,6 +5,8 @@ extends HBoxContainer
 @export var product_big_view : VBoxContainer
 @export var product_info : VBoxContainer
 
+var curr_product : Product
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -15,6 +17,8 @@ func get_state():
 
 
 func setup_page(product, index = 0):
+	curr_product = product
+	
 	product_big_view.setup(product, index)
 	product_info.setup(product)
 
@@ -25,7 +29,10 @@ func _on_buy_button_pressed() -> void:
 
 func _on_yes_pressed() -> void:
 	print("YOU BOUGHT THE THINGY :D")
-	assert(false, "Yet to implement transition after buying")
+	if curr_product.winner:
+		$Outcome.play()
+	else:
+		$Outcome2.play()
 
 
 func _on_no_pressed() -> void:

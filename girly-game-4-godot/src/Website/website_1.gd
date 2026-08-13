@@ -45,7 +45,8 @@ func _ready() -> void:
 	shop_page_seach_bar.search_prompted.connect(_on_search_prompted)
 	shop_page_seach_bar.pressed_logo_from_search_bar.connect(_on_website_1_pressed)
 	shop_page.product_clicked_from_category.connect(view_product)
-
+	
+	change_page(ProductInfo.HOME)
 
 func init_products():
 	const path = "res://src/Resources/Products/"

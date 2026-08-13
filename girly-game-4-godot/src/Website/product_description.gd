@@ -22,7 +22,7 @@ func setup(product):
 		"type": ProductInfo.make_clickable(product_description, product.accesory_type),
 	}
 	
-	var desc_template = "{description}\nCollection: {collection}\nSubstyle: {substyle}\nAccesory Type: {type}\n
+	var desc_template = "{description}\nコレクション: {collection}\nけい: {substyle}\nアクセサリー タイプ: {type}\n
 	".format(dict)
 	
 	var product_name_str : String = product.product_name

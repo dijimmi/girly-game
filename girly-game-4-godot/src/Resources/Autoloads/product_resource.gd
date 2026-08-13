@@ -2,22 +2,30 @@ class_name Product
 extends Resource
 
 @export var product_name : String = "Default Lolita Dress"
-@export var description : String = "Buy this now :D"
-@export var category : String = "lolita"
-@export var accesory_type : String = "Dress"
-@export var substyle : String = "sweet"
-@export var featured : bool = false
 @export var id : int = -1
 
+@export_category("Description")
+@export var description : String = "今すぐこれを購入してください"
+@export var category : String = "ロリータ"
+@export var accesory_type : String = "ドレス"
+@export var substyle : String = "あまろりー"
+
+@export_category("Booleans")
+@export var featured : bool = false
+@export var winner : bool = false
+
+@export_category("Keywords")
 @export var keywords : Array[String] = []
 
-@export var textures_path : String = "res://import/Art/shop/ss/a_outfit/"
+@export_category("Texture Directory")
+@export_dir var textures_path : String = "res://import/Art/shop/ss/a_outfit/"
 
+@export_category("Colors")
 @export var color_set1 : Array[Color] = [Color.GREEN, Color.GREEN, Color.GREEN]
 @export var color_set2 : Array[Color] = [Color.GREEN, Color.GREEN, Color.GREEN]
 @export var color_set3 : Array[Color] = [Color.GREEN, Color.GREEN, Color.GREEN]
 
-@export var default_color : Color = Color.RED
+const default_color : Color = Color.RED
 
 func get_keywords():
 	var keyword_list = []
@@ -36,15 +44,17 @@ func get_texture_rect_list() -> Array[TextureRect]:
 	var list : Array = []
 	
 	var texture_files = DirAccess.get_files_at(textures_path)
-	for texture in texture_files:
+	for texture : String in texture_files:
 		if not texture.ends_with(".png"):
+			continue
+		if texture.contains("base_"):
 			continue
 		
 		var texture_rect = TextureRect.new()
-		texture = load(textures_path + texture)
-		assert(texture != null, "This shit is null bro")
+		var loaded_texture = load("%s/%s" % [textures_path, texture])
+		assert(loaded_texture != null, "This shit is null bro")
 		
-		texture_rect.texture = texture
+		texture_rect.texture = loaded_texture
 		texture_rect.expand_mode = TextureRect.EXPAND_FIT_HEIGHT_PROPORTIONAL
 		list.append(texture_rect)
 	

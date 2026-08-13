@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("2_g2745")
 product_name = "ブランド1"
-description = "omg buy this"
-textures_path = "res://import/Art/shop/bonnet/"
+accesory_type = "ボンネット"
+featured = true
+textures_path = "res://import/Art/shop/bonnet"
+color_set1 = Array[Color]([Color(1, 1, 1, 1), Color(1, 0.6466665, 0.8767317, 1), Color(0.7466852, 0.029241381, 0, 1)])
 color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

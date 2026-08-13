@@ -113,6 +113,7 @@ func add_category(category_name : String, mode : String = "category"):
 	elif mode == "keyword":
 		# this shit is not gonna work soon enough cuz the category name is not
 		# gonna be the same as the keyword which is what im using here
+		
 		curr_search = category_name
 		new_cat.add_products_by_keywords(category_name)
 		
