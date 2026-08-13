@@ -1,6 +1,6 @@
 extends Node
 
-const FEATURED = "Featured Products"
+const FEATURED = "お すすめ しょうひん"
 const HOME = "home"
 const SHOP_PAGE_SEARCH = "shop_page_search"
 const FEATURED_PAGE = "featured_page"
@@ -28,12 +28,12 @@ func search_on_glossary(hovered_text) -> Dictionary:
 	return sample_dict
 
 
-func _on_clickable_text_gui_input(event: InputEvent,node : RichTextLabel) -> void:
+func _on_clickable_text_gui_input(event: InputEvent, node : RichTextLabel) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			# Check if the mouse is currently hovering over a meta item
 			if meta_text != null:
-				_on_meta_right_clicked(node, meta_text)
+				_on_meta_right_clicked(meta_text, node)
 
 
 func _on_meta_right_clicked(meta: Variant, node : RichTextLabel) -> void:

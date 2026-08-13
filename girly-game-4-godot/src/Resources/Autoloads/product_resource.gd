@@ -25,9 +25,10 @@ extends Resource
 @export var color_set1 : Array[Color] = [Color.GREEN, Color.GREEN, Color.GREEN]
 @export var color_set2 : Array[Color] = [Color.GREEN, Color.GREEN, Color.GREEN]
 @export var color_set3 : Array[Color] = [Color.GREEN, Color.GREEN, Color.GREEN]
+@export var color_set_count = 3
 
-const color_set_count = 3
 const default_color : Color = Color.RED
+
 
 func get_keywords():
 	var keyword_list = []

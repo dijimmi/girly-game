@@ -48,7 +48,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AddressBarBG" type="PanelContainer" parent="VBoxContainer" unique_id=85514073]
-visible = false
 layout_mode = 2
 size_flags_vertical = 0
 
@@ -73,7 +72,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="HomePageBG" type="PanelContainer" parent="VBoxContainer" unique_id=1566243328 node_paths=PackedStringArray("grid")]
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("2_11yjo")
@@ -294,7 +292,6 @@ layout_mode = 2
 text = "no"
 
 [node name="TaskBarBG" type="PanelContainer" parent="VBoxContainer" unique_id=527215838]
-visible = false
 layout_mode = 2
 size_flags_vertical = 8
 

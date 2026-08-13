@@ -10,4 +10,4 @@ accesory_type = "ぼうし"
 featured = true
 winner = true
 textures_path = "res://import/Art/shop/hat"
-color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])
+color_set1 = Array[Color]([Color(0.7995831, 0.92313135, 0.96972114, 1), Color(1, 1, 1, 1), Color(0.7995831, 0.92313135, 0.96972114, 1), Color(0.7995831, 0.92313135, 0.96972114, 1)])
