@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://d4b0ahy63w48c"]
+
+[ext_resource type="Script" uid="uid://bobikxclxs6en" path="res://src/Worlds/tooltip.gd" id="1_hfqbf"]
+
+[node name="Tooltip" type="CanvasLayer" unique_id=814937963 node_paths=PackedStringArray("virtual_label", "tooltip_bg", "jp_word", "romaji_word", "word_definition")]
+script = ExtResource("1_hfqbf")
+virtual_label = NodePath("PanelContainer/Label")
+tooltip_bg = NodePath("PanelContainer")
+jp_word = NodePath("PanelContainer/VBoxContainer/JapaneseWord")
+romaji_word = NodePath("PanelContainer/VBoxContainer/RomajiWord")
+word_definition = NodePath("PanelContainer/VBoxContainer/Definition")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=682568679]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=80910104]
+layout_mode = 2
+alignment = 1
+
+[node name="JapaneseWord" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1967790809]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+text = "ブランド"
+fit_content = true
+scroll_active = false
+
+[node name="RomajiWord" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=774215867]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+text = "(bu-ra-n-do)"
+fit_content = true
+scroll_active = false
+
+[node name="Definition" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=1077881871]
+layout_mode = 2
+text = "brand - brand of clothing"
+fit_content = true
+scroll_active = false
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=107219324]
+layout_mode = 2
+
+[connection signal="mouse_entered" from="PanelContainer" to="." method="_on_tooltip_mouse_entered"]
+[connection signal="mouse_exited" from="PanelContainer" to="." method="_on_tooltip_mouse_exited"]
