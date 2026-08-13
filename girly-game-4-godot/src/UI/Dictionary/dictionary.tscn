@@ -1,0 +1,271 @@
+[gd_scene format=3 uid="uid://b6tpd4ybxcoh0"]
+
+[ext_resource type="Script" uid="uid://cw8nlpskumrhl" path="res://src/UI/Dictionary/dictionary.gd" id="1_p4bu3"]
+[ext_resource type="Resource" uid="uid://ctu427wqr6fj4" path="res://src/Resources/DialogicCustomFiles/glossary_words.tres" id="2_lwnmy"]
+[ext_resource type="PackedScene" uid="uid://mu6qvv2bagnd" path="res://src/UI/Dictionary/word.tscn" id="3_1pmtp"]
+[ext_resource type="Texture2D" uid="uid://bg57fpq2v6tbh" path="res://image.png" id="4_6gvq8"]
+[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="5_lwnmy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0mr5"]
+content_margin_left = 24.0
+content_margin_right = 10.0
+bg_color = Color(1, 0.69, 0.77783334, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.74, 0.4144, 0.58262676, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Dictionary" type="CanvasLayer" unique_id=1168859383 node_paths=PackedStringArray("word_container", "word_label", "examples_Vbox", "definition")]
+script = ExtResource("1_p4bu3")
+glossary = ExtResource("2_lwnmy")
+word_button = ExtResource("3_1pmtp")
+word_container = NodePath("PageVBoxContainer/AllWords/HBoxContainer/Dictionnary/DictionaryContainer/WordsContainer/ScrollContainer/WordsVBoxContainer")
+word_label = NodePath("PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/WordLabel")
+examples_Vbox = NodePath("PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples/VBoxContainer")
+definition = NodePath("PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Definition")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=290218902]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.85, 0, 0.43916687, 0.12156863)
+
+[node name="PageVBoxContainer" type="VBoxContainer" parent="." unique_id=2004378678]
+custom_maximum_size = Vector2(1152, 648)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="TopPage" type="Control" parent="PageVBoxContainer" unique_id=1883439452]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="PageVBoxContainer/TopPage" unique_id=2040348319]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 105.0
+offset_bottom = 47.0
+text = "<- Back"
+
+[node name="Checkmark" type="TextureButton" parent="PageVBoxContainer/TopPage" unique_id=1765862559]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -337.0
+offset_top = 3.0
+offset_right = -292.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("4_6gvq8")
+texture_pressed = ExtResource("5_lwnmy")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PageVBoxContainer/TopPage" unique_id=1823756687]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 11.0
+offset_right = 461.0
+offset_bottom = 40.0
+text = "Show known words"
+
+[node name="AllWords" type="Control" parent="PageVBoxContainer" unique_id=1610887594]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Background" type="ColorRect" parent="PageVBoxContainer/AllWords" unique_id=1921889553]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.88, 0.616, 0.6952001, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PageVBoxContainer/AllWords" unique_id=2016483755]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Dictionnary" type="MarginContainer" parent="PageVBoxContainer/AllWords/HBoxContainer" unique_id=1062001271]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_bottom = 16
+
+[node name="DictionaryContainer" type="VBoxContainer" parent="PageVBoxContainer/AllWords/HBoxContainer/Dictionnary" unique_id=1053099686]
+clip_children = 1
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+
+[node name="Dictionnary" type="Label" parent="PageVBoxContainer/AllWords/HBoxContainer/Dictionnary/DictionaryContainer" unique_id=2059100614]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Dictionary :"
+
+[node name="WordsContainer" type="MarginContainer" parent="PageVBoxContainer/AllWords/HBoxContainer/Dictionnary/DictionaryContainer" unique_id=1564402439]
+custom_maximum_size = Vector2(-1, 549)
+clip_contents = true
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 28
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PageVBoxContainer/AllWords/HBoxContainer/Dictionnary/DictionaryContainer/WordsContainer" unique_id=867651125]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+horizontal_scroll_mode = 0
+scroll_hint_mode = 2
+
+[node name="WordsVBoxContainer" type="VBoxContainer" parent="PageVBoxContainer/AllWords/HBoxContainer/Dictionnary/DictionaryContainer/WordsContainer/ScrollContainer" unique_id=1735111006]
+layout_mode = 2
+theme_override_constants/separation = 37
+
+[node name="WordDescription" type="Control" parent="PageVBoxContainer/AllWords/HBoxContainer" unique_id=198007943]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="WordDescriptionMovement" type="Control" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription" unique_id=1012342181]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement" unique_id=806242465]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.82, 0.82, 1)
+
+[node name="WordLabel" type="Label" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement" unique_id=537009674]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -98.0
+offset_right = 21.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.63, 0.17009999, 0.4077151, 1)
+theme_override_font_sizes/font_size = 40
+text = "Word"
+horizontal_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/WordLabel" unique_id=1562485021]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.79
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 4.549999
+texture = ExtResource("5_lwnmy")
+expand_mode = 1
+
+[node name="Examples" type="Label" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement" unique_id=2036251294]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 364.0
+offset_right = 100.0
+offset_bottom = 398.0
+theme_override_colors/font_color = Color(0.627451, 0.16862746, 0.40784314, 1)
+text = "Examples :"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples" unique_id=2000214253]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 20.0
+offset_right = 314.0
+offset_bottom = 60.0
+
+[node name="Examples" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples/VBoxContainer" unique_id=96496708]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.627451, 0.16862746, 0.40784314, 1)
+bbcode_enabled = true
+vertical_alignment = 1
+
+[node name="Examples2" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples/VBoxContainer" unique_id=578825741]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.627451, 0.16862746, 0.40784314, 1)
+bbcode_enabled = true
+vertical_alignment = 1
+
+[node name="Examples3" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples/VBoxContainer" unique_id=357692567]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.627451, 0.16862746, 0.40784314, 1)
+bbcode_enabled = true
+vertical_alignment = 1
+
+[node name="Definition" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement" unique_id=1415352105]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 268.0
+offset_right = 401.0
+offset_bottom = 338.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_v0mr5")
+text = "Definition"
+scroll_active = false
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement" unique_id=823415586]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 20.0
+offset_right = 332.0
+offset_bottom = 190.0
+
+[node name="Button" type="Button" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription" unique_id=410299243]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 41.0
+offset_bottom = 40.0
+text = "X"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=968967166]
+
+[connection signal="pressed" from="PageVBoxContainer/TopPage/BackButton" to="." method="dictionary_anim_out"]
+[connection signal="toggled" from="PageVBoxContainer/TopPage/Checkmark" to="." method="update_filter"]
+[connection signal="pressed" from="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/Button" to="." method="word_details_anim_out"]

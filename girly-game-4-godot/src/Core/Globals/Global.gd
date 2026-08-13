@@ -63,3 +63,8 @@ func get_player_exp(key : String) -> float:
 var can_pause : bool = true
 
 var next_scene : String = ""
+
+var glossary : DialogicGlossary = load("uid://ctu427wqr6fj4")
+func unlock_word( word : String) -> void:
+	if word in glossary.entries:
+		EventBus.unlock_word.emit(word)

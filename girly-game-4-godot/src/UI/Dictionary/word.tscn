@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://mu6qvv2bagnd"]
+
+[ext_resource type="Script" uid="uid://byxdpwlqqgc0n" path="res://src/UI/Dictionary/word.gd" id="1_xakxu"]
+
+[node name="Button" type="Button" unique_id=1203445988]
+custom_minimum_size = Vector2(0, 45)
+anchors_preset = -1
+offset_right = 16.0
+offset_bottom = 53.0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = " 
+"
+script = ExtResource("1_xakxu")
+
+[node name="Label" type="Label" parent="." unique_id=684003432]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 1133.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "thisaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+justification_flags = 162
+clip_text = true

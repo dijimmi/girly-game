@@ -38,16 +38,15 @@ directories/dtl_directory={
 "test_timeline": "res://src/_Tests/test_timeline.dtl"
 }
 layout/style_directory={
-"": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
 "CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
 "narration_style_dialogue": "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres", "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"]
-layout/default_style="res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
+layout/default_style=""
 variables={
 "FriendName": "Aoi",
-"PlayerName": "あき",
+"PlayerName": "jfjdjfdsdfj",
 "PlayerNameJP": "あき",
 "PresName": "Club President"
 }

@@ -5,12 +5,13 @@ var minigames : Dictionary[String,PackedScene ]= {
 } 
 
 func start_minigame(word : String, rounds : int = 1, minigame: String = "" ) -> void:
-	print(rounds)
+	
 	var minigame_handler = MinigameHandler.new()
+	minigame_handler.layer = 98
 	minigame_handler.delete_on_finished = true
 	minigame_handler.rounds = rounds
 	minigame_handler.word_to_learn = word
-	minigame_handler.process_mode = Node.PROCESS_MODE_PAUSABLE
+	minigame_handler.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	
 	if minigame == "":
 		for scene in minigames.values():
@@ -24,7 +25,8 @@ func start_minigame(word : String, rounds : int = 1, minigame: String = "" ) -> 
 	minigame_handler._start_minigames(word)
 	EventBus.minigame_end.connect(func (): get_tree().paused = false)
 	get_tree().paused = true
-	print(get_tree()," ",get_tree().root)
+func open_dictionary() -> void:
+	pass
 func set_next_scene(cue : String) -> void:
 	Global.next_scene = cue
 	#print("changed next scene to ",cue," !")

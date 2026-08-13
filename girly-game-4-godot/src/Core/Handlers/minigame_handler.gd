@@ -1,4 +1,4 @@
-class_name MinigameHandler extends Node
+class_name MinigameHandler extends CanvasLayer
 
 var rounds : int = 3
 var current_rounds : int = 0

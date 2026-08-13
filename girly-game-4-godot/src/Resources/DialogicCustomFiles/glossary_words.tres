@@ -8,10 +8,15 @@ entries = {
 "あお": {
 "alternatives": ["あおい"],
 "case_sensitive": true,
-"name": "あお"
+"extra": "examples wooho
+example2 woohoo",
+"name": "あお",
+"text": "blue",
+"title": ""
 },
 "あおい": "あお",
 "うん": {
+"extra": "",
 "name": "うん"
 },
 "はい": {

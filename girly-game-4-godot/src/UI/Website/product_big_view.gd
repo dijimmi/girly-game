@@ -8,7 +8,7 @@ extends VBoxContainer
 @export var colors : HBoxContainer
 @export var image_bg : PanelContainer
 
-#should probably use uid instead so that we can move around folders if needed
+#should probably use uid instead of direct path in case the files get moved around
 var current_product : Resource = load("res://src/Resources/Products/product4.tres")
 var current_color_index : int = 0
 

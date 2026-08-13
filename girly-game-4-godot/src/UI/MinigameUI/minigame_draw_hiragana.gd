@@ -119,7 +119,6 @@ func update_guide(hint : String = "") -> void:
 	
 	if current_symbol < word_to_teach.length():
 		current_letter = word_to_teach[current_symbol]
-		
 	if hint != "":
 		texture_rect.texture = Texture2D.new()
 		return
@@ -134,12 +133,11 @@ func update_guide(hint : String = "") -> void:
 		current_letter = $DrawingFrame.dakuten_hiragana_dictionary[current_letter]
 	elif word_to_teach[current_symbol] in $DrawingFrame.handakuten_hiragana_dictionary:
 		current_letter = $DrawingFrame.handakuten_hiragana_dictionary[current_letter]
-	
 	if hint in frames_dict.keys():
 		texture_rect.texture = frames_dict[hint]
 		return
-		
-	if !$DrawingFrame.hiragana_picture[current_letter]:
+	
+	if not current_letter in $DrawingFrame.hiragana_picture:
 		return
 	frames_dict = $DrawingFrame.hiragana_picture[current_letter].frames
 	

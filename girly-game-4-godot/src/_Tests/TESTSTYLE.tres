@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://brk5adkidcnh3"]
+
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_kgmkk"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="3_a8a6r"]
+
+[sub_resource type="Resource" id="Resource_oy3i0"]
+script = ExtResource("2_kgmkk")
+
+[sub_resource type="Resource" id="Resource_namat"]
+script = ExtResource("2_kgmkk")
+
+[sub_resource type="Resource" id="Resource_18mvw"]
+script = ExtResource("2_kgmkk")
+
+[sub_resource type="Resource" id="Resource_rwff7"]
+script = ExtResource("2_kgmkk")
+
+[sub_resource type="Resource" id="Resource_5k0v5"]
+script = ExtResource("2_kgmkk")
+
+[sub_resource type="Resource" id="Resource_3vniq"]
+script = ExtResource("2_kgmkk")
+
+[sub_resource type="Resource" id="Resource_6iae8"]
+script = ExtResource("2_kgmkk")
+
+[sub_resource type="Resource" id="Resource_87fnk"]
+script = ExtResource("2_kgmkk")
+
+[resource]
+script = ExtResource("3_a8a6r")
+name = "TESTSTYLE"
+layer_info = {
+"": SubResource("Resource_oy3i0"),
+"10": SubResource("Resource_namat"),
+"11": SubResource("Resource_18mvw"),
+"12": SubResource("Resource_rwff7"),
+"15": SubResource("Resource_5k0v5"),
+"16": SubResource("Resource_3vniq"),
+"17": SubResource("Resource_6iae8"),
+"18": SubResource("Resource_87fnk")
+}
+metadata/_latest_layer = "10"
