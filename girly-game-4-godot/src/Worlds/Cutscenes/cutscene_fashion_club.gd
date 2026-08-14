@@ -4,6 +4,7 @@ extends Cutscene
 func _ready() -> void:
 	animationPlayer.animation_finished.connect(_on_animation_finished)
 	skipped = false
+	AudioManager.load_music("cutscene fashion")
 	
 func _on_animation_finished(_anim : StringName) -> void:
 	if skipped == false:

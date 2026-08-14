@@ -146,7 +146,6 @@ func _apply_export_overrides() -> void:
 	_apply_sounds_settings()
 
 func _ready() -> void:
-	print("does ready never happen?")
 	DialogicUtil.autoload().Text.speaker_updated.connect(change_textbox_tex)
 func change_textbox_tex(_character : DialogicCharacter) -> void:
 	#if !character.custom_info.keys().has("TextBoxInfo"):

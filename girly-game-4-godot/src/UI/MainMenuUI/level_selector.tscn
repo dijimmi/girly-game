@@ -43,3 +43,5 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.025, 2.025)
 columns = 4
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

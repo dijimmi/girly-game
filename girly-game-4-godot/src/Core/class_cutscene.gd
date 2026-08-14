@@ -2,9 +2,7 @@
 class_name Cutscene extends Control
 
 @export var animationPlayer : AnimationPlayer = null
-
-func _ready() -> void:
-	$AnimationPlayer.autoplay = $AnimationPlayer.current_animation 
+ 
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings : PackedStringArray = []
 	if get_child_count() < 1:
