@@ -1,18 +1,25 @@
-[background arg="res://image.png" fade="0.0"]
-join pres center
-pres: こんにちわ！ Nice to meet ya
-pres: Are you guys interested in joining the club ?
-update pres left [move_time="0.5" move_trans="cubic"]
-join friend right
-friend: うん！
+[background arg="res://import/Art/BackgroundArt/bg_fashion_club.png" fade="1.0" wait="true"]
+join pres (Smile) left [mirrored="true"]
+pres: いらっしゃい !  Hello! Nice to meet ya
+pres (Happy): Are you guys interested in joining the club ?
+join friend (Neutral) right
+[wait time="0.8" hide_text="false"]
+friend (Smile): うん！
 main_character: I guess so
+update friend (Neutral)
+pres (Smile): Alright, you just need to sign here and there please.
 do Dialogue.start_minigame(Dialogic.VAR.PlayerNameJP)
-pres: サンキュー!
+pres (Happy): サンキュー!
 pres: You can look around and hang out, we’ll be starting our meeting soon
 main_character: Thank you
-friend: はい~
+friend (Smile): はい~
+leave pres
+update friend center [move_time="0.5"]
 main_character: Alright so... I joined, now I can leave, right?
-friend: Eh? マジ?!!
+friend (Confused): ええ?!!
 main_character: I’m just messing with you.
+update friend (Neutral)
 main_character: Anyway, it looks like there’s a few people around, I don’t want to interrupt them…
+friend (Smile): That’s okay
+friend (Confused): Oh look, another one is joining.
 do Dialogue.set_next_scene("main menu")

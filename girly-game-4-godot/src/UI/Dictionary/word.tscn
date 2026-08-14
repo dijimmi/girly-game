@@ -13,19 +13,19 @@ text = "
 "
 script = ExtResource("1_xakxu")
 
-[node name="Label" type="Label" parent="." unique_id=684003432]
+[node name="Label" type="RichTextLabel" parent="." unique_id=2089676467]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 7.0
-offset_top = 4.0
+offset_top = 1.0
 offset_right = 1133.0
-offset_bottom = 5.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
 text = "thisaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 justification_flags = 162
-clip_text = true

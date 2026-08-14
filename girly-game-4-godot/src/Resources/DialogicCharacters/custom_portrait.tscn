@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bddilbwmc54fn"]
+
+[ext_resource type="Script" uid="uid://s55t0j3e6j4q" path="res://src/Resources/DialogicCharacters/custom_portrait.gd" id="1_ghmw2"]
+[ext_resource type="Texture2D" uid="uid://cwc8f1ksk6oqp" path="res://import/Art/portrait/LoveInterest/Portrait_Base.png" id="2_jnarb"]
+
+[sub_resource type="Animation" id="Animation_iujb5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3cssq"]
+resource_name = "change_sprite"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 1),
+"transitions": PackedFloat32Array(0, 0.37892938, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 10), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_call_change_expression"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oans4"]
+_data = {
+&"RESET": SubResource("Animation_iujb5"),
+&"change_sprite": SubResource("Animation_3cssq")
+}
+
+[node name="CustomPortrait" type="Node2D" unique_id=639819127]
+script = ExtResource("1_ghmw2")
+portrait_width = 518
+portrait_height = 682
+
+[node name="Body" type="Sprite2D" parent="." unique_id=968014346]
+position = Vector2(0, -317.2)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("2_jnarb")
+
+[node name="Faces" type="Node2D" parent="." unique_id=653329741]
+position = Vector2(0, -317.2)
+scale = Vector2(0.48, 0.48)
+
+[node name="Neutral" type="Sprite2D" parent="Faces" unique_id=1944786987]
+
+[node name="Happy" type="Sprite2D" parent="Faces" unique_id=637995757]
+visible = false
+
+[node name="Smile" type="Sprite2D" parent="Faces" unique_id=1809417395]
+visible = false
+
+[node name="Confused" type="Sprite2D" parent="Faces" unique_id=2069062225]
+visible = false
+
+[node name="Laugh" type="Sprite2D" parent="Faces" unique_id=2115828138]
+visible = false
+
+[node name="Worried" type="Sprite2D" parent="Faces" unique_id=1072844716]
+visible = false
+
+[node name="Worried2" type="Sprite2D" parent="Faces" unique_id=165604891]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1897317509]
+libraries/ = SubResource("AnimationLibrary_oans4")

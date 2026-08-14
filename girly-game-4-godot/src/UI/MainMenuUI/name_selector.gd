@@ -7,6 +7,7 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("confirm"):
 		if _is_name(written_text):
 			Dialogic.VAR.PlayerName = written_text 
+			Dialogic.VAR.PlayerNameJP = "ぬえ"
 			EventBus.name_selected.emit()
 func _is_name(cname : String) -> bool:
 	for character in name_list.names:

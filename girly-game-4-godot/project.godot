@@ -27,6 +27,7 @@ ProductInfo="*uid://itgrjwushly2"
 
 directories/dch_directory={
 "friend": "res://src/Resources/DialogicCharacters/friend.dch",
+"love_interest": "res://src/Resources/DialogicCharacters/love_interest.dch",
 "main_character": "res://src/Resources/DialogicCharacters/main_character.dch",
 "narrator": "res://src/Resources/DialogicCharacters/narrator.dch",
 "pres": "res://src/Resources/DialogicCharacters/pres.dch"
@@ -46,6 +47,7 @@ layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres
 layout/default_style=""
 variables={
 "FriendName": "Aoi",
+"LoveInterestName": "A",
 "PlayerName": "jfjdjfdsdfj",
 "PlayerNameJP": "あき",
 "PresName": "Club President"

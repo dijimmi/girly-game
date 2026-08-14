@@ -10,21 +10,59 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Default",
+&"default_portrait": "Neutral",
 &"description": "",
-&"display_name": "PresName",
+&"display_name": "{PresName}",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Default": {
+"Confused": {
 "export_overrides": {
+"body_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Base.png\"",
+"emotion": "3",
+"expression_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Eyes4.png\"",
 "image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
+},
+"Happy": {
+"export_overrides": {
+"body_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Base.png\"",
+"emotion": "1",
+"expression_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Eyes2.png\"",
+"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
+},
+"Neutral": {
+"export_overrides": {
+"body_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Base.png\"",
+"expression_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Eyes1.png\"",
+"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
+},
+"Smile": {
+"export_overrides": {
+"body_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Base.png\"",
+"emotion": "2",
+"expression_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Eyes3.png\"",
+"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
 }
 },
 &"scale": 1.0

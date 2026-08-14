@@ -77,8 +77,8 @@ func _tween_meta_colors(col : Color, meta : Variant = null, speed : float = 0.05
 		
 		var regex = RegEx.new()
 		if meta == null:
-			regex.compile(r"\[color=[^\]]+\]")
-			textbox.text = regex.sub(textbox.text, new_color_str, true)
+			regex.compile(r"(\[url=[^\]]+\])\[color=[^\]]+\]")
+			textbox.text = regex.sub(textbox.text, "$1" + new_color_str, true)
 		else:
 			regex.compile("(\\[url=\"" + meta + "\"\\])\\[color=[^\\]]+\\]")
 			textbox.text = regex.sub(textbox.text, "$1" + new_color_str, true)
@@ -90,14 +90,12 @@ func _tween_meta_colors(col : Color, meta : Variant = null, speed : float = 0.05
 	_reset_meta_colors(goal_color)
 func _reset_meta_colors(col : Color, meta : Variant = null) -> void:
 	var regex = RegEx.new()
-	regex.compile(r"\[color=[^\]]+\]")
-	
 	var new_color = col.to_html(false)
 	var new_color_str = "[color="+str(new_color)+"]"
 	
 	if meta == null:
-		regex.compile(r"\[color=[^\]]+\]")
-		textbox.text = regex.sub(textbox.text, new_color_str, true)
+		regex.compile(r"(\[url=[^\]]+\])\[color=[^\]]+\]")
+		textbox.text = regex.sub(textbox.text, "$1" + new_color_str, true)
 	else:
 		regex.compile("(\\[url=\"" + meta + "\"\\])\\[color=[^\\]]+\\]")
 		textbox.text = regex.sub(textbox.text, "$1" + new_color_str, true)

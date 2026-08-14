@@ -5,24 +5,56 @@
 [resource]
 script = ExtResource("1_l5idx")
 entries = {
+"a-o": "あお",
+"ha-i": "はい",
+"i-ra-ssha-i": "いらっしゃい",
+"ko-n-ni-chi-wa": "こんにちは！",
+"sa-n-kyuu": "サンキュー",
+"u-n": "うん",
+"ya-t-ta": "やった",
 "あお": {
-"alternatives": ["あおい"],
+"alternatives": ["a-o"],
 "case_sensitive": true,
-"extra": "examples wooho
-example2 woohoo",
+"extra": "そら　は　あお  (sora wa ao) : the sky is blue",
 "name": "あお",
-"text": "blue",
-"title": ""
+"text": "[ol] (n) blue / green",
+"title": "Blue"
 },
-"あおい": "あお",
+"いらっしゃい": {
+"alternatives": ["i-ra-ssha-i"],
+"name": "いらっしゃい",
+"title": "Welcome"
+},
 "うん": {
+"alternatives": ["u-n"],
 "extra": "",
-"name": "うん"
+"name": "うん",
+"title": "Yes/That's right"
+},
+"ええ": {
+"name": "ええ",
+"title": "Huh"
+},
+"こんにちは！": {
+"alternatives": ["ko-n-ni-chi-wa"],
+"name": "こんにちは！",
+"text": "",
+"title": "Hello"
 },
 "はい": {
-"name": "はい"
+"alternatives": ["ha-i"],
+"name": "はい",
+"text": "",
+"title": "Yes"
 },
 "やった": {
-"name": "やった"
+"alternatives": ["ya-t-ta"],
+"name": "やった",
+"title": "Yay/Hooray"
+},
+"サンキュー": {
+"alternatives": ["sa-n-kyuu"],
+"name": "サンキュー",
+"title": "Thank you"
 }
 }

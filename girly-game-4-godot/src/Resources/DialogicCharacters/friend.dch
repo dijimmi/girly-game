@@ -10,21 +10,83 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Default",
+&"default_portrait": "Neutral",
 &"description": "",
 &"display_name": "{FriendName}",
 &"mirror": false,
 &"nicknames": ["{FriendName}"],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Default": {
+"Confused": {
 "export_overrides": {
-"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"emotion": "3",
+"expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_4.png\"",
+"image": ""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
+},
+"Happy": {
+"export_overrides": {
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"emotion": "1",
+"expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_2.png\"",
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
+},
+"Mischievous": {
+"export_overrides": {
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"emotion": "4",
+"expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_5_Mischiveous.png\"",
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
+},
+"Neutral": {
+"export_overrides": {
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_1.png\"",
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
+},
+"Smile": {
+"export_overrides": {
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"emotion": "2",
+"expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_3.png\"",
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
+},
+"Smug": {
+"export_overrides": {
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"emotion": "5",
+"expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_6_Smug.png\"",
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
 }
 },
 &"scale": 1.0

@@ -245,6 +245,7 @@ offset_top = 268.0
 offset_right = 401.0
 offset_bottom = 338.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_v0mr5")
+bbcode_enabled = true
 text = "Definition"
 scroll_active = false
 vertical_alignment = 1
