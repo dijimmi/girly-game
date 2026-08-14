@@ -5,6 +5,10 @@
 [resource]
 script = ExtResource("1_l5idx")
 entries = {
+"": {
+"case_sensitive": true,
+"name": ""
+},
 "a-ku-se-so-ri-i": "アクセサリー",
 "a-ma-ro-ri-i": "あまろりー",
 "a-o": "あお",
@@ -165,7 +169,5 @@ entries = {
 "name": "ロリータ",
 "text": "Japanese fashion",
 "title": "Lolita"
-"ッつ": {
-"name": "ッつ"
 }
 }
