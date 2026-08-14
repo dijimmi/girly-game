@@ -372,6 +372,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="text_changed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_changed"]
 [connection signal="text_submitted" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_submitted"]
 [connection signal="pressed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchButton" to="VBoxContainer/ShopPageSearchBar" method="_on_search_button_pressed"]
+[connection signal="buy_product" from="VBoxContainer/ShopPageBG/ViewProductPage" to="." method="_on_view_product_page_buy_product"]
 [connection signal="gui_input" from="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo/ProductCategories" to="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo" method="_on_product_categories_gui_input"]
 [connection signal="meta_hover_ended" from="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo/ProductCategories" to="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo" method="_on_product_categories_meta_hover_ended"]
 [connection signal="meta_hover_started" from="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo/ProductCategories" to="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo" method="_on_product_categories_meta_hover_started"]
@@ -379,3 +380,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/Yes" to="VBoxContainer/ShopPageBG/ViewProductPage" method="_on_yes_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/VBoxContainer/HBoxContainer/No" to="VBoxContainer/ShopPageBG/ViewProductPage" method="_on_no_pressed"]
 [connection signal="pressed" from="VBoxContainer/TaskBarBG/TaskBar/Chat" to="." method="_on_chat_pressed"]
+[connection signal="hint_received" from="ChatLayer/ChatScreen" to="." method="_on_chat_screen_hint_received"]

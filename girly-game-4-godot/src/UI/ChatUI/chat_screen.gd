@@ -36,7 +36,7 @@ var new_convo : Dictionary = {
 		"Consider that before asking for help.",
 		Constants.INPUT_TRIGGERED,
 		"I... think I need your help",
-		Constants.REPLY_TRIGGERED,
+		Constants.HINT1,
 		"Alright.",
 		"She asked for a head piece, right?",
 		"With pastel colors?",
@@ -46,7 +46,7 @@ var new_convo : Dictionary = {
 		Constants.INPUT_TRIGGERED,
 		"I... think I need your help",
 		"Again...",
-		Constants.REPLY_TRIGGERED,
+		Constants.HINT2,
 		"Get her the hat piece",
 		Constants.STOP_CONVO
 	]
@@ -60,9 +60,6 @@ var index : Dictionary = {
 	Constants.VERONICA_CHAT : 0
 }
 
-var indices : Dictionary
-var reply_indices : Dictionary
-var last_option_chosen : Dictionary
 var last_person : String
 
 var first_time : Dictionary = {
@@ -70,7 +67,7 @@ var first_time : Dictionary = {
 	Constants.VERONICA_CHAT : true
 }
 
-var talked_to_ai_after_lock = false
+signal hint_received(hint_num)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -85,6 +82,75 @@ Buttons Pressed
 func start_conversation(person):
 	load_conversation(person)
 	continue_conversation(person)
+
+
+func continue_conversation(person):
+	if index[person] >= new_convo[person].size():
+		print("NONONONONO it's the end")
+		return
+	
+	var curr_message = new_convo[person][index[person]]
+	var is_reply = is_replying[person]
+	last_person = person
+	
+	if curr_message == Constants.STOP_CONVO:
+		print("Conversation Stopped")
+		return
+	
+	curr_message = check_hint(curr_message)
+	
+	if curr_message == Constants.REPLY_TRIGGERED:
+		input_field.new_message("")
+		
+		index[person] += 1
+		curr_message = new_convo[person][index[person]]
+		
+		add_recieved_message(person, curr_message, true)
+		
+		is_reply = true
+		is_replying[person] = is_reply
+		index[person] += 1
+		
+		await get_tree().create_timer(Constants.REPLY_ANIMATION_TIME + Constants.REPLY_INITIAL_DELAY).timeout
+		
+	elif curr_message == Constants.INPUT_TRIGGERED:
+		index[person] += 1
+		curr_message = new_convo[person][index[person]]
+		
+		input_field.new_message(curr_message)
+		
+		is_reply = false
+		is_replying[person] = is_reply
+		index[person] += 1
+		
+		return
+	
+	else:
+		if is_reply:
+			add_recieved_message(person, curr_message, true)
+			await get_tree().create_timer(Constants.REPLY_ANIMATION_TIME + Constants.REPLY_INITIAL_DELAY).timeout
+		else:
+			input_field.new_message(curr_message)
+			index[person] += 1
+			return
+			
+		index[person] += 1
+	
+	continue_conversation(person)
+
+
+func check_hint(text):
+	if text == Constants.HINT1:
+		hint_received.emit(1)
+		return Constants.REPLY_TRIGGERED
+	elif text == Constants.HINT2:
+		hint_received.emit(2)
+		return Constants.REPLY_TRIGGERED
+	elif text == Constants.HINT3:
+		hint_received.emit(3)
+		return Constants.REPLY_TRIGGERED
+		
+	return text
 
 
 func _on_text_field_gui_input(event: InputEvent) -> void:
@@ -175,58 +241,6 @@ func add_recieved_message(person_name, message_text, is_new : bool):
 	if is_new:
 		update_conversation(person_name, Constants.RECEIVED_TYPE, message_text)
 
-
-func continue_conversation(person):
-	if index[person] >= new_convo[person].size():
-		print("NONONONONO it's the end")
-		return
-	
-	var curr_message = new_convo[person][index[person]]
-	var is_reply = is_replying[person]
-	last_person = person
-	
-	if curr_message == Constants.STOP_CONVO:
-		print("Conversation Stopped")
-		return
-	
-	if curr_message == Constants.REPLY_TRIGGERED:
-		input_field.new_message("")
-		
-		index[person] += 1
-		curr_message = new_convo[person][index[person]]
-		
-		add_recieved_message(person, curr_message, true)
-		
-		is_reply = true
-		is_replying[person] = is_reply
-		index[person] += 1
-		
-		await get_tree().create_timer(Constants.REPLY_ANIMATION_TIME + Constants.REPLY_INITIAL_DELAY).timeout
-		
-	elif curr_message == Constants.INPUT_TRIGGERED:
-		index[person] += 1
-		curr_message = new_convo[person][index[person]]
-		
-		input_field.new_message(curr_message)
-		
-		is_reply = false
-		is_replying[person] = is_reply
-		index[person] += 1
-		
-		return
-	
-	else:
-		if is_reply:
-			add_recieved_message(person, curr_message, true)
-			await get_tree().create_timer(Constants.REPLY_ANIMATION_TIME + Constants.REPLY_INITIAL_DELAY).timeout
-		else:
-			input_field.new_message(curr_message)
-			index[person] += 1
-			return
-			
-		index[person] += 1
-	
-	continue_conversation(person)
 
 """ 
 Loading Conversations 

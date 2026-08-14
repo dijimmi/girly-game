@@ -40,15 +40,12 @@ const SENT_TYPE = "sent"
 const RECEIVED_TYPE = "received"
 
 # Load Input TYpes
-const INPUT_OLD = "old"
-const INPUT_OPTIONS_MENU = "options_menu"
-const INPUT_OPTION_SELECTED = "option_selected"
-const INPUT_SENT = "sent"
-
-
 const INPUT_TRIGGERED = "triggered--"
 const REPLY_TRIGGERED = "reply_now--"
 const STOP_CONVO = "stop--"
+const HINT1 = "hint1--"
+const HINT2 = "hint2--"
+const HINT3 = "hint3--"
 
 const SELECT_OPTION_MESSAGE = "Select an Option..."
 const END_OF_MESSAGES = "END OF MESSAGES"

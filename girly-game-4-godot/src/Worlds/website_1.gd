@@ -33,6 +33,9 @@ var stack = [
 var active_page : String = ProductInfo.HOME
 
 
+var web_score = 0
+var curr_level = ProductInfo.Level.ONE
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pages = {
@@ -51,6 +54,12 @@ func _ready() -> void:
 	change_page(ProductInfo.HOME)
 
 
+func update_score(score_amt):
+	web_score += score_amt
+	
+	print("Current Score: ", str(web_score))
+
+
 func init_products():
 	const path = "res://src/Resources/Products/"
 	
@@ -59,7 +68,7 @@ func init_products():
 	for file_name in files:
 		var loaded_product : Product = load(path + file_name)
 		loaded_product.id = id
-		if loaded_product.level == ProductInfo.Level.ONE:
+		if loaded_product.level == curr_level:
 			ProductInfo.products.append(loaded_product)
 
 
@@ -173,3 +182,36 @@ func _on_chat_pressed() -> void:
 	if chat_layer.visible:
 		chat_screen.load_conversation(Constants.VERONICA_CHAT)
 		chat_screen.continue_conversation(Constants.VERONICA_CHAT)
+
+
+func _on_view_product_page_buy_product(product: Product) -> void:	
+	if product.winner:
+		if product.level == ProductInfo.Level.ONE:
+			update_score(500)
+		elif product.level == ProductInfo.Level.TWO:
+			update_score(750)
+		elif product.level == ProductInfo.Level.THREE:
+			update_score(1000)
+	elif product.mid_winner:
+		if product.level == ProductInfo.Level.ONE:
+			update_score(250)
+		elif product.level == ProductInfo.Level.TWO:
+			update_score(375)
+		elif product.level == ProductInfo.Level.THREE:
+			update_score(500)
+	else:
+		update_score(0)
+	
+	print("New score: ", str(web_score))
+	#TODO: ADD FUNCTION TO GO BACK TO DIALOGIC SCENE AND UPDATE OVERALL SCORE
+
+
+func _on_chat_screen_hint_received(_hint_num: Variant) -> void:
+	if curr_level == ProductInfo.Level.ONE:
+		update_score(-250)
+	elif curr_level == ProductInfo.Level.TWO:
+		update_score(-325)
+	elif curr_level == ProductInfo.Level.THREE:
+		update_score(-500)
+	else:
+		update_score(0)

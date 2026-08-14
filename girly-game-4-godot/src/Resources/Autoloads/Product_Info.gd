@@ -1,5 +1,7 @@
 extends Node
 
+var score = 0
+
 const FEATURED = "お すすめ しょうひん"
 const HOME = "home"
 const SHOP_PAGE_SEARCH = "shop_page_search"
