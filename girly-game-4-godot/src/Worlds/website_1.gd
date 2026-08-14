@@ -19,6 +19,8 @@ extends Control
 @export var undo : Button
 @export var redo : Button
 
+@export var chat_layer : CanvasLayer
+@export var chat_screen : ChatScreen
 
 var pages : Dictionary[String, Array] = {}
 
@@ -163,3 +165,11 @@ func _on_website_1_pressed() -> void:
 
 func _on_home_pressed() -> void:
 	change_page(ProductInfo.HOME)
+
+
+func _on_chat_pressed() -> void:
+	chat_layer.visible = !chat_layer.visible
+	
+	if chat_layer.visible:
+		chat_screen.load_conversation(Constants.VERONICA_CHAT)
+		chat_screen.continue_conversation(Constants.VERONICA_CHAT)

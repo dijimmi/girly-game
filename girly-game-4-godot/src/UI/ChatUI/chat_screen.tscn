@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://c2ravsacmti61"]
+
+[ext_resource type="PackedScene" uid="uid://cgp5k2goiakpj" path="res://src/UI/ChatUI/chat_bubble.tscn" id="1_kkkbx"]
+[ext_resource type="Script" uid="uid://urrnoquojw8p" path="res://src/UI/ChatUI/chat_screen.gd" id="1_oimbg"]
+[ext_resource type="PackedScene" uid="uid://cts7fps42ouhy" path="res://src/UI/ChatUI/date.tscn" id="3_85g14"]
+[ext_resource type="PackedScene" uid="uid://f7fgl1v3dhay" path="res://src/UI/ChatUI/chat_bubble_recieved.tscn" id="3_vl1sr"]
+[ext_resource type="Script" uid="uid://dte8wedbs43iv" path="res://src/UI/ChatUI/text_field.gd" id="5_hkn2f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuhsr"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyrwx"]
+bg_color = Color(1, 1, 1, 1)
+border_width_top = 2
+border_color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oe24n"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oe24n"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1cpni"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ag6lx"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mog1e"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvj40"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ci22w"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6223377, 0.6223382, 0.62233794, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.3254902)
+shadow_size = 600
+
+[node name="ChatScreen" type="PanelContainer" unique_id=1878078702 node_paths=PackedStringArray("messages_list", "input_field", "options_menu")]
+custom_minimum_size = Vector2(200, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -25.0
+offset_right = 66.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_vuhsr")
+script = ExtResource("1_oimbg")
+chat_bubble_sent = ExtResource("1_kkkbx")
+chat_bubble_recieved = ExtResource("3_vl1sr")
+date_scene = ExtResource("3_85g14")
+messages_list = NodePath("ScreenWidgets/ScrollContainer/MessagesContainer")
+input_field = NodePath("ScreenWidgets/TextBox/HBoxContainer/TextField")
+options_menu = NodePath("OptionsHover/OptionsMenu")
+
+[node name="ScreenWidgets" type="VBoxContainer" parent="." unique_id=2064890005]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScreenWidgets" unique_id=689813368]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MessagesContainer" type="VBoxContainer" parent="ScreenWidgets/ScrollContainer" unique_id=1948271120]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Date" parent="ScreenWidgets/ScrollContainer/MessagesContainer" unique_id=1512840360 instance=ExtResource("3_85g14")]
+layout_mode = 2
+script = null
+
+[node name="ChatBubble" parent="ScreenWidgets/ScrollContainer/MessagesContainer" unique_id=1032107144 instance=ExtResource("1_kkkbx")]
+layout_mode = 2
+script = null
+
+[node name="ChatBubbleRecieved" parent="ScreenWidgets/ScrollContainer/MessagesContainer" unique_id=1172582112 instance=ExtResource("3_vl1sr")]
+layout_mode = 2
+script = null
+
+[node name="TextBox" type="PanelContainer" parent="ScreenWidgets" unique_id=1369076510]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uyrwx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenWidgets/TextBox" unique_id=7578133]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextField" type="PanelContainer" parent="ScreenWidgets/TextBox/HBoxContainer" unique_id=161253105 node_paths=PackedStringArray("send_button")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_oe24n")
+script = ExtResource("5_hkn2f")
+send_button = NodePath("../SendButton")
+
+[node name="Message" type="RichTextLabel" parent="ScreenWidgets/TextBox/HBoxContainer/TextField" unique_id=159536007]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oe24n")
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+text_direction = 1
+
+[node name="SendButton" type="Button" parent="ScreenWidgets/TextBox/HBoxContainer" unique_id=360230653]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+theme_override_colors/icon_hover_color = Color(0.51007515, 0.51007515, 0.51007515, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0.5399678, 0.48698187, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_1cpni")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ag6lx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mog1e")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wvj40")
+expand_icon = true
+
+[node name="OptionsHover" type="CanvasLayer" parent="." unique_id=411041896]
+layer = 5
+visible = false
+
+[node name="OptionsMenu" type="PanelContainer" parent="OptionsHover" unique_id=450712325]
+custom_minimum_size = Vector2(300, 300)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -16.0
+offset_right = 4.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ci22w")
+
+[node name="Options" type="VBoxContainer" parent="OptionsHover/OptionsMenu" unique_id=251236704]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Button1" type="Button" parent="OptionsHover/OptionsMenu/Options" unique_id=1156180788]
+custom_minimum_size = Vector2(250, 34)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Texto"
+text_overrun_behavior = 5
+autowrap_mode = 2
+
+[node name="Button2" type="Button" parent="OptionsHover/OptionsMenu/Options" unique_id=37373195]
+custom_minimum_size = Vector2(250, 34)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Texto"
+text_overrun_behavior = 3
+autowrap_mode = 2
+
+[node name="Button3" type="Button" parent="OptionsHover/OptionsMenu/Options" unique_id=1630249505]
+custom_minimum_size = Vector2(250, 34)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Texto"
+text_overrun_behavior = 3
+autowrap_mode = 2
+
+[connection signal="gui_input" from="ScreenWidgets/TextBox/HBoxContainer/TextField" to="." method="_on_text_field_gui_input"]
+[connection signal="pressed" from="ScreenWidgets/TextBox/HBoxContainer/SendButton" to="." method="_on_send_button_pressed"]
+[connection signal="pressed" from="OptionsHover/OptionsMenu/Options/Button1" to="OptionsHover/OptionsMenu" method="_on_button_1_pressed"]
+[connection signal="pressed" from="OptionsHover/OptionsMenu/Options/Button2" to="OptionsHover/OptionsMenu" method="_on_button_2_pressed"]
+[connection signal="pressed" from="OptionsHover/OptionsMenu/Options/Button3" to="OptionsHover/OptionsMenu" method="_on_button_3_pressed"]
+
+[editable path="ScreenWidgets/ScrollContainer/MessagesContainer/Date"]

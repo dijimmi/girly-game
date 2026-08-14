@@ -1,0 +1,190 @@
+{
+  "AI": {
+    "contact_name": "AI",
+    "messages": [
+      {
+        "type": "date",
+        "text": "--/--/----"
+      },
+      {
+        "type": "received",
+        "text": "[HIDDEN]"
+      }
+    ]
+  },
+  "Vero~": {
+    "contact_name": "Vero~",
+    "messages": [
+      {
+        "type": "date",
+        "text": "04/01/2026"
+      },
+      {
+        "type": "received",
+        "text": "heyy guuuurl, are u down for tomorrow night going to the cinema"
+      },
+      {
+        "type": "sent",
+        "text": "I can't, I have a lot of work to do…"
+      },
+      {
+        "type": "sent",
+        "text": "maybe next week?"
+      },
+      {
+        "type": "received",
+        "text": "oh I gotcha"
+      },
+      {
+        "type": "received",
+        "text": "gotta stay educated, I see"
+      },
+      {
+        "type": "sent",
+        "text": "Yeah…"
+      },
+      {
+        "type": "sent",
+        "text": "Thanks though!"
+      },
+      {
+        "type": "date",
+        "text": "04/01/2026"
+      },
+      {
+        "type": "received",
+        "text": "######, check this out, so funny, right? [img=24x24]res://assets/emojis/laughing.png[/img]"
+      },
+      {
+        "type": "date",
+        "text": "04/09/2026"
+      },
+      {
+        "type": "received",
+        "text": "heyy gurl"
+      },
+      {
+        "type": "received",
+        "text": "some of ur friends have been asking about u"
+      },
+      {
+        "type": "received",
+        "text": "they say ur not coming to class"
+      },
+      {
+        "type": "received",
+        "text": "is everything ok?"
+      },
+      {
+        "type": "date",
+        "text": "04/11/2026"
+      },
+      {
+        "type": "received",
+        "text": "#####?"
+      },
+      {
+        "type": "received",
+        "text": "u don't usually take this long to reply"
+      },
+      {
+        "type": "received",
+        "text": "pls, call me if u need anything"
+      },
+      {
+        "type": "date",
+        "text": "04/13/2026"
+      },
+      {
+        "type": "received",
+        "text": "i went to ur apartment and ur neighbors said u haven't been there in a while"
+      },
+      {
+        "type": "received",
+        "text": "ur not answering my calls"
+      },
+      {
+        "type": "received",
+        "text": "shit…"
+      }
+    ]
+  },
+  "Mom": {
+    "contact_name": "Mom",
+    "messages": [
+      {
+        "type": "date",
+        "text": "--/--/----"
+      },
+      {
+        "type": "received",
+        "text": "[HIDDEN]"
+      }
+    ]
+  },
+  "Dad": {
+    "contact_name": "Dad",
+    "messages": [
+      {
+        "type": "date",
+        "text": "--/--/----"
+      },
+      {
+        "type": "received",
+        "text": "[HIDDEN]"
+      }
+    ]
+  },
+  "Betsy": {
+    "contact_name": "Betsy",
+    "messages": [
+      {
+        "type": "date",
+        "text": "--/--/----"
+      },
+      {
+        "type": "received",
+        "text": "[HIDDEN]"
+      }
+    ]
+  },
+  "Kieran": {
+    "contact_name": "Kieran",
+    "messages": [
+      {
+        "type": "date",
+        "text": "--/--/----"
+      },
+      {
+        "type": "received",
+        "text": "[HIDDEN]"
+      }
+    ]
+  },
+  "Physics Group": {
+    "contact_name": "Physics Group",
+    "messages": [
+      {
+        "type": "date",
+        "text": "--/--/----"
+      },
+      {
+        "type": "received",
+        "text": "[HIDDEN]"
+      }
+    ]
+  },
+  "Ramen (yes, like the food)": {
+    "contact_name": "Ramen (yes, like the food)",
+    "messages": [
+      {
+        "type": "date",
+        "text": "--/--/----"
+      },
+      {
+        "type": "received",
+        "text": "[HIDDEN]"
+      }
+    ]
+  }
+}

@@ -6,6 +6,5 @@
 script = ExtResource("1_h7r7w")
 product_name = "【Maison Rosette】- あまドレス"
 level = 0
-featured = true
 textures_path = "res://import/Art/shop/outfit_c"
 color_set1 = Array[Color]([Color(1, 0.78, 0.8386666, 1), Color(1, 1, 1, 1), Color(0.93, 0.4743, 0.60341495, 1), Color(0, 0, 0, 1)])
