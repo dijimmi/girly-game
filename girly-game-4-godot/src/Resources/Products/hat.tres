@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Product" format=3 uid="uid://b3qllwfh67nhj"]
+
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_8gtbp"]
+
+[resource]
+script = ExtResource("1_8gtbp")
+product_name = "ブランド5"
+level = 0
+accesory_type = "ぼうし"
+substyle = "クラシックロリー"
+winner = true
+textures_path = "res://import/Art/shop/hat"
+color_set1 = Array[Color]([Color(0.7995831, 0.92313135, 0.96972114, 1), Color(1, 1, 1, 1), Color(0.7995831, 0.92313135, 0.96972114, 1), Color(0.7995831, 0.92313135, 0.96972114, 1)])

@@ -36,17 +36,22 @@ func setup(product : Product, p_size):
 	change_color(product)
 
 
-func change_color(product):
+func change_color(product : Product):
 	var color_count = image_bg.get_child_count()
 	
 	for i in color_count:
 		var texture : TextureRect = image_bg.get_child(i)
 		
+		print("Current color: ", i)
 		if get_color_set(product, 0).size() <= i:
 			texture.modulate = product.default_color
 			continue
 		
-		texture.modulate = product.color_set1[i]
+		assert(texture != null, "Texture here is null.")
+		texture.modulate = get_color_set(product, 0)[i]
+		
+		if product.winner and i == 3:
+			print(image_bg.get_children())
 
 
 func get_color_set(product : Product, index : int):

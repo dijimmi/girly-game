@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cgp5k2goiakpj"]
+
+[ext_resource type="Script" uid="uid://cy2ytcd06wgdq" path="res://src/UI/ChatUI/chat_bubble.gd" id="1_gbx12"]
+[ext_resource type="StyleBox" uid="uid://b3unxk8xpjwwg" path="res://src/UI/ChatUI/bubble.tres" id="2_f8oay"]
+
+[node name="ChatBubble" type="HBoxContainer" unique_id=816647144 node_paths=PackedStringArray("message")]
+offset_right = 70.0
+offset_bottom = 75.0
+theme_override_constants/separation = 0
+alignment = 2
+script = ExtResource("1_gbx12")
+message = NodePath("Bubble/Margins/Message")
+
+[node name="Spacer" type="Control" parent="." unique_id=1922142514]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Bubble" type="PanelContainer" parent="." unique_id=1032107144]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("2_f8oay")
+
+[node name="Margins" type="MarginContainer" parent="Bubble" unique_id=321285664]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="Message" type="RichTextLabel" parent="Bubble/Margins" unique_id=1352898321]
+custom_minimum_size = Vector2(50, 34)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+horizontal_alignment = 2
+vertical_alignment = 1

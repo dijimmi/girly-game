@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cts7fps42ouhy"]
+
+[ext_resource type="Script" uid="uid://dl052i6uojajg" path="res://src/UI/ChatUI/date.gd" id="1_n2ccd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uloyp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 20
+
+[node name="Date" type="PanelContainer" unique_id=1512840360 node_paths=PackedStringArray("label")]
+offset_right = 114.0
+offset_bottom = 27.0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_uloyp")
+script = ExtResource("1_n2ccd")
+label = NodePath("Margin/DateText")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1298136753]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 5
+
+[node name="DateText" type="Label" parent="Margin" unique_id=1304192488]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55455405, 0.554554, 0.5545539, 1)
+theme_override_font_sizes/font_size = 12
+text = "month/date/year"

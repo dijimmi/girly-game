@@ -30,6 +30,7 @@ layout_mode = 2
 [node name="NameLabel" type="RichTextLabel" parent="WidgetRow" unique_id=963694889]
 layout_mode = 2
 size_flags_vertical = 4
+mouse_filter = 1
 text = "First"
 fit_content = true
 scroll_active = false
@@ -62,3 +63,5 @@ texture_normal = ExtResource("1_xc8fy")
 texture_disabled = ExtResource("3_n66r4")
 ignore_texture_size = true
 stretch_mode = 4
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

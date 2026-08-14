@@ -5,7 +5,10 @@
 [resource]
 script = ExtResource("2_k8jvd")
 product_name = "ブランド2"
+level = 0
 accesory_type = "ケープレット"
+substyle = "クラシックロリー"
 featured = true
 textures_path = "res://import/Art/shop/capelet"
+color_set1 = Array[Color]([Color(0.7, 0.65683335, 0.63, 1), Color(0.77, 0.73919994, 0.7238, 1), Color(0.609375, 0.65, 0.5525, 1)])
 color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

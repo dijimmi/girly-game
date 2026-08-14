@@ -24,6 +24,3 @@ name_list = NodePath("NameList")
 
 [node name="NameList" type="VBoxContainer" parent="." unique_id=79155961]
 layout_mode = 2
-
-[node name="NameWidget" parent="NameList" unique_id=915354676 instance=ExtResource("1_vj5qs")]
-layout_mode = 2

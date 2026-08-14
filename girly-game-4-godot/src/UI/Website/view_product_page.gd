@@ -7,6 +7,8 @@ extends HBoxContainer
 
 var curr_product : Product
 
+signal buy_product(product : Product)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -33,6 +35,8 @@ func _on_yes_pressed() -> void:
 		$Outcome.play()
 	else:
 		$Outcome2.play()
+	buy_product.emit(curr_product)
+	buy_popup.visible = false
 
 
 func _on_no_pressed() -> void:

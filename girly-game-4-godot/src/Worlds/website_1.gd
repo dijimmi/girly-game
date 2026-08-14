@@ -19,6 +19,8 @@ extends Control
 @export var undo : Button
 @export var redo : Button
 
+@export var chat_layer : CanvasLayer
+@export var chat_screen : ChatScreen
 
 var pages : Dictionary[String, Array] = {}
 
@@ -30,6 +32,12 @@ var stack = [
 
 var active_page : String = ProductInfo.HOME
 
+
+var web_score = 0
+var curr_level = ProductInfo.Level.ONE
+
+# USE THIS SIGNAL TOWARDS THE LEVEL MANAGER OR WHATEVER :)
+signal close_website_and_get_score(score : int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -48,15 +56,23 @@ func _ready() -> void:
 	
 	change_page(ProductInfo.HOME)
 
+
+func update_score(score_amt):
+	web_score += score_amt
+	
+	print("Current Score: ", str(web_score))
+
+
 func init_products():
 	const path = "res://src/Resources/Products/"
 	
 	var files = DirAccess.get_files_at(path)
 	var id = 0
 	for file_name in files:
-		var loaded_product = load(path + file_name)
+		var loaded_product : Product = load(path + file_name)
 		loaded_product.id = id
-		ProductInfo.products.append(loaded_product)
+		if loaded_product.level == curr_level:
+			ProductInfo.products.append(loaded_product)
 
 
 func view_product(dict, index = 0, _from_redo = false):
@@ -161,3 +177,45 @@ func _on_website_1_pressed() -> void:
 
 func _on_home_pressed() -> void:
 	change_page(ProductInfo.HOME)
+
+
+func _on_chat_pressed() -> void:
+	chat_layer.visible = !chat_layer.visible
+	
+	if chat_layer.visible:
+		chat_screen.load_conversation(Constants.VERONICA_CHAT)
+		chat_screen.continue_conversation(Constants.VERONICA_CHAT)
+
+
+func _on_view_product_page_buy_product(product: Product) -> void:	
+	if product.winner:
+		if product.level == ProductInfo.Level.ONE:
+			update_score(500)
+		elif product.level == ProductInfo.Level.TWO:
+			update_score(750)
+		elif product.level == ProductInfo.Level.THREE:
+			update_score(1000)
+	elif product.mid_winner:
+		if product.level == ProductInfo.Level.ONE:
+			update_score(250)
+		elif product.level == ProductInfo.Level.TWO:
+			update_score(375)
+		elif product.level == ProductInfo.Level.THREE:
+			update_score(500)
+	else:
+		update_score(0)
+	
+	print("New score: ", str(web_score))
+	close_website_and_get_score.emit(web_score)
+	#TODO: ADD FUNCTION TO GO BACK TO DIALOGIC SCENE AND UPDATE OVERALL SCORE
+
+
+func _on_chat_screen_hint_received(_hint_num: Variant) -> void:
+	if curr_level == ProductInfo.Level.ONE:
+		update_score(-250)
+	elif curr_level == ProductInfo.Level.TWO:
+		update_score(-325)
+	elif curr_level == ProductInfo.Level.THREE:
+		update_score(-500)
+	else:
+		update_score(0)

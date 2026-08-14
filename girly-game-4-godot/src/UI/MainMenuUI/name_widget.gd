@@ -8,6 +8,7 @@ extends PanelContainer
 @export var is_default : bool
 
 static var visible_names = 0
+signal name_pressed(cname : String)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -51,3 +52,9 @@ func verify_match(text : String):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			name_pressed.emit(name_label.text)
