@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b87xryrg3eybu"]
 
 [ext_resource type="Script" uid="uid://cwn1o0ihthao8" path="res://src/UI/MainMenuUI/main_menu.gd" id="1_t6xyb"]
+[ext_resource type="PackedScene" uid="uid://ri1t4nsb8w43" path="res://src/UI/MainMenuUI/level_selector.tscn" id="2_blov8"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1050728028]
 script = ExtResource("1_t6xyb")
@@ -40,7 +41,13 @@ custom_minimum_size = Vector2(128, 24)
 layout_mode = 2
 text = "Load Save"
 
+[node name="ChoseScene" type="Button" parent="Control/Buttons" unique_id=1172147581]
+custom_minimum_size = Vector2(128, 24)
+layout_mode = 2
+text = "Chose Scene"
+
 [node name="PlaytestButton" type="Button" parent="Control/Buttons" unique_id=1202402097]
+visible = false
 custom_minimum_size = Vector2(128, 24)
 layout_mode = 2
 text = "Playtest"
@@ -84,5 +91,9 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.41215247, 0.41215247, 0.41215247, 1)
 
+[node name="LevelSelector" parent="." unique_id=1252859361 instance=ExtResource("2_blov8")]
+visible = false
+
 [connection signal="pressed" from="Control/Buttons/NewSaveButton" to="." method="_on_new_save_button_pressed"]
+[connection signal="pressed" from="Control/Buttons/ChoseScene" to="LevelSelector" method="open_level_selector"]
 [connection signal="pressed" from="Control/Buttons/PlaytestButton" to="." method="_on_playtest_button_pressed"]
