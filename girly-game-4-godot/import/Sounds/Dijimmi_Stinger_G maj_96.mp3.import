@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuq5sgn8qlh3x"
+path="res://.godot/imported/Dijimmi_Stinger_G maj_96.mp3-d3703fa72362915c6b53c758b2aada77.mp3str"
+
+[deps]
+
+source_file="res://import/Sounds/Dijimmi_Stinger_G maj_96.mp3"
+dest_files=["res://.godot/imported/Dijimmi_Stinger_G maj_96.mp3-d3703fa72362915c6b53c758b2aada77.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

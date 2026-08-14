@@ -15,6 +15,10 @@ run/main_scene="uid://db4o5620hkek7"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://dpv51y4kkjt2m"
+
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
@@ -24,6 +28,7 @@ Dialogue="*uid://2x6dsbwluld7"
 ProductInfo="*uid://itgrjwushly2"
 Tooltip="*uid://d4b0ahy63w48c"
 Constants="*uid://elfvujdn5hpr"
+AudioManager="*uid://l705be311h5p"
 
 [dialogic]
 

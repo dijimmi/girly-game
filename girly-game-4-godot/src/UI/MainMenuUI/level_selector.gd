@@ -17,5 +17,5 @@ func open_level_selector():
 		new_button.pressed.connect(func ():
 			EventBus.load_scene.emit(scene))
 
-func close_level_selector():
+func _on_back_button_pressed() -> void:
 	hide()

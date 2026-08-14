@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cn1jorh50rw5e"]
+
+[ext_resource type="Script" uid="uid://l3g83mm522lb" path="res://src/UI/MainMenuUI/settings.gd" id="1_41h2x"]
+
+[node name="Settings" type="Control" unique_id=1000439076]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_41h2x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=25844483]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 46.222168
+offset_top = 26.0
+offset_right = -46.222168
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.43, 0.43, 0.43, 0.56078434)
+
+[node name="Title" type="Label" parent="ColorRect" unique_id=885194722]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -182.0
+offset_right = 20.0
+offset_bottom = -159.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect" unique_id=503719284]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.5
+offset_top = -38.5
+offset_right = 156.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/v_separation = 37
+columns = 2
+
+[node name="Volume" type="Label" parent="ColorRect/GridContainer" unique_id=101926979]
+layout_mode = 2
+text = "Volume"
+horizontal_alignment = 1
+
+[node name="VolumeHSlider" type="HSlider" parent="ColorRect/GridContainer" unique_id=2041790594]
+layout_mode = 2
+min_value = -60.0
+max_value = 1.0
+step = 0.5
+value = -9.0
+
+[node name="Voices" type="Label" parent="ColorRect/GridContainer" unique_id=1658457857]
+layout_mode = 2
+text = "Voices"
+horizontal_alignment = 1
+
+[node name="VoicesHSlider2" type="HSlider" parent="ColorRect/GridContainer" unique_id=1631887187]
+layout_mode = 2
+min_value = -60.0
+max_value = 1.0
+step = 0.5
+value = -9.0
+
+[node name="Music" type="Label" parent="ColorRect/GridContainer" unique_id=1351977771]
+layout_mode = 2
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicHSlider" type="HSlider" parent="ColorRect/GridContainer" unique_id=812278943]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = -80.0
+max_value = 6.0
+step = 0.5
+value = -9.0
+
+[node name="SoundEffects" type="Label" parent="ColorRect/GridContainer" unique_id=892770690]
+layout_mode = 2
+text = "Sound Effects"
+horizontal_alignment = 1
+
+[node name="SoundEffectsHSlider" type="HSlider" parent="ColorRect/GridContainer" unique_id=772940581]
+layout_mode = 2
+min_value = -80.0
+max_value = 6.0
+step = 0.5
+
+[node name="BackButton" type="Button" parent="." unique_id=589240575]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.038000003
+anchor_right = 0.041
+anchor_bottom = 0.038000003
+offset_left = 28.767998
+offset_top = 27.375998
+offset_right = 112.768
+offset_bottom = 68.376
+text = "<- Back"
+
+[connection signal="value_changed" from="ColorRect/GridContainer/VolumeHSlider" to="." method="_on_volume_h_slider_value_changed"]
+[connection signal="value_changed" from="ColorRect/GridContainer/VoicesHSlider2" to="." method="_on_voices_h_slider_2_value_changed"]
+[connection signal="value_changed" from="ColorRect/GridContainer/MusicHSlider" to="." method="_on_music_h_slider_value_changed"]
+[connection signal="value_changed" from="ColorRect/GridContainer/SoundEffectsHSlider" to="." method="_on_sound_effects_h_slider_value_changed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

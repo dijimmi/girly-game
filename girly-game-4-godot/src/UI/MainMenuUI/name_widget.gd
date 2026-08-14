@@ -14,7 +14,6 @@ signal name_pressed(cname : String)
 func _ready() -> void:
 	if not is_default:
 		visible_names += 1
-		print("added: ",visible_names)
 	else:
 		visible = false
 

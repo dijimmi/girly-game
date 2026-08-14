@@ -12,11 +12,9 @@ var cur_level
 var cur_level_name
 func _load_scene(cue : String = Global.next_scene):
 	if !(cue in scene_array.keys()):
-		print("[level_handler] ",cue," isn't in the scene_array : ",scene_array.keys())
 		return
 	if cur_level: cur_level.queue_free()
 	var level = scene_array[cue].instantiate()
 	cur_level = level
 	cur_level_name = cue
 	add_child(level)
-	#AudioHandler.play_or_resume_music()

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cwn1o0ihthao8" path="res://src/UI/MainMenuUI/main_menu.gd" id="1_t6xyb"]
 [ext_resource type="PackedScene" uid="uid://ri1t4nsb8w43" path="res://src/UI/MainMenuUI/level_selector.tscn" id="2_blov8"]
+[ext_resource type="PackedScene" uid="uid://cn1jorh50rw5e" path="res://src/UI/MainMenuUI/settings.tscn" id="3_sebvq"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1050728028]
 script = ExtResource("1_t6xyb")
@@ -55,7 +56,6 @@ text = "Playtest"
 [node name="SettingsButton" type="Button" parent="Control/Buttons" unique_id=1243679909]
 custom_minimum_size = Vector2(128, 24)
 layout_mode = 2
-disabled = true
 text = "Settings"
 
 [node name="QuitButton" type="Button" parent="Control/Buttons" unique_id=1270837940]
@@ -94,6 +94,10 @@ color = Color(0.41215247, 0.41215247, 0.41215247, 1)
 [node name="LevelSelector" parent="." unique_id=1252859361 instance=ExtResource("2_blov8")]
 visible = false
 
+[node name="Settings" parent="." unique_id=1000439076 instance=ExtResource("3_sebvq")]
+visible = false
+
 [connection signal="pressed" from="Control/Buttons/NewSaveButton" to="." method="_on_new_save_button_pressed"]
 [connection signal="pressed" from="Control/Buttons/ChoseScene" to="LevelSelector" method="open_level_selector"]
 [connection signal="pressed" from="Control/Buttons/PlaytestButton" to="." method="_on_playtest_button_pressed"]
+[connection signal="pressed" from="Control/Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]

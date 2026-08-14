@@ -1,5 +1,6 @@
 [background arg="res://import/Art/BackgroundArt/bg_corridor_afternoon.png" fade="1.0" wait="true"]
 [style name="CustomDialogue"]
+do AudioManager.load_music("scene2")
 join friend (Smile) center [animation="Fade In" length="0.2"]
 friend (Happy): Come on, it’s gonna be fun!
 update friend (Neutral) center [move_time="0.5"]
