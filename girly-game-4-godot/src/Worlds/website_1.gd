@@ -36,6 +36,9 @@ var active_page : String = ProductInfo.HOME
 var web_score = 0
 var curr_level = ProductInfo.Level.ONE
 
+# USE THIS SIGNAL TOWARDS THE LEVEL MANAGER OR WHATEVER :)
+signal close_website_and_get_score(score : int)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pages = {
@@ -203,6 +206,7 @@ func _on_view_product_page_buy_product(product: Product) -> void:
 		update_score(0)
 	
 	print("New score: ", str(web_score))
+	close_website_and_get_score.emit(web_score)
 	#TODO: ADD FUNCTION TO GO BACK TO DIALOGIC SCENE AND UPDATE OVERALL SCORE
 
 
