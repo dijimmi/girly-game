@@ -40,6 +40,9 @@ func _unlock_word(word) -> void:
 @export var examples_Vbox : VBoxContainer
 @export var definition : RichTextLabel
 
+# Added this to be able to use it in the website
+@export var example1: RichTextLabel
+
 func update_word_details(word) -> void:
 	if "text" in glossary.entries[word]:
 		definition.text = glossary.entries[word]["text"]
@@ -50,7 +53,7 @@ func update_word_details(word) -> void:
 		for i in examples.size():
 			if i < examples_Vbox.get_child_count():
 				examples_Vbox.get_child(i).text = "[ul]" + examples[i]
-	word_label.text = glossary.entries[word]["name"]
+	word_label.text = glossary.entries[word]["name"].replace("@", "ッ")
 	word_details_anim_in()
 func word_details_anim_in() -> void:
 	$PageVBoxContainer/AllWords/HBoxContainer/WordDescription.show()

@@ -1,6 +1,7 @@
 extends Control
 
 @export var my_vbox : VBoxContainer
+@export var url: LineEdit
 
 @export var address_bar : PanelContainer
 @export var task_bar : PanelContainer
@@ -15,6 +16,7 @@ extends Control
 @export var ads : VBoxContainer
 
 @export var homepage : PanelContainer
+@export var honse_page: PanelContainer
 
 @export var undo : Button
 @export var redo : Button
@@ -45,7 +47,8 @@ func _ready() -> void:
 		ProductInfo.HOME:             [homepage],
 		ProductInfo.SHOP_PAGE_SEARCH: [shop_page, shop_page_seach_bar, products_list_page],
 		ProductInfo.FEATURED_PAGE:    [shop_page_seach_bar, shop_page, featured_page],
-		ProductInfo.SHOP_PAGE_BUY:    [shop_page_seach_bar, shop_page, view_product_page]
+		ProductInfo.SHOP_PAGE_BUY:    [shop_page_seach_bar, shop_page, view_product_page],
+		ProductInfo.HONSE:            [honse_page],
 	}
 	
 	init_products()
@@ -219,3 +222,9 @@ func _on_chat_screen_hint_received(_hint_num: Variant) -> void:
 		update_score(-500)
 	else:
 		update_score(0)
+
+
+func _on_url_text_submitted(new_text: String) -> void:
+	if new_text.to_lower().contains("honse"):
+		url.text = "honse!.com"
+		change_page(ProductInfo.HONSE)

@@ -2,11 +2,14 @@ extends Node
 
 var score = 0
 
-const FEATURED = "お すすめ しょうひん"
+var glossary = Global.glossary
+
+const FEATURED = "おすすめしょうひん"
 const HOME = "home"
 const SHOP_PAGE_SEARCH = "shop_page_search"
 const FEATURED_PAGE = "featured_page"
 const SHOP_PAGE_BUY = "shop_page_buy"
+const HONSE = "honse"
 
 var products : Array[Product]
 var meta_text = null
@@ -22,12 +25,43 @@ func make_clickable(node : RichTextLabel, text : String) -> String:
 
 
 func search_on_glossary(hovered_text) -> Dictionary:
+	#hovered_text = hovered_text.strip_edges()
+	
+	var sample_dict = {
+	"jp": hovered_text,
+	"romaji": "bu-ra-n-do",
+	"definition": "ERROR ERROR WORD NOT IN GLOSSARY"
+	}
+	
+	print(glossary.entries.get(hovered_text, ""), "SHIMIMI YE SHIMI YE SHIMI YA")
+	if "name" in glossary.entries.get(hovered_text, ""):
+		sample_dict["jp"] = hovered_text
+		sample_dict["romaji"] = glossary.entries[hovered_text]["alternatives"][0]
+		sample_dict["definition"] = glossary.entries[hovered_text].get("title", "")
+	
+	return sample_dict
+
+
+func update_word_details(hovered_text) -> void:
 	var sample_dict = {
 	"jp": hovered_text,
 	"romaji": "bu-ra-n-do",
 	"definition": "www you thought u had it unlocked? womp womp"
 	}
-	return sample_dict
+	
+	if "text" in glossary.entries[hovered_text]:
+		sample_dict["jp"] = glossary.entries[hovered_text]["text"]
+	else:
+		sample_dict["jp"] = ""
+	sample_dict["jp"] = glossary.entries[hovered_text]["name"]
+	# I need romaji
+	
+	
+	#if "extra" in glossary.entries[hovered_text] :
+		#var examples : Array = glossary.entries[hovered_text]["extra"].rsplit("\n")
+		#for i in examples.size():
+			#if i < examples_Vbox.get_child_count():
+				#examples_Vbox.get_child(i).text = "[ul]" + examples[i]
 
 
 func _on_clickable_text_gui_input(event: InputEvent, node : RichTextLabel) -> void:

@@ -20,14 +20,15 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="Dictionary" type="CanvasLayer" unique_id=1168859383 node_paths=PackedStringArray("word_container", "word_label", "examples_Vbox", "definition")]
+[node name="Dictionary" type="CanvasLayer" unique_id=1168859383 node_paths=PackedStringArray("word_container", "word_label", "examples_Vbox", "definition", "example1")]
 script = ExtResource("1_p4bu3")
 glossary = ExtResource("2_lwnmy")
 word_button = ExtResource("3_1pmtp")
 word_container = NodePath("PageVBoxContainer/AllWords/HBoxContainer/Dictionnary/DictionaryContainer/WordsContainer/ScrollContainer/WordsVBoxContainer")
 word_label = NodePath("PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/WordLabel")
-examples_Vbox = NodePath("PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples/VBoxContainer")
+examples_Vbox = NodePath("PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/ExamplesLiteralWord/VBoxContainer")
 definition = NodePath("PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Definition")
+example1 = NodePath("PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/ExamplesLiteralWord/VBoxContainer/Example1")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=290218902]
 anchors_preset = 15
@@ -197,7 +198,7 @@ offset_bottom = 4.549999
 texture = ExtResource("5_lwnmy")
 expand_mode = 1
 
-[node name="Examples" type="Label" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement" unique_id=2036251294]
+[node name="ExamplesLiteralWord" type="Label" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement" unique_id=2036251294]
 layout_mode = 0
 offset_left = 14.0
 offset_top = 364.0
@@ -207,7 +208,7 @@ theme_override_colors/font_color = Color(0.627451, 0.16862746, 0.40784314, 1)
 text = "Examples :"
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples" unique_id=2000214253]
+[node name="VBoxContainer" type="VBoxContainer" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/ExamplesLiteralWord" unique_id=2000214253]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.5
@@ -217,21 +218,21 @@ offset_top = 20.0
 offset_right = 314.0
 offset_bottom = 60.0
 
-[node name="Examples" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples/VBoxContainer" unique_id=96496708]
+[node name="Example1" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/ExamplesLiteralWord/VBoxContainer" unique_id=96496708]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 theme_override_colors/default_color = Color(0.627451, 0.16862746, 0.40784314, 1)
 bbcode_enabled = true
 vertical_alignment = 1
 
-[node name="Examples2" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples/VBoxContainer" unique_id=578825741]
+[node name="Example2" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/ExamplesLiteralWord/VBoxContainer" unique_id=578825741]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 theme_override_colors/default_color = Color(0.627451, 0.16862746, 0.40784314, 1)
 bbcode_enabled = true
 vertical_alignment = 1
 
-[node name="Examples3" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/Examples/VBoxContainer" unique_id=357692567]
+[node name="Example3" type="RichTextLabel" parent="PageVBoxContainer/AllWords/HBoxContainer/WordDescription/WordDescriptionMovement/ExamplesLiteralWord/VBoxContainer" unique_id=357692567]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 theme_override_colors/default_color = Color(0.627451, 0.16862746, 0.40784314, 1)

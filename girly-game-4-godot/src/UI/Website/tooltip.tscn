@@ -64,6 +64,11 @@ text = "brand - brand of clothing"
 fit_content = true
 scroll_active = false
 
+[node name="OpenDictionary" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1257075425]
+layout_mode = 2
+disabled = true
+text = "Open Dictionary"
+
 [node name="Label" type="Label" parent="PanelContainer" unique_id=107219324]
 layout_mode = 2
 size_flags_horizontal = 0

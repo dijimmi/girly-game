@@ -36,7 +36,6 @@ func setup(dict, hovered_text_position : Vector2, make_visible : bool = true):
 	tooltip_bg.position = hovered_text_position
 	tooltip_bg.position.y -= tooltip_bg.size.y
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

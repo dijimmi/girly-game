@@ -5,13 +5,30 @@
 [resource]
 script = ExtResource("1_l5idx")
 entries = {
+"a-ku-se-so-ri-i": "アクセサリー",
+"a-ma-ro-ri-i": "あまろりー",
 "a-o": "あお",
+"bo-n-ne-tto": "ボンネット",
+"bo-u-shi": "ぼうし",
+"cho-o-ka-a": "チョーカー",
+"co-re-ku-sho-n": "コレクション",
+"du-re-su": "ドレス",
+"e-e": "ええ",
+"go-su-ro-ri": "ゴスロリ",
 "ha-i": "はい",
+"he-a-ri-bo-n": "ヘアリボン",
 "i-ra-ssha-i": "いらっしゃい",
+"ka-a-pe-re-tto": "ケープレット",
+"ke-i": "けい",
 "ko-n-ni-chi-wa": "こんにちは！",
+"ku-ra-shi-kku-ro-ri-i": "クラシックロリー",
+"ku-tsu": "くつ",
+"o-su-su-me-sho-u-hi-n": "おすすめしょうひん",
+"ro-ri-i-ta": "ロリータ",
 "sa-n-kyuu": "サンキュー",
+"ta-i-pu": "タイプ",
 "u-n": "うん",
-"ya-t-ta": "やった",
+"ya-tta": "やった",
 "あお": {
 "alternatives": ["a-o"],
 "case_sensitive": true,
@@ -19,6 +36,11 @@ entries = {
 "name": "あお",
 "text": "[ol] (n) blue / green",
 "title": "Blue"
+},
+"あまろりー": {
+"alternatives": ["a-ma-ro-ri-i"],
+"name": "あまろりー",
+"title": "Sweet Lolita"
 },
 "いらっしゃい": {
 "alternatives": ["i-ra-ssha-i"],
@@ -32,8 +54,25 @@ entries = {
 "title": "Yes/That's right"
 },
 "ええ": {
+"alternatives": ["e-e"],
 "name": "ええ",
 "title": "Huh"
+},
+"おすすめしょうひん": {
+"alternatives": ["o-su-su-me-sho-u-hi-n"],
+"name": "おすすめしょうひん",
+"title": "Featured Products"
+},
+"くつ": {
+"alternatives": ["ku-tsu"],
+"name": "くつ",
+"title": "Shoes"
+},
+"けい": {
+"alternatives": ["ke-i"],
+"name": "けい",
+"text": "Variation of the collection",
+"title": "Substyle"
 },
 "こんにちは！": {
 "alternatives": ["ko-n-ni-chi-wa"],
@@ -47,14 +86,84 @@ entries = {
 "text": "",
 "title": "Yes"
 },
+"ぼうし": {
+"alternatives": ["bo-u-shi"],
+"name": "ぼうし",
+"text": "Head Accessory",
+"title": "Hat"
+},
 "やった": {
-"alternatives": ["ya-t-ta"],
+"alternatives": ["ya-tta"],
 "name": "やった",
 "title": "Yay/Hooray"
+},
+"アクセサリー": {
+"alternatives": ["a-ku-se-so-ri-i"],
+"name": "アクセサリー",
+"title": "Accessory"
+},
+"クラシックロリー": {
+"alternatives": ["ku-ra-shi-kku-ro-ri-i"],
+"case_sensitive": true,
+"name": "クラシックロリー",
+"text": "Substyle of Lolita",
+"title": "Classic Lolita"
+},
+"ケープレット": {
+"alternatives": ["ka-a-pe-re-tto"],
+"name": "ケープレット",
+"title": "Capalet"
+},
+"コレクション": {
+"alternatives": ["co-re-ku-sho-n"],
+"name": "コレクション",
+"title": "Collection"
+},
+"ゴスロリ": {
+"alternatives": ["go-su-ro-ri"],
+"name": "ゴスロリ",
+"title": "Gothic Lolita"
 },
 "サンキュー": {
 "alternatives": ["sa-n-kyuu"],
 "name": "サンキュー",
 "title": "Thank you"
+},
+"タイプ": {
+"alternatives": ["ta-i-pu"],
+"case_sensitive": true,
+"name": "タイプ",
+"text": "",
+"title": "Type"
+},
+"チョーカー": {
+"alternatives": ["cho-o-ka-a"],
+"name": "チョーカー",
+"text": "Neck Accessory",
+"title": "Choker"
+},
+"ドレス": {
+"alternatives": ["du-re-su"],
+"name": "ドレス",
+"title": "Dress"
+},
+"ヘアリボン": {
+"alternatives": ["he-a-ri-bo-n"],
+"name": "ヘアリボン",
+"title": "Hair Ribbon"
+},
+"ボンネット": {
+"alternatives": ["bo-n-ne-tto"],
+"case_sensitive": false,
+"name": "ボンネット",
+"text": "Head Accessory",
+"title": "Bonnet"
+},
+"ロリータ": {
+"alternatives": ["ro-ri-i-ta"],
+"case_sensitive": true,
+"name": "ロリータ",
+"text": "Japanese fashion",
+"title": "Lolita"
 }
 }

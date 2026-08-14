@@ -42,6 +42,7 @@ func get_keywords():
 	keyword_list.append(category)
 	keyword_list.append(substyle)
 	keyword_list.append(accesory_type)
+	keyword_list.append("all")
 	
 	return keyword_list
 
