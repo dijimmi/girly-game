@@ -68,6 +68,18 @@ max_value = 1.0
 step = 0.5
 value = -9.0
 
+[node name="Voices" type="Label" parent="ColorRect/GridContainer" unique_id=1658457857]
+layout_mode = 2
+text = "Voices"
+horizontal_alignment = 1
+
+[node name="VoicesHSlider2" type="HSlider" parent="ColorRect/GridContainer" unique_id=1631887187]
+layout_mode = 2
+min_value = -60.0
+max_value = 1.0
+step = 0.5
+value = -9.0
+
 [node name="Music" type="Label" parent="ColorRect/GridContainer" unique_id=1351977771]
 layout_mode = 2
 text = "Music"
@@ -105,8 +117,8 @@ offset_right = 112.768
 offset_bottom = 68.376
 text = "<- Back"
 
-[connection signal="drag_ended" from="ColorRect/GridContainer/VolumeHSlider" to="." method="_on_volume_h_slider_drag_ended"]
 [connection signal="value_changed" from="ColorRect/GridContainer/VolumeHSlider" to="." method="_on_volume_h_slider_value_changed"]
+[connection signal="value_changed" from="ColorRect/GridContainer/VoicesHSlider2" to="." method="_on_voices_h_slider_2_value_changed"]
 [connection signal="value_changed" from="ColorRect/GridContainer/MusicHSlider" to="." method="_on_music_h_slider_value_changed"]
 [connection signal="value_changed" from="ColorRect/GridContainer/SoundEffectsHSlider" to="." method="_on_sound_effects_h_slider_value_changed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
