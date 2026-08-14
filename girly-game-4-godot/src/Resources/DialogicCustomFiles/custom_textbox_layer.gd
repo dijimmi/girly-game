@@ -145,7 +145,23 @@ func _apply_export_overrides() -> void:
 	## TYPING SOUNDS
 	_apply_sounds_settings()
 
-
+func _ready() -> void:
+	print("does ready never happen?")
+	DialogicUtil.autoload().Text.speaker_updated.connect(change_textbox_tex)
+func change_textbox_tex(_character : DialogicCharacter) -> void:
+	#if !character.custom_info.keys().has("TextBoxInfo"):
+		#return
+	var dialog_text_panel = %DialogTextPanel
+	var name_label_panel = %NameLabelPanel
+	#var ninerect_textbox = %NineRectTextbox
+	#var ninerect_texture = %NineRectTexture
+	dialog_text_panel.self_modulate = Color(1.0, 1.0, 1.0, 0.0) #character.custom_info["TextBoxInfo"]
+	#ninerect_textbox.self_modulate = character.custom_info["TextBoxInfo"]
+	name_label_panel.self_modulate = Color("ffffffff")
+	#ninerect_texture.texture = load(character.custom_info["TextboxTexture"])
+	#ninerect_texture.self_modulate = character.custom_info["TextBoxInfo"] 
+	#ninerect_textbox.self_modulate.h += 50
+	#ninerect_textbox.self_modulate.a = 158.0/255.0
 ## Applies all text box settings to the scene.
 ## Except the box animations.
 func _apply_box_settings() -> void:
@@ -245,7 +261,7 @@ func _apply_text_settings() -> void:
 func _apply_indicator_settings() -> void:
 	var next_indicator: DialogicNode_NextIndicator = %NextIndicator
 	next_indicator.enabled = next_indicator_enabled
-
+	
 	if next_indicator_enabled:
 		next_indicator.animation = next_indicator_animation as DialogicNode_NextIndicator.Animations
 		if ResourceLoader.exists(next_indicator_texture):

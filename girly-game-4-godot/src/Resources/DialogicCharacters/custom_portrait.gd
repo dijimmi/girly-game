@@ -53,7 +53,6 @@ func _update_portrait(_passed_character: DialogicCharacter, _passed_portrait: St
 		$Faces/Excited.texture = load(expression_image)
 		$Faces/Excited.show()
 func _set_mirror(is_mirrored: bool) -> void:
-	print(is_mirrored)
 	if is_mirrored:
 		self.scale.x = -1
 

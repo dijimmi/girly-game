@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bhrvdg5ftyble" path="res://src/UI/MinigameUI/minigame_draw_hiragana.gd" id="1_k6yt4"]
 [ext_resource type="PackedScene" uid="uid://ckjywq7d7pc5d" path="res://src/Entity/drawing_frame.tscn" id="2_vhj4k"]
-[ext_resource type="Texture2D" uid="uid://btqi3441eaut5" path="res://import/Art/UIArt/handakuten.png" id="3_217i8"]
-[ext_resource type="Texture2D" uid="uid://cocu2tg20h3di" path="res://import/Art/UIArt/dakuten.png" id="4_f73qd"]
-[ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/UIArt/a_1.png" id="4_lkbmo"]
-[ext_resource type="Texture2D" uid="uid://bjqv567gklwfr" path="res://import/Art/UIArt/hiragana_writing_background.png" id="12_2lagt"]
+[ext_resource type="Texture2D" uid="uid://btqi3441eaut5" path="res://import/Art/UIArt/Hiragana/handakuten.png" id="3_217i8"]
+[ext_resource type="Texture2D" uid="uid://cocu2tg20h3di" path="res://import/Art/UIArt/Hiragana/dakuten.png" id="4_f73qd"]
+[ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/UIArt/Hiragana/a_1.png" id="4_lkbmo"]
+[ext_resource type="Texture2D" uid="uid://bjqv567gklwfr" path="res://import/Art/UIArt/Hiragana/hiragana_writing_background.png" id="12_2lagt"]
 
 [node name="DrawHiragana" type="Control" unique_id=2074376187]
 layout_mode = 3

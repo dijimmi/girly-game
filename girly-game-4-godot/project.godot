@@ -29,7 +29,6 @@ directories/dch_directory={
 "friend": "res://src/Resources/DialogicCharacters/friend.dch",
 "love_interest": "res://src/Resources/DialogicCharacters/love_interest.dch",
 "main_character": "res://src/Resources/DialogicCharacters/main_character.dch",
-"narrator": "res://src/Resources/DialogicCharacters/narrator.dch",
 "pres": "res://src/Resources/DialogicCharacters/pres.dch"
 }
 directories/dtl_directory={
@@ -39,12 +38,13 @@ directories/dtl_directory={
 "test_timeline": "res://src/_Tests/test_timeline.dtl"
 }
 layout/style_directory={
+"": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
 "CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
 "narration_style_dialogue": "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres", "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"]
-layout/default_style=""
+layout/default_style="res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
 variables={
 "FriendName": "Aoi",
 "LoveInterestName": "A",
@@ -85,7 +85,7 @@ audio/channel_defaults={
 }
 }
 glossary/glossary_files=["uid://ctu427wqr6fj4"]
-glossary/default_color=Color(0.81960785, 0.36078432, 0.78039217, 1)
+glossary/default_color=Color(1, 0.913737, 0.4479167, 1)
 text/autocolor_names=true
 
 [display]

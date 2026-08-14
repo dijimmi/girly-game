@@ -12,3 +12,5 @@ signal minigame_round_end
 signal load_scene(cue : String)
 
 signal unlock_word(word : String)
+
+signal change_textbox_tex
