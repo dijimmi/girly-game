@@ -14,3 +14,5 @@ signal load_scene(cue : String)
 signal unlock_word(word : String)
 
 signal change_textbox_tex
+
+signal music_stopped

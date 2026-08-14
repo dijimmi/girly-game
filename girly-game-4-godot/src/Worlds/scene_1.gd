@@ -11,7 +11,6 @@ func _ready() -> void:
 	Global.can_pause = false
 
 func _on_name_selected() -> void:
-	print("name selected")
 	$CanvasLayer.visible = false
 	get_tree().paused = false
 	Global.can_pause = true

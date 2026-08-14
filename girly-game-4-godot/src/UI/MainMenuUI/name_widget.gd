@@ -13,7 +13,6 @@ static var visible_names = 0
 func _ready() -> void:
 	if not is_default:
 		visible_names += 1
-		print("added: ",visible_names)
 	else:
 		visible = false
 
@@ -47,7 +46,3 @@ func verify_match(text : String):
 			visible_names += 1
 		else:
 			visible_names -= 1
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
