@@ -3,46 +3,53 @@
 
 # @ MEANS VOICED DIALOGUE
 
-join pres (JoySpeaking) left [mirrored="true"]
+join pres (Happy) left [mirrored="true"]
 [voice volume="0.0"]
-pres: いらっしゃい !  Hello! Nice to meet ya! #id:67
+pres (Happy): いらっしゃい !  Hello! Nice to meet ya'll! #id:67
 # pres: いらっしゃい！ ハロー、ナイス・トゥ・ミーチュー！
 [voice volume="0.0"]
-pres (Joy): Are you guys interested in joining the club? @ #id:68
+pres: Are you guys interested in joining the club? @ #id:68
 # pres (Joy): 二人とも、入部希望？
+update pres (Neutral)
 join friend right
-friend (Joy): うん！ @ #id:69
+[voice path="res://import/Voices/Aoi/Aoi_5.wav" volume="0.0" bus="Voices"]
+friend (Smile): うん！ #id:69
 # MISSING TRANSLATION
+update friend (Neutral)
 main_character: I guess so... #id:6a
 # main_character: まあ……そんな感じです。
-update friend (Neutral)
-pres (Joy): Alright, you just need to sign here, and there please. #id:6b
+[voice volume="0.0"]
+pres (Happy): Alright, you just need to sign here, and there please. #id:6b
 # pres (Joy): じゃあ、こことここに名前を書いてね。
 do Dialogue.start_minigame(Dialogic.VAR.PlayerNameJP)
 # MISSING TRANSLATION
+[voice volume="0.0"]
 pres (JoySpeaking): サンキュー! #id:6c
 # pres (JoySpeaking): サンキュー！
+[voice volume="0.0"]
 pres: You can look around and hang out, we'll be starting our meeting soon. #id:6d
 # pres: 始まるまでは、部内を適当に見て回ったりしてくつろいでいって。もうすぐミーティング始めるから。
 main_character: Thank you. #id:6e
 # main_character: ありがとうございます。
+[voice path="res://import/Voices/Aoi/Aoi_6.wav" volume="0.0"]
 
-friend (Joy): はい~ #id:6f
+friend (Joy): はーい~ #id:6f
 # friend (Joy): はーい。
 leave pres
 update friend center [move_time="0.5"]
-main_character: Alright so... I joined, now I can leave, right? #id:70
+main_character: Alright so... I joined. Now I can leave, right? #id:70
 # main_character: よし……入部したし、俺もう帰っていいよな？
-friend (NeutralSpeaking): ええ?!! @ #id:71
+[voice path="res://import/Voices/Aoi/Aoi_7.wav" volume="0.0"]
+friend (Confused): ええ?!! #id:71
 # friend (NeutralSpeaking): ええっ！？
 main_character: I'm just messing with you. #id:72
 # main_character: …冗談だって。
-update friend (Neutral)
+update friend (Smug)
 main_character: I thought more people would be here... #id:73
 # main_character: もっと人がいると思ってたけど……。
-friend (NeutralSpeaking): It's a new club, from what I heard. #id:74
+friend (Happy): It's a new club, give it time... #id:74
 # friend (NeutralSpeaking): できたばかりの部活らしいよ。
-friend (JoySPeaking): Oh look, another one is joining! #id:75
+friend: Oh look, another one is joining! #id:75
 # friend (JoySPeaking): あ、見て。もう一人来たよ。
 
 Ayumi: (JP) Here it is. (enters the scene) #id:76

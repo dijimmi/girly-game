@@ -129,15 +129,10 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks" unique_id=1505256674]
 layout_mode = 2
 
-[node name="BigView" type="Button" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1113590106]
+[node name="ShowGames" type="Button" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1113590106]
 layout_mode = 2
 toggle_mode = true
 text = "big view"
-
-[node name="Game1" type="LinkButton" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1031569832]
-layout_mode = 2
-text = "game"
-uri = "https://jillsplades.itch.io/my-little-bento-shop"
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=388935697]
 layout_mode = 2
@@ -431,7 +426,7 @@ autoplay = true
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Undo" to="." method="_on_undo_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Redo" to="." method="_on_redo_pressed"]
 [connection signal="text_submitted" from="VBoxContainer/AddressBarBG/AddressBar/URL" to="." method="_on_url_text_submitted"]
-[connection signal="toggled" from="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer/BigView" to="VBoxContainer/HomePageBG" method="_on_big_view_toggled"]
+[connection signal="toggled" from="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer/ShowGames" to="VBoxContainer/HomePageBG" method="_on_big_view_toggled"]
 [connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/Website1" to="." method="_on_website_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/GameThumbnail1" to="VBoxContainer/HomePageBG" method="_on_game_thumbnail_1_pressed"]
 [connection signal="gui_input" from="VBoxContainer/ShopPageSearchBar/TopBar/WebsiteLogo" to="VBoxContainer/ShopPageSearchBar" method="_on_website_logo_gui_input"]
