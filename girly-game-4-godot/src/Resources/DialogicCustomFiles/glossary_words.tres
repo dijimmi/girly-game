@@ -6,9 +6,58 @@
 script = ExtResource("1_l5idx")
 entries = {
 "": {
+"_translation_id": "2be",
 "case_sensitive": true,
 "name": ""
 },
+"Glossary/2bd/2bf/alternatives": "あお",
+"Glossary/2bd/2bf/name": "あお",
+"Glossary/2bd/2c0/alternatives": "あまろりー",
+"Glossary/2bd/2c0/name": "あまろりー",
+"Glossary/2bd/2c1/alternatives": "いらっしゃい",
+"Glossary/2bd/2c1/name": "いらっしゃい",
+"Glossary/2bd/2c2/alternatives": "うん",
+"Glossary/2bd/2c2/name": "うん",
+"Glossary/2bd/2c3/alternatives": "ええ",
+"Glossary/2bd/2c3/name": "ええ",
+"Glossary/2bd/2c4/alternatives": "おすすめしょうひん",
+"Glossary/2bd/2c4/name": "おすすめしょうひん",
+"Glossary/2bd/2c5/alternatives": "くつ",
+"Glossary/2bd/2c5/name": "くつ",
+"Glossary/2bd/2c6/alternatives": "けい",
+"Glossary/2bd/2c6/name": "けい",
+"Glossary/2bd/2c7/alternatives": "こんにちは！",
+"Glossary/2bd/2c7/name": "こんにちは！",
+"Glossary/2bd/2c8/alternatives": "はい",
+"Glossary/2bd/2c8/name": "はい",
+"Glossary/2bd/2c9/alternatives": "ぼうし",
+"Glossary/2bd/2c9/name": "ぼうし",
+"Glossary/2bd/2ca/alternatives": "やった",
+"Glossary/2bd/2ca/name": "やった",
+"Glossary/2bd/2cb/alternatives": "アクセサリー",
+"Glossary/2bd/2cb/name": "アクセサリー",
+"Glossary/2bd/2cc/alternatives": "クラシックロリー",
+"Glossary/2bd/2cc/name": "クラシックロリー",
+"Glossary/2bd/2cd/alternatives": "ケープレット",
+"Glossary/2bd/2cd/name": "ケープレット",
+"Glossary/2bd/2ce/alternatives": "コレクション",
+"Glossary/2bd/2ce/name": "コレクション",
+"Glossary/2bd/2cf/alternatives": "ゴスロリ",
+"Glossary/2bd/2cf/name": "ゴスロリ",
+"Glossary/2bd/2d0/alternatives": "サンキュー",
+"Glossary/2bd/2d0/name": "サンキュー",
+"Glossary/2bd/2d1/alternatives": "タイプ",
+"Glossary/2bd/2d1/name": "タイプ",
+"Glossary/2bd/2d2/alternatives": "チョーカー",
+"Glossary/2bd/2d2/name": "チョーカー",
+"Glossary/2bd/2d3/alternatives": "ドレス",
+"Glossary/2bd/2d3/name": "ドレス",
+"Glossary/2bd/2d4/alternatives": "ヘアリボン",
+"Glossary/2bd/2d4/name": "ヘアリボン",
+"Glossary/2bd/2d5/alternatives": "ボンネット",
+"Glossary/2bd/2d5/name": "ボンネット",
+"Glossary/2bd/2d6/alternatives": "ロリータ",
+"Glossary/2bd/2d6/name": "ロリータ",
 "a-ku-se-so-ri-i": "アクセサリー",
 "a-ma-ro-ri-i": "あまろりー",
 "a-o": "あお",
@@ -34,6 +83,7 @@ entries = {
 "u-n": "うん",
 "ya-tta": "やった",
 "あお": {
+"_translation_id": "2bf",
 "alternatives": ["a-o"],
 "case_sensitive": true,
 "extra": "そら　は　あお  (sora wa ao) : the sky is blue",
@@ -42,71 +92,84 @@ entries = {
 "title": "Blue"
 },
 "あまろりー": {
+"_translation_id": "2c0",
 "alternatives": ["a-ma-ro-ri-i"],
 "name": "あまろりー",
 "title": "Sweet Lolita"
 },
 "いらっしゃい": {
+"_translation_id": "2c1",
 "alternatives": ["i-ra-ssha-i"],
 "name": "いらっしゃい",
 "title": "Welcome"
 },
 "うん": {
+"_translation_id": "2c2",
 "alternatives": ["u-n"],
 "extra": "",
 "name": "うん",
 "title": "Yes/That's right"
 },
 "ええ": {
+"_translation_id": "2c3",
 "alternatives": ["e-e"],
 "name": "ええ",
 "title": "Huh"
 },
 "おすすめしょうひん": {
+"_translation_id": "2c4",
 "alternatives": ["o-su-su-me-sho-u-hi-n"],
 "name": "おすすめしょうひん",
 "title": "Featured Products"
 },
 "くつ": {
+"_translation_id": "2c5",
 "alternatives": ["ku-tsu"],
 "name": "くつ",
 "title": "Shoes"
 },
 "けい": {
+"_translation_id": "2c6",
 "alternatives": ["ke-i"],
 "name": "けい",
 "text": "Variation of the collection",
 "title": "Substyle"
 },
 "こんにちは！": {
+"_translation_id": "2c7",
 "alternatives": ["ko-n-ni-chi-wa"],
 "name": "こんにちは！",
 "text": "",
 "title": "Hello"
 },
 "はい": {
+"_translation_id": "2c8",
 "alternatives": ["ha-i"],
 "name": "はい",
 "text": "",
 "title": "Yes"
 },
 "ぼうし": {
+"_translation_id": "2c9",
 "alternatives": ["bo-u-shi"],
 "name": "ぼうし",
 "text": "Head Accessory",
 "title": "Hat"
 },
 "やった": {
+"_translation_id": "2ca",
 "alternatives": ["ya-tta"],
 "name": "やった",
 "title": "Yay/Hooray"
 },
 "アクセサリー": {
+"_translation_id": "2cb",
 "alternatives": ["a-ku-se-so-ri-i"],
 "name": "アクセサリー",
 "title": "Accessory"
 },
 "クラシックロリー": {
+"_translation_id": "2cc",
 "alternatives": ["ku-ra-shi-kku-ro-ri-i"],
 "case_sensitive": true,
 "name": "クラシックロリー",
@@ -114,26 +177,31 @@ entries = {
 "title": "Classic Lolita"
 },
 "ケープレット": {
+"_translation_id": "2cd",
 "alternatives": ["ka-a-pe-re-tto"],
 "name": "ケープレット",
 "title": "Capalet"
 },
 "コレクション": {
+"_translation_id": "2ce",
 "alternatives": ["co-re-ku-sho-n"],
 "name": "コレクション",
 "title": "Collection"
 },
 "ゴスロリ": {
+"_translation_id": "2cf",
 "alternatives": ["go-su-ro-ri"],
 "name": "ゴスロリ",
 "title": "Gothic Lolita"
 },
 "サンキュー": {
+"_translation_id": "2d0",
 "alternatives": ["sa-n-kyuu"],
 "name": "サンキュー",
 "title": "Thank you"
 },
 "タイプ": {
+"_translation_id": "2d1",
 "alternatives": ["ta-i-pu"],
 "case_sensitive": true,
 "name": "タイプ",
@@ -141,22 +209,26 @@ entries = {
 "title": "Type"
 },
 "チョーカー": {
+"_translation_id": "2d2",
 "alternatives": ["cho-o-ka-a"],
 "name": "チョーカー",
 "text": "Neck Accessory",
 "title": "Choker"
 },
 "ドレス": {
+"_translation_id": "2d3",
 "alternatives": ["du-re-su"],
 "name": "ドレス",
 "title": "Dress"
 },
 "ヘアリボン": {
+"_translation_id": "2d4",
 "alternatives": ["he-a-ri-bo-n"],
 "name": "ヘアリボン",
 "title": "Hair Ribbon"
 },
 "ボンネット": {
+"_translation_id": "2d5",
 "alternatives": ["bo-n-ne-tto"],
 "case_sensitive": false,
 "name": "ボンネット",
@@ -164,10 +236,62 @@ entries = {
 "title": "Bonnet"
 },
 "ロリータ": {
+"_translation_id": "2d6",
 "alternatives": ["ro-ri-i-ta"],
 "case_sensitive": true,
 "name": "ロリータ",
 "text": "Japanese fashion",
 "title": "Lolita"
 }
+}
+_translation_id = "2bd"
+_translation_keys = {
+"a-ku-se-so-ri-i": "Glossary/2bd/2cb/alternatives",
+"a-ma-ro-ri-i": "Glossary/2bd/2c0/alternatives",
+"a-o": "Glossary/2bd/2bf/alternatives",
+"bo-n-ne-tto": "Glossary/2bd/2d5/alternatives",
+"bo-u-shi": "Glossary/2bd/2c9/alternatives",
+"cho-o-ka-a": "Glossary/2bd/2d2/alternatives",
+"co-re-ku-sho-n": "Glossary/2bd/2ce/alternatives",
+"du-re-su": "Glossary/2bd/2d3/alternatives",
+"e-e": "Glossary/2bd/2c3/alternatives",
+"go-su-ro-ri": "Glossary/2bd/2cf/alternatives",
+"ha-i": "Glossary/2bd/2c8/alternatives",
+"he-a-ri-bo-n": "Glossary/2bd/2d4/alternatives",
+"i-ra-ssha-i": "Glossary/2bd/2c1/alternatives",
+"ka-a-pe-re-tto": "Glossary/2bd/2cd/alternatives",
+"ke-i": "Glossary/2bd/2c6/alternatives",
+"ko-n-ni-chi-wa": "Glossary/2bd/2c7/alternatives",
+"ku-ra-shi-kku-ro-ri-i": "Glossary/2bd/2cc/alternatives",
+"ku-tsu": "Glossary/2bd/2c5/alternatives",
+"o-su-su-me-sho-u-hi-n": "Glossary/2bd/2c4/alternatives",
+"ro-ri-i-ta": "Glossary/2bd/2d6/alternatives",
+"sa-n-kyuu": "Glossary/2bd/2d0/alternatives",
+"ta-i-pu": "Glossary/2bd/2d1/alternatives",
+"u-n": "Glossary/2bd/2c2/alternatives",
+"ya-tta": "Glossary/2bd/2ca/alternatives",
+"あお": "Glossary/2bd/2bf/name",
+"あまろりー": "Glossary/2bd/2c0/name",
+"いらっしゃい": "Glossary/2bd/2c1/name",
+"うん": "Glossary/2bd/2c2/name",
+"ええ": "Glossary/2bd/2c3/name",
+"おすすめしょうひん": "Glossary/2bd/2c4/name",
+"くつ": "Glossary/2bd/2c5/name",
+"けい": "Glossary/2bd/2c6/name",
+"こんにちは！": "Glossary/2bd/2c7/name",
+"はい": "Glossary/2bd/2c8/name",
+"ぼうし": "Glossary/2bd/2c9/name",
+"やった": "Glossary/2bd/2ca/name",
+"アクセサリー": "Glossary/2bd/2cb/name",
+"クラシックロリー": "Glossary/2bd/2cc/name",
+"ケープレット": "Glossary/2bd/2cd/name",
+"コレクション": "Glossary/2bd/2ce/name",
+"ゴスロリ": "Glossary/2bd/2cf/name",
+"サンキュー": "Glossary/2bd/2d0/name",
+"タイプ": "Glossary/2bd/2d1/name",
+"チョーカー": "Glossary/2bd/2d2/name",
+"ドレス": "Glossary/2bd/2d3/name",
+"ヘアリボン": "Glossary/2bd/2d4/name",
+"ボンネット": "Glossary/2bd/2d5/name",
+"ロリータ": "Glossary/2bd/2d6/name"
 }

@@ -21,6 +21,10 @@
 [ext_resource type="AudioStream" uid="uid://cuq5sgn8qlh3x" path="res://import/Sounds/Dijimmi_Stinger_G maj_96.mp3" id="15_t3722"]
 [ext_resource type="Texture2D" uid="uid://be3ajmbykabdv" path="res://music.png" id="18_jqbq8"]
 [ext_resource type="PackedScene" uid="uid://brosbmba0e5x7" path="res://src/Worlds/music_player.tscn" id="20_kvwn1"]
+[ext_resource type="AudioStream" uid="uid://dljvtfvlssi5h" path="res://import/Music/Song/re_mas1.wav" id="22_8vfry"]
+[ext_resource type="AudioStream" uid="uid://cqrl87jb6ks5y" path="res://import/Music/Song/Aoi_ - main.wav" id="23_dtfal"]
+[ext_resource type="AudioStream" uid="uid://bk6dndhav1fxw" path="res://import/Music/Song/Aoi_ - harm1.wav" id="24_uvjsx"]
+[ext_resource type="AudioStream" uid="uid://syqp7gchjwx6" path="res://import/Music/Song/Aoi_ - harm2.wav" id="25_axus7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g2e6"]
 texture = ExtResource("6_1ptsb")
@@ -404,6 +408,24 @@ offset_bottom = 70.711975
 metadata/_edit_use_anchors_ = true
 
 [node name="Honse" type="AudioStreamPlayer" parent="." unique_id=961655352]
+
+[node name="Song" type="AudioStreamPlayer" parent="." unique_id=245871462]
+stream = ExtResource("22_8vfry")
+volume_db = -22.829
+autoplay = true
+
+[node name="Song2" type="AudioStreamPlayer" parent="." unique_id=913007239]
+stream = ExtResource("23_dtfal")
+volume_db = 15.942
+autoplay = true
+
+[node name="Song3" type="AudioStreamPlayer" parent="." unique_id=962516138]
+stream = ExtResource("24_uvjsx")
+autoplay = true
+
+[node name="Song4" type="AudioStreamPlayer" parent="." unique_id=2040202689]
+stream = ExtResource("25_axus7")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Undo" to="." method="_on_undo_pressed"]

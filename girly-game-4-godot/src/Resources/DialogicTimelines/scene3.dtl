@@ -1,25 +1,25 @@
 [background arg="res://import/Art/BackgroundArt/bg_fashion_club.png" fade="1.0" wait="true"]
 join pres (Smile) left [mirrored="true"]
-pres: いらっしゃい !  Hello! Nice to meet ya
-pres (Happy): Are you guys interested in joining the club ?
+pres: いらっしゃい !  Hello! Nice to meet ya #id:11
+pres (Happy): Are you guys interested in joining the club ? #id:12
 join friend (Neutral) right
 [wait time="0.8" hide_text="false"]
-friend (Smile): うん！
-main_character: I guess so
+friend (Smile): うん！ #id:13
+main_character: I guess so #id:14
 update friend (Neutral)
-pres (Smile): Alright, you just need to sign here and there please.
+pres (Smile): Alright, you just need to sign here and there please. #id:15
 do Dialogue.start_minigame(Dialogic.VAR.PlayerNameJP)
-pres (Happy): サンキュー!
-pres: You can look around and hang out, we’ll be starting our meeting soon
-main_character: Thank you
-friend (Smile): はい~
+pres (Happy): サンキュー! #id:16
+pres: You can look around and hang out, we’ll be starting our meeting soon #id:17
+main_character: Thank you #id:18
+friend (Smile): はい~ #id:19
 leave pres
 update friend center [move_time="0.5"]
-main_character: Alright so... I joined, now I can leave, right?
-friend (Confused): ええ?!!
-main_character: I’m just messing with you.
+main_character: Alright so... I joined, now I can leave, right? #id:1a
+friend (Confused): ええ?!! #id:1b
+main_character: I’m just messing with you. #id:1c
 update friend (Neutral)
-main_character: Anyway, it looks like there’s a few people around, I don’t want to interrupt them…
-friend (Smile): That’s okay
-friend (Confused): Oh look, another one is joining.
+main_character: Anyway, it looks like there’s a few people around, I don’t want to interrupt them… #id:1d
+friend (Smile): That’s okay #id:1e
+friend (Confused): Oh look, another one is joining. #id:1f
 do Dialogue.set_next_scene("main menu")

@@ -1,0 +1,73 @@
+[background arg="res://import/Art/BackgroundArt/bg_corridor_afternoon.png" fade="1.0" wait="true"]
+[style name="CustomDialogue"]
+{FriendName} and I walk together through the hallways, getting used to our surroundings. #id:47
+# MISSING TRANSLATION
+Even though we've been here for a few weeks already, it still feels so different from back home. #id:48
+# MISSING TRANSLATION
+join friend (Happy) center [animation="Fade In"]
+friend: {PlayerName}, look a Japanese fashion club! #id:49
+# MISSING TRANSLATION
+main_character: Japanese fashion club? #id:4a
+# MISSING TRANSLATION
+friend (Neutral): Yeah! It says here it's newly formed and they're looking for members. #id:4b
+# MISSING TRANSLATION
+friend (Smile): Let's join! #id:4c
+# MISSING TRANSLATION
+main_character: I don't know... I'm not into Japanese fashion like you are. #id:4d
+# MISSING TRANSLATION
+friend (Neutral): Come on, it's gonna be fun! #id:4e
+# friend (JoySPeaking): ねえ、絶対楽しいって！
+main_character: But I'm not interested in your fashion kei whatever, {FriendName}! #id:4f
+# main_character: でも俺、お前の言う「おしゃれ」だか何だかにはあんまり興味ないんだって{FriendName}！
+friend (Happy): But you'd be so... #id:50
+# MISSING TRANSLATION
+[voice path="res://import/Voices/Aoi/Aoi_1.wav" volume="0.0" bus="Voices"]
+friend (Smile): Kawaii! #id:51
+# MISSING TRANSLATION
+update friend (Neutral)
+main_character: Yeah, but it's not something I'm going to wear. #id:52
+# main_character: いや、服がかわいくても俺が着るわけじゃないだろ。
+main_character: Are there even fashion trends for men? #id:53
+# main_character: そもそも男向けにも、そういうファッションの流行ってあるの？
+friend (Confused): {PlayerName} you've asked me that before, of course there are! #id:54
+# friend (NeutralSpeaking): {PlayerName}、それ前にも聞いてたよ？ もちろんあるよ！
+main_character: Ugh… I don't want to… #id:55
+# main_character: んー……やっぱ行きたくない……。
+friend (Happy): Don't you want to learn more japanese? You can meet Japanese people in here! #id:56
+# friend (JoySPeaking): 日本語、もっと覚えたいんでしょ？ ここなら日本人とも知り合えるよ！
+[voice path="res://import/Voices/Aoi/Aoi_2.wav" volume="0.0" bus="Voices"]
+friend (Mischievous): かのじょ も みつかる かも~ #id:57
+# MISSING TRANSLATION
+main_character: A... what? #id:5a
+# MISSING TRANSLATION
+friend (Happy): You know, a かのじょ? You've probably heard that word before... #id:5b
+# MISSING TRANSLATION
+update friend (Neutral)
+main_character: Maybe, I don't remember it though. #id:5c
+# MISSING TRANSLATION
+friend (Smug): Then let me spell it out for you. At this club, you can find you a G-I-R-L-F-R-I-E-N-D. #id:5d
+# MISSING TRANSLATION
+main_character: Yeah right... #id:5e
+# MISSING TRANSLATION
+[voice path="res://import/Voices/Aoi/Aoi_3.wav" volume="0.0" bus="Voices"]
+friend (Happy): いま、わらった？ #id:5f
+# MISSING TRANSLATION
+friend (Mischievous): Seems like your face changed when I mentioned kanojo… #id:60
+# friend: 「彼女」って言った瞬間、表情が変わったよ～…？
+friend (Smug): You definately want a kanojo, don't you? #id:61
+# friend (JoySPeaking): やっぱ彼女ほしいんじゃないの～？
+main_character: Leave me alone. #id:62
+# main_character: ほっとけ。
+friend (Happy): So you're gonna join? #id:63
+# friend (JoySPeaking): で、入部する？
+update friend (Neutral)
+main_character: ... #id:64
+# main_character: ……。
+main_character: Alright fine. But only to learn Japanese, not for any other reasons… #id:65
+# main_character: ……わかったよ、入部すればいいんだろ。ただし日本語の勉強のためだからな。それ以外の理由じゃないから……。
+[voice path="res://import/Voices/Aoi/Aoi_4.wav" volume="1.5" bus="Voices"]
+update friend (Smile) [animation="Bounce" length="0.4"]
+friend (Smile): やった！ #id:66
+# friend (Joy): やったぁ！
+do Dialogue.set_next_scene("cutscene fashion club")
+# MISSING TRANSLATION

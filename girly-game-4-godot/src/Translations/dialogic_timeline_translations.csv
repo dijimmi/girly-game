@@ -1,0 +1,687 @@
+keys,en
+Text/11/text,いらっしゃい !  Hello! Nice to meet ya
+Text/12/text,Are you guys interested in joining the club ?
+Text/13/text,うん！
+Text/14/text,I guess so
+Text/15/text,"Alright, you just need to sign here and there please."
+Text/16/text,サンキュー!
+Text/17/text,"You can look around and hang out, we’ll be starting our meeting soon"
+Text/18/text,Thank you
+Text/19/text,はい~
+Text/1a/text,"Alright so... I joined, now I can leave, right?"
+Text/1b/text,ええ?!!
+Text/1c/text,I’m just messing with you.
+Text/1d/text,"Anyway, it looks like there’s a few people around, I don’t want to interrupt them…"
+Text/1e/text,That’s okay
+Text/1f/text,"Oh look, another one is joining."
+Text/20/text,I’ve recently become intersted in learning Japanese ever since I’ve grown closer to my friend {FriendName}.
+Text/21/text,I met her in high school a few years ago when she transferred from Japan.
+Text/22/text,"Ever since she came to the US, she hasn't returned home until now."
+Text/23/text,"{PlayerName} I found an exchange program to Japan, we should go!"
+Text/24/text,She said in a voice message one day.
+Text/25/text,I immediately agreed!
+Text/26/text,And so begun my journey to learn Japanese...
+Text/27/text,For real this time.
+Text/28/text,"Come on, it’s gonna be fun!"
+Text/29/text,"But I’m not interested in your fashion kei whatever, {FriendName}!"
+Text/2a/text,But you'd be so kawaii
+Text/2b/text,"Yeah, but it’s not something I’m going to wear"
+Text/2c/text,Are there even fashion trends for men?
+Text/2d/text,"{PlayerName} you ‘ve asked me that before, of course there are!"
+Text/2e/text,Ugh… I don’t want to…
+Text/2f/text,Don’t you want to learn more japanese? You can meet japanese people in here!
+Text/30/text,Even find a kanojo~
+Text/31/text,Yeah right...
+Text/32/text,Was that a slight smile I saw…
+Text/33/text,Seems like your face changed when I mentioned kanojo…
+Text/34/text,"You def want a kanojo, don’t you?"
+Text/35/text,Leave me alone
+Text/36/text,So you’re gonna join?
+Text/37/text,...
+Text/38/text,"Alright fine. But only to learn Japanese, not for any other reasons…"
+Text/39/text,やった！
+Text/3a/text,I've recently become intersted in learning Japanese ever since I've grown closer to my friend {FriendName}.
+Text/3b/text,We met at a young age when her family moved from Japan to my neighborhood in the US.
+Text/3c/text,We didn't get along at first.
+Text/3d/text,Her assertive attitude and excess confidence in herself rubbed me the wrong way.
+Text/3e/text,"But as time passed by, and we grew older, we got used to one another, and became friends."
+Text/3f/text,"Now we're both 20-year-old college students, and we've become best friends to each other!"
+Text/40/text,"I played a big role in her English language journey, thought I never tried to learn Japanese seriously..."
+Text/41/text,Until now.
+Text/42/text,{PlayerName}! I found an exchange program that goes to Japan! We should do it together!
+Text/43/text,{FriendName} texted me late one night...
+Text/44/text,I immediately agreed!
+Text/45/text,"And so, my journey to learn Japanese... it's finally starting."
+Text/46/text,For real this time!
+Text/47/text,"{FriendName} and I walk together through the hallways, getting used to our surroundings."
+Text/48/text,"Even though we've been here for a few weeks already, it still feels so different from back home."
+Text/49/text,"{PlayerName}, look a fashion club!"
+Text/4a/text,A fashion club?
+Text/4b/text,Yeah! It says here it's newly formed and they're looking for members.
+Text/4c/text,Let's join!
+Text/4d/text,I don't know... I'm not into Japanese fashion like you are.
+Text/4e/text,"Come on, it's gonna be fun!"
+Text/4f/text,"But I'm not interested in your fashion kei whatever, {FriendName}!"
+Text/50/text,But you'd be so...
+Text/51/text,friend {JoySpeaking): Kawaii!
+Text/52/text,"Yeah, but it's not something I'm going to wear."
+Text/53/text,Are there even fashion trends for men?
+Text/54/text,"{PlayerName} you've asked me that before, of course there are!"
+Text/55/text,Ugh… I don't want to…
+Text/56/text,Don't you want to learn more japanese? You can meet Japanese people in here!
+Text/57/text,かのじょ も みつかる かも~
+Text/58/text,Yeah right...
+Text/59/text,Even find a kanojo~
+Text/5a/text,A... what?
+Text/5b/text,"You know, a KANOJO? You've probably heard that word from me before..."
+Text/5c/text,"Maybe, I don't remember it though."
+Text/5d/text,"Then let me spell it out for you. At this club, you can find you a G-I-R-L-F-R-I-E-N-D."
+Text/5e/text,Yeah right...
+Text/5f/text,いま、わらった？
+Text/60/text,Seems like your face changed when I mentioned kanojo…
+Text/61/text,"You definately want a kanojo, don't you?"
+Text/62/text,Leave me alone
+Text/63/text,So you're gonna join?
+Text/64/text,...
+Text/65/text,"Alright fine. But only to learn Japanese, not for any other reasons…"
+Text/66/text,やった！
+Text/67/text,いらっしゃい !  Hello! Nice to meet ya! @
+Text/68/text,Are you guys interested in joining the club? @
+Text/69/text,うん！ @
+Text/6a/text,I guess so...
+Text/6b/text,"Alright, you just need to sign here, and there please."
+Text/6c/text,サンキュー!
+Text/6d/text,"You can look around and hang out, we'll be starting our meeting soon."
+Text/6e/text,Thank you.
+Text/6f/text,はい~
+Text/70/text,"Alright so... I joined, now I can leave, right?"
+Text/71/text,ええ?!! @
+Text/72/text,I'm just messing with you.
+Text/73/text,I thought more people would be here...
+Text/74/text,"It's a new club, from what I heard."
+Text/75/text,"Oh look, another one is joining!"
+Text/76/text,(JP) Here it is. (enters the scene)
+Text/77/text,"[Maybe Ayumi could say something like ""This is the place!"". Could be a good chance to show her personality/speaking style in a quick way.]"
+Text/78/text,I look at the new girl… She's so…
+Text/79/text,Kawaii!
+Text/7a/text,No... not just kawaii.
+Text/7b/text,She's... she's...
+Text/7c/text,My {FriendName}'s piercing gaze interrupt my thoughts.
+Text/7d/text,Ohoho {PlayerName}~ you like her?
+Text/7e/text,What? No! What are you talking about?
+Text/7f/text,"Oh, nothing!"
+Text/80/text,Ayumi walks towards us.
+Text/81/text,こんにちは! @
+Text/82/text,Hello…
+Text/83/text,Hm?
+Text/84/text,"Ah! Are you two the new exchange students, hello!"
+Text/85/text,うん! @
+Text/86/text,We just joined!
+Text/87/text,"Yeah, she dragged me here..."
+Text/88/text,(gets kicked) Ow!
+Text/89/text,pff- www @
+Text/8a/text,Ayumi です! @
+Text/8b/text,And you?
+Text/8c/text,"I'm {main_character name}, nice to meet you."
+Text/8d/text,Aoi です! @
+Text/8e/text,"Are you also a transfer student, Ayumi?"
+Text/8f/text,ぜんぜん~
+Text/90/text,I reside here in Japan.
+Text/91/text,Though my father is from the USA.
+Text/92/text,So I know English too!
+Text/93/text,"Oh, interesting."
+Text/94/text,Sugoi! @
+Text/95/text,Do you come from the US?
+Text/96/text,"Yeah, we do, although {friend} is originally from Japan, but she moved to the US to study."
+Text/97/text,Do you like fashion like Aoi?
+Text/98/text,"Hai! I do, though I'm not very knowledgeble."
+Text/99/text,I got you covered!
+Text/9a/text,Hontou!? @
+Text/9b/text,"Yeah, she's an expert on that stuff."
+Text/9c/text,(JP) That's great! @
+Text/9d/text,"Okay guys, let's get started!"
+Text/9e/text,It's starting! We should hurry to join them!
+Text/9f/text,It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things!
+Text/a0/text,うそつき! I'm sure you knew all that already.
+Text/a1/text,"Oh, so that word you do know?"
+Text/a2/text,I know some…
+Text/a3/text,"Anyways, I'm going to talk to the President about something, I'll catch you outside."
+Text/a4/text,"Alright, bye bye"
+Text/a5/text,いもうと なの? @
+Text/a6/text,"Uhh, if you're asking if she's my sister, no, she's my best friend."
+Text/a7/text,Aaah~
+Text/a8/text,"You do seem like good friends, haha."
+Text/a9/text,"Yeah, we are."
+Text/aa/text,"We're pretty different though. She's crazy over fashion, while I'm…"
+Text/ab/text,*cough* *cough*
+Text/ac/text,Still learning-
+Text/ad/text,そう... @
+Text/ae/text,You surely know more than me too...
+Text/af/text,"I don't know, I've always seen kawaii-fashion and knew it existed, but it's when I tried it on that something felt like it just clicked."
+Text/b0/text,"I've bought a few pieces, but I'm no expert."
+Text/b1/text,I'm sure your outfits look great!
+Text/b2/text,Arigatou~ @
+Text/b3/text,"Ah, the President needs to lock the room, we should go, it was nice to meet you!"
+Text/b4/text,Wait…
+Text/b5/text,EE? @
+Text/b6/text,I was wondering…
+Text/b7/text,Since we're both learning.
+Text/b8/text,What if I help you get accessories for your next outfit?
+Text/b9/text,"Just so I can learn a bit more, you know?"
+Text/ba/text,Go easy on me though.
+Text/bb/text,EE? @
+Text/bc/text,Nani? @
+Text/bd/text,You want choose my next oufit?
+Text/be/text,"No no, not choose, just pick out an accessory for you."
+Text/bf/text,I just want to immerse myself in the Japanese language.
+Text/c0/text,So you just have to send me a website and I'll check it out!
+Text/c1/text,Sou... @
+Text/c2/text,I...
+Text/c3/text,I think I'm okay with that!
+Text/c4/text,I'll give you my number just in case.
+Text/c5/text,Arigatou.
+Text/c6/text,I'll send you the link when I choose it.
+Text/c7/text,うん、まかせて! @
+Text/c8/text,See you later!
+Text/c9/text,[cue website 1 minigame]
+Text/ca/text,Hello everyone! Konnichiha! @
+Text/cb/text,Hello!
+Text/cc/text,"is Aoi not coming to the meetup, [main_character name]?"
+Text/cd/text,"I'm not sure, I thought she was already here."
+Text/ce/text,Sou~
+Text/cf/text,Maybe she's running late.
+Text/d0/text,Possibly.
+Text/d1/text,I wonder... where is Ayumi?
+Text/d2/text,(footsteps)
+Text/d3/text,[main_character Name]! @
+Text/d4/text,Ayumi!
+Text/d5/text,"Taking a look at her outfit, I feel my cheeks burning."
+Text/d6/text,I was not expecting her to look so pretty…
+Text/d7/text,At least Aoi is not here.
+Text/d8/text,"I wouldn't want her to see me like this, how embarrassing."
+Text/d9/text,"Konnichiha, genki desu ka? @"
+Text/da/text,Genki desu!
+Text/db/text,Anata ha kawaii desu!
+Text/dc/text,Arigatou! @
+Text/dd/text,"What you bought fit me very well, thank you so much!"
+Text/de/text,No problem! It helped me learn some Japanese so I don't mind.
+Text/df/text,Hontou? @
+Text/e0/text,Un!
+Text/e1/text,(JP) roritafashion ha kawaii desu
+Text/e2/text,I think I said it right.
+Text/e3/text,Hai @
+Text/e4/text,Sugoi! @
+Text/e5/text,You look so pretty!
+Text/e6/text,Aoi! @
+Text/e7/text,Arigatou~ @
+Text/e8/text,"Hey, Aoi, I'm glad you made it!"
+Text/e9/text,I did!
+Text/ea/text,"I lost track of time and almost didn't make it, but I did."
+Text/eb/text,"I'm glad you made it too, Aoi!"
+Text/ec/text,Let's have a great time!
+Text/ed/text,cue transition
+Text/ee/text,"After a few group activities, the presdent says their goodbyes and the other members leave as well."
+Text/ef/text,(JP) Today was fun! @
+Text/f0/text,"Yeah, definitely!"
+Text/f1/text,It's cool to learn about Japanese culture.
+Text/f2/text,"And also listen to you guys talk in Japanese even though I don't understand half of it, haha."
+Text/f3/text,www @
+Text/f4/text,"You'll get there one day, keep practicing!"
+Text/f5/text,"I will, I will..."
+Text/f6/text,"Actually, I was thinking, if you had the time..."
+Text/f7/text,Could help me practice my japanese skills?
+Text/f8/text,How so?
+Text/f9/text,"Well, I don't know, talk to me about yourself, but in Japanese and I'll try to figure out what you're saying."
+Text/fa/text,Hmm okay!
+Text/fb/text,Let's start easy then.
+Text/fc/text,"Konbanwa, watashi no namae wa ayumi desu"
+Text/fd/text,eeeto @
+Text/fe/text,"[in japanese] I'm 20 years old, I'm half-japanese but born In japan"
+Text/ff/text,Hold up you lost me there.
+Text/100/text,You said you're not japanese?
+Text/101/text,Nono I said I'm half-japanese but born in Japan
+Text/102/text,"Oh ok ok, gotcha."
+Text/103/text,"[JP] I like dressups, singing, dancing, and watching anime, of course."
+Text/104/text,Anime? You like anime?
+Text/105/text,Hai! @
+Text/106/text,"I love anime too, I'm such a fan of shonen like Jujustu Kaisen, Black Clover, One Punch Man…"
+Text/107/text,"They're really cool, you should watch them."
+Text/108/text,My friend Aoi watched them with me but she says it's not her type.
+Text/109/text,"I'll have to agree with her, unfortunately."
+Text/10a/text,I'm more into romance or slice of life animes.
+Text/10b/text,Ah that's fair.
+Text/10c/text,You said you sing too?
+Text/10d/text,YES! Oh maybe your Japanese is not so bad after all.
+Text/10e/text,Maybe I've been studying…
+Text/10f/text,"But hear me out, if you can sing, my favorite anime's intro…"
+Text/110/text,We can be friends.
+Text/111/text,Which anime would that be?
+Text/112/text,Probably One Punch Man?
+Text/113/text,I mean…
+Text/114/text,It can't be that hard…
+Text/115/text,One PUUUUUUUUUUNCH @
+Text/116/text,"Haha, you nailed it."
+Text/117/text,"I declare us, officialy, friends."
+Text/118/text,www @
+Text/119/text,"No, but what do you usually like to sing?"
+Text/11a/text,Umm…
+Text/11b/text,"I haven't sung in a while, actually…"
+Text/11c/text,"Oh, really. May I ask why?"
+Text/11d/text,It's a long story…
+Text/11e/text,I don't want to get into it right now.
+Text/11f/text,"Oh, gomen!"
+Text/120/text,Don't worry!
+Text/121/text,The two of you stay quiet for a few seconds.
+Text/122/text,Everyone already left…
+Text/123/text,"Yeah, they did a while ago."
+Text/124/text,"But it's fun talking with you, [PlayerName]"
+Text/125/text,Likewise.
+Text/126/text,"I have an idea! I'll shoot some words at you and you tell me what you think they mean in English, yes?"
+Text/127/text,"Yeah, let's do it!"
+Text/128/text,[matching minigame]
+Choice/129/text,
+Choice/129/disabled_text,
+Text/12a/text,[
+Text/12b/text,Based on how well you did:
+Text/12c/text,"Ugh, too hard!"
+Text/12d/text,Or
+Text/12e/text,Already becoming a pro!
+Text/12f/text,]
+Text/130/text,You'll get better with more practice I'm sure.
+Text/131/text,"So, since I chose your accessory correctly this time."
+Text/132/text,Would you like some help choosing your next outfit?
+Text/133/text,Ee? @
+Text/134/text,Hontou? (idk if we have a blushing expression but it would be nice) @
+Text/135/text,I nod.
+Text/136/text,"Mmm, let me think."
+Text/137/text,[JP] I would love to! @
+Text/138/text,For next time I was thinking a more casual style
+Text/139/text,"Since I think the next meetup we're going to the cinema, then I want to be comfortable"
+Text/13a/text,I think I already have something in mind.
+Text/13b/text,Great! If you have any questions you can text me too ;)
+Text/13c/text,"Pfft, im an expert already, come on."
+Text/13d/text,www @
+Text/13e/text,"Alright then, I'll see you next week!"
+Text/13f/text,See ya!
+Text/140/text,[cue website 2 minigame]
+Text/141/text,Looks who's finally here.
+Text/142/text,"I know, I know. I know I'm late, I just uhh…"
+Text/143/text,Got distracted.
+Text/144/text,Sure...
+Text/145/text,"Hey [main_character name], good to see you! @"
+Text/146/text,Oh hey Ayumi
+Text/147/text,You look…
+Text/148/text,I am!
+Text/149/text,"aw, arigatou gozaimazu @"
+Text/14a/text,]
+Text/14b/text,"It was definitely thanks to you though, you were a great help!"
+Text/14c/text,[main_character name]~ @
+Text/14d/text,"I look at Aoi with a serious look, hoping she can read my mind"
+Text/14e/text,"""Don't embarrass me in front of her!"""
+Text/14f/text,"However, Ayumi doesnt seem to notice"
+Text/150/text,It was nothing!
+Text/151/text,"Also, Aoi, that makes us even."
+Text/152/text,You definitely arrived later than I did last time!
+Text/153/text,"Oh, whatever..."
+Text/154/text,www @
+Text/155/text,"Also, how did you do on your test?"
+Text/156/text,"I did great, of course."
+Text/157/text,I'm very smart.
+Text/158/text,"Of course you are very smart, {friend}."
+Text/159/text,"You hang out with me, that's smart."
+Text/15a/text,Pff-
+Text/15b/text,www @
+Text/15c/text,You look like you're really good friends talking to each other like that. @
+Text/15d/text,"Yeah, we are."
+Text/15e/text,"[main_character name] is my bestie, he's a really good person."
+Text/15f/text,How so?
+Text/160/text,Well…
+Text/161/text,He helped me a lot when I was starting to learn English.
+Text/162/text,"Well... when we started getting along. At first he didn't stand me, right?"
+Text/163/text,"Right, I remember, haha."
+Text/164/text,It's big thanks to him that I'm able to speak English so fluently.
+Text/165/text,"As I said, I'm smart."
+Text/166/text,www @
+Text/167/text,"That sounds really nice of you, [main_character name] @"
+Text/168/text,Arigatou~
+Text/169/text,Sorry to interrupt!
+Text/16a/text,It seems you guys were talking but we're about to start.
+Text/16b/text,Alright!
+Text/16c/text,I'll help you guys up.
+Choice/16d/text,epic transition
+Choice/16d/disabled_text,
+Text/16e/text,"Lolita fashion isn't just about asthetic but also empowerment, and freedom."
+Text/16f/text,8888888
+Text/170/text,It's really interesting learning about this.
+Text/171/text,Un! @
+Text/172/text,"Alright guys, I need to leave now if I want to make it to the movies."
+Text/173/text,"I take a lot of time getting dressed, haha."
+Text/174/text,Definitely.
+Text/175/text,"But I look good, don't I?"
+Text/176/text,I'll give you that.
+Text/177/text,"Alright, bye~"
+Text/178/text,Sayonara~
+Text/179/text,Thanks everyone for coming!
+Text/17a/text,Thank you for hosting!
+Text/17b/text,Arigato gozaimasu @
+Text/17c/text,See you at the movies!
+Text/17d/text,See you!
+Text/17e/text,"See you, sensei!"
+Text/17f/text,a small pause
+Text/180/text,I think im going to stay here a bit and enjoy the breeze.
+Text/181/text,Hm?
+Text/182/text,Mind if I join you?
+Text/183/text,Oh okay!
+Text/184/text,I sit down in the grass (maybe sound effect)
+Text/185/text,"Ah, this is nice."
+Text/186/text,I really like sitting down and just feeling the breeze you know?
+Text/187/text,By yourself?
+Text/188/text,"Usually, yeah"
+Text/189/text,"My friends usually just hang out playing videogames, going to the movies…"
+Text/18a/text,"But I like talking, chlling."
+Text/18b/text,Sou desu
+Text/18c/text,What about you? What do you like to do with your friends?
+Text/18d/text,I'm really down to whatever.
+Text/18e/text,"Watching movies, dining out, going to arcades, talking, it varies."
+Text/18f/text,But I get you. Not everyone wants to just chill.
+Text/190/text,Yeah…
+Text/191/text,I catch myself staring at Ayumi's hair moving with the wind.
+Text/192/text,[main_character Name] @
+Text/193/text,Yeah?
+Text/194/text,Can I ask you a weird question?
+Text/195/text,"Ask me anything, go ahead."
+Text/196/text,Do you ever feel like…
+Text/197/text,You can't be yourself with your friends?
+Text/198/text,Or with a friend?
+Text/199/text,"Hmm, I don't think so, no."
+Text/19a/text,"Especially not with friend, she's my best friend."
+Text/19b/text,And with my other friends…
+Text/19c/text,"Well… I don't have to share everything about me with them, you know?"
+Text/19d/text,It depends on how much trust I have in them.
+Text/19e/text,Does that make sense?
+Text/19f/text,Un!
+Text/1a0/text,Why do you ask?
+Text/1a1/text,I don't know…
+Text/1a2/text,I feel like my friends would mock me if they knew I went to a fashion club…
+Text/1a3/text,Really?
+Text/1a4/text,Isn't fashion like something big in Japan?
+Text/1a5/text,"It is, but I don't know..."
+Text/1a6/text,It's a little embarrassing.
+Text/1a7/text,"Nah, I'm sure they won't mock you!"
+Text/1a8/text,Especially if they're good friends like {friend} is to me
+Text/1a9/text,I'm not that close with any of my friends.
+Text/1aa/text,I could never joke around like that haha.
+Text/1ab/text,I think you should give a shot still!
+Text/1ac/text,"Tell them, and see how they react."
+Text/1ad/text,I'm sure they'll be more than okay with it.
+Text/1ae/text,You think?
+Text/1af/text,un! @
+Text/1b0/text,Hmm
+Text/1b1/text,I'll think about it then.
+Text/1b2/text,Thank you.
+Text/1b3/text,Ah it's no biggie.
+Text/1b4/text,"Anyhow, I think we better get going to the movies, or we'll be late."
+Text/1b5/text,Good idea.
+Text/1b6/text,And Ayumi?
+Text/1b7/text,eh?
+Text/1b8/text,I think it's cool you like fashion. It fits you really well.
+Text/1b9/text,[choice – tell her she looks pretty or not]
+Text/1ba/text,ee? @
+Text/1bb/text,Arigatou gozaimasu~ @
+Text/1bc/text,Let's go!
+Text/1bd/text,transition to new scene
+Text/1be/text,Really odd that Ayumi wasnt here. She said she would be here…
+Text/1bf/text,"When you walk out of the meeting room, you see Ayumi walking by"
+Text/1c0/text,Ayumi!
+Text/1c1/text,Oh hey [main_character name] ~
+Text/1c2/text,You just missed the meeting.
+Text/1c3/text,Yeah… I wasn't feeling good today.
+Text/1c4/text,May I ask why?
+Text/1c5/text,I don't really want to talk about that here…
+Text/1c6/text,I was just going to go out to buy myself something.
+Text/1c7/text,Do you want to come?
+Text/1c8/text,"Sure, I can go."
+Text/1c9/text,Great!
+Text/1ca/text,Yo! Can I join you?
+Text/1cb/text,Aoi! @
+Text/1cc/text,"Sure, come with!"
+Text/1cd/text,"The more the merrier, as you americans say"
+Text/1ce/text,www @
+Text/1cf/text,Coffee Shop transition
+Text/1d0/text,We arrive at the coffee shop and Aoi helps me order a cup of tea for myself and for her.
+Text/1d1/text,The three of you sit down
+Text/1d2/text,{friend name} Told me she'll be here soon.
+Text/1d3/text,Okay!
+Text/1d4/text,"So, daijoubu?"
+Text/1d5/text,daijoubu janai desu…
+Text/1d6/text,I told my friends… like you said.
+Text/1d7/text,And most of them were excited about it.
+Text/1d8/text,Except one friend.
+Text/1d9/text,What did they say?
+Text/1da/text,"He said it's childish, and that I have to grow up now that I'm a college student…"
+Text/1db/text,Baka desu yo!
+Text/1dc/text,nani?
+Text/1dd/text,Oh I meant he's an idiot. Sorry
+Text/1de/text,Gomennasai
+Text/1df/text,"Oh, it's okay."
+Text/1e0/text,But why would he say that?
+Text/1e1/text,Did he mock you?
+Text/1e2/text,He didn't mock me…
+Text/1e3/text,"But I thought he'd be happy for me, you know?"
+Text/1e4/text,Instead of being weirded out.
+Text/1e5/text,I see.
+Text/1e6/text,"But the rest of your friends were supportive, no?"
+Text/1e7/text,"Yeah, it's just..."
+Text/1e8/text,It reminded me of when I was little...
+Text/1e9/text,What do you mean?
+Text/1ea/text,"When I was little, I wanted to be a singer…"
+Text/1eb/text,"I wasn't the best, but… I tried"
+Text/1ec/text,And I was really happy doing so.
+Text/1ed/text,And my parents both supported me.
+Text/1ee/text,"But my best friend at the time, he…"
+Text/1ef/text,He?
+Text/1f0/text,"There was a ongaku happyokai at school, a music recital. And I wanted to participate"
+Text/1f1/text,"I wasn't used to being in front of an audience, it was gonna be my first time"
+Text/1f2/text,And I was really nervous
+Text/1f3/text,"So when my turn came, I walked over the microphone shaking"
+Text/1f4/text,I grabbed it and started singing…
+Text/1f5/text,[tarareando]
+Text/1f6/text,And I felt something bit my foot
+Text/1f7/text,I dropped the mic and it fell in my foot!
+Text/1f8/text,"oooh, that's nasty"
+Text/1f9/text,"when I kneeled down to grab the mic, I saw my friend laughing"
+Text/1fa/text,"and I was just a kid, so of course… It hurt me"
+Text/1fb/text,"I started singing again, and when I watched him him, he was still laughing!"
+Text/1fc/text,I started sobbing.
+Text/1fd/text,"And the more I cried, the harder he laughed!"
+Text/1fe/text,Baka…
+Text/1ff/text,kare ha baka desu yo!
+Text/200/text,I felt so humilliated…
+Text/201/text,So I stopped singing for a while…
+Text/202/text,And made some new friends after some time.
+Text/203/text,"Which treated me well, but I still felt afraid to be mocked like that again."
+Text/204/text,That sounds very sad…
+Text/205/text,Yeah…
+Text/206/text,"But I've been trying to trust people again, it's just…"
+Text/207/text,Hard
+Text/208/text,"Yeah I know, especially when they don't prove you wrong"
+Text/209/text,Precisely
+Text/20a/text,And yeah…
+Text/20b/text,"I wanted to go to the reunion today, but I wasn't feeling good."
+Text/20c/text,Sou Sou
+Text/20d/text,Hopefully that tea will calm you down.
+Text/20e/text,Yeah… I really love their chamomile tea.
+Text/20f/text,That’s why I came here. It always helps me relax.
+Text/210/text,"I don’t usually drink much coffee, so having something like this is nice."
+Text/211/text,"Same. And since it’s caffeine-free, I don’t have to worry about it keeping me awake tonight."
+Text/212/text,Fair enough.
+Text/213/text,"Also, I’ve been curious…"
+Text/214/text,How are you liking Japanese fashion? Are you starting to enjoy it?
+Text/215/text,It's definitely interesting! I didn't know there were so many substyles of Lolita fashion.
+Text/216/text,"It made hard choosing an accesory for you, but I think I've done pretty well, don't you think?"
+Text/217/text,Hai! @
+Text/218/text,Thank you! @
+Text/219/text,{MC Character Name~ @
+Text/21a/text,It's exciting to have some pick out an item for me!
+Text/21b/text,www @
+Text/21c/text,No one has ever done that for me before~
+Text/21d/text,That's only because you haven't told anyone you liked fashion.
+Text/21e/text,That's true...
+Text/21f/text,But still!
+Text/220/text,It's a very nice thing~
+Text/221/text,I hear the door of the coffee shop opening.
+Text/222/text,Sorry I'm late!
+Text/223/text,I got stuck in traffic on the way here.
+Text/224/text,"Yeah, that happens, especially at this hour."
+Text/225/text,We were just leaving.
+Text/226/text,(JP) Really? @
+Text/227/text,I'm just kidding!
+Text/228/text,You made in time.
+Text/229/text,We were just talking about Japanese fashion being my newfound skill
+Text/22a/text,"Oh, really!?"
+Text/22b/text,Name 3 lolita brands!
+Text/22c/text,[prompt minigame]
+Text/22d/text,Good~
+Text/22e/text,Now 3 types of accesories!
+Text/22f/text,[prompt minigame]
+Text/230/text,"Good, good."
+Text/231/text,I'm impressed.
+Text/232/text,Even though I’m probably not the one you’re trying to impress.
+Text/233/text,I give Aoi a warning look and deliberately clear my throat.
+Text/234/text,"Okay, okay. I’ll stop."
+Text/235/text,Hm? Are you okay?
+Text/236/text,"Judging by her expression, she hadn’t heard Aoi’s comment. What a relief."
+Text/237/text,"Yeah, I’m fine. I just had something in my throat."
+Text/238/text,Oh okay.
+Text/239/text,"{FriendName}, could you tell me what happened at the club today?friend name} do you mind giving me a run down on what happened in the club today?"
+Text/23a/text,Oh sure!
+Text/23b/text,transition
+Text/23c/text,www @
+Text/23d/text,That's so funny!
+Text/23e/text,"Haha, yeah!"
+Text/23f/text,"By the way, {character name} @"
+Text/240/text,Why did you want to learn Japanese? I'm curious.
+Text/241/text,Hmm
+Text/242/text,It started as a joke with {FriendName}
+Text/243/text,Because she used to talk to me in japanese to upset me cuz I didn't know what she was saying
+Text/244/text,And I told her I would learn Japanese
+Text/245/text,I didn't but…
+Text/246/text,It seemed like an interesting language
+Text/247/text,I just didin't have the motivation to learn it yet.
+Text/248/text,Until she told me about the exchange program.
+Text/249/text,"I wanted to know a bit since I was gonna be talking with Japanese people, you know?"
+Text/24a/text,But it's fair to say that it's not easy
+Text/24b/text,"Aww, yes it can be hard"
+Text/24c/text,Especially if you haven't been introduced to any other languages.
+Text/24d/text,Yeah.
+Text/24e/text,It definitely is...
+Text/24f/text,"I take the last sip of my tea, which has already gotten cold."
+Text/250/text,It's getting late.
+Text/251/text,"Yeah, we should home soon."
+Text/252/text,You stand up.
+Text/253/text,[main_character name]~
+Text/254/text,thanks for listening to me
+Text/255/text,"Anytime, Ayumi"
+Text/256/text,Thank you both for coming!
+Text/257/text,It's nothing!
+Text/258/text,I'll see you around!
+Text/259/text,"[prompt last website 3 minigame → in the minigame ayumi will tell you about the big fashion event at the mall. If it doesn't end up happening, then ill add the dialogue here]"
+Text/25a/text,I'm really nervous…
+Text/25b/text,When will Ayumi arrive?
+Text/25c/text,Did I choose the wrong outfit? Is she mad at me?
+Text/25d/text,…
+Text/25e/text,What has gotten into me?
+Text/25f/text,Being anxious is so unlike me…
+Text/260/text,I look at the other people that have gathered here. They all wear different fashion styles.
+Text/261/text,"While I look for costume similar to the one Ayumi will be wearing, I hear my phone ring in my pocket."
+Text/262/text,Hello?
+Text/263/text,[main_character Name]! Where are you?
+Text/264/text,I'm here! Next to the…
+Text/265/text,Anime booth.
+Text/266/text,"Oh oh, I think I see you."
+Text/267/text,Where???
+Text/268/text,She hangs up.
+Text/269/text,[main_character Name]! @
+Text/26a/text,Ayumi appears behind a wall.
+Text/26b/text,"Before you can turn around, Ayumi walks in front of you, wearing the dress you picked out for her."
+Text/26c/text,Ayumi!
+Text/26d/text,Good to see you!
+Text/26e/text,[main_character Name]~ @
+Text/26f/text,You look…
+Text/270/text,I hold myself back before I say something embarrassing.
+Text/271/text,sugoi… (in small text)
+Text/272/text,"Kawaii, very kawaii. (JP)"
+Text/273/text,Arigatou~ @
+Text/274/text,I really like the outfit you chose for me.
+Text/275/text,Thanks a lot!
+Text/276/text,"Ah, it's nothing. I'm glad you like it."
+Text/277/text,"I've become quite the fashionist, right?"
+Text/278/text,www @
+Text/279/text,un~ @
+Text/27a/text,Better than Aoi?
+Text/27b/text,Did I hear my name?
+Text/27c/text,Aoi!
+Text/27d/text,I didn't know you'd be here.
+Text/27e/text,Surprise surprise.
+Text/27f/text,I just came to say hi and buy some things.
+Text/280/text,Oh I see I see.
+Text/281/text,"Good to see you, Aoi!"
+Text/282/text,Likewise!
+Text/283/text,I'll see you two later.
+Text/284/text,Have fun!
+Text/285/text,See ya!
+Text/286/text,Sayonara! @
+Text/287/text,Aoi leaves.
+Text/288/text,"Now that we're here, just the two of us…"
+Text/289/text,I wonder…
+Text/28a/text,Does that make this… a date?
+Text/28b/text,A DATE?
+Text/28c/text,I clear my throat.
+Text/28d/text,"Sorry, that caught me off guard."
+Text/28e/text,Why do you say that?
+Text/28f/text,Well…
+Text/290/text,I feel we've been friends for a while now…
+Text/291/text,"And you know, since you've been so nice to me, helping me choose my outfits."
+Text/292/text,I thought that meant that you like me.
+Text/293/text,"Oop, what's going on..."
+Text/294/text,{PlayerName}~
+Text/295/text,Do you like me?
+Text/296/text,What do I do now…?
+Text/297/text,I never thought this would happen...
+Text/298/text,Not like this...
+Text/299/text,"Not that I didn't want this or anything, but…"
+Text/29a/text,I…
+Text/29b/text,EE? @
+Text/29c/text,I do...
+Text/29d/text,Hontou?
+Text/29e/text,Hai. I like you... a lot~
+Text/29f/text,Why did I have to say it like that?
+Text/2a0/text,I sound so cringe!
+Text/2a1/text,That makes me so happy! (JP) @
+Text/2a2/text,www @
+Text/2a3/text,To be honest…
+Text/2a4/text,"I was afraid to be wrong, so I cheated a little bit."
+Text/2a5/text,And I asked Aoi first.
+Text/2a6/text,What!?
+Text/2a7/text,www @
+Text/2a8/text,That's why she was here.
+Text/2a9/text,To help me get past my nervousness.
+Text/2aa/text,Tch- Aoi…
+Text/2ab/text,I'm gonna have a talk with her once I get home…
+Text/2ac/text,She is in so much trouble…
+Text/2ad/text,Ayumi and I look at each other and laugh.
+Text/2ae/text,www @
+Text/2af/text,So… do you want to walk around with me?
+Text/2b0/text,Very much so!
+Text/2b1/text,You walk around the mall with Ayumi talking about various things
+Text/2b2/text,Fashion
+Text/2b3/text,Friends
+Text/2b4/text,Coincidences
+Text/2b5/text,[more description but Im lazy to write it]
+Text/2b6/text,"In the end, we went back to the park where we used to sit on the grass. # I need to change this cuz we don't have this art"
+Text/2b7/text,I had so much fun today.
+Text/2b8/text,"Thanks for helping me choose my outfit, and all that…"
+Text/2b9/text,My pleasure~
+Text/2ba/text,Ayumi lays her head on my shoulder
+Text/2bb/text,THE END.
+Text/2bc/text,This is test dialogue あお

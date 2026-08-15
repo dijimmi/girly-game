@@ -1,0 +1,351 @@
+# Scene 8.5: last emotional layer from Sakura, backstory learning perhaps. maybe gives you a hint as to whether or not you're on the right path (let's say she holds your hand or hugs you if you are doing good, if not, then she doesn't)
+
+We arrive at the coffee shop and Aoi helps me order a cup of tea for myself and for her. #id:1d0
+# 喫茶店に着くと、アオイが俺の分と自分の分のお茶を注文するのを手伝ってくれた。
+The three of you sit down #id:1d1
+# 三人で席に着く。
+
+main_character: {friend name} Told me she'll be here soon. #id:1d2
+# main_character: {friend name}が、もうすぐ来るって言ってた。
+
+Ayumi: Okay! #id:1d3
+# Ayumi: うん！
+
+main_character: So, daijoubu? #id:1d4
+# main_character: それで……大丈夫？
+
+Ayumi: daijoubu janai desu… #id:1d5
+# MISSING TRANSLATION
+Ayumi: I told my friends… like you said. #id:1d6
+# Ayumi: 友達に話したの……[main_character name]に言われたとおり。
+Ayumi: And most of them were excited about it. #id:1d7
+# Ayumi: ほとんどの子はね、楽しそうに話を聞いてくれたんだ。
+Ayumi: Except one friend. #id:1d8
+# Ayumi: でも、一人だけ……。
+
+main_character: What did they say? #id:1d9
+# main_character: 何て言われた？
+
+Ayumi: He said it's childish, and that I have to grow up now that I'm a college student… #id:1da
+# Ayumi: 「子どもっぽい」って。大学生なんだから、もう大人にならなきゃって……。
+
+main_character: Baka desu yo! #id:1db
+# main_character: バカですよ！
+
+Ayumi: nani? #id:1dc
+# Ayumi: え？
+
+main_character: Oh I meant he's an idiot. Sorry #id:1dd
+# main_character: あ、バカなのはそいつって意味。ごめん。
+main_character: Gomennasai #id:1de
+# main_character: ごめんなさい。
+
+Ayumi: Oh, it's okay. #id:1df
+# Ayumi: ううん、全然。大丈夫。
+
+main_character: But why would he say that? #id:1e0
+# main_character: でも、なんでそいつそんなこと言うんだ？
+main_character: Did he mock you? #id:1e1
+# main_character: からかわれたのか？
+
+Ayumi: He didn't mock me… #id:1e2
+# Ayumi: からかわれたわけじゃない……。
+Ayumi: But I thought he'd be happy for me, you know? #id:1e3
+# Ayumi: その、楽しく話せるかなって思ったんだけど…わかる？
+Ayumi: Instead of being weirded out. #id:1e4
+# Ayumi: 変わり者を見るような反応じゃないと、思ってたから。
+
+main_character: I see. #id:1e5
+# main_character: そっか。
+main_character: But the rest of your friends were supportive, no? #id:1e6
+# main_character: でも、他の友達は応援してくれたんだろ？
+
+Ayumi: Yeah, it's just... #id:1e7
+# Ayumi: うん。ただ……。
+Ayumi: It reminded me of when I was little... #id:1e8
+# Ayumi: 子どもの頃のこと、思い出しちゃって……。
+
+main_character: What do you mean? #id:1e9
+# main_character: どういうこと？
+
+Ayumi: When I was little, I wanted to be a singer… #id:1ea
+# Ayumi: 私、子どもの頃は歌手になりたかったんだ……。
+Ayumi: I wasn't the best, but… I tried #id:1eb
+# Ayumi: そんなに上手じゃなかったけど……一生懸命、練習してた。
+Ayumi: And I was really happy doing so. #id:1ec
+# Ayumi: 歌うのが、本当に楽しくて。
+Ayumi: And my parents both supported me. #id:1ed
+# Ayumi: 両親も応援してくれてた。
+Ayumi: But my best friend at the time, he… #id:1ee
+# Ayumi: でも、その頃いちばん仲が良かった男の子が……。
+
+main_character: He? #id:1ef
+# main_character: その子が？
+
+Ayumi: There was a ongaku happyokai at school, a music recital. And I wanted to participate #id:1f0
+# MISSING TRANSLATION
+Ayumi: I wasn't used to being in front of an audience, it was gonna be my first time #id:1f1
+# Ayumi: 人前に立つのには慣れてなくて、それが初めてのステージだったんだ。
+Ayumi: And I was really nervous #id:1f2
+# Ayumi: だから、すごく緊張してて。
+Ayumi: So when my turn came, I walked over the microphone shaking #id:1f3
+# Ayumi: 自分の番になって、震えながらマイクのところまで歩いていって……。
+Ayumi: I grabbed it and started singing… #id:1f4
+# Ayumi: マイクを握って、歌い始めたの……。
+Ayumi: [tarareando] #id:1f5
+# Ayumi: ［鼻歌］
+Ayumi: And I felt something bit my foot #id:1f6
+# Ayumi: そしたら急に、何かが足に噛みついたみたいな痛みが走って。
+Ayumi: I dropped the mic and it fell in my foot! #id:1f7
+# Ayumi: マイクを落としちゃって、それが足の上に落ちたの。
+
+main_character: oooh, that's nasty #id:1f8
+# main_character: うわ……痛いやつ。
+
+Ayumi: when I kneeled down to grab the mic, I saw my friend laughing #id:1f9
+# Ayumi: 急いでマイクを拾おうとしたら、あの子が笑ってるのが見えた。
+Ayumi: and I was just a kid, so of course… It hurt me #id:1fa
+# Ayumi: 私も子どもだったから……すごく傷ついちゃって。
+Ayumi: I started singing again, and when I watched him him, he was still laughing! #id:1fb
+# Ayumi: それでも、歌い直したんだけど、あの子はまだ笑ってて
+Ayumi: I started sobbing. #id:1fc
+# Ayumi: 私それで、泣いちゃってさ。
+Ayumi: And the more I cried, the harder he laughed! #id:1fd
+# Ayumi: 私が泣けば泣くほど、あの子は私のことを笑ってた。
+
+main_character: Baka… #id:1fe
+# main_character: バカ……。
+
+Ayumi: kare ha baka desu yo! #id:1ff
+# Ayumi: 彼はバカですよ！
+Ayumi: I felt so humilliated… #id:200
+# Ayumi: それが、すごく恥ずかしくて。
+Ayumi: So I stopped singing for a while… #id:201
+# Ayumi: それからしばらく、歌うのをやめたの。
+Ayumi: And made some new friends after some time. #id:202
+# Ayumi: 今では、新しい友達もできたけど。
+Ayumi: Which treated me well, but I still felt afraid to be mocked like that again. #id:203
+# Ayumi: みんな私に優しくしてくれた。でも、またあんなふうに笑われるんじゃないかって怖くて。
+
+main_character: That sounds very sad… #id:204
+# main_character: それは……つらかったな。
+
+Ayumi: Yeah… #id:205
+# Ayumi: うん……。
+Ayumi: But I've been trying to trust people again, it's just… #id:206
+# Ayumi: でも、もう一度、人を信じないとと思って。ただ…。
+Ayumi: Hard #id:207
+# Ayumi: 怖くて。
+
+main_character: Yeah I know, especially when they don't prove you wrong #id:208
+# main_character: そうだよな。友達が「そんの心配無用だ！」って思わせるくらいのことがないとな。
+
+Ayumi: Precisely #id:209
+# Ayumi: そうだね。
+Ayumi: And yeah… #id:20a
+# Ayumi: それで……。
+Ayumi: I wanted to go to the reunion today, but I wasn't feeling good. #id:20b
+# Ayumi: 今日も集まりには行きたかったんだけど、やっぱり心の整理がうまくできなくて。
+
+main_character: Sou Sou #id:20c
+# main_character: そう、そう。
+main_character: Hopefully that tea will calm you down. #id:20d
+# main_character: お茶を飲んで、少し落ち着くといいな。
+
+Ayumi: Yeah… I really love their chamomile tea. #id:20e
+# MISSING TRANSLATION
+
+Ayumi: That’s why I came here. It always helps me relax. #id:20f
+# MISSING TRANSLATION
+
+main_character: I don’t usually drink much coffee, so having something like this is nice. #id:210
+# MISSING TRANSLATION
+
+Ayumi: Same. And since it’s caffeine-free, I don’t have to worry about it keeping me awake tonight. #id:211
+# MISSING TRANSLATION
+
+main_character: Fair enough. #id:212
+# main_character: そうだな。
+
+Ayumi: Also, I’ve been curious… #id:213
+# MISSING TRANSLATION
+
+Ayumi: How are you liking Japanese fashion? Are you starting to enjoy it? #id:214
+# MISSING TRANSLATION
+
+main_character: It's definitely interesting! I didn't know there were so many substyles of Lolita fashion. #id:215
+# main_character: 結構面白い！ ロリータにも、あんなにいろんな系統があるなんて知らなかった。
+main_character: It made hard choosing an accesory for you, but I think I've done pretty well, don't you think? #id:216
+# main_character: アクセサリー選ぶのも大変だったけど……俺の割には結構いい仕事したと思わないか？
+
+Ayumi: Hai! @ #id:217
+# MISSING TRANSLATION
+Ayumi: Thank you! @ #id:218
+# Ayumi: ありがとう！
+Ayumi: {MC Character Name~ @ #id:219
+# Ayumi: {MC Character Name}。
+Ayumi: It's exciting to have some pick out an item for me! #id:21a
+# Ayumi: 誰かに、自分のためにアイテムを選んでもらうのって、こんなに嬉しいんだね。
+Ayumi: www @ #id:21b
+# Ayumi: ふふ。
+Ayumi: No one has ever done that for me before~ #id:21c
+# Ayumi: 今まで、一度もなかったから。
+
+main_character: That's only because you haven't told anyone you liked fashion. #id:21d
+# main_character: それは、アユミがファッション好きなことを言ってなかったからなだけだよ。
+
+Ayumi: That's true... #id:21e
+# Ayumi: それはそうだけど……。
+Ayumi: But still! #id:21f
+# Ayumi: でも！
+Ayumi: It's a very nice thing~ #id:220
+# Ayumi: それでも、すごく嬉しかったの。
+
+I hear the door of the coffee shop opening. #id:221
+# 店のドアが開く音がした。
+
+friend: Sorry I'm late! #id:222
+# friend: 遅くなってごめん！
+friend: I got stuck in traffic on the way here. #id:223
+# friend: 途中で渋滞にはまっちゃって。
+
+main_character: Yeah, that happens, especially at this hour. #id:224
+# main_character: まあ、この時間ならあるあるだな。
+main_character: We were just leaving. #id:225
+# main_character: ちょうど今、帰るところだった。
+
+friend: (JP) Really? @ #id:226
+# friend: （日本語）本当に？
+
+main_character: I'm just kidding! #id:227
+# main_character: 冗談だよ！
+main_character: You made in time. #id:228
+# main_character: ちゃんと間に合ったよ。
+main_character: We were just talking about Japanese fashion being my newfound skill #id:229
+# main_character: ちょうど、俺が日本のファッションセンスが覚醒したって話をしてたところ。
+
+friend: Oh, really!? #id:22a
+# friend: 本当に！？
+friend: Name 3 lolita brands! #id:22b
+# friend: じゃあ、ロリータブランドを3つ言って！
+
+[prompt minigame] #id:22c
+# ［入力ミニゲーム］
+
+friend: Good~ #id:22d
+# friend: 正解〜。
+friend: Now 3 types of accesories! #id:22e
+# friend: じゃあ次、アクセサリーを3種類！
+
+[prompt minigame] #id:22f
+# ［入力ミニゲーム］
+
+friend: Good, good. #id:230
+# friend: いいね、いいね。
+friend: I'm impressed. #id:231
+# friend: ちょっと見直した。
+friend (mischevious or smug): Even though I’m probably not the one you’re trying to impress. #id:232
+# MISSING TRANSLATION
+
+I give Aoi a warning look and deliberately clear my throat. #id:233
+# MISSING TRANSLATION
+
+friend (quietly): Okay, okay. I’ll stop. #id:234
+# MISSING TRANSLATION
+
+Ayumi: Hm? Are you okay? #id:235
+# MISSING TRANSLATION
+
+Judging by her expression, she hadn’t heard Aoi’s comment. What a relief. #id:236
+# MISSING TRANSLATION
+
+main_character: Yeah, I’m fine. I just had something in my throat. #id:237
+# MISSING TRANSLATION
+
+Ayumi: Oh okay. #id:238
+# MISSING TRANSLATION
+Ayumi: {FriendName}, could you tell me what happened at the club today?friend name} do you mind giving me a run down on what happened in the club today? #id:239
+# MISSING TRANSLATION
+
+Aoi: Oh sure! #id:23a
+# Aoi: もちろん！
+
+transition #id:23b
+# ［場面転換］
+
+Ayumi: www @ #id:23c
+# Ayumi: あはは！
+Ayumi: That's so funny! #id:23d
+# Ayumi: それ面白すぎる！
+
+main_character: Haha, yeah! #id:23e
+# main_character: はは、だろ！
+
+Ayumi: By the way, {character name} @ #id:23f
+# Ayumi: そういえば、{character name}。
+Ayumi: Why did you want to learn Japanese? I'm curious. #id:240
+# Ayumi: どうして日本語を勉強しようと思ったの？ ちょっと気になって。
+
+main_character: Hmm #id:241
+# main_character: うーん。
+main_character: It started as a joke with {FriendName} #id:242
+# MISSING TRANSLATION
+main_character: Because she used to talk to me in japanese to upset me cuz I didn't know what she was saying #id:243
+# main_character: あいつ、俺が日本語わからないのをいいことに、わざと日本語で話して困らせてきたんだよ。
+main_character: And I told her I would learn Japanese #id:244
+# main_character: それで、「いつか日本語覚えてやる」って言った。
+main_character: I didn't but… #id:245
+# main_character: 結局、そのときはあんまり勉強しなかったけど……。
+main_character: It seemed like an interesting language #id:246
+# main_character: 言葉としては面白そうだなって思ってた。
+main_character: I just didin't have the motivation to learn it yet. #id:247
+# main_character: ただ、本気で勉強するほどのやる気はまだなくて。
+
+main_character: Until she told me about the exchange program. #id:248
+# main_character: 交換留学の話を聞いてさ。
+main_character: I wanted to know a bit since I was gonna be talking with Japanese people, you know? #id:249
+# main_character: 日本人と話すことになるなら、少しくらいわかるようになりたいと思って。
+main_character: But it's fair to say that it's not easy #id:24a
+# main_character: でも、簡単じゃないのは間違いないな。
+
+Ayumi: Aww, yes it can be hard #id:24b
+# Ayumi: うん、難しいよね。
+Ayumi: Especially if you haven't been introduced to any other languages. #id:24c
+# Ayumi: 特に、それまで外国語に触れたことがないと。
+
+main_character: Yeah. #id:24d
+# main_character: うん。
+main_character: It definitely is... #id:24e
+# MISSING TRANSLATION
+
+I take the last sip of my tea, which has already gotten cold. #id:24f
+# MISSING TRANSLATION
+
+main_character: It's getting late. #id:250
+# main_character: …もう遅くなってきたな。
+
+Ayumi: Yeah, we should home soon. #id:251
+# MISSING TRANSLATION
+
+You stand up. #id:252
+# 俺は席を立つ。
+
+Ayumi: [main_character name]~ #id:253
+# MISSING TRANSLATION
+Ayumi: thanks for listening to me #id:254
+# MISSING TRANSLATION
+
+main_character: Anytime, Ayumi #id:255
+# main_character: いつでも聞くよ、アユミ。
+
+Ayumi: Thank you both for coming! #id:256
+# Ayumi: アオイちゃんも、付き合ってくれてありがとうね。
+
+friend: It's nothing! #id:257
+# friend: これくらい全然！
+
+Ayumi: I'll see you around! #id:258
+# Ayumi: じゃあ、またね。
+
+[prompt last website 3 minigame → in the minigame ayumi will tell you about the big fashion event at the mall. If it doesn't end up happening, then ill add the dialogue here] #id:259
+# ［最後のWebサイト3ミニゲームへ → ミニゲーム内で、アユミからモールで開催される大きなファッションイベントについて聞く。実装しない場合は、ここに会話を追加する］

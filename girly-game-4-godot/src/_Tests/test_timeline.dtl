@@ -1,4 +1,4 @@
 do Dialogue.start_minigame("あお")
 join main_character right
 join friend left [mirrored="true"]
-This is test dialogue あお
+This is test dialogue あお #id:2bc

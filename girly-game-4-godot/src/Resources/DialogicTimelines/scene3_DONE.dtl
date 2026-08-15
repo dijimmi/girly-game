@@ -1,0 +1,158 @@
+[background arg="res://import/Art/BackgroundArt/bg_fashion_club.png" fade="1.0" wait="true"]
+[style name="CustomDialogue"]
+
+# @ MEANS VOICED DIALOGUE
+
+join pres (JoySpeaking) left [mirrored="true"]
+[voice volume="0.0"]
+pres: いらっしゃい !  Hello! Nice to meet ya! #id:67
+# pres: いらっしゃい！ ハロー、ナイス・トゥ・ミーチュー！
+[voice volume="0.0"]
+pres (Joy): Are you guys interested in joining the club? @ #id:68
+# pres (Joy): 二人とも、入部希望？
+join friend right
+friend (Joy): うん！ @ #id:69
+# MISSING TRANSLATION
+main_character: I guess so... #id:6a
+# main_character: まあ……そんな感じです。
+update friend (Neutral)
+pres (Joy): Alright, you just need to sign here, and there please. #id:6b
+# pres (Joy): じゃあ、こことここに名前を書いてね。
+do Dialogue.start_minigame(Dialogic.VAR.PlayerNameJP)
+# MISSING TRANSLATION
+pres (JoySpeaking): サンキュー! #id:6c
+# pres (JoySpeaking): サンキュー！
+pres: You can look around and hang out, we'll be starting our meeting soon. #id:6d
+# pres: 始まるまでは、部内を適当に見て回ったりしてくつろいでいって。もうすぐミーティング始めるから。
+main_character: Thank you. #id:6e
+# main_character: ありがとうございます。
+
+friend (Joy): はい~ #id:6f
+# friend (Joy): はーい。
+leave pres
+update friend center [move_time="0.5"]
+main_character: Alright so... I joined, now I can leave, right? #id:70
+# main_character: よし……入部したし、俺もう帰っていいよな？
+friend (NeutralSpeaking): ええ?!! @ #id:71
+# friend (NeutralSpeaking): ええっ！？
+main_character: I'm just messing with you. #id:72
+# main_character: …冗談だって。
+update friend (Neutral)
+main_character: I thought more people would be here... #id:73
+# main_character: もっと人がいると思ってたけど……。
+friend (NeutralSpeaking): It's a new club, from what I heard. #id:74
+# friend (NeutralSpeaking): できたばかりの部活らしいよ。
+friend (JoySPeaking): Oh look, another one is joining! #id:75
+# friend (JoySPeaking): あ、見て。もう一人来たよ。
+
+Ayumi: (JP) Here it is. (enters the scene) #id:76
+# MISSING TRANSLATION
+[Maybe Ayumi could say something like "This is the place!". Could be a good chance to show her personality/speaking style in a quick way.] #id:77
+I look at the new girl… She's so… #id:78
+# 新しく入ってきた女の子を見る。……なんていうか、その……。
+Kawaii! #id:79
+# かわいい…！
+No... not just kawaii. #id:7a
+# MISSING TRANSLATION
+She's... she's... #id:7b
+# MISSING TRANSLATION
+
+My {FriendName}'s piercing gaze interrupt my thoughts. #id:7c
+# MISSING TRANSLATION
+
+friend: Ohoho {PlayerName}~ you like her? #id:7d
+# friend: ほほ〜う、{PlayerName}〜？ {PlayerName}ってああいう娘がタイプ？
+
+main_character: What? No! What are you talking about? #id:7e
+# main_character: は？ 違うって！ 何言ってんだよ？
+
+friend: Oh, nothing! #id:7f
+# friend: べつに〜？
+
+Ayumi walks towards us. #id:80
+# MISSING TRANSLATION
+
+friend: こんにちは! @ #id:81
+# friend: こんにちは！
+main_character: Hello… #id:82
+# main_character: こ、こんにちは……。
+
+Ayumi: Hm? #id:83
+# Ayumi: ん？
+Ayumi: Ah! Are you two the new exchange students, hello! #id:84
+# Ayumi: あっ！ 二人が新しく来た留学生さん？ 初めまして！
+
+friend: うん! @ #id:85
+# friend: うん！
+friend: We just joined! #id:86
+# friend: 私たち、今入部したばかりなの！
+
+main_character: Yeah, she dragged me here... #id:87
+# main_character: まあ、俺はこいつに引っ張ってこられただけだけど……。
+
+main_character: (gets kicked) Ow! #id:88
+# main_character: （蹴られる）痛っ！
+
+Ayumi: pff- www @ #id:89
+# Ayumi: ふふっ
+Ayumi: Ayumi です! @ #id:8a
+# MISSING TRANSLATION
+
+Ayumi: And you? #id:8b
+# Ayumi: あなたたちは？
+
+main_character: I'm {main_character name}, nice to meet you. #id:8c
+# main_character: {main_character name}です。よろしく。
+friend: Aoi です! @ #id:8d
+# MISSING TRANSLATION
+
+main_character: Are you also a transfer student, Ayumi? #id:8e
+# main_character: アユミも留学生なの？
+
+Ayumi: ぜんぜん~ #id:8f
+# Ayumi: ううん、違うよ〜。
+Ayumi: I reside here in Japan. #id:90
+# Ayumi: 私は日本に住んでるよ。
+Ayumi: Though my father is from the USA. #id:91
+# Ayumi: お父さんはアメリカ人だけどね。
+Ayumi: So I know English too! #id:92
+# MISSING TRANSLATION
+
+main_character: Oh, interesting. #id:93
+# main_character: へえ、そうなんだ。
+
+friend: Sugoi! @ #id:94
+# friend: すごい！
+
+Ayumi: Do you come from the US? #id:95
+# Ayumi: 二人はアメリカから来たの？
+
+main_character: Yeah, we do, although {friend} is originally from Japan, but she moved to the US to study. #id:96
+# main_character: うん、二人ともアメリカから来たんだ。でもfriendはもともと日本出身で、勉強するためにアメリカへ引っ越してきた。
+
+main_character: Do you like fashion like Aoi? #id:97
+# main_character: アオイみたいに、アユミもファッションが好きなの？
+
+Ayumi: Hai! I do, though I'm not very knowledgeble. #id:98
+# Ayumi: うん、好き！ でも、そんなに詳しいわけじゃないけど……。
+
+friend: I got you covered! #id:99
+# friend: それなら私に任せて！
+
+Ayumi: Hontou!? @ #id:9a
+# Ayumi: 本当！？
+
+main_character: Yeah, she's an expert on that stuff. #id:9b
+# main_character: うん、こいつ、その辺はかなり詳しいから。
+
+Ayumi: (JP) That's great! @ #id:9c
+# Ayumi: （日本語）すごいんだね！
+
+Presi: Okay guys, let's get started! #id:9d
+# Presi: それじゃあみんな、そろそろ始めるよ！
+friend: It's starting! We should hurry to join them! #id:9e
+# friend: 始まるって！ 私たちも行こ！
+# replace this with a small transition
+# ＃ここは短いトランジションに差し替える。
+do Dialogue.set_next_scene("main menu")
+# MISSING TRANSLATION

@@ -1,0 +1,49 @@
+# Scene 8: no fashion reunion this time, maybe it gets skipped and you see Sakura in the hallways or smth and ask her why she didn’t go to the reunion and invite her out to talk about it.
+
+Really odd that Ayumi wasnt here. She said she would be here… #id:1be
+# アユミが来ないなんて変だな。来るって言ってたはずなのに……。
+
+When you walk out of the meeting room, you see Ayumi walking by #id:1bf
+# 部室を出ると、廊下を歩いているアユミが目に入った。
+
+main_character: Ayumi! #id:1c0
+# main_character: アユミ！
+
+Ayumi: Oh hey [main_character name] ~ #id:1c1
+# Ayumi: あ、[main_character name]。
+
+main_character: You just missed the meeting. #id:1c2
+# main_character: 今、ちょうど集まり終わったところだぞ。
+Ayumi: Yeah… I wasn't feeling good today. #id:1c3
+# Ayumi: うん……今日はちょっと気分がよくなくて……。
+
+main_character: May I ask why? #id:1c4
+# main_character: 理由、聞いてもいい？
+
+Ayumi: I don't really want to talk about that here… #id:1c5
+# Ayumi: ここではあんまり話したくないな……。
+Ayumi: I was just going to go out to buy myself something. #id:1c6
+# Ayumi: ちょうど、何か買いに出ようと思ってたところなの。
+Ayumi: Do you want to come? #id:1c7
+# Ayumi: …一緒に来る？
+
+main_character: Sure, I can go. #id:1c8
+# main_character: いいよ、行こう。
+
+Ayumi: Great! #id:1c9
+# Ayumi: …よかった。
+
+Aoi: Yo! Can I join you? #id:1ca
+# Aoi: よっ！ 私も行っていい？
+
+Ayumi: Aoi! @ #id:1cb
+# Ayumi: アオイちゃん！
+Ayumi: Sure, come with! #id:1cc
+# Ayumi: もちろん、一緒に行こ！
+Ayumi: The more the merrier, as you americans say #id:1cd
+# Ayumi: ほら、アメリカじゃ「多ければ多いほど楽しい」って言うんだよね？
+Ayumi: www @ #id:1ce
+# Ayumi: …あはは
+
+Coffee Shop transition #id:1cf
+# MISSING TRANSLATION

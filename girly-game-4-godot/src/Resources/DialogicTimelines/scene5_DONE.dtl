@@ -1,0 +1,306 @@
+pres: Hello everyone! Konnichiha! @ #id:ca
+# pres: みんな、ハロー！ 「こんにちは」！
+main_character: Hello! #id:cb
+# main_character: こんにちは！
+pres: is Aoi not coming to the meetup, [main_character name]? #id:cc
+# pres: [main_character name]、アオイさんは今日来ないの？
+main_character: I'm not sure, I thought she was already here. #id:cd
+# main_character: わからないです。もう来てると思ってました。
+pres: Sou~ #id:ce
+# pres: そう〜。
+pres: Maybe she's running late. #id:cf
+# pres: 遅れてるだけかもね。
+main_character: Possibly. #id:d0
+# main_character: かもしれません。
+
+I wonder... where is Ayumi? #id:d1
+# MISSING TRANSLATION
+(footsteps) #id:d2
+# （足音）
+
+Ayumi: [main_character Name]! @ #id:d3
+# Ayumi: [main_character Name]！
+
+main_character: Ayumi! #id:d4
+# main_character: アユミ！
+
+Taking a look at her outfit, I feel my cheeks burning. #id:d5
+# 彼女を見た瞬間、顔が熱くなるのを感じた。
+I was not expecting her to look so pretty… #id:d6
+# こんなに綺麗に着こなしてくるなんて、思ってもみなかった……。
+At least Aoi is not here. #id:d7
+# アオイがまだ来てなくて助かった。
+I wouldn't want her to see me like this, how embarrassing. #id:d8
+# こんな顔してるところを見られたら、あいつに絶対からかわれていたに違いない。
+
+Ayumi: Konnichiha, genki desu ka? @ #id:d9
+# Ayumi: こんにちは、元気ですか？
+
+main_character: Genki desu! #id:da
+# main_character: 元気です！
+main_character: Anata ha kawaii desu! #id:db
+# main_character: あなたは、かわいいです！
+
+Ayumi: Arigatou! @ #id:dc
+# Ayumi: …ありがとう！
+Ayumi: What you bought fit me very well, thank you so much! #id:dd
+# Ayumi: 選んでくれたもの、すごくよかった。本当にありがとう！
+
+main_character: No problem! It helped me learn some Japanese so I don't mind. #id:de
+# main_character: 全然！ 日本語の勉強にもなったし、むしろ俺のほうが助かったよ。
+
+Ayumi: Hontou? @ #id:df
+# Ayumi: …本当？
+
+main_character: Un! #id:e0
+# main_character: うん！
+main_character: (JP) roritafashion ha kawaii desu #id:e1
+# main_character: （日本語）ロリータファッションは、かわいいです。
+main_character: I think I said it right. #id:e2
+# main_character: 今の、合ってたよな？
+
+Ayumi: Hai @ #id:e3
+# MISSING TRANSLATION
+
+Aoi: Sugoi! @ #id:e4
+# Aoi: すごい！
+Aoi: You look so pretty! #id:e5
+# Aoi: アユミちゃん、すっごくかわいい！
+
+Ayumi: Aoi! @ #id:e6
+# Ayumi: アオイちゃん！
+Ayumi: Arigatou~ @ #id:e7
+# Ayumi: ありがとう〜。
+
+main_character: Hey, Aoi, I'm glad you made it! #id:e8
+# main_character: お、アオイ！ 間に合ってよかった！
+
+Aoi: I did! #id:e9
+# Aoi: 間に合ったよ！
+Aoi: I lost track of time and almost didn't make it, but I did. #id:ea
+# Aoi: ちょっと時間を忘れてて、危うく間に合わないところだったけど……ぎりぎりセーフ！
+
+Ayumi: I'm glad you made it too, Aoi! #id:eb
+# Ayumi: アオイちゃんも来られてよかった！
+Ayumi: Let's have a great time! #id:ec
+# Ayumi: 今日も楽しもうね！
+
+cue transition #id:ed
+# MISSING TRANSLATION
+
+After a few group activities, the presdent says their goodbyes and the other members leave as well. #id:ee
+# いくつかグループ活動を終えると、部長が締めの挨拶をして、他の部員たちも帰っていった。
+
+Ayumi: (JP) Today was fun! @ #id:ef
+# Ayumi: 今日は楽しかった！
+
+main_character: Yeah, definitely! #id:f0
+# main_character: うん、俺も楽しかった。
+main_character: It's cool to learn about Japanese culture. #id:f1
+# main_character: 日本の文化を知るのって面白いな。
+main_character: And also listen to you guys talk in Japanese even though I don't understand half of it, haha. #id:f2
+# main_character: みんなが日本語で話してるのを聞くのも楽しいしな。まあ、半分もわかってないけどなぁ
+
+Ayumi: www @ #id:f3
+# Ayumi:ふふ
+Ayumi: You'll get there one day, keep practicing! #id:f4
+# Ayumi: そのうちわかるようになるよ。練習あるのみ！だね
+
+main_character: I will, I will... #id:f5
+# main_character: そうだな、頑張るよ……。
+main_character: Actually, I was thinking, if you had the time... #id:f6
+# main_character: そうだ、もしまだ時間あるならさ……。
+main_character: Could help me practice my japanese skills? #id:f7
+# main_character: 日本語の練習、付き合ってくれない？
+
+Ayumi: How so? #id:f8
+# Ayumi: どんなふうに？
+
+main_character: Well, I don't know, talk to me about yourself, but in Japanese and I'll try to figure out what you're saying. #id:f9
+# main_character: そうだな……アユミ自身のことを、日本語で話してみてよ。俺がどこまで意味をつかめるか試してみたい。
+
+Ayumi: Hmm okay! #id:fa
+# Ayumi: うーん、いいよ！
+Ayumi: Let's start easy then. #id:fb
+# Ayumi: じゃあ、簡単なのからね。
+Ayumi: Konbanwa, watashi no namae wa ayumi desu #id:fc
+# Ayumi: こんばんは、私の名前はアユミです。
+Ayumi: eeeto @ #id:fd
+# Ayumi: えーっと……。
+Ayumi: [in japanese] I'm 20 years old, I'm half-japanese but born In japan #id:fe
+# Ayumi: ［日本語で］私は20歳です。日本とアメリカのハーフで、日本生まれです。
+
+main_character: Hold up you lost me there. #id:ff
+# main_character: 待って、今ので置いてかれた。
+main_character: You said you're not japanese? #id:100
+# main_character: 「日本人じゃない」って言った？
+
+Ayumi: Nono I said I'm half-japanese but born in Japan #id:101
+# Ayumi: ううん。「ハーフだけど、日本生まれ」って言ったの。
+
+main_character: Oh ok ok, gotcha. #id:102
+# main_character: ああ、なるほど。
+
+Ayumi: [JP] I like dressups, singing, dancing, and watching anime, of course. #id:103
+# Ayumi: ［日本語で］着飾ることと、歌うことと、踊ること。それから、もちろんアニメを見るのも好き。
+
+main_character: Anime? You like anime? #id:104
+# main_character: アニメ？ アニメ好きなの？
+
+Ayumi: Hai! @ #id:105
+# Ayumi: はい！
+
+main_character: I love anime too, I'm such a fan of shonen like Jujustu Kaisen, Black Clover, One Punch Man… #id:106
+# main_character: 俺も大好き！ 『呪術廻戦』とか『ブラッククローバー』とか『ワンパンマン』みたいな、少年ものが特に好きなんだ。
+main_character: They're really cool, you should watch them. #id:107
+# main_character: どれもマジでかっこいいから、アユミも見たほうがいいよ。
+main_character: My friend Aoi watched them with me but she says it's not her type. #id:108
+# main_character: アオイとも一緒に見たけど、「好みじゃない」って言われた。
+
+Ayumi: I'll have to agree with her, unfortunately. #id:109
+# Ayumi: 残念だけど、私もアオイちゃんと同じでそんなにかなぁ。
+Ayumi: I'm more into romance or slice of life animes. #id:10a
+# Ayumi: 私は恋愛ものとか日常系のほうが好きだよ。
+
+main_character: Ah that's fair. #id:10b
+# main_character: ああ、それはそれでわかる。
+main_character: You said you sing too? #id:10c
+# main_character: そういえば、歌うのも好きって言ってたよな？
+
+Ayumi: YES! Oh maybe your Japanese is not so bad after all. #id:10d
+# Ayumi: そう！ あれ、[main_character name]、思ったより日本語できるんじゃない？
+
+main_character: Maybe I've been studying… #id:10e
+# main_character: もしかして俺、ちゃんと勉強できてたのかもな……。
+main_character: But hear me out, if you can sing, my favorite anime's intro… #id:10f
+# main_character: でも、ちょっと聞いてくれ。もしアユミが俺の好きなアニメのOPを歌えるなら……。
+main_character: We can be friends. #id:110
+# main_character: 俺たちは、友達になれる。
+
+Ayumi: Which anime would that be? #id:111
+# Ayumi: 何のアニメ？
+
+main_character: Probably One Punch Man? #id:112
+# main_character: たぶん……『ワンパンマン』？
+
+Ayumi: I mean… #id:113
+# Ayumi: まあ……。
+Ayumi: It can't be that hard… #id:114
+# Ayumi: そんなに難しくは……ないかな……。
+Ayumi: One PUUUUUUUUUUNCH @ #id:115
+# MISSING TRANSLATION
+
+main_character: Haha, you nailed it. #id:116
+# main_character: ははっ、完璧。
+main_character: I declare us, officialy, friends. #id:117
+# main_character: ただいまをもって、俺たちは正式に友達です。
+
+Ayumi: www @ #id:118
+# Ayumi: ふふ、何それ。
+
+main_character: No, but what do you usually like to sing? #id:119
+# main_character: いや、冗談は置いといて。普段はどんな歌を歌うの？
+
+Ayumi: Umm… #id:11a
+# Ayumi: うーん……。
+Ayumi: I haven't sung in a while, actually… #id:11b
+# Ayumi: 実は、しばらく歌ってなくて……。
+
+main_character: Oh, really. May I ask why? #id:11c
+# main_character: そうなんだ。理由、聞いてもいい？
+
+Ayumi: It's a long story… #id:11d
+# Ayumi: ちょっと長い話で……。
+Ayumi: I don't want to get into it right now. #id:11e
+# Ayumi: 今はあんまり話したくないかな。
+
+main_character: Oh, gomen! #id:11f
+# main_character: あ、ごめん！
+
+Ayumi: Don't worry! #id:120
+# Ayumi: 気にしないで！
+
+The two of you stay quiet for a few seconds. #id:121
+# 数秒、二人の間に沈黙が流れる。
+
+main_character: Everyone already left… #id:122
+# main_character: みんなは、もう帰ったな……。
+
+Ayumi: Yeah, they did a while ago. #id:123
+# Ayumi: うん、結構前にね。
+Ayumi: But it's fun talking with you, [PlayerName] #id:124
+# MISSING TRANSLATION
+
+main_character: Likewise. #id:125
+# main_character: 俺も。
+
+Ayumi: I have an idea! I'll shoot some words at you and you tell me what you think they mean in English, yes? #id:126
+# Ayumi: ねえ、いいこと思いついた！ 私が日本語をいくつか言うから、英語でどういう意味か当ててみる？
+
+main_character: Yeah, let's do it! #id:127
+# main_character: やろう！
+
+[matching minigame] #id:128
+# ［マッチング・ミニゲーム］
+
+-  #id:129
+# ――使う単語は、まだ考えないといけないかな。
+
+[ #id:12a
+Based on how well you did\: #id:12b
+# ［成績に応じて：］
+main_character: Ugh, too hard! #id:12c
+# main_character: うわ、むずすぎ！
+
+Or #id:12d
+# または
+
+main_character: Already becoming a pro! #id:12e
+# main_character: もうプロになれそうだな！
+] #id:12f
+# MISSING TRANSLATION
+
+Ayumi: You'll get better with more practice I'm sure. #id:130
+# Ayumi: 練習すれば、絶対もっと上手になるよ。
+
+main_character: So, since I chose your accessory correctly this time. #id:131
+# main_character: じゃあさ、今回はアクセサリーをちゃんと選べたことだし……。
+main_character: Would you like some help choosing your next outfit? #id:132
+# main_character: 次は服も、俺に選ばせてくれない？
+
+Ayumi: Ee? @ #id:133
+# Ayumi: え？
+Ayumi: Hontou? (idk if we have a blushing expression but it would be nice) @ #id:134
+# MISSING TRANSLATION
+
+I nod. #id:135
+# 俺はうなずく。
+
+Ayumi: Mmm, let me think. #id:136
+# Ayumi: うーん……どうしようかなぁ。
+Ayumi: [JP] I would love to! @ #id:137
+# Ayumi: ［日本語で］…じゃあ、お願いしちゃおうかな！
+Ayumi: For next time I was thinking a more casual style #id:138
+# Ayumi: 次はもう少しカジュアルな感じにしようかなって思ってるの。
+Ayumi: Since I think the next meetup we're going to the cinema, then I want to be comfortable #id:139
+# Ayumi: 次の集まりは映画館に行くみたいだから、楽に過ごせる格好がいいなって。
+
+main_character: I think I already have something in mind. #id:13a
+# main_character: もう、なんとなくイメージあるかも。
+
+Ayumi: Great! If you have any questions you can text me too ;) #id:13b
+# Ayumi: すごい！ わからないことがあったら、メッセージしてくれていいからね ;)
+
+main_character: Pfft, im an expert already, come on. #id:13c
+# main_character: いやいや、もう俺は専門家並みだから。どんと任せろって。
+
+Ayumi: www @ #id:13d
+# Ayumi: ふふっ、そっか。
+Ayumi: Alright then, I'll see you next week! #id:13e
+# Ayumi: じゃあ、また来週ね！
+
+main_character: See ya! #id:13f
+# main_character: またな！
+
+[cue website 2 minigame] #id:140
+# ［Webサイト2のミニゲームへ］

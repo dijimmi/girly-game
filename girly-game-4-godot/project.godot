@@ -39,9 +39,19 @@ directories/dch_directory={
 "pres": "res://src/Resources/DialogicCharacters/pres.dch"
 }
 directories/dtl_directory={
+"scene1_DONE": "res://src/Resources/DialogicTimelines/scene1_DONE.dtl",
 "scene1_narration": "res://src/Resources/DialogicTimelines/scene1_narration.dtl",
 "scene2": "res://src/Resources/DialogicTimelines/scene2.dtl",
+"scene2_DONE": "res://src/Resources/DialogicTimelines/scene2_DONE.dtl",
 "scene3": "res://src/Resources/DialogicTimelines/scene3.dtl",
+"scene3_DONE": "res://src/Resources/DialogicTimelines/scene3_DONE.dtl",
+"scene4_DONE": "res://src/Resources/DialogicTimelines/scene4_DONE.dtl",
+"scene5_DONE": "res://src/Resources/DialogicTimelines/scene5_DONE.dtl",
+"scene6_DONE": "res://src/Resources/DialogicTimelines/scene6_DONE.dtl",
+"scene7_1_done": "res://src/Resources/DialogicTimelines/scene7_1_done.dtl",
+"scene7_5_DONE": "res://src/Resources/DialogicTimelines/scene7_5_DONE.dtl",
+"scene8_DONE": "res://src/Resources/DialogicTimelines/scene8_DONE.dtl",
+"scene9_DONE": "res://src/Resources/DialogicTimelines/scene9_DONE.dtl",
 "test_timeline": "res://src/_Tests/test_timeline.dtl"
 }
 layout/style_directory={
@@ -94,6 +104,17 @@ audio/channel_defaults={
 glossary/glossary_files=["uid://ctu427wqr6fj4"]
 glossary/default_color=Color(1, 0.913737, 0.4479167, 1)
 text/autocolor_names=true
+translation/enabled=true
+translation/original_locale="en"
+translation/file_mode=0
+translation/translation_folder="res://src/Translations"
+translation/save_mode=0
+translation/add_separator=false
+translation/id_counter=730
+translation/locales=[]
+translation/intern/save_mode=0
+translation/intern/file_mode=0
+translation/intern/translation_folder="res://src/Translations"
 
 [display]
 
@@ -138,6 +159,10 @@ confirm={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/test="en"
 
 [physics]
 
