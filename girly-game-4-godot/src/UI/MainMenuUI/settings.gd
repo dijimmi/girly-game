@@ -12,10 +12,6 @@ func _ready() -> void:
 	indx = AudioServer.get_bus_index("SoundEffects")
 	AudioServer.set_bus_volume_db(indx, sfx_slider.value)
 	
-	var a = "ッつ"
-	var glos = load("res://src/Resources/DialogicCustomFiles/glossary_words.tres")
-	print(a in glos.entries, print, glos.entries.keys())
-
 func _on_back_button_pressed() -> void:
 	hide()
 

@@ -37,8 +37,9 @@ enum ModulateModes {BASE_COLOR_ONLY, ENTRY_COLOR_ON_BOX, GLOBAL_BG_COLOR}
 
 const MISSING_INDEX := -1
 func get_pointer() -> Control:
-	return $Pointer
-
+	return $Node2D/Pointer
+func get_node2d() -> Node2D:
+	return $Node2D
 
 func get_title() -> Label:
 	return %Title
@@ -70,15 +71,16 @@ func _ready() -> void:
 ## Method that shows the bubble and fills in the info
 func _on_dialogic_display_dialog_text_meta_hover_started(meta: String) -> void:
 	var entry_info := DialogicUtil.autoload().Glossary.get_entry(meta)
-
+	var other_entry = DialogicUtil.autoload().Glossary.find_glossary(meta) #.glossaries #[0].entries
+	#Members/glossaries
 	if entry_info.is_empty():
 		return
 
 	anim_in()
-	get_title().text = entry_info.title
-	get_text().text = entry_info.text
+	get_title().text = entry_info.title #should get from alternative
+	get_text().text = other_entry.entries[meta]["alternatives"][0]
 	get_text().text = ['', '[center]', '[right]'][text_alignment] + get_text().text
-	get_pointer().global_position = get_pointer().get_global_mouse_position() - Vector2(get_pointer().size.x / 2 , get_pointer().size.y)
+	get_node2d().global_position = get_node2d().get_global_mouse_position() #- Vector2(get_pointer().size.x / 2 , get_pointer().size.y)
 	#if title_color_mode == TextColorModes.ENTRY:
 		#get_title().add_theme_color_override(&"font_color", entry_info.color)
 	#if text_color_mode == TextColorModes.ENTRY:
@@ -96,9 +98,7 @@ func _process(_delta: float) -> void:
 
 	var pointer: Control = get_pointer()
 	if pointer.visible:
-		pointer.global_position = pointer.get_global_mouse_position() - Vector2(get_pointer().size.x / 2 , get_pointer().size.y)
-
-
+		get_node2d().global_position = get_node2d().get_global_mouse_position() #- Vector2(get_pointer().size.x / 2 , get_pointer().size.y)
 
 ## Method that hides the bubble
 func _on_dialogic_display_dialog_text_meta_hover_ended(_meta:String) -> void:
@@ -164,16 +164,22 @@ func _apply_export_overrides() -> void:
 var animTween : Tween
 func anim_in() -> void:
 	get_pointer().show()
+	$AnimationPlayer.play("pop")
 	if animTween:
 		animTween.kill()
 	animTween = create_tween()
 	animTween.set_trans(Tween.TRANS_CUBIC)
-	animTween.tween_property(%Panel,"position", Vector2(9.88,13),0.2)
+	animTween.tween_property(%Panel,"position", Vector2(13,13),0.2)
+	animTween.set_parallel()
+	animTween.tween_property(%Panel,"modulate", Color(1.0, 1.0, 1.0, 1.0), 0.2)
 func anim_out() -> void:
+	$AnimationPlayer.stop()
 	if animTween:
 		animTween.kill()
 	animTween = create_tween()
 	animTween.set_trans(Tween.TRANS_CUBIC)
-	animTween.tween_property(%Panel,"position", Vector2(9.88, 109), 0.2)
+	animTween.tween_property(%Panel,"position", Vector2(13, 109), 0.2)
+	animTween.set_parallel()
+	animTween.tween_property(%Panel,"modulate", Color(1.0, 1.0, 1.0, 0.0), 0.2)
 	await animTween.finished
 	get_pointer().hide()

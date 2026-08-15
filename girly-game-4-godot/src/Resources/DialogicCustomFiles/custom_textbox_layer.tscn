@@ -318,6 +318,7 @@ patch_margin_bottom = 32
 
 [node name="DialogTextPanel" type="PanelContainer" parent="Anchor/AnimationParent/Sizer" unique_id=979053315]
 unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
@@ -347,16 +348,6 @@ textbox_root = NodePath("..")
 unique_name_in_owner = true
 script = ExtResource("5_e2l71")
 play_every_character = 0
-
-[node name="ColorRect" type="ColorRect" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/DialogicNode_DialogText" unique_id=1950360127]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 0.43, 0.43, 0.27058825)
 
 [node name="NextIndicator" type="Control" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=123341988]
 unique_name_in_owner = true
@@ -415,7 +406,7 @@ name_label_root = NodePath("..")
 [node name="CutUpText" parent="." unique_id=412244657 node_paths=PackedStringArray("textbox", "layer") instance=ExtResource("11_3lw22")]
 textbox = NodePath("../Anchor/AnimationParent/Sizer/DialogTextPanel/DialogicNode_DialogText")
 layer = NodePath("..")
-clicked_color = Color(0.7123783, 0.25801823, 0.53260756, 1)
-hover_color = Color(1, 0.79607844, 1, 1)
+clicked_color = Color(0.56, 0.413, 0.14, 1)
+hover_color = Color(0.98866665, 1, 0.65999997, 1)
 
 [node name="MinigameHandler" parent="." unique_id=1857577767 instance=ExtResource("12_mxd4s")]

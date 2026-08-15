@@ -35,7 +35,7 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_dnhuk"]
-viewport_path = NodePath("Pointer/Panel/Control2/SubViewport")
+viewport_path = NodePath("Node2D/Pointer/Panel/Control2/SubViewport")
 
 [sub_resource type="Gradient" id="Gradient_dnhuk"]
 interpolation_mode = 1
@@ -46,6 +46,67 @@ gradient = SubResource("Gradient_dnhuk")
 width = 250
 height = 250
 metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_dnhuk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_anl6j"]
+resource_name = "pop"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(2.6390164, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666668, 0.16666669, 0.2, 0.23333333, 0.36666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 0.14865094, 1),
+"update": 0,
+"values": [0.0, 0.2076941809873248, -0.17453292519943295, 0.08726646259971647, -0.03490658503988659, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q423p"]
+_data = {
+&"RESET": SubResource("Animation_dnhuk"),
+&"pop": SubResource("Animation_anl6j")
+}
 
 [node name="CustomGlossaryPopup" type="Control" unique_id=2057859251]
 z_index = 5
@@ -59,18 +120,19 @@ scale = Vector2(1.0121801, 1)
 mouse_filter = 2
 script = ExtResource("1_5vldw")
 
-[node name="Pointer" type="ColorRect" parent="." unique_id=1638123423]
+[node name="Node2D" type="Node2D" parent="." unique_id=972266880]
+
+[node name="Pointer" type="ColorRect" parent="Node2D" unique_id=1638123423]
 clip_contents = true
-layout_mode = 0
-offset_left = -121.519875
-offset_top = -121.0
-offset_right = 121.51986
-offset_bottom = -21.0
+offset_left = -121.52
+offset_top = -100.0
+offset_right = 121.51974
+offset_bottom = -1.5258789e-05
 pivot_offset_ratio = Vector2(0.5, 1)
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="Panel" type="PanelContainer" parent="Pointer" unique_id=995801294]
+[node name="Panel" type="PanelContainer" parent="Node2D/Pointer" unique_id=995801294]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 7
@@ -84,42 +146,44 @@ offset_right = 83.02285
 offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 0
+offset_transform_enabled = true
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dnhuk")
 metadata/_edit_use_custom_anchors = true
 metadata/_edit_layout_mode = 1
 
-[node name="VBox" type="VBoxContainer" parent="Pointer/Panel" unique_id=357120592]
+[node name="VBox" type="VBoxContainer" parent="Node2D/Pointer/Panel" unique_id=357120592]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 0
 
-[node name="Title" type="Label" parent="Pointer/Panel/VBox" unique_id=437923009]
+[node name="Title" type="Label" parent="Node2D/Pointer/Panel/VBox" unique_id=437923009]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.38431373, 0.2627451, 0.13333334, 1)
 
-[node name="HSeparator" type="HSeparator" parent="Pointer/Panel/VBox" unique_id=1278219523]
+[node name="HSeparator" type="HSeparator" parent="Node2D/Pointer/Panel/VBox" unique_id=1278219523]
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/separator = SubResource("StyleBoxLine_v0mr5")
 
-[node name="Text" type="RichTextLabel" parent="Pointer/Panel/VBox" unique_id=1716722498]
+[node name="Text" type="RichTextLabel" parent="Node2D/Pointer/Panel/VBox" unique_id=1716722498]
 unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.5686275)
 layout_mode = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0.38431373, 0.2627451, 0.13333334, 1)
 bbcode_enabled = true
 fit_content = true
 
-[node name="Control" type="Control" parent="Pointer/Panel" unique_id=337290533]
+[node name="Control" type="Control" parent="Node2D/Pointer/Panel" unique_id=337290533]
 show_behind_parent = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 mouse_filter = 2
 
-[node name="PanelPoint" type="PanelContainer" parent="Pointer/Panel/Control" unique_id=891852741]
+[node name="PanelPoint" type="PanelContainer" parent="Node2D/Pointer/Panel/Control" unique_id=891852741]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = -0.999999
@@ -132,10 +196,10 @@ size_flags_vertical = 8
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_anl6j")
 
-[node name="Control2" type="Control" parent="Pointer/Panel" unique_id=1133800390]
+[node name="Control2" type="Control" parent="Node2D/Pointer/Panel" unique_id=1133800390]
 layout_mode = 2
 
-[node name="TextureRect2" type="ColorRect" parent="Pointer/Panel/Control2" unique_id=1296669999]
+[node name="TextureRect2" type="ColorRect" parent="Node2D/Pointer/Panel/Control2" unique_id=1296669999]
 self_modulate = Color(1, 0.9475, 0.65, 0.8784314)
 z_index = -1
 layout_mode = 1
@@ -152,7 +216,7 @@ offset_transform_enabled = true
 offset_transform_pivot = Vector2(0.5, 0.5)
 offset_transform_visual_only = false
 
-[node name="TextureRect" type="TextureRect" parent="Pointer/Panel/Control2" unique_id=319090963]
+[node name="TextureRect" type="TextureRect" parent="Node2D/Pointer/Panel/Control2" unique_id=319090963]
 self_modulate = Color(0.71, 0.497, 0.1775, 0.3372549)
 z_index = -1
 layout_mode = 1
@@ -173,7 +237,7 @@ texture = ExtResource("2_dnhuk")
 expand_mode = 1
 stretch_mode = 1
 
-[node name="TextureRect3" type="TextureRect" parent="Pointer/Panel/Control2" unique_id=1115138126]
+[node name="TextureRect3" type="TextureRect" parent="Node2D/Pointer/Panel/Control2" unique_id=1115138126]
 self_modulate = Color(1, 0.9490196, 0.6509804, 0.6666667)
 z_index = -1
 layout_mode = 1
@@ -192,13 +256,16 @@ rotation = 0.00092489517
 scale = Vector2(0.11, 0.11)
 texture = SubResource("ViewportTexture_dnhuk")
 
-[node name="SubViewport" type="SubViewport" parent="Pointer/Panel/Control2" unique_id=444015331]
+[node name="SubViewport" type="SubViewport" parent="Node2D/Pointer/Panel/Control2" unique_id=444015331]
 transparent_bg = true
 anisotropic_filtering_level = 4
 size = Vector2i(352, 186)
 
-[node name="TextureRect3" type="TextureRect" parent="Pointer/Panel/Control2/SubViewport" unique_id=1632541014]
+[node name="TextureRect3" type="TextureRect" parent="Node2D/Pointer/Panel/Control2/SubViewport" unique_id=1632541014]
 offset_right = 40.0
 offset_bottom = 40.0
 rotation = -0.7853982
 texture = SubResource("GradientTexture2D_j32xi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1195734703]
+libraries/ = SubResource("AnimationLibrary_q423p")

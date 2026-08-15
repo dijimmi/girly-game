@@ -144,11 +144,12 @@ func finish_text(is_organic := false) -> void:
 ## Checks if the next character in the text can be revealed.
 func _process(delta: float) -> void:
 	var rect : Rect2 = get_rect()
-	#rect.position.y -= 15
-	#rect.size.y -= 15
-	#rect.position = abs(rect.position)
-	#rect.size = abs(rect.size)
-	if !rect.has_point(get_local_mouse_position()) && meta_hovered:
+	var new_rect : Rect2 = rect
+	new_rect.position.y = rect.position.y - 45
+	new_rect.position.x = rect.position.x - 45
+	new_rect.size.y = rect.size.y + 55
+	new_rect.size.x = rect.size.x + 55
+	if !new_rect.has_point(get_local_mouse_position()) && hovered:
 		meta_hover_ended.emit(meta_hovered)
 	if !revealing or DialogicUtil.autoload().paused:
 		return
