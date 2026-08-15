@@ -6,6 +6,7 @@
 script = ExtResource("1_l5idx")
 entries = {
 "a-o": "あお",
+"e-e": "ええ",
 "ha-i": "はい",
 "i-ra-ssha-i": "いらっしゃい",
 "ko-n-ni-chi-wa": "こんにちは！",
@@ -32,6 +33,7 @@ entries = {
 "title": "Yes/That's right"
 },
 "ええ": {
+"alternatives": ["e-e"],
 "name": "ええ",
 "title": "Huh"
 },

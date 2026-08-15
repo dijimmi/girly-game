@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://c1kmjw5jit367"]
 
 [ext_resource type="Script" uid="uid://c0hh1pskdca3r" path="res://src/Resources/DialogicCustomFiles/custom_glossary_popup.gd" id="1_5vldw"]
+[ext_resource type="Texture2D" uid="uid://2aqv0xh4uwkn" path="res://import/Art/UIArt/ui_tex_rabbit_solid_transparent.png" id="2_dnhuk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnhuk"]
-bg_color = Color(0.12549, 0.12549, 0.12549, 1)
-border_width_left = 2
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
 border_width_top = 4
 border_width_right = 4
-border_width_bottom = 2
+border_width_bottom = 4
+border_color = Color(1, 1, 0.88, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -17,17 +19,56 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_v0mr5"]
+color = Color(1, 0.9566667, 0.74, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_anl6j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 0.8784314, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_right = 5
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_dnhuk"]
+viewport_path = NodePath("Pointer/Panel/Control2/SubViewport")
+
+[sub_resource type="Gradient" id="Gradient_dnhuk"]
+interpolation_mode = 1
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j32xi"]
+gradient = SubResource("Gradient_dnhuk")
+width = 250
+height = 250
+metadata/_snap_enabled = true
+
 [node name="CustomGlossaryPopup" type="Control" unique_id=2057859251]
+z_index = 5
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.0121801, 1)
+mouse_filter = 2
 script = ExtResource("1_5vldw")
 
-[node name="Pointer" type="Control" parent="." unique_id=326487682]
-anchors_preset = 0
+[node name="Pointer" type="ColorRect" parent="." unique_id=1638123423]
+clip_contents = true
+layout_mode = 0
+offset_left = -121.519875
+offset_top = -121.0
+offset_right = 121.51986
+offset_bottom = -21.0
+pivot_offset_ratio = Vector2(0.5, 1)
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
 
 [node name="Panel" type="PanelContainer" parent="Pointer" unique_id=995801294]
 unique_name_in_owner = true
@@ -37,30 +78,37 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -81.0
-offset_top = -92.0
-offset_right = 86.0
-offset_bottom = -35.0
+offset_left = -83.97716
+offset_top = -87.0
+offset_right = 83.02285
+offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dnhuk")
 metadata/_edit_use_custom_anchors = true
 metadata/_edit_layout_mode = 1
 
 [node name="VBox" type="VBoxContainer" parent="Pointer/Panel" unique_id=357120592]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/separation = 0
 
 [node name="Title" type="Label" parent="Pointer/Panel/VBox" unique_id=437923009]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.38431373, 0.2627451, 0.13333334, 1)
 
 [node name="HSeparator" type="HSeparator" parent="Pointer/Panel/VBox" unique_id=1278219523]
 layout_mode = 2
+mouse_filter = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_v0mr5")
 
 [node name="Text" type="RichTextLabel" parent="Pointer/Panel/VBox" unique_id=1716722498]
 unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.38431373, 0.2627451, 0.13333334, 1)
 bbcode_enabled = true
 fit_content = true
 
@@ -69,15 +117,88 @@ show_behind_parent = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+mouse_filter = 2
 
 [node name="PanelPoint" type="PanelContainer" parent="Pointer/Panel/Control" unique_id=891852741]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = -0.999999
-offset_top = -14.0
+offset_top = -5.0
 offset_right = 19.0
-offset_bottom = 6.0
-rotation = 0.75799
+offset_bottom = 15.0
+rotation = 0.7818602
 size_flags_horizontal = 4
 size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_dnhuk")
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_anl6j")
+
+[node name="Control2" type="Control" parent="Pointer/Panel" unique_id=1133800390]
+layout_mode = 2
+
+[node name="TextureRect2" type="ColorRect" parent="Pointer/Panel/Control2" unique_id=1296669999]
+self_modulate = Color(1, 0.9475, 0.65, 0.8784314)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 5.0140004
+anchor_bottom = 4.9410005
+offset_left = -7.0
+offset_top = -6.0
+offset_right = 60.773804
+offset_bottom = 57.126953
+grow_horizontal = 2
+scale = Vector2(0.2, 0.2)
+offset_transform_enabled = true
+offset_transform_pivot = Vector2(0.5, 0.5)
+offset_transform_visual_only = false
+
+[node name="TextureRect" type="TextureRect" parent="Pointer/Panel/Control2" unique_id=319090963]
+self_modulate = Color(0.71, 0.497, 0.1775, 0.3372549)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.113000005
+anchor_right = 4.9830003
+anchor_bottom = 4.9410005
+offset_left = -7.0
+offset_top = -0.01099968
+offset_right = 65.70282
+offset_bottom = 57.126953
+grow_horizontal = 2
+scale = Vector2(0.2, 0.2)
+offset_transform_enabled = true
+offset_transform_pivot = Vector2(0.5, 0.5)
+offset_transform_visual_only = false
+texture = ExtResource("2_dnhuk")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Pointer/Panel/Control2" unique_id=1115138126]
+self_modulate = Color(1, 0.9490196, 0.6509804, 0.6666667)
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.5180001
+anchor_right = 0.5
+anchor_bottom = 1.5180001
+offset_left = -21.271355
+offset_top = -21.45401
+offset_right = 330.72864
+offset_bottom = 164.54599
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 0.00092489517
+scale = Vector2(0.11, 0.11)
+texture = SubResource("ViewportTexture_dnhuk")
+
+[node name="SubViewport" type="SubViewport" parent="Pointer/Panel/Control2" unique_id=444015331]
+transparent_bg = true
+anisotropic_filtering_level = 4
+size = Vector2i(352, 186)
+
+[node name="TextureRect3" type="TextureRect" parent="Pointer/Panel/Control2/SubViewport" unique_id=1632541014]
+offset_right = 40.0
+offset_bottom = 40.0
+rotation = -0.7853982
+texture = SubResource("GradientTexture2D_j32xi")

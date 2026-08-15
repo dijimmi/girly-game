@@ -74,20 +74,19 @@ func _on_dialogic_display_dialog_text_meta_hover_started(meta: String) -> void:
 	if entry_info.is_empty():
 		return
 
-	get_pointer().show()
+	anim_in()
 	get_title().text = entry_info.title
 	get_text().text = entry_info.text
 	get_text().text = ['', '[center]', '[right]'][text_alignment] + get_text().text
-	get_pointer().global_position = get_pointer().get_global_mouse_position()
-
-	if title_color_mode == TextColorModes.ENTRY:
-		get_title().add_theme_color_override(&"font_color", entry_info.color)
-	if text_color_mode == TextColorModes.ENTRY:
-		get_text().add_theme_color_override(&"default_color", entry_info.color)
-	match box_modulate_mode:
-		ModulateModes.ENTRY_COLOR_ON_BOX:
-			get_panel().self_modulate = entry_info.color
-			get_panel_point().self_modulate = entry_info.color
+	get_pointer().global_position = get_pointer().get_global_mouse_position() - Vector2(get_pointer().size.x / 2 , get_pointer().size.y)
+	#if title_color_mode == TextColorModes.ENTRY:
+		#get_title().add_theme_color_override(&"font_color", entry_info.color)
+	#if text_color_mode == TextColorModes.ENTRY:
+		#get_text().add_theme_color_override(&"default_color", entry_info.color)
+	#match box_modulate_mode:
+		#ModulateModes.ENTRY_COLOR_ON_BOX:
+			#get_panel().self_modulate = entry_info.color
+			#get_panel_point().self_modulate = entry_info.color
 
 
 ## Method that keeps the bubble at mouse position when visible
@@ -97,14 +96,13 @@ func _process(_delta: float) -> void:
 
 	var pointer: Control = get_pointer()
 	if pointer.visible:
-		pointer.global_position = pointer.get_global_mouse_position()
+		pointer.global_position = pointer.get_global_mouse_position() - Vector2(get_pointer().size.x / 2 , get_pointer().size.y)
+
 
 
 ## Method that hides the bubble
 func _on_dialogic_display_dialog_text_meta_hover_ended(_meta:String) -> void:
-	get_pointer().hide()
-
-
+	anim_out()
 
 func _apply_export_overrides() -> void:
 	# Apply fonts
@@ -161,3 +159,21 @@ func _apply_export_overrides() -> void:
 		ModulateModes.GLOBAL_BG_COLOR:
 			panel.self_modulate = get_global_setting(&'bg_color', box_base_modulate)
 			get_panel_point().self_modulate = get_global_setting(&'bg_color', box_base_modulate)
+
+
+var animTween : Tween
+func anim_in() -> void:
+	get_pointer().show()
+	if animTween:
+		animTween.kill()
+	animTween = create_tween()
+	animTween.set_trans(Tween.TRANS_CUBIC)
+	animTween.tween_property(%Panel,"position", Vector2(9.88,13),0.2)
+func anim_out() -> void:
+	if animTween:
+		animTween.kill()
+	animTween = create_tween()
+	animTween.set_trans(Tween.TRANS_CUBIC)
+	animTween.tween_property(%Panel,"position", Vector2(9.88, 109), 0.2)
+	await animTween.finished
+	get_pointer().hide()

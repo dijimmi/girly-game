@@ -214,6 +214,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_kp34g")
 box_panel = "res://src/Resources/CustomDialogicFiles/vn_textbox_default_panel.tres"
 name_label_box_panel = "res://src/Resources/CustomDialogicFiles/vn_textbox_name_label_panel.tres"
@@ -234,6 +235,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="AnimationParent" type="Control" parent="Anchor" unique_id=599497142]
 modulate = Color(1, 1, 1, 0)
@@ -346,11 +348,22 @@ unique_name_in_owner = true
 script = ExtResource("5_e2l71")
 play_every_character = 0
 
+[node name="ColorRect" type="ColorRect" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/DialogicNode_DialogText" unique_id=1950360127]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.43, 0.43, 0.27058825)
+
 [node name="NextIndicator" type="Control" parent="Anchor/AnimationParent/Sizer/DialogTextPanel" unique_id=123341988]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
+mouse_filter = 2
 script = ExtResource("6_2cwmd")
 show_on_questions = true
 texture = ExtResource("7_nq2nf")

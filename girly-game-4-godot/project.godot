@@ -26,9 +26,9 @@ EventBus="*uid://6k2yk4tqekh"
 Global="*uid://clvrqagm1kgiq"
 Dialogue="*uid://2x6dsbwluld7"
 ProductInfo="*uid://itgrjwushly2"
+AudioManager="*uid://l705be311h5p"
 Tooltip="*uid://d4b0ahy63w48c"
 Constants="*uid://elfvujdn5hpr"
-AudioManager="*uid://l705be311h5p"
 
 [dialogic]
 

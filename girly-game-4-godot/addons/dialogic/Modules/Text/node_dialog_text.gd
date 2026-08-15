@@ -128,8 +128,6 @@ func continue_reveal() -> void:
 		# if the text finished organically, add a small input block
 		# this prevents accidental skipping when you expected the text to be longer
 		DialogicUtil.autoload().Inputs.block_input(ProjectSettings.get_setting('dialogic/text/advance_delay', 0.1))
-
-
 ## Reveals the entire text instantly.
 func finish_text(is_organic := false) -> void:
 	visible_ratio = 1
@@ -145,6 +143,13 @@ func finish_text(is_organic := false) -> void:
 
 ## Checks if the next character in the text can be revealed.
 func _process(delta: float) -> void:
+	var rect : Rect2 = get_rect()
+	#rect.position.y -= 15
+	#rect.size.y -= 15
+	#rect.position = abs(rect.position)
+	#rect.size = abs(rect.size)
+	if !rect.has_point(get_local_mouse_position()) && meta_hovered:
+		meta_hover_ended.emit(meta_hovered)
 	if !revealing or DialogicUtil.autoload().paused:
 		return
 
@@ -155,13 +160,16 @@ func _process(delta: float) -> void:
 		continue_reveal()
 
 
-
+var meta_hovered : Variant = null
+var hovered : bool = false
 func _on_meta_hover_started(_meta:Variant) -> void:
+	hovered = true
+	meta_hovered = _meta
 	DialogicUtil.autoload().Inputs.action_was_consumed = true
-
 func _on_meta_hover_ended(_meta:Variant) -> void:
+	hovered = false
+	meta_hovered = _meta
 	DialogicUtil.autoload().Inputs.action_was_consumed = false
-
 func _on_meta_clicked(_meta:Variant) -> void:
 	DialogicUtil.autoload().Inputs.action_was_consumed = true
 
@@ -169,19 +177,15 @@ func _on_meta_clicked(_meta:Variant) -> void:
 ## Handle mouse input
 func on_gui_input(event:InputEvent) -> void:
 	DialogicUtil.autoload().Inputs.handle_node_gui_input(event)
-
-
 func custom_fx_update() -> void:
 	for effect:RichTextEffect in custom_effects:
 		if "visible_characters" in effect:
 			effect.visible_characters = visible_characters
 
-
 func custom_fx_reset() -> void:
 	for effect in custom_effects:
 		if effect.has_method("reset"):
 			effect.reset()
-
 
 func custom_fx_skip() -> void:
 	for effect in custom_effects:
