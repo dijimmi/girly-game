@@ -3,7 +3,7 @@
 do AudioManager.load_music("scene2")
 join friend (Smile) center [animation="Fade In" length="0.2"]
 friend (Happy): Come on, it’s gonna be fun!
-update friend (Neutral) center [move_time="0.5"]
+update friend (Neutral) [length="0.0"]
 main_character: But I’m not interested in your fashion kei whatever, {FriendName}!
 friend (Smile): But you'd be so kawaii
 update friend (Neutral)

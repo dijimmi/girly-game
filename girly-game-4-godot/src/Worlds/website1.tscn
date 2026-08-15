@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cpfma3tbt886c" path="res://messages.png" id="14_shefs"]
 [ext_resource type="PackedScene" uid="uid://c2ravsacmti61" path="res://src/UI/ChatUI/chat_screen.tscn" id="15_b5nas"]
 [ext_resource type="AudioStream" uid="uid://cuq5sgn8qlh3x" path="res://import/Sounds/Dijimmi_Stinger_G maj_96.mp3" id="15_t3722"]
+[ext_resource type="Texture2D" uid="uid://be3ajmbykabdv" path="res://music.png" id="18_jqbq8"]
 [ext_resource type="PackedScene" uid="uid://brosbmba0e5x7" path="res://src/Worlds/music_player.tscn" id="20_kvwn1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g2e6"]
@@ -371,7 +372,7 @@ stretch_mode = 5
 [node name="MusicPlayer" type="TextureButton" parent="VBoxContainer/TaskBarBG/TaskBar" unique_id=875419768]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-texture_normal = ExtResource("4_b5nas")
+texture_normal = ExtResource("18_jqbq8")
 ignore_texture_size = true
 stretch_mode = 5
 
