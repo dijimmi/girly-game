@@ -85,6 +85,7 @@ grow_vertical = 2
 expand_mode = 2
 
 [node name="Label" type="Label" parent="." unique_id=758819483]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -96,3 +97,53 @@ offset_bottom = 91.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
+
+[node name="ExitButton" type="Button" parent="." unique_id=126063775]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 31.0
+offset_right = 1119.0
+offset_bottom = 62.0
+text = "X"
+
+[node name="Rounds" type="Label" parent="." unique_id=994470717]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 57.0
+offset_right = 129.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 50
+text = "0/0"
+
+[node name="Instructions" type="Label" parent="." unique_id=1984616786]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.0
+offset_top = 47.0
+offset_right = 122.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "word"
+horizontal_alignment = 1
+
+[node name="Ratio" type="Label" parent="Instructions" unique_id=1576277540]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.0
+offset_right = 122.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.07970453, 0.6542565, 0.82694465, 1)
+theme_override_font_sizes/font_size = 30
+text = "word"
+horizontal_alignment = 1
+visible_characters = 0
+visible_characters_behavior = 1
+visible_ratio = 0.0
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

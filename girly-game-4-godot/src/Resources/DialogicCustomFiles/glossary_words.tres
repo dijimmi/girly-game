@@ -30,7 +30,7 @@ entries = {
 "alternatives": ["u-n"],
 "extra": "",
 "name": "うん",
-"title": "Yes/That's right"
+"title": "Yeah"
 },
 "ええ": {
 "alternatives": ["e-e"],
@@ -52,7 +52,7 @@ entries = {
 "やった": {
 "alternatives": ["ya-t-ta"],
 "name": "やった",
-"title": "Yay/Hooray"
+"title": "Hooray"
 },
 "サンキュー": {
 "alternatives": ["sa-n-kyuu"],

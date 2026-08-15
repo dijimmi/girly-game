@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bvtxp0s53mehc" path="res://src/Core/Handlers/minigame_handler.gd" id="1_bnn44"]
 [ext_resource type="PackedScene" uid="uid://c6ojot2ko0pnp" path="res://src/UI/MinigameUI/minigame_draw_hiragana.tscn" id="1_c2nxf"]
+[ext_resource type="PackedScene" uid="uid://d4k7pnnfsyxn" path="res://src/UI/MinigameUI/minigame_match.tscn" id="3_fkg5w"]
 
 [node name="MinigameHandler" type="CanvasLayer" unique_id=906300315]
 layer = 500
 script = ExtResource("1_bnn44")
 
 [node name="DrawHiragana" parent="." unique_id=2074376187 instance=ExtResource("1_c2nxf")]
+visible = false
+
+[node name="Match" parent="." unique_id=1569849493 instance=ExtResource("3_fkg5w")]
 visible = false

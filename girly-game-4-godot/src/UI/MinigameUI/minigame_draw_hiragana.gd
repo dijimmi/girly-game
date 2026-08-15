@@ -4,6 +4,7 @@ var difficulty : int = 0
 var word_to_teach : String = ""
 
 func start_minigame(meta : String) -> void:
+	print("Draw start")
 	if meta == "" or meta == null:
 		return
 	word_to_teach = meta
@@ -86,6 +87,7 @@ func update_current_character(hint : String = ""):
 		current_character = word_to_teach[current_symbol]
 	if hint != "":
 		current_character = hint
+
 #______-DIFFICULTY 1-2-______#
 func verify_symbol() -> void:
 	if difficulty == 0:
@@ -113,6 +115,8 @@ func next_symbol() -> void:
 		update_current_character($DrawingFrame.handakuten_hiragana_dictionary[word_to_teach[current_symbol]])
 	update_guide()
 func update_guide(hint : String = "") -> void:
+	update_rounds()
+	update_instructions()
 	var frames_dict : Dictionary = {}
 	var current_letter : String
 	var texture_rect = $DrawingFrame/TextureRect
@@ -148,3 +152,13 @@ func update_guide(hint : String = "") -> void:
 		1:
 			frame = frames_dict["full"]
 	texture_rect.texture = frame
+func update_instructions() -> void:
+	$Instructions.text = word_to_teach
+	$Instructions/Ratio.text = word_to_teach
+	$Instructions/Ratio.visible_ratio = current_symbol / float(word_to_teach.length())
+func update_rounds() -> void:
+	$Rounds.text = str(get_parent().current_rounds) + "/" + str(get_parent().rounds)
+
+func _on_exit_button_pressed() -> void:
+	EventBus.minigame_skipped.emit()
+	end_minigame()
