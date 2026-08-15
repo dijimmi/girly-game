@@ -7,6 +7,7 @@ extends PanelContainer
 @export var song_time: HSlider
 @export var current_song: AudioStreamPlayer
 @export var song_list: VBoxContainer
+@export var volume_slider: VSlider
 
 var songs = [
 	{
@@ -30,6 +31,7 @@ var is_dragging = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().process_frame
+	_init_volume_slider()
 	setup_song(0, false)
 	for song in songs:
 		var btn = Button.new()
@@ -110,3 +112,23 @@ func _on_forward_pressed() -> void:
 	song_index += 1
 	setup_song(song_index)
 	
+	
+func _init_volume_slider() -> void:
+	volume_slider.min_value = 0.0
+	volume_slider.max_value = 1.0
+	volume_slider.step = 0.01       # <--- CRUCIAL: Changing this from 1.0 to 0.01 fixes the jumping
+	volume_slider.rounded = false
+	
+	volume_slider.set_meta("bus_index", AudioServer.get_bus_index("Music"))
+	volume_slider.value_changed.connect(_on_volume_slider_value_changed)
+	
+	volume_slider.value = db_to_linear(
+		AudioServer.get_bus_volume_db(volume_slider.get_meta("bus_index"))
+	)
+
+
+func _on_volume_slider_value_changed(val : float) -> void:
+	AudioServer.set_bus_volume_db(
+		volume_slider.get_meta("bus_index"),
+		linear_to_db(val)
+	)

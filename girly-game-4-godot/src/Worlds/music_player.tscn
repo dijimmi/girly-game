@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bciht1eqxyjtp" path="res://honsetastic.jpg" id="2_18c66"]
 [ext_resource type="AudioStream" uid="uid://bex6hlykmru1o" path="res://import/Music/結んだ末は_mas.wav" id="3_18c66"]
 
-[node name="MusicPlayer" type="PanelContainer" unique_id=1197386428 node_paths=PackedStringArray("song_thumbnail", "song_name", "aritst_name", "song_time", "current_song", "song_list")]
+[node name="MusicPlayer" type="PanelContainer" unique_id=1197386428 node_paths=PackedStringArray("song_thumbnail", "song_name", "aritst_name", "song_time", "current_song", "song_list", "volume_slider")]
 custom_minimum_size = Vector2(200, 200)
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,6 +26,7 @@ aritst_name = NodePath("HBoxContainer/VBoxContainer/AritstName")
 song_time = NodePath("HBoxContainer/VBoxContainer/SongTime")
 current_song = NodePath("CurrentSong")
 song_list = NodePath("HBoxContainer/PanelContainer/SongList")
+volume_slider = NodePath("HBoxContainer/VolumeSlider")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1705726884]
 layout_mode = 2
@@ -85,8 +86,14 @@ text = "next"
 layout_mode = 2
 scrollable = false
 
+[node name="VolumeSlider" type="VSlider" parent="HBoxContainer" unique_id=264428801]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
 [node name="CurrentSong" type="AudioStreamPlayer" parent="." unique_id=693250212]
 stream = ExtResource("3_18c66")
+bus = &"Music"
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/PlayPause" to="." method="_on_play_pause_pressed"]
