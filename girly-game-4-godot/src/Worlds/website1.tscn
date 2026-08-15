@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://d4b0ahy63w48c" path="res://src/UI/Website/tooltip.tscn" id="13_11yjo"]
 [ext_resource type="Texture2D" uid="uid://cpfma3tbt886c" path="res://messages.png" id="14_shefs"]
 [ext_resource type="PackedScene" uid="uid://c2ravsacmti61" path="res://src/UI/ChatUI/chat_screen.tscn" id="15_b5nas"]
+[ext_resource type="AudioStream" uid="uid://cuq5sgn8qlh3x" path="res://import/Sounds/Dijimmi_Stinger_G maj_96.mp3" id="15_t3722"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8g2e6"]
 texture = ExtResource("6_1ptsb")
@@ -299,6 +300,9 @@ text = "Buy"
 stream = SubResource("AudioStreamMP3_cedpa")
 
 [node name="Outcome2" type="AudioStreamPlayer" parent="VBoxContainer/ShopPageBG/ViewProductPage" unique_id=1545959988]
+stream = ExtResource("15_t3722")
+
+[node name="Outcome3" type="AudioStreamPlayer" parent="VBoxContainer/ShopPageBG/ViewProductPage" unique_id=1176900933]
 stream = ExtResource("12_wnsjb")
 
 [node name="ConfirmPurchase" type="CanvasLayer" parent="VBoxContainer/ShopPageBG" unique_id=420345878]

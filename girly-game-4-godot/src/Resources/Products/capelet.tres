@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("2_k8jvd")
 product_name = "ブランド2"
-level = 0
 accesory_type = "ケープレット"
 substyle = "クラシックロリー"
 featured = true

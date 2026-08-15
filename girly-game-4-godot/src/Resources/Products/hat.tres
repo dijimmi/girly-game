@@ -8,6 +8,7 @@ product_name = "ブランド5"
 level = 0
 accesory_type = "ぼうし"
 substyle = "クラシックロリー"
+featured = true
 winner = true
 textures_path = "res://import/Art/shop/hat"
 color_set1 = Array[Color]([Color(0.7995831, 0.92313135, 0.96972114, 1), Color(1, 1, 1, 1), Color(0.7995831, 0.92313135, 0.96972114, 1), Color(0.7995831, 0.92313135, 0.96972114, 1)])

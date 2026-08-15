@@ -33,8 +33,10 @@ func _on_yes_pressed() -> void:
 	print("YOU BOUGHT THE THINGY :D")
 	if curr_product.winner:
 		$Outcome.play()
-	else:
+	elif curr_product.mid_winner:
 		$Outcome2.play()
+	else:
+		$Outcome3.play()
 	buy_product.emit(curr_product)
 	buy_popup.visible = false
 
