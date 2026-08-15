@@ -225,6 +225,13 @@ func _on_chat_screen_hint_received(_hint_num: Variant) -> void:
 
 
 func _on_url_text_submitted(new_text: String) -> void:
+	
 	if new_text.to_lower().contains("honse"):
 		url.text = "honse!.com"
 		change_page(ProductInfo.HONSE)
+
+@export var music_layer: CanvasLayer
+
+
+func _on_music_player_pressed() -> void:
+	music_layer.visible = !music_layer.visible

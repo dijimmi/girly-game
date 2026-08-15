@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://brosbmba0e5x7"]
+
+[ext_resource type="Script" uid="uid://cv5ra5ypbki1x" path="res://src/Worlds/music_player.gd" id="1_o7svr"]
+[ext_resource type="Texture2D" uid="uid://bciht1eqxyjtp" path="res://honsetastic.jpg" id="2_18c66"]
+[ext_resource type="AudioStream" uid="uid://bex6hlykmru1o" path="res://import/Music/結んだ末は_mas.wav" id="3_18c66"]
+
+[node name="MusicPlayer" type="PanelContainer" unique_id=1197386428 node_paths=PackedStringArray("song_thumbnail", "song_name", "aritst_name", "song_time", "current_song", "song_list")]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -104.5
+offset_right = 100.0
+offset_bottom = 104.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_o7svr")
+song_thumbnail = NodePath("HBoxContainer/VBoxContainer/SongThumbnail")
+song_name = NodePath("HBoxContainer/VBoxContainer/SongName")
+aritst_name = NodePath("HBoxContainer/VBoxContainer/AritstName")
+song_time = NodePath("HBoxContainer/VBoxContainer/SongTime")
+current_song = NodePath("CurrentSong")
+song_list = NodePath("HBoxContainer/PanelContainer/SongList")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1705726884]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer" unique_id=1286643845]
+layout_mode = 2
+
+[node name="SongList" type="VBoxContainer" parent="HBoxContainer/PanelContainer" unique_id=745302089]
+layout_mode = 2
+
+[node name="SongButton" type="Button" parent="HBoxContainer/PanelContainer/SongList" unique_id=583377204]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=676475478]
+layout_mode = 2
+alignment = 1
+
+[node name="SongThumbnail" type="TextureRect" parent="HBoxContainer/VBoxContainer" unique_id=1120970305]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("2_18c66")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SongName" type="RichTextLabel" parent="HBoxContainer/VBoxContainer" unique_id=692962660]
+layout_mode = 2
+text = "TITLE"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AritstName" type="RichTextLabel" parent="HBoxContainer/VBoxContainer" unique_id=1810191232]
+layout_mode = 2
+text = "aRTIST"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=1454618733]
+layout_mode = 2
+alignment = 1
+
+[node name="Back" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=549654954]
+layout_mode = 2
+text = "back"
+
+[node name="PlayPause" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=239824338]
+layout_mode = 2
+text = "play"
+
+[node name="Forward" type="Button" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=223567348]
+layout_mode = 2
+text = "next"
+
+[node name="SongTime" type="HSlider" parent="HBoxContainer/VBoxContainer" unique_id=1572182227]
+layout_mode = 2
+scrollable = false
+
+[node name="CurrentSong" type="AudioStreamPlayer" parent="." unique_id=693250212]
+stream = ExtResource("3_18c66")
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/PlayPause" to="." method="_on_play_pause_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/HBoxContainer/Forward" to="." method="_on_forward_pressed"]
+[connection signal="drag_ended" from="HBoxContainer/VBoxContainer/SongTime" to="." method="_on_song_time_drag_ended"]
+[connection signal="drag_started" from="HBoxContainer/VBoxContainer/SongTime" to="." method="_on_song_time_drag_started"]
+[connection signal="value_changed" from="HBoxContainer/VBoxContainer/SongTime" to="." method="_on_song_time_value_changed"]
