@@ -47,17 +47,17 @@ var is_dragging: bool = false
 func _ready() -> void:
 	await get_tree().process_frame
 	
-	_route_existing_music_players()
-	_init_volume_slider()
-	
-	# Start the first song
-	setup_song(0, true)
-	
-	next_song_1_label.text = songs[0]["title"]
-	next_song_2_label.text = songs[1]["title"]
-	
-	next_song_1_bg.gui_input.connect(_on_next_song_1_input)
-	next_song_2_bg.gui_input.connect(_on_next_song_2_input)
+	#_route_existing_music_players()
+	#_init_volume_slider()
+	#
+	## Start the first song
+	#setup_song(0, true)
+	#
+	#next_song_1_label.text = songs[0]["title"]
+	#next_song_2_label.text = songs[1]["title"]
+	#
+	#next_song_1_bg.gui_input.connect(_on_next_song_1_input)
+	#next_song_2_bg.gui_input.connect(_on_next_song_2_input)
 
 
 func setup_song(index: int, play: bool = true) -> void:

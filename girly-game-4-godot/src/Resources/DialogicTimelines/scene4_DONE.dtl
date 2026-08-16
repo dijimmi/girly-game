@@ -1,3 +1,4 @@
+[background arg="res://import/Art/BackgroundArt/bg_fashion_club.png" fade="0.5" wait="true"]
 friend: It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
 # friend: Jファッション好きの人たちと話せて楽しかった〜！ まだ初日なのに、もういろいろ勉強になったよ！
 
@@ -10,7 +11,7 @@ friend: Oh, so that word you do know? #id:a1
 main_character: I know some… #id:a2
 # main_character: 少しくらいは……。
 
-update Ayumi (Laughing) @
+update  @
 
 friend: Anyways, I'm going to talk to the President about something, I'll catch you outside. #id:a3
 # friend: それより、私ちょっと部長に話があるから。外で待ってて！
@@ -108,6 +109,5 @@ Ayumi: うん、まかせて! @ #id:c7
 # MISSING TRANSLATION
 Ayumi: See you later! #id:c8
 # Ayumi: じゃあ、またね！
-
-[cue website 1 minigame] #id:c9
+do Dialogue.set_next_scene("website1")
 # ［Webサイト1のミニゲームへ］

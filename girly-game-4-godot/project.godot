@@ -40,10 +40,10 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "scene1_DONE": "res://src/Resources/DialogicTimelines/scene1_DONE.dtl",
-"scene1_narration": "res://src/Resources/DialogicTimelines/scene1_narration.dtl",
-"scene2": "res://src/Resources/DialogicTimelines/scene2.dtl",
+"scene1_narration": "res://src/_Tests/scene1_narration.dtl",
+"scene2": "res://src/_Tests/scene2.dtl",
 "scene2_DONE": "res://src/Resources/DialogicTimelines/scene2_DONE.dtl",
-"scene3": "res://src/Resources/DialogicTimelines/scene3.dtl",
+"scene3": "res://src/_Tests/scene3.dtl",
 "scene3_DONE": "res://src/Resources/DialogicTimelines/scene3_DONE.dtl",
 "scene4_DONE": "res://src/Resources/DialogicTimelines/scene4_DONE.dtl",
 "scene5_DONE": "res://src/Resources/DialogicTimelines/scene5_DONE.dtl",

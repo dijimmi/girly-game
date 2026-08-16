@@ -5,6 +5,7 @@
 Even though we've been here for a few weeks already, it still feels so different from back home. #id:48
 # MISSING TRANSLATION
 join friend (Happy) center [animation="Fade In"]
+[voice path="res://import/Voices/Aoi/" volume="0.0"]
 friend: {PlayerName}, look a Japanese fashion club! #id:49
 # MISSING TRANSLATION
 main_character: Japanese fashion club? #id:4a

@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var timeline_name : String = "scene1_narration"
+@export var timeline_name : String = "scene1_DONE"
 
 func _ready() -> void:
 	assert(timeline_name != "", str(self.name)+"'s timeline name isn't set properly")

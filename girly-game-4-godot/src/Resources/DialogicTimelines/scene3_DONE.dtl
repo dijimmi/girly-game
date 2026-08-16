@@ -161,5 +161,6 @@ friend: It's starting! We should hurry to join them! #id:9e
 # friend: 始まるって！ 私たちも行こ！
 # replace this with a small transition
 # ＃ここは短いトランジションに差し替える。
-do Dialogue.set_next_scene("main menu")
 # MISSING TRANSLATION
+[background arg="#000000ff" fade="0.5" wait="true"]
+jump scene4_DONE/
