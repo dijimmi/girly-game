@@ -53,7 +53,7 @@ func _ready() -> void:
 	}
 	
 	# TODO: remember to delete this once we call it elsewhere
-	#new_website("2")
+	new_website("2")
 	
 	website_1.pressed.connect(_on_website_1_pressed.bind(website_1))
 	shop_page_seach_bar.search_prompted.connect(_on_search_prompted)
@@ -88,6 +88,9 @@ func init_products():
 		var loaded_product : Product = load(path + file_name)
 		if loaded_product.level == curr_level:
 			ProductInfo.products.append(loaded_product)
+	
+	shop_page.add_featured_products()
+
 @export_category("websites")
 @export var website_1: TextureButton
 @export var home_page_websites: GridContainer

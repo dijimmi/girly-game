@@ -409,6 +409,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/ShopPageBG/FeaturedProducts" unique_id=1735584603]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -437,6 +438,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="ViewProductPage" type="Control" parent="VBoxContainer/ShopPageBG" unique_id=1542293147 node_paths=PackedStringArray("buy_popup", "product_big_view", "product_info")]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

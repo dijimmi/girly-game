@@ -28,16 +28,17 @@ var states = {
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	await get_tree().process_frame
-	
-	add_category(ProductInfo.FEATURED)
 
 
 func add_featured_products():
+	add_category(ProductInfo.FEATURED)
+	clear_search_results()
+	
 	for child : ProductCategory in products_list.get_children():
-		if child.category == ProductInfo.FEATURED:
-			clear_search_results()
+		if ProductInfo.FEATURED in child.category:
 			child.add_products_by_category()
 		
+	print(products_list.get_children())
 
 
 func load_state(page: String, from_undo: bool) -> void:
@@ -62,7 +63,6 @@ func load_state(page: String, from_undo: bool) -> void:
 		view_product_page.setup_page(state[0], state[1])
 	
 	elif page == ProductInfo.FEATURED_PAGE:
-		add_featured_products()
 		show_featured()
 
 
