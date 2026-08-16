@@ -61,7 +61,7 @@ theme = ExtResource("1_6wl4a")
 
 [node name="NamePrompt" type="LineEdit" parent="VBoxContainer" unique_id=1967696550]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.470703, 0.21939844, 0.28495172, 1)
 theme_override_colors/font_uneditable_color = Color(1, 1, 1, 0.5019608)
 theme_override_styles/normal = SubResource("StyleBoxFlat_wenl1")
 placeholder_text = "Enter Name"
