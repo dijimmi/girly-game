@@ -55,17 +55,17 @@ _data = {
 
 [node name="CustomPortrait" type="Node2D" unique_id=639819127]
 script = ExtResource("1_ghmw2")
-portrait_width = 518
-portrait_height = 682
+portrait_width = null
+portrait_height = null
 
 [node name="Body" type="Sprite2D" parent="." unique_id=968014346]
-position = Vector2(0, -317.2)
-scale = Vector2(0.48, 0.48)
+position = Vector2(0, -516.5)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_jnarb")
 
 [node name="Faces" type="Node2D" parent="." unique_id=653329741]
-position = Vector2(0, -317.2)
-scale = Vector2(0.48, 0.48)
+position = Vector2(0, -516.5)
+scale = Vector2(0.75, 0.75)
 
 [node name="Neutral" type="Sprite2D" parent="Faces" unique_id=1944786987]
 

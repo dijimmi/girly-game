@@ -244,7 +244,7 @@ func _update_debug_portrait_transform() -> void:
 	debug_character_holder_node.position = transform.position
 	debug_character_scene_node.position = portrait_info.get('offset', Vector2())+character.offset
 
-	debug_character_holder_node.scale = transform.size
+	#debug_character_holder_node.scale = transform.size
 
 
 ## Updates the debug origins position. Also calls _update_debug_portrait_transform()
