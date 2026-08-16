@@ -83,14 +83,14 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("TextureRect:modulate")
+tracks/5/path = NodePath(".:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_uopbp"]
@@ -197,14 +197,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/path = NodePath("TextureRect:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.43333334),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.96666664),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lp4k3"]
@@ -236,7 +248,6 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_xam24")
 
 [node name="DrawingFrame" parent="." unique_id=614917709 node_paths=PackedStringArray("label") instance=ExtResource("2_vhj4k")]
-modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(384, 384)
 layout_mode = 1
 anchors_preset = 8
@@ -410,7 +421,7 @@ offset_left = -180.0
 offset_top = 26.0
 offset_right = 320.0
 offset_bottom = 196.0
-rotation = -0.20943952
+rotation = 0.16944237
 texture = ExtResource("8_uopbp")
 flip_h = true
 

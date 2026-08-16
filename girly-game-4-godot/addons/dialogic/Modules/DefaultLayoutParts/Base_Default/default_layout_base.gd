@@ -13,6 +13,8 @@ extends DialogicLayoutBase
 @export var global_font_size: int = 18
 
 func _ready():
+	if !Global.font_to_use:
+		return
 	global_font = Global.font_to_use.resource_path 
 func _apply_export_overrides() -> void:
 	# apply layer

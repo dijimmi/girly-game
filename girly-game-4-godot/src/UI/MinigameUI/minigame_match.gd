@@ -15,14 +15,20 @@ func _ready() -> void:
 
 func start_minigame(meta : String) -> void:
 	update_rounds()
-	var previous_round = clamp(get_parent().current_rounds-1, 0, get_parent().rounds)
-	if !get_parent().minigame_order.get(previous_round) == self:
+	var previous_round = get_parent().current_rounds-1
+	if previous_round < 0:
+		$AnimationPlayer.play("minigame_in")
+	elif !get_parent().minigame_order.get(clamp(previous_round,0,get_parent().rounds)) == self:
 		$AnimationPlayer.play("minigame_in")
 	fill_words(meta)
 	self.show()
 func end_minigame() -> void:
 	var next_round = get_parent().current_rounds + 1
-	hide()
+	if next_round > get_parent().rounds:
+		$AnimationPlayer.play("minigame_out")
+	elif !get_parent().minigame_order.get(clamp(next_round,0,get_parent().rounds)) == self:
+		$AnimationPlayer.play("minigame_out")
+	
 	for button in %WordsEN.get_children()+%WordsJP.get_children():
 		button.disabled = false
 		button.set_pressed_no_signal(false)

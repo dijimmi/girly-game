@@ -12,7 +12,6 @@ var word_to_teach : String = ""
 
 
 func start_minigame(meta : String) -> void:
-	print("Draw start")
 	if meta == "" or meta == null:
 		return
 	word_to_teach = meta
@@ -20,14 +19,22 @@ func start_minigame(meta : String) -> void:
 	
 	current_symbol = 0
 	current_line = 0
+	var previous_round = get_parent().current_rounds-1
+	if previous_round < 0:
+		$AnimationPlayer.play("minigame_in")
+	elif !get_parent().minigame_order.get(clamp(previous_round,0,get_parent().rounds)) == self:
+		$AnimationPlayer.play("minigame_in")
 	update_current_character()
 	update_guide()
 	self.show()
 
 func end_minigame() -> void:
 	update_guide("null")
-	await get_tree().create_timer(0.5).timeout
-	self.hide()
+	var next_round = get_parent().current_rounds + 1
+	if next_round > get_parent().rounds:
+		$AnimationPlayer.play("minigame_out")
+	elif !get_parent().minigame_order.get(clamp(next_round,0,get_parent().rounds)) == self:
+		$AnimationPlayer.play("minigame_out")
 	$DrawingFrame.clear_frame()
 	$DrawingFrame.clear_label()
 	EventBus.minigame_round_end.emit()
