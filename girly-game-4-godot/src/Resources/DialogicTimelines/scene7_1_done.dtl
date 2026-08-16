@@ -9,7 +9,7 @@ When you walk out of the meeting room, you see Ayumi walking by #id:1bf
 main_character: Ayumi! #id:1c0
 # main_character: アユミ！
 
-love_interest: Oh hey [main_character name] ~ #id:1c1
+love_interest: Oh hey {PlayerName} ~ #id:1c1
 # Ayumi: あ、[main_character name]。
 
 main_character: You just missed the meeting. #id:1c2

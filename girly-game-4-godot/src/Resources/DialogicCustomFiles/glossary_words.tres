@@ -59,6 +59,7 @@ entries = {
 "a-ni-me": "アニメ",
 "a-o": "あお",
 "a-ri-ga-to-u": "ありがとう",
+"ba-ka": "バカ",
 "bo-n-ne-tto": "ボンネット",
 "bo-u-shi": "ぼうし",
 "cho-o-ka-a": "チョーカー",
@@ -70,6 +71,7 @@ entries = {
 "faa-sho-n": "ファッション",
 "ge-n-ki": "げんき",
 "go-me-n": "ごめん",
+"go-me-n-na-sa-i": "ごめんなさい",
 "go-su-ro-ri": "ゴスロリ",
 "go-za-i-ma-su": "ございます",
 "ha-i": "はい",
@@ -225,6 +227,11 @@ entries = {
 "name": "ごめん",
 "title": "Sorry"
 },
+"ごめんなさい": {
+"alternatives": ["go-me-n-na-sa-i"],
+"name": "ごめんなさい",
+"title": "I'm sorry"
+},
 "さよなら": {
 "alternatives": ["sa-yo-na-ra"],
 "name": "さよなら",
@@ -378,6 +385,11 @@ entries = {
 "alternatives": ["du-re-su"],
 "name": "ドレス",
 "title": "Dress"
+},
+"バカ": {
+"alternatives": ["ba-ka"],
+"name": "バカ",
+"title": "fool"
 },
 "ファッション": {
 "alternatives": ["faa-sho-n"],
