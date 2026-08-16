@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://bpcan81im5njq"]
+
+[ext_resource type="FontFile" uid="uid://dksbyhngtpu87" path="res://import/Fonts/LINESeedJP-Bold.ttf" id="1_4qad0"]
+[ext_resource type="FontFile" uid="uid://cysl0xtptx3lf" path="res://import/Fonts/MochiyPopOne-Regular.ttf" id="1_sh48j"]
+
+[resource]
+Button/fonts/font = ExtResource("1_4qad0")
+Label/fonts/font = ExtResource("1_sh48j")
+RichTextLabel/fonts/normal_font = ExtResource("1_sh48j")

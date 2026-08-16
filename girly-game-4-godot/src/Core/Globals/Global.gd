@@ -72,3 +72,5 @@ func unlock_word( word : String) -> void:
 	if word in glossary.entries:
 		glossary.entries[word].set("unlocked", true)
 		EventBus.unlock_word.emit(word)
+
+var font_to_use : FontFile

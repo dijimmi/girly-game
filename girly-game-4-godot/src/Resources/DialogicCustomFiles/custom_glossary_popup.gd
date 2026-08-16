@@ -77,10 +77,18 @@ func _on_dialogic_display_dialog_text_meta_hover_started(meta: String) -> void:
 		return
 
 	anim_in()
-	get_title().text = entry_info.title #should get from alternative
-	get_text().text = other_entry.entries[meta]["alternatives"][0]
-	get_text().text = ['', '[center]', '[right]'][text_alignment] + get_text().text
-	get_node2d().global_position = get_node2d().get_global_mouse_position() #- Vector2(get_pointer().size.x / 2 , get_pointer().size.y)
+	print(other_entry.entries[meta])
+	if other_entry.entries[meta].get_or_add("unlocked", false):
+		get_title().show()
+		get_panel().get_node("VBox/HSeparator").show()
+		get_title().text = entry_info.title #should get from alternative
+		get_text().text = other_entry.entries[meta]["alternatives"][0]
+		get_text().text = ['', '[center]', '[right]'][text_alignment] + get_text().text
+	else :
+		get_title().hide()
+		get_panel().get_node("VBox/HSeparator").hide()
+		get_text().text = "???"
+	get_node2d().global_position = get_node2d().get_global_mouse_position() 
 	#if title_color_mode == TextColorModes.ENTRY:
 		#get_title().add_theme_color_override(&"font_color", entry_info.color)
 	#if text_color_mode == TextColorModes.ENTRY:
@@ -117,7 +125,8 @@ func _apply_export_overrides() -> void:
 	if font:
 		title.add_theme_font_override(&"font", font)
 	title.horizontal_alignment = title_alignment as HorizontalAlignment
-
+	
+	font = Global.font_to_use
 	# Apply font & sizes
 	title.add_theme_font_size_override(&"font_size", font_title_size)
 	var labels: Array[RichTextLabel] = [get_text()]

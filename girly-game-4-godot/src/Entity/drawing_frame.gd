@@ -277,7 +277,15 @@ class_name DrawingFrame extends Control
 @export_category("Drawing")
 @export var max_point_distance : float = 5.5
 
-
+@export_category("Music")
+@export var good_line : Array[AudioStream] = [
+	load("uid://bhb2i27yj6ao6")] #u_o8xh7gwsrj-correct
+@export var wrong_line : AudioStream = load("uid://bf46uodjtpcoq")
+@export var marker_draw : Array[AudioStream] = [
+	load("uid://c2ws4rnd3v35j"),
+	load("uid://da8dnm4j5ne71"),
+	load("uid://cwhlpsjq2s513"),
+]
 func _ready() -> void:
 	if get_parent():
 		$Delay.timeout.connect(get_parent().verify_symbol)
@@ -299,8 +307,10 @@ func recognise_line(i : int = get_parent().current_line) -> bool:
 			total_lines.append(line[i])
 
 	if total_lines.has(lines[i]):
+		AudioManager.play_random_sfx($Effects, good_line)
 		result = true
 	else:
+		AudioManager.play_sfx($Effects, wrong_line)
 		print("[drawing_frame] : character not recognised. Possible line : ", total_lines," recognised line : ", lines[i])
 	return result
 func recognise_character():
@@ -336,7 +346,10 @@ func clear_frame() -> void:
 #________________-DRAWING-________________#
 var mouse_pos : Vector2 = Vector2.ZERO
 func _gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion && Input.is_action_pressed("draw"):
+	if Input.is_action_just_pressed("draw"):
+		print("helllo???")
+		AudioManager.play_random_sfx($Stroke, marker_draw)
+	elif event is InputEventMouseMotion && Input.is_action_pressed("draw"):
 			mouse_pos = event.position
 			_draw_new_line()
 			$Delay.start()

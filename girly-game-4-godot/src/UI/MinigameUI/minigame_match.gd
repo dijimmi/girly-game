@@ -4,11 +4,16 @@ extends Control
 @export var hiragana_letters : TranslateDictionary = load("uid://cbdooaaiqyw8d")
 @export var katakana_letters : TranslateDictionary = load("uid://be8dikuw87xwb")
 
+@export var on_clicked_sound : AudioStream = load("uid://8jmsy5l5yd1l")
+@export var on_matched_sound : AudioStream = load("uid://dsdfajvkul3th")
+@export var on_wrong_sound : AudioStream = load("uid://bf46uodjtpcoq")
+@export var on_hovered_sound : AudioStream = load("uid://cx258ok0kcfo8")
+
+@export var on_skipped_sound : AudioStream = load("uid://dcxhhblaywrvd")
 func _ready() -> void:
 	connect_buttons()
 
 func start_minigame(meta : String) -> void:
-	print("Match start")
 	update_rounds()
 
 	fill_words(meta)
@@ -18,41 +23,48 @@ func end_minigame() -> void:
 	for button in %WordsEN.get_children()+%WordsJP.get_children():
 		button.disabled = false
 		button.set_pressed_no_signal(false)
-	print("end minigame matching", self.visible)
 	EventBus.minigame_round_end.emit()
 
 #______________-LOGIC-______________#
 func connect_buttons() -> void:
 	for button in %WordsJP.get_children():
 		button.toggled.connect(_on_clicked.bind(true, button))
+		button.mouse_entered.connect(_on_button_mouse_entered)
 	for answer_button in %WordsEN.get_children():
 		answer_button.toggled.connect(_on_clicked.bind(false, answer_button))
-
+		answer_button.mouse_entered.connect(_on_button_mouse_entered)
 var stored_word : String = ""
 func _on_clicked(toggled_on : bool ,jp : bool ,button : Button) -> void:
-	print("CLICKED WORD : ", button.text)
 	if !toggled_on:
 		return
 	var word = button.text
-	
+
 	if jp:
 		if stored_word == answers_dictionary[word]:
+			$Effects.volume_db = -9.0
+			AudioManager.play_sfx($Effects, on_matched_sound)
 			disable_buttons(true, button)
 		elif stored_word == "":
 			stored_word = word
 		elif stored_word != answers_dictionary[word]:
+			$Effects.volume_db = 0.0
+			AudioManager.play_sfx($Effects, on_wrong_sound)
 			clear_buttons()
 	else:
 		var good_key = answers_dictionary.find_key(word) #answers_dictionary[ ]
 		if stored_word == good_key:
+			$Effects.volume_db = -9.0
+			AudioManager.play_sfx($Effects, on_matched_sound)
 			disable_buttons(false, button)
 		elif stored_word == "":
 			stored_word = word
 		elif stored_word != good_key:
+			$Effects.volume_db = 0.0
+			AudioManager.play_sfx($Effects, on_wrong_sound)
 			clear_buttons()
+	AudioManager.play_sfx($Button, on_clicked_sound)
 
 func clear_buttons() -> void:
-	print("clear buttons")
 	stored_word = ""
 	for button in %WordsEN.get_children()+%WordsJP.get_children():
 		if button.button_pressed:
@@ -67,7 +79,6 @@ func disable_buttons(jp: bool, button : Button) -> void:
 		button2 = answers_dictionary.find_key(button1)
 	for child in %WordsEN.get_children() + %WordsJP.get_children():
 		if child.text == button1 or child.text == button2:
-			print(jp," ",child.text," button1 : ", button1," button2 : ", button2)
 			child.set_pressed_no_signal(false)
 			child.disabled = true
 	stored_word = ""
@@ -105,7 +116,7 @@ func get_lists(meta : String) -> Array:
 	update_answers_dictionary(meta)
 	
 	for entry in glossary.entries.keys():
-		if glossary.entries[entry] is Dictionary:
+		if glossary.entries[entry] is Dictionary and entry != meta:
 			var unlocked_word = glossary.entries[entry].get_or_add("unlocked", false)
 			if unlocked_word:
 				jp_list.append(entry)
@@ -133,11 +144,17 @@ func update_answers_dictionary(key : String)-> void:
 		pass
 		value = glossary.entries[key]["title"]
 	answers_dictionary.set(key, value)
-	print(answers_dictionary)
 
 
 func _on_exit_button_pressed() -> void:
+	AudioManager.play_sfx($Button, on_skipped_sound)
+	
 	EventBus.minigame_skipped.emit()
+	get_parent().exit_minigames()
 	end_minigame()
 func update_rounds() -> void:
 	$Rounds.text = str(get_parent().current_rounds) + "/" + str(get_parent().rounds)
+
+
+func _on_button_mouse_entered() -> void:
+	AudioManager.play_sfx($Button, on_hovered_sound)

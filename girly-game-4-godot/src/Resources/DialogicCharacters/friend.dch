@@ -24,7 +24,8 @@
 "body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
 "emotion": "3",
 "expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_4.png\"",
-"image": ""
+"image": "",
+"portrait_width": "518.0"
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -36,7 +37,8 @@
 "body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
 "emotion": "1",
 "expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_2.png\"",
-"image": ""
+"image": "",
+"portrait_width": "518.0"
 },
 "mirror": false,
 "offset": Vector2(0, 0),

@@ -117,4 +117,10 @@ theme_override_font_sizes/font_size = 30
 text = "Match the words
 "
 
+[node name="Button" type="AudioStreamPlayer" parent="." unique_id=1619909515]
+max_polyphony = 50
+bus = &"SoundEffects"
+
+[node name="Effects" type="AudioStreamPlayer" parent="." unique_id=2055427512]
+
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

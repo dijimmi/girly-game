@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://c1kmjw5jit367"]
 
 [ext_resource type="Script" uid="uid://c0hh1pskdca3r" path="res://src/Resources/DialogicCustomFiles/custom_glossary_popup.gd" id="1_5vldw"]
-[ext_resource type="Texture2D" uid="uid://2aqv0xh4uwkn" path="res://import/Art/UIArt/ui_tex_rabbit_solid_transparent.png" id="2_dnhuk"]
+[ext_resource type="Theme" uid="uid://bpcan81im5njq" path="res://src/Resources/Themes/theme.tres" id="1_anl6j"]
+[ext_resource type="Texture2D" uid="uid://2aqv0xh4uwkn" path="res://import/Art/UIArt/Texture/ui_tex_rabbit_solid_transparent.png" id="2_dnhuk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnhuk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -118,6 +119,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0121801, 1)
 mouse_filter = 2
+theme = ExtResource("1_anl6j")
 script = ExtResource("1_5vldw")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=972266880]
@@ -161,6 +163,7 @@ theme_override_constants/separation = 0
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.38431373, 0.2627451, 0.13333334, 1)
+text = "aaaaaa"
 
 [node name="HSeparator" type="HSeparator" parent="Node2D/Pointer/Panel/VBox" unique_id=1278219523]
 layout_mode = 2
@@ -171,10 +174,14 @@ theme_override_styles/separator = SubResource("StyleBoxLine_v0mr5")
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0.5686275)
 layout_mode = 2
+size_flags_vertical = 3
 mouse_filter = 2
 theme_override_colors/default_color = Color(0.38431373, 0.2627451, 0.13333334, 1)
 bbcode_enabled = true
+text = "aaaaaa"
 fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Control" type="Control" parent="Node2D/Pointer/Panel" unique_id=337290533]
 show_behind_parent = true

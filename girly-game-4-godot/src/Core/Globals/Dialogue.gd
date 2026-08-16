@@ -13,7 +13,7 @@ func start_minigame(word : String, _rounds : int = 1, minigame: String = "" ) ->
 	var minigame_handler = MinigameHandler.new()
 	minigame_handler.layer = 98
 	minigame_handler.delete_on_finished = true
-	#minigame_handler.rounds = _rounds
+	minigame_handler.rounds = _rounds
 	minigame_handler.word_to_learn = word
 	minigame_handler.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	

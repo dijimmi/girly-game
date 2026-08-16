@@ -8,6 +8,8 @@
 layer = 500
 script = ExtResource("1_bnn44")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=334928857]
+
 [node name="DrawHiragana" parent="." unique_id=2074376187 instance=ExtResource("1_c2nxf")]
 visible = false
 

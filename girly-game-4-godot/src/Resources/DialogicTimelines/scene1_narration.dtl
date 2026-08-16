@@ -1,5 +1,5 @@
 [background arg="#000000ff" fade="0.0"]
-[style name="narration_style_dialogue"]
+[style name="CustomDialogue"]
 I’ve recently become intersted in learning Japanese ever since I’ve grown closer to my friend {FriendName}.
 I met her in high school a few years ago when she transferred from Japan.
 Ever since she came to the US, she hasn't returned home until now.

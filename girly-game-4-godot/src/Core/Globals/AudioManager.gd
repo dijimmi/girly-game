@@ -1,7 +1,7 @@
 extends Node
 
 var music: AudioStreamPlayer
-var SFX: AudioStreamPlayer2D
+var SFX: AudioStreamPlayer
 
 var music_on = true
 var sfx_on = true
@@ -88,3 +88,13 @@ func _play_or_resume_music():
 		_resume_music()  
 	else:
 		_play_music()
+#____________SFX_______________#
+
+func play_sfx(audio_player : AudioStreamPlayer, sound : AudioStream) -> void:
+	audio_player.stream = sound
+	audio_player.bus = "SoundEffects"
+	audio_player.pitch_scale = randf_range(0.98,1.02)
+	audio_player.play()
+func play_random_sfx(audio_player : AudioStreamPlayer, sounds : Array[AudioStream]) -> void:
+	var sound = sounds.pick_random()
+	play_sfx(audio_player, sound)
