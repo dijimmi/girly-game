@@ -50,11 +50,12 @@ main_character: I thought more people would be here... #id:73
 friend (Happy): It's a new club, give it time... #id:74
 # friend (NeutralSpeaking): できたばかりの部活らしいよ。
 friend: Oh look, another one is joining! #id:75
+leave friend
+join love_interest center
 # friend (JoySPeaking): あ、見て。もう一人来たよ。
 
-Ayumi: (JP) Here it is. (enters the scene) #id:76
+love_interest (Confused): Here it is. #id:76
 # MISSING TRANSLATION
-[Maybe Ayumi could say something like "This is the place!". Could be a good chance to show her personality/speaking style in a quick way.] #id:77
 I look at the new girl… She's so… #id:78
 # 新しく入ってきた女の子を見る。……なんていうか、その……。
 Kawaii! #id:79
@@ -64,8 +65,10 @@ No... not just kawaii. #id:7a
 She's... she's... #id:7b
 # MISSING TRANSLATION
 
-My {FriendName}'s piercing gaze interrupt my thoughts. #id:7c
+{FriendName}'s piercing gaze interrupt my thoughts. #id:7c
 # MISSING TRANSLATION
+leave love_interest
+join friend center
 
 friend: Ohoho {PlayerName}~ you like her? #id:7d
 # friend: ほほ〜う、{PlayerName}〜？ {PlayerName}ってああいう娘がタイプ？
@@ -78,15 +81,17 @@ friend: Oh, nothing! #id:7f
 
 Ayumi walks towards us. #id:80
 # MISSING TRANSLATION
+join love_interest left [animation="Slide From Left"]
+update friend right
 
-friend: こんにちは! @ #id:81
+friend: こんにちは! #id:81
 # friend: こんにちは！
 main_character: Hello… #id:82
 # main_character: こ、こんにちは……。
 
-Ayumi: Hm? #id:83
+love_interest: Hm? #id:83
 # Ayumi: ん？
-Ayumi: Ah! Are you two the new exchange students, hello! #id:84
+love_interest: Ah! Are you two the new exchange students, hello! #id:84
 # Ayumi: あっ！ 二人が新しく来た留学生さん？ 初めまして！
 
 friend: うん! @ #id:85
@@ -100,12 +105,12 @@ main_character: Yeah, she dragged me here... #id:87
 main_character: (gets kicked) Ow! #id:88
 # main_character: （蹴られる）痛っ！
 
-Ayumi: pff- www @ #id:89
+love_interest: pff- www @ #id:89
 # Ayumi: ふふっ
-Ayumi: Ayumi です! @ #id:8a
+love_interest: Ayumi です! @ #id:8a
 # MISSING TRANSLATION
 
-Ayumi: And you? #id:8b
+love_interest: And you? #id:8b
 # Ayumi: あなたたちは？
 
 main_character: I'm {main_character name}, nice to meet you. #id:8c
@@ -116,22 +121,22 @@ friend: Aoi です! @ #id:8d
 main_character: Are you also a transfer student, Ayumi? #id:8e
 # main_character: アユミも留学生なの？
 
-Ayumi: ぜんぜん~ #id:8f
+love_interest: ぜんぜん~ #id:8f
 # Ayumi: ううん、違うよ〜。
-Ayumi: I reside here in Japan. #id:90
+love_interest: I'm from Japan #id:90
 # Ayumi: 私は日本に住んでるよ。
-Ayumi: Though my father is from the USA. #id:91
+love_interest: Though my father is from the USA. #id:91
 # Ayumi: お父さんはアメリカ人だけどね。
-Ayumi: So I know English too! #id:92
+love_interest: So I know English too! #id:92
 # MISSING TRANSLATION
 
-main_character: Oh, interesting. #id:93
+main_character: Ooh, interesting. #id:93
 # main_character: へえ、そうなんだ。
 
-friend: Sugoi! @ #id:94
+friend: Sugoi! #id:94
 # friend: すごい！
 
-Ayumi: Do you come from the US? #id:95
+love_interest: Do you come from the US? #id:95
 # Ayumi: 二人はアメリカから来たの？
 
 main_character: Yeah, we do, although {friend} is originally from Japan, but she moved to the US to study. #id:96
@@ -140,19 +145,19 @@ main_character: Yeah, we do, although {friend} is originally from Japan, but she
 main_character: Do you like fashion like Aoi? #id:97
 # main_character: アオイみたいに、アユミもファッションが好きなの？
 
-Ayumi: Hai! I do, though I'm not very knowledgeble. #id:98
+love_interest: Hai! I do, though I'm not very knowledgeble. #id:98
 # Ayumi: うん、好き！ でも、そんなに詳しいわけじゃないけど……。
 
 friend: I got you covered! #id:99
 # friend: それなら私に任せて！
 
-Ayumi: Hontou!? @ #id:9a
+love_interest: Hontou!? #id:9a
 # Ayumi: 本当！？
 
 main_character: Yeah, she's an expert on that stuff. #id:9b
 # main_character: うん、こいつ、その辺はかなり詳しいから。
 
-Ayumi: (JP) That's great! @ #id:9c
+love_interest: That's great! #id:9c
 # Ayumi: （日本語）すごいんだね！
 
 Presi: Okay guys, let's get started! #id:9d

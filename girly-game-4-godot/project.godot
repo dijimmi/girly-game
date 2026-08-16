@@ -63,7 +63,7 @@ layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres
 layout/default_style="res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
 variables={
 "FriendName": "Aoi",
-"LoveInterestName": "A",
+"LoveInterestName": "Ayumi",
 "PlayerName": "jfjdjfdsdfj",
 "PlayerNameJP": "あき",
 "PresName": "Club President"

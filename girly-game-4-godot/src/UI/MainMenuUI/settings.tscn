@@ -4,6 +4,12 @@
 [ext_resource type="Theme" uid="uid://bpcan81im5njq" path="res://src/Resources/Themes/theme.tres" id="1_kow2s"]
 [ext_resource type="FontFile" uid="uid://cysl0xtptx3lf" path="res://import/Fonts/MochiyPopOne-Regular.ttf" id="3_su7nk"]
 [ext_resource type="FontFile" uid="uid://dksbyhngtpu87" path="res://import/Fonts/LINESeedJP-Bold.ttf" id="4_kow2s"]
+[ext_resource type="Texture2D" uid="uid://df6surut75ojb" path="res://import/Art/UIArt/9rect.png" id="5_hsrey"]
+[ext_resource type="Texture2D" uid="uid://bcbdy1g2o51" path="res://import/Art/UIArt/MainMenu/checkbox_off.png" id="6_fyf51"]
+[ext_resource type="Texture2D" uid="uid://p0tpg51jlhcc" path="res://import/Art/UIArt/MainMenu/checkbox.png" id="7_wenl1"]
+[ext_resource type="Texture2D" uid="uid://b0rkgql2fm63x" path="res://import/Art/UIArt/9rect_highlight.png" id="8_mhits"]
+[ext_resource type="Texture2D" uid="uid://nuf238yqaa41" path="res://import/Art/UIArt/MainMenu/button1.png" id="9_wenl1"]
+[ext_resource type="Texture2D" uid="uid://co8l3sv2nlfmd" path="res://import/Art/UIArt/MainMenu/button1_bg.png" id="10_mhits"]
 
 [node name="Settings" type="Control" unique_id=1000439076]
 layout_mode = 3
@@ -17,7 +23,8 @@ script = ExtResource("1_41h2x")
 font = ExtResource("3_su7nk")
 simple_font = ExtResource("4_kow2s")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=25844483]
+[node name="ColorRect" type="NinePatchRect" parent="." unique_id=1813351407]
+self_modulate = Color(1, 0.59000003, 0.7061666, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,7 +35,11 @@ offset_right = -46.222168
 offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.43, 0.43, 0.43, 0.56078434)
+texture = ExtResource("5_hsrey")
+patch_margin_left = 96
+patch_margin_top = 64
+patch_margin_right = 106
+patch_margin_bottom = 74
 
 [node name="Title" type="Label" parent="ColorRect" unique_id=885194722]
 layout_mode = 1
@@ -38,9 +49,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -85.5
-offset_top = -229.0
+offset_top = -321.0
 offset_right = 85.5
-offset_bottom = -177.0
+offset_bottom = -269.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 35
@@ -54,10 +65,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -195.0
-offset_top = -131.5
-offset_right = 156.5
-offset_bottom = 131.5
+offset_left = -427.0
+offset_top = -184.0
+offset_right = 388.5
+offset_bottom = 184.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/v_separation = 37
@@ -67,6 +78,7 @@ columns = 2
 layout_mode = 2
 theme = ExtResource("1_kow2s")
 theme_override_fonts/font = ExtResource("3_su7nk")
+theme_override_font_sizes/font_size = 30
 text = "Volume"
 horizontal_alignment = 1
 
@@ -81,6 +93,7 @@ value = -9.0
 layout_mode = 2
 theme = ExtResource("1_kow2s")
 theme_override_fonts/font = ExtResource("3_su7nk")
+theme_override_font_sizes/font_size = 30
 text = "Voices"
 horizontal_alignment = 1
 
@@ -95,6 +108,7 @@ value = -9.0
 layout_mode = 2
 theme = ExtResource("1_kow2s")
 theme_override_fonts/font = ExtResource("3_su7nk")
+theme_override_font_sizes/font_size = 30
 text = "Music"
 horizontal_alignment = 1
 
@@ -110,6 +124,7 @@ value = -9.0
 layout_mode = 2
 theme = ExtResource("1_kow2s")
 theme_override_fonts/font = ExtResource("3_su7nk")
+theme_override_font_sizes/font_size = 30
 text = "Sound Effects"
 horizontal_alignment = 1
 
@@ -124,29 +139,76 @@ value = 10.0
 layout_mode = 2
 theme = ExtResource("1_kow2s")
 theme_override_fonts/font = ExtResource("3_su7nk")
+theme_override_font_sizes/font_size = 30
 text = "Use Simple font"
 horizontal_alignment = 1
 
-[node name="CheckBox" type="CheckBox" parent="ColorRect/GridContainer" unique_id=26314673]
+[node name="Control" type="Control" parent="ColorRect/GridContainer" unique_id=1578564802]
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="." unique_id=589240575]
+[node name="CheckBox" type="TextureButton" parent="ColorRect/GridContainer/Control" unique_id=1754306165]
+layout_mode = 0
+offset_left = 47.0
+offset_top = -7.0
+offset_right = 216.0
+offset_bottom = 59.0
+texture_normal = ExtResource("6_fyf51")
+texture_pressed = ExtResource("7_wenl1")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Highlight" type="NinePatchRect" parent="ColorRect" unique_id=1902001701]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_mhits")
+patch_margin_left = 96
+patch_margin_top = 64
+patch_margin_right = 106
+patch_margin_bottom = 74
+
+[node name="BackButton" type="TextureRect" parent="." unique_id=1532932399]
+self_modulate = Color(0.65, 0.94166666, 1, 1)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.041
 anchor_top = 0.038000003
 anchor_right = 0.041
 anchor_bottom = 0.038000003
-offset_left = 28.767998
-offset_top = 27.375998
-offset_right = 112.768
-offset_bottom = 68.376
+offset_left = -31.720001
+offset_top = 18.96
+offset_right = 468.28
+offset_bottom = 188.96002
 theme = ExtResource("1_kow2s")
-text = "X Back"
+texture = ExtResource("9_wenl1")
+
+[node name="BackButton" type="TextureRect" parent="BackButton" unique_id=1666172159]
+self_modulate = Color(0.22, 0.0792, 0.0792, 1)
+show_behind_parent = true
+layout_mode = 1
+offset_right = 500.0
+offset_bottom = 170.0
+theme = ExtResource("1_kow2s")
+texture = ExtResource("10_mhits")
+
+[node name="Label" type="Label" parent="BackButton" unique_id=970306433]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -27.416
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "<- Back"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="value_changed" from="ColorRect/GridContainer/VolumeHSlider" to="." method="_on_volume_h_slider_value_changed"]
 [connection signal="value_changed" from="ColorRect/GridContainer/VoicesHSlider2" to="." method="_on_voices_h_slider_2_value_changed"]
 [connection signal="value_changed" from="ColorRect/GridContainer/MusicHSlider" to="." method="_on_music_h_slider_value_changed"]
 [connection signal="value_changed" from="ColorRect/GridContainer/SoundEffectsHSlider" to="." method="_on_sound_effects_h_slider_value_changed"]
-[connection signal="toggled" from="ColorRect/GridContainer/CheckBox" to="." method="_on_check_box_toggled"]
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="toggled" from="ColorRect/GridContainer/Control/CheckBox" to="." method="_on_check_box_toggled"]

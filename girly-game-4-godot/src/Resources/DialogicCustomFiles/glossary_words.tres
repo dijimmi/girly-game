@@ -5,11 +5,6 @@
 [resource]
 script = ExtResource("1_l5idx")
 entries = {
-"": {
-"_translation_id": "2be",
-"case_sensitive": true,
-"name": ""
-},
 "Glossary/2bd/2bf/alternatives": "あお",
 "Glossary/2bd/2bf/name": "あお",
 "Glossary/2bd/2c0/alternatives": "あまろりー",

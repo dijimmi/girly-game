@@ -3,7 +3,11 @@
 [ext_resource type="FontFile" uid="uid://dksbyhngtpu87" path="res://import/Fonts/LINESeedJP-Bold.ttf" id="1_4qad0"]
 [ext_resource type="FontFile" uid="uid://cysl0xtptx3lf" path="res://import/Fonts/MochiyPopOne-Regular.ttf" id="1_sh48j"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p42j1"]
+bg_color = Color(0.94006324, 0.8380373, 0.8452406, 1)
+
 [resource]
 Button/fonts/font = ExtResource("1_4qad0")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_p42j1")
 Label/fonts/font = ExtResource("1_sh48j")
 RichTextLabel/fonts/normal_font = ExtResource("1_sh48j")
