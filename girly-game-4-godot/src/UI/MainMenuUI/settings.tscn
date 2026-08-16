@@ -172,7 +172,7 @@ patch_margin_top = 64
 patch_margin_right = 106
 patch_margin_bottom = 74
 
-[node name="BackButton" type="TextureRect" parent="." unique_id=1532932399]
+[node name="BackButton" type="TextureButton" parent="." unique_id=1232096606]
 self_modulate = Color(0.65, 0.94166666, 1, 1)
 layout_mode = 1
 anchors_preset = -1
@@ -185,7 +185,7 @@ offset_top = 18.96
 offset_right = 468.28
 offset_bottom = 188.96002
 theme = ExtResource("1_kow2s")
-texture = ExtResource("9_wenl1")
+texture_normal = ExtResource("9_wenl1")
 
 [node name="BackButton" type="TextureRect" parent="BackButton" unique_id=1666172159]
 self_modulate = Color(0.22, 0.0792, 0.0792, 1)
@@ -214,3 +214,4 @@ vertical_alignment = 1
 [connection signal="value_changed" from="ColorRect/GridContainer/MusicHSlider" to="." method="_on_music_h_slider_value_changed"]
 [connection signal="value_changed" from="ColorRect/GridContainer/SoundEffectsHSlider" to="." method="_on_sound_effects_h_slider_value_changed"]
 [connection signal="toggled" from="ColorRect/GridContainer/Control/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
