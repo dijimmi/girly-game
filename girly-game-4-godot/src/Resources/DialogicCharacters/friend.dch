@@ -1,7 +1,7 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-&"_translation_id": "2d7",
+&"_translation_id": "",
 &"color": Color(0.08771431, 0.42312604, 0.5807291, 1),
 &"custom_info": {
 "TextBoxColor": Color(0.5229, 0.83, 0.79928994, 1),

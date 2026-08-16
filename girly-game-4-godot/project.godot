@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="girly-game4-godot"
-run/main_scene="uid://3gbqc8g1x28u"
+run/main_scene="uid://db4o5620hkek7"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -103,6 +103,7 @@ audio/channel_defaults={
 glossary/glossary_files=["uid://ctu427wqr6fj4"]
 glossary/default_color=Color(1, 0.913737, 0.4479167, 1)
 text/autocolor_names=true
+audio/type_sound_bus="SoundEffects"
 translation/enabled=true
 translation/original_locale="en"
 translation/file_mode=0
@@ -114,7 +115,6 @@ translation/locales=[]
 translation/intern/save_mode=0
 translation/intern/file_mode=0
 translation/intern/translation_folder="res://src/Translations"
-audio/type_sound_bus="SoundEffects"
 
 [display]
 
