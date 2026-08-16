@@ -127,9 +127,9 @@ love_interest: Hmm okay! #id:fa
 # Ayumi: うーん、いいよ！
 love_interest: Let's start easy then. #id:fb
 # Ayumi: じゃあ、簡単なのからね。
-main_character: Konbanwa, watashi no namae wa ayumi desu #id:fc
+main_character: こんばんは, わたし の なまえ は ayumi です #id:fc
 # Ayumi: こんばんは、私の名前はアユミです。
-Ayumi: eeeto #id:fd
+Ayumi: えーっと #id:fd
 # Ayumi: えーっと……。
 Ayumi: [in japanese] I'm 20 years old, I'm half-japanese but born In japan #id:fe
 # Ayumi: ［日本語で］私は20歳です。日本とアメリカのハーフで、日本生まれです。
@@ -145,13 +145,13 @@ Ayumi: Nono I said I'm half-japanese but born in Japan #id:101
 main_character: Oh ok ok, gotcha. #id:102
 # main_character: ああ、なるほど。
 
-Ayumi: [JP] I like dressups, singing, dancing, and watching anime, of course. #id:103
+Ayumi: ファッション, うたう, だんす　そして　アニメ　を　みる　が　すき　です. #id:103
 # Ayumi: ［日本語で］着飾ることと、歌うことと、踊ること。それから、もちろんアニメを見るのも好き。
 
 main_character: Anime? You like anime? #id:104
 # main_character: アニメ？ アニメ好きなの？
 
-Ayumi: Hai! @ #id:105
+Ayumi: はい！! @ #id:105
 # Ayumi: はい！
 
 main_character: I love anime too, I'm such a fan of shonen like Jujustu Kaisen, Black Clover, One Punch Man… #id:106
@@ -218,7 +218,7 @@ Ayumi: It's a long story… #id:11d
 Ayumi: I don't want to get into it right now. #id:11e
 # Ayumi: 今はあんまり話したくないかな。
 
-main_character: Oh, gomen! #id:11f
+main_character: Oh, ごめん！ #id:11f
 # main_character: あ、ごめん！
 
 Ayumi: Don't worry! #id:120
@@ -272,9 +272,9 @@ main_character: So, since I chose your accessory correctly this time. #id:131
 main_character: Would you like some help choosing your next outfit? #id:132
 # main_character: 次は服も、俺に選ばせてくれない？
 
-Ayumi: Ee? @ #id:133
+Ayumi: ええ? @ #id:133
 # Ayumi: え？
-Ayumi: Hontou? (idk if we have a blushing expression but it would be nice) @ #id:134
+Ayumi: ほんと? (idk if we have a blushing expression but it would be nice) @ #id:134
 # MISSING TRANSLATION
 
 I nod. #id:135

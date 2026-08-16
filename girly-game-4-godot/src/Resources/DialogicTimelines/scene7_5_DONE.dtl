@@ -1,5 +1,5 @@
 # Scene 8.5: last emotional layer from Sakura, backstory learning perhaps. maybe gives you a hint as to whether or not you're on the right path (let's say she holds your hand or hugs you if you are doing good, if not, then she doesn't)
-[background scene="res://src/Resources/FullArtBG/fullart2.tscn" fade="0.0"]
+[background fade="0.0"]
 do AudioManager.load_music("scene7-5")
 
 We arrive at the coffee shop and Aoi helps me order a cup of tea for myself and for her. #id:1d0
@@ -14,7 +14,7 @@ main_character: {friend name} Told me she'll be here soon. #id:1d2
 love_interest: Okay! #id:1d3
 # Ayumi: うん！
 
-main_character: So, daijoubu? #id:1d4
+main_character: So, だいじょうぶ　? #id:1d4
 # main_character: それで……大丈夫？
 
 love_interest: daijoubu janai desu… #id:1d5
@@ -33,15 +33,15 @@ main_character: What did they say? #id:1d9
 love_interest: He said it's childish, and that I have to grow up now that I'm a college student… #id:1da
 # Ayumi: 「子どもっぽい」って。大学生なんだから、もう大人にならなきゃって……。
 
-main_character: Baka desu yo! #id:1db
+main_character: バカ です よ! #id:1db
 # main_character: バカですよ！
 
-love_interest: nani? #id:1dc
+love_interest: なに? #id:1dc
 # Ayumi: え？
 
 main_character: Oh I meant he's an idiot. Sorry #id:1dd
 # main_character: あ、バカなのはそいつって意味。ごめん。
-main_character: Gomennasai #id:1de
+main_character: ごめんなさい #id:1de
 # main_character: ごめんなさい。
 
 love_interest: Oh, it's okay. #id:1df

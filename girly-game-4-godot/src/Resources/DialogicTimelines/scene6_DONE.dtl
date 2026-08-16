@@ -12,7 +12,7 @@ main_character: Got distracted. #id:143
 friend: Sure... #id:144
 # friend: まあ、いいけどさぁ……。
 
-love_interest: Hey [main_character name], good to see you! @ #id:145
+love_interest: Hey {PlayerName}, good to see you! @ #id:145
 # Ayumi: あ、[main_character name]！ 来れたんだ！よかったぁ。
 
 main_character: Oh hey Ayumi #id:146
@@ -22,7 +22,7 @@ main_character: cute #id:147
 # main_character: 今日の服……。
 
 [comfortable: I am! #id:148
-love_interest: aw, arigatou @ #id:149
+love_interest: aw, ありがとう @ #id:149
 # cute（kawaii）：わ、ありがとうございます。
 ] #id:14a
 # MISSING TRANSLATION
@@ -30,7 +30,7 @@ love_interest: aw, arigatou @ #id:149
 love_interest: It was definitely thanks to you though, you were a great help! #id:14b
 # Ayumi: でも、本当に[main_character name]のおかげだよ。すごく助かった！
 
-friend: [main_character name]~ @ #id:14c
+friend: {PlayerName}~ @ #id:14c
 # friend: [main_character name]〜？
 
 I look at Aoi with a serious look, hoping she can read my mind #id:14d
@@ -80,7 +80,7 @@ love_interest: You look like you're really good friends talking to each other li
 main_character: Yeah, we are. #id:15d
 # main_character: まあな。
 
-friend: [main_character name] is my bestie, he's a really good person. #id:15e
+friend: {PlayerName} is my bestie, he's a really good person. #id:15e
 # friend: [main_character name]は私の親友だからね！いいやつだから。
 
 love_interest: How so? #id:15f
@@ -104,10 +104,10 @@ main_character: As I said, I'm smart. #id:165
 
 love_interest: www @ #id:166
 # Ayumi: ふふっ、あははは。
-love_interest: That sounds really nice of you, [main_character name] @ #id:167
+love_interest: That sounds really nice of you, {PlayerName} @ #id:167
 # Ayumi: そうだったんだ。すごく優しいんだね、[main_character name]。
 
-main_character: Arigatou~ #id:168
+main_character: ありがとう~ #id:168
 # main_character: …ありがとう〜。
 
 pres: Sorry to interrupt! #id:169
@@ -148,7 +148,7 @@ main_character: I'll give you that. #id:176
 friend: Alright, bye~ #id:177
 # MISSING TRANSLATION
 
-love_interest: Sayonara~ #id:178
+love_interest: さよなら~ #id:178
 # MISSING TRANSLATION
 
 pres: Thanks everyone for coming! #id:179
@@ -157,7 +157,7 @@ pres: Thanks everyone for coming! #id:179
 main_character: Thank you for hosting! #id:17a
 # main_character: こちらこそ、ありがとうございました！
 
-love_interest: Arigato gozaimasu @ #id:17b
+love_interest: ありがとう ございます @ #id:17b
 # MISSING TRANSLATION
 
 pres: See you at the movies! #id:17c
@@ -166,7 +166,7 @@ pres: See you at the movies! #id:17c
 main_character: See you! #id:17d
 # main_character: はい！また！
 
-love_interest: See you, sensei! #id:17e
+love_interest: See you, せんせい! #id:17e
 # MISSING TRANSLATION
 
 a small pause #id:17f
@@ -220,7 +220,7 @@ love_interest: Yeah… #id:190
 I catch myself staring at Ayumi's hair moving with the wind. #id:191
 # 風に揺れるアユミの髪を、いつの間にか目で追っていた。
 
-love_interest: [main_character Name] @ #id:192
+love_interest: {PlayerName} @ #id:192
 # Ayumi: [main_character Name]。
 
 main_character: Yeah? #id:193
@@ -252,7 +252,7 @@ main_character: It depends on how much trust I have in them. #id:19d
 main_character: Does that make sense? #id:19e
 # main_character: ……伝わる？
 
-love_interest: Un! #id:19f
+love_interest: うん! #id:19f
 # Ayumi: うん！
 
 main_character: Why do you ask? #id:1a0
@@ -293,7 +293,7 @@ main_character: I'm sure they'll be more than okay with it. #id:1ad
 love_interest: You think? #id:1ae
 # Ayumi: そうかな？
 
-main_character: un! @ #id:1af
+main_character: うん! @ #id:1af
 # main_character: うん！
 
 love_interest: Hmm #id:1b0
@@ -322,9 +322,9 @@ main_character: I think it's cool you like fashion. It fits you really well. #id
 [choice – tell her she looks pretty or not] #id:1b9
 # ［選択肢：アユミを「きれいだ」と褒める／褒めない］
 
-love_interest: ee? @ #id:1ba
+love_interest: ええ? @ #id:1ba
 # Ayumi: えっ？
-love_interest: Arigatou gozaimasu~ @ #id:1bb
+love_interest: ありがとう ございます~ @ #id:1bb
 # Ayumi: ありがとうございます〜。
 Ayumi: Let's go! #id:1bc
 # Ayumi: 行こっ！
