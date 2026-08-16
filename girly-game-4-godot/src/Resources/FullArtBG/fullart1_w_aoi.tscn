@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://cujs81f2uu363"]
 
 [ext_resource type="Texture2D" uid="uid://d1480vkikl0nb" path="res://import/Art/assets_girlyjam/full_art/Art 1/1_SpecialArtTop_WithAoi.png" id="1_1gtcq"]
-[ext_resource type="Script" uid="uid://blsjcvm6gvd78" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_ydtvf"]
+[ext_resource type="Script" uid="uid://bm6k08ff2gjou" path="res://src/Resources/FullArtBG/fullart_1_w_aoi.gd" id="1_kefeo"]
 [ext_resource type="Texture2D" uid="uid://bmtnm2rknvj7" path="res://import/Art/assets_girlyjam/full_art/Art 1/3_SpecialArtBase.png" id="2_ydtvf"]
 [ext_resource type="Texture2D" uid="uid://c7jkcjm1bgl3h" path="res://import/Art/assets_girlyjam/full_art/Art 1/2_SpecialArtLace.png" id="3_1ca74"]
 [ext_resource type="Texture2D" uid="uid://dufp01cm21xy8" path="res://import/Art/assets_girlyjam/full_art/Art 1/4_SpecialArtTint.png" id="4_kefeo"]
+[ext_resource type="Texture2D" uid="uid://oipf7kyklvpi" path="res://import/Art/assets_girlyjam/full_art/Art 1/mini_hat.png" id="6_n3ygo"]
+[ext_resource type="Texture2D" uid="uid://bo0kmlcxwxjb2" path="res://import/Art/assets_girlyjam/full_art/Art 1/ribbon.png" id="7_4q11s"]
 
 [node name="Node2D" type="Node" unique_id=660549081]
-script = ExtResource("1_ydtvf")
+script = ExtResource("1_kefeo")
 metadata/_custom_type_script = "uid://blsjcvm6gvd78"
 
 [node name="Sprite2D4" type="TextureRect" parent="." unique_id=576922258]
-modulate = Color(0.6356267, 0.5145376, 0.51069295, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -26,7 +27,7 @@ grow_vertical = 2
 texture = ExtResource("4_kefeo")
 
 [node name="Sprite2D3" type="TextureRect" parent="." unique_id=332038718]
-modulate = Color(0.81960785, 0.7294118, 0.6901961, 1)
+self_modulate = Color(1, 0.90999997, 0.9565, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -41,7 +42,7 @@ grow_vertical = 2
 texture = ExtResource("3_1ca74")
 
 [node name="Sprite2D2" type="TextureRect" parent="." unique_id=375648300]
-modulate = Color(0.2509804, 0.1254902, 0.14509805, 1)
+modulate = Color(0.7462, 0.90181005, 0.91, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -68,3 +69,32 @@ offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1gtcq")
+
+[node name="Hat" type="TextureRect" parent="." unique_id=1896897948]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_n3ygo")
+
+[node name="Bow" type="TextureRect" parent="." unique_id=492018581]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_4q11s")

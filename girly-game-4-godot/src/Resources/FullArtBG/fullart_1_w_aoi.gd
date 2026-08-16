@@ -1,13 +1,16 @@
 extends DialogicBackground
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	FA.change_fullart1.connect(change_expression)
 	if Dialogic.VAR.LEVEL == 1:
 		$Hat.show()
 		$Bow.hide()
 	elif Dialogic.VAR.LEVEL == 2:
 		$Bow.show()
 		$Hat.hide()
-func change_expression(expression):
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
 	pass
