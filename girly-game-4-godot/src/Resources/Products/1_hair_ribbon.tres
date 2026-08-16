@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://5ifqv686wkoo"]
 
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_x6bco"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_c5tl0"]
 
 [resource]
-script = ExtResource("1_x6bco")
+script = ExtResource("1_c5tl0")
 product_name = "【DOLLCANDY】- バブルガム   ヘアリボン"
 level = 0
 accesory_type = "ヘアリボン"

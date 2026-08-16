@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://b6uepykbi27af"]
 
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="2_k8jvd"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_7nmcc"]
 
 [resource]
-script = ExtResource("2_k8jvd")
+script = ExtResource("1_7nmcc")
 product_name = "ブランド2"
+level = 1
 accesory_type = "ケープレット"
 substyle = "クラシックロリー"
 featured = true

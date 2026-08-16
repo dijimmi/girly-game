@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://dr06sukifi4iv"]
 
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_kvelj"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_3nyad"]
 
 [resource]
-script = ExtResource("1_kvelj")
+script = ExtResource("1_3nyad")
 product_name = "【DOLLCANDY】- バブルガムくつ"
+level = 2
 accesory_type = "くつ"
 textures_path = "res://import/Art/shop/shoes"
 color_set1 = Array[Color]([Color(0.9490196, 0.7019608, 0.78431374, 1), Color(1, 1, 1, 1), Color(0.9490196, 0.7019608, 0.78431374, 1), Color(0.6117647, 0.96862745, 1, 1), Color(0.92, 0.8556, 0.8556, 1)])

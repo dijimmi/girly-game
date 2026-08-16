@@ -1,12 +1,14 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://yeevvp7eqajt"]
 
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_oevrj"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_ctbib"]
 
 [resource]
-script = ExtResource("1_oevrj")
+script = ExtResource("1_ctbib")
 product_name = "ブランド6"
+level = 0
 accesory_type = "チョーカー"
 substyle = "ゴスロリ"
+featured = true
 textures_path = "res://import/Art/shop/neck"
 color_set1 = Array[Color]([Color(0.282, 0.2931, 0.3, 1), Color(0.0671, 0.084975004, 0.11, 1)])
 color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

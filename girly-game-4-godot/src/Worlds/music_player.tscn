@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://hd284xu3jrgk" path="res://import/Art/ui_tex/website/img_web_vol.png" id="8_rimpb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vfry"]
-bg_color = Color(0.18, 0.18, 0.18, 0.5882353)
+bg_color = Color(0, 0, 0, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -116,6 +116,7 @@ alignment = 1
 [node name="Control2" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1120785697]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="Back" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=549654954]
 layout_mode = 2
@@ -135,6 +136,7 @@ icon = ExtResource("6_4j605")
 [node name="Control" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2038559247]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
+mouse_filter = 1
 
 [node name="SongTime" type="HSlider" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1572182227]
 layout_mode = 2
@@ -173,6 +175,7 @@ layout_mode = 2
 
 [node name="VolumeControl" type="Control" parent="." unique_id=318996837]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="VolumeBtn" type="Button" parent="VolumeControl" unique_id=706482849]
 layout_mode = 0
@@ -180,6 +183,7 @@ offset_left = 267.0
 offset_top = 71.75
 offset_right = 300.0
 offset_bottom = 104.75
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mxsx2")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_4t6qk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_6r0kb")

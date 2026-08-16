@@ -1,9 +1,10 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://coa5hljphipob"]
 
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_h7r7w"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_e2jw8"]
 
 [resource]
-script = ExtResource("1_h7r7w")
+script = ExtResource("1_e2jw8")
 product_name = "【Maison Rosette】- あまドレス"
+level = 1
 textures_path = "res://import/Art/shop/outfit_c"
 color_set1 = Array[Color]([Color(1, 0.78, 0.8386666, 1), Color(1, 1, 1, 1), Color(0.93, 0.4743, 0.60341495, 1), Color(0, 0, 0, 1)])

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://goffnugiiy85"]
 
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_kqrah"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_kkvcb"]
 
 [resource]
-script = ExtResource("1_kqrah")
+script = ExtResource("1_kkvcb")
 product_name = "ブランド7"
-level = 0
+level = 2
 substyle = "クラシックロリー"
 featured = true
 textures_path = "res://import/Art/shop/outfit_a"
