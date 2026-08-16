@@ -1,0 +1,244 @@
+[gd_scene format=3 uid="uid://cmabdt2tx7dq1"]
+
+[ext_resource type="Script" uid="uid://i2fn0ssk5slf" path="res://src/Resources/FullArtBG/full_art_scene.gd" id="1_fo4jt"]
+[ext_resource type="Texture2D" uid="uid://bx2eqhjhkbxfx" path="res://import/Art/assets_girlyjam/full_art/Art 1/1_SpecialArtTopAlone.png" id="1_rci07"]
+[ext_resource type="Texture2D" uid="uid://d1480vkikl0nb" path="res://import/Art/assets_girlyjam/full_art/Art 1/1_SpecialArtTop_WithAoi.png" id="2_fo4jt"]
+[ext_resource type="Texture2D" uid="uid://dufp01cm21xy8" path="res://import/Art/assets_girlyjam/full_art/Art 1/4_SpecialArtTint.png" id="3_67olh"]
+[ext_resource type="Texture2D" uid="uid://c7jkcjm1bgl3h" path="res://import/Art/assets_girlyjam/full_art/Art 1/2_SpecialArtLace.png" id="4_1frtl"]
+[ext_resource type="Texture2D" uid="uid://bmtnm2rknvj7" path="res://import/Art/assets_girlyjam/full_art/Art 1/3_SpecialArtBase.png" id="5_qfhlj"]
+[ext_resource type="Texture2D" uid="uid://dbylg4viiyqxb" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee.png" id="6_fguwd"]
+[ext_resource type="Texture2D" uid="uid://cganijmfwwy8w" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_WithAoi.png" id="7_724tc"]
+[ext_resource type="Texture2D" uid="uid://2eg7bgxuojxa" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ao_Eye1.png" id="8_e5muw"]
+[ext_resource type="Texture2D" uid="uid://daa5sdvm120su" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ao_Eye2.png" id="9_d2mjy"]
+[ext_resource type="Texture2D" uid="uid://dmg5vbui4ife8" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye1.png" id="10_tkwbp"]
+[ext_resource type="Texture2D" uid="uid://ppdmnx2grurc" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye2.png" id="11_oapgj"]
+[ext_resource type="Texture2D" uid="uid://bs707seb8wqhy" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye3.png" id="12_e7lka"]
+[ext_resource type="Texture2D" uid="uid://c6vf6p6niexgl" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye4.png" id="13_p8b26"]
+[ext_resource type="Texture2D" uid="uid://cgxtg82gvcekb" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye5.png" id="14_cyiim"]
+[ext_resource type="Texture2D" uid="uid://dxbtkc0h86dia" path="res://import/Art/assets_girlyjam/full_art/Art 3/4_SpecialArtTopAlone_Base.png" id="15_ofpkl"]
+[ext_resource type="Texture2D" uid="uid://bfas18fxb8377" path="res://import/Art/assets_girlyjam/full_art/Art 3/3_SpecialArtTopAlone_Lace.png" id="16_ts3m7"]
+[ext_resource type="Texture2D" uid="uid://d08rt1csn1m6u" path="res://import/Art/assets_girlyjam/full_art/Art 3/2_SpecialArtTopAlone_Tint.png" id="17_06bwh"]
+[ext_resource type="Texture2D" uid="uid://bv8yxt8prufp7" path="res://import/Art/assets_girlyjam/full_art/Art 3/1_SpecialArtTopAlone.png" id="18_3k27t"]
+
+[node name="Control" type="Control" unique_id=1182138148]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fo4jt")
+
+[node name="Art1" type="Control" parent="." unique_id=1273165578]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Alone" type="TextureRect" parent="Art1" unique_id=671527101]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rci07")
+
+[node name="WithAoi" type="TextureRect" parent="Art1" unique_id=1119651106]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fo4jt")
+
+[node name="Lace1" type="TextureRect" parent="Art1" unique_id=296434366]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_67olh")
+
+[node name="Lace2" type="TextureRect" parent="Art1" unique_id=667360790]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1frtl")
+
+[node name="Lace3" type="TextureRect" parent="Art1" unique_id=1747709319]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_qfhlj")
+
+[node name="Art2" type="Control" parent="." unique_id=1285326144]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Alone" type="TextureRect" parent="Art2" unique_id=206510482]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_fguwd")
+
+[node name="WithAoi" type="TextureRect" parent="Art2" unique_id=602594077]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_724tc")
+
+[node name="AyumiFace" type="Control" parent="Art2" unique_id=198519675]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OpenMouth" type="TextureRect" parent="Art2/AyumiFace" unique_id=1354206962]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_e5muw")
+
+[node name="OpenMouthSide" type="TextureRect" parent="Art2/AyumiFace" unique_id=1062543326]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_d2mjy")
+
+[node name="Aoi" type="Control" parent="Art2" unique_id=292389508]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Smiling" type="TextureRect" parent="Art2/Aoi" unique_id=621777692]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_tkwbp")
+
+[node name="SmilingSide" type="TextureRect" parent="Art2/Aoi" unique_id=496767935]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_oapgj")
+
+[node name="Surprised" type="TextureRect" parent="Art2/Aoi" unique_id=101825443]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_e7lka")
+
+[node name="OpenMouthSide" type="TextureRect" parent="Art2/Aoi" unique_id=318398926]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_p8b26")
+
+[node name="OpenMouth" type="TextureRect" parent="Art2/Aoi" unique_id=1364426917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_cyiim")
+
+[node name="Art3" type="Control" parent="." unique_id=513007702]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lace3" type="TextureRect" parent="Art3" unique_id=1590556689]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_ofpkl")
+
+[node name="Lace2" type="TextureRect" parent="Art3" unique_id=383474287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_ts3m7")
+
+[node name="Lace1" type="TextureRect" parent="Art3" unique_id=1260673286]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_06bwh")
+
+[node name="Alone" type="TextureRect" parent="Art3" unique_id=1827979289]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_3k27t")
