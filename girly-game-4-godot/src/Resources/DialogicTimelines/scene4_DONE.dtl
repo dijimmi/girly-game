@@ -80,7 +80,7 @@ audio "res://import/Voices/Aoi/Aoi_eeh.wav"
 
 love_interest: ええ? #id:bb
 # Ayumi: え？
-main_character:なに? #id:bc
+main_character: なに? #id:bc
 # Ayumi: なに？
 Ayumi: You want choose my next oufit? #id:bd
 # Ayumi: 次の私のコーデを、{PlayerName}が選んでくれるの？
@@ -100,6 +100,14 @@ love_interest: I think I'm okay with that! #id:c3
 # Ayumi: うん……それなら、お願いしてみようかな。
 love_interest: I'll give you my number just in case. #id:c4
 # Ayumi: …念のため、連絡先も教えておくね。
+
+love_interest: I was thinking I wanted something from the brand DOLLCANDY
+
+love_interest: Though it's not necessary!
+
+love_interest: I mainly want something with pastel colors, and that covers my head.
+
+main_character: Got it!
 
 main_character: ありがとう. #id:c5
 # main_character: ありがとう。

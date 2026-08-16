@@ -1,3 +1,4 @@
+[background arg="res://import/Art/BackgroundArt/bg_river_afternoon.png" fade="0.0"]
 join pres center
 set {LEVEL} = 1.0
 pres (Happy): Hello everyone! こんにちは! @ #id:ca
@@ -67,8 +68,9 @@ main_character: I think I said it right. #id:e2
 
 love_interest: はい #id:e3
 # MISSING TRANSLATION
+[background scene="res://src/Resources/FullArtBG/fullart1_w_aoi.tscn" fade="0.0"]
 
-love_interest: すごい! #id:e4
+friend: すごい! #id:e4
 # Aoi: すごい！
 friend: You look so pretty! #id:e5
 # Aoi: アユミちゃん、すっごくかわいい！
@@ -91,9 +93,11 @@ love_interest: I'm glad you made it too, Aoi! #id:eb
 love_interest: Let's have a great time! #id:ec
 # Ayumi: 今日も楽しもうね！
 # MISSING TRANSLATION
+[background arg="#000000ff" fade="0.0"]
 
 After a few group activities, the presdent says their goodbyes and the other members leave as well. #id:ee
 # いくつかグループ活動を終えると、部長が締めの挨拶をして、他の部員たちも帰っていった。
+[background scene="res://src/Resources/FullArtBG/fullart1.tscn" fade="0.0"]
 
 love_interest: きょう　は　たのしかった！ #id:ef
 # Ayumi: 今日は楽しかった！
@@ -126,24 +130,6 @@ main_character: Well, I don't know, talk to me about yourself, but in Japanese a
 love_interest: Hmm okay! #id:fa
 # Ayumi: うーん、いいよ！
 love_interest: Let's start easy then. #id:fb
-# Ayumi: じゃあ、簡単なのからね。
-main_character: こんばんは, わたし の なまえ は ayumi です #id:fc
-# Ayumi: こんばんは、私の名前はアユミです。
-Ayumi: えーっと #id:fd
-# Ayumi: えーっと……。
-Ayumi: [in japanese] I'm 20 years old, I'm half-japanese but born In japan #id:fe
-# Ayumi: ［日本語で］私は20歳です。日本とアメリカのハーフで、日本生まれです。
-
-main_character: Hold up you lost me there. #id:ff
-# main_character: 待って、今ので置いてかれた。
-main_character: You said you're not japanese? #id:100
-# main_character: 「日本人じゃない」って言った？
-
-Ayumi: Nono I said I'm half-japanese but born in Japan #id:101
-# Ayumi: ううん。「ハーフだけど、日本生まれ」って言ったの。
-
-main_character: Oh ok ok, gotcha. #id:102
-# main_character: ああ、なるほど。
 
 Ayumi: ファッション, うたう, だんす　そして　アニメ　を　みる　が　すき　です. #id:103
 # Ayumi: ［日本語で］着飾ることと、歌うことと、踊ること。それから、もちろんアニメを見るのも好き。
@@ -238,35 +224,6 @@ Ayumi: But it's fun talking with you, [PlayerName] #id:124
 main_character: Likewise. #id:125
 # main_character: 俺も。
 
-Ayumi: I have an idea! I'll shoot some words at you and you tell me what you think they mean in English, yes? #id:126
-# Ayumi: ねえ、いいこと思いついた！ 私が日本語をいくつか言うから、英語でどういう意味か当ててみる？
-
-main_character: Yeah, let's do it! #id:127
-# main_character: やろう！
-
-[matching minigame] #id:128
-# ［マッチング・ミニゲーム］
-
--  #id:129
-# ――使う単語は、まだ考えないといけないかな。
-
-[ #id:12a
-Based on how well you did\: #id:12b
-# ［成績に応じて：］
-main_character: Ugh, too hard! #id:12c
-# main_character: うわ、むずすぎ！
-
-Or #id:12d
-# または
-
-main_character: Already becoming a pro! #id:12e
-# main_character: もうプロになれそうだな！
-] #id:12f
-# MISSING TRANSLATION
-
-Ayumi: You'll get better with more practice I'm sure. #id:130
-# Ayumi: 練習すれば、絶対もっと上手になるよ。
-
 main_character: So, since I chose your accessory correctly this time. #id:131
 # main_character: じゃあさ、今回はアクセサリーをちゃんと選べたことだし……。
 main_character: Would you like some help choosing your next outfit? #id:132
@@ -282,12 +239,13 @@ I nod. #id:135
 
 Ayumi: Mmm, let me think. #id:136
 # Ayumi: うーん……どうしようかなぁ。
-Ayumi: [JP] I would love to! @ #id:137
+Ayumi: I would love to! #id:137
 # Ayumi: ［日本語で］…じゃあ、お願いしちゃおうかな！
-Ayumi: For next time I was thinking a more casual style #id:138
-# Ayumi: 次はもう少しカジュアルな感じにしようかなって思ってるの。
-Ayumi: Since I think the next meetup we're going to the cinema, then I want to be comfortable #id:139
-# Ayumi: 次の集まりは映画館に行くみたいだから、楽に過ごせる格好がいいなって。
+Ayumi: I'm probably going to use the same dress, so
+
+Ayumi: Find me another headpiece that goes with it!
+
+Ayumi: Should have pastel colors, and I want it to be small, okay?
 
 main_character: I think I already have something in mind. #id:13a
 # main_character: もう、なんとなくイメージあるかも。

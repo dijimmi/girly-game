@@ -1,3 +1,4 @@
+[background arg="res://import/Art/BackgroundArt/bg_river_afternoon.png" fade="0.0"]
 I'm really nervous… #id:25a
 # 緊張する……。
 When will {LoveInterestName} arrive? #id:25b
@@ -233,6 +234,6 @@ Coincidences #id:2b4
 [more description but Im lazy to write it] #id:2b5
 # ［ここにもう少し描写を追加予定］
 
-In the end, we went back to the park where we used to sit on the grass. # I need to change this cuz we don't have this art #id:2b6
-do Dialogue.set_next_scene("website1")
+In the end, we went back to the park where we used to sit on the grass. #id:2b6
 # MISSING TRANSLATION
+jump scene9_DONE/
