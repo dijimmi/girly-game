@@ -56,6 +56,7 @@ entries = {
 "a-ku-se-so-ri-i": "アクセサリー",
 "a-ma-ro-ri-i": "あまろりー",
 "a-na-ta": "あなた",
+"a-ni-me": "アニメ",
 "a-o": "あお",
 "a-ri-ga-to-u": "ありがとう",
 "bo-n-ne-tto": "ボンネット",
@@ -65,32 +66,41 @@ entries = {
 "de-su": "です",
 "du-re-su": "ドレス",
 "e-e": "ええ",
+"e-tto": "えーっと",
 "faa-sho-n": "ファッション",
-"for real": "ほんと",
 "ge-n-ki": "げんき",
+"go-me-n": "ごめん",
 "go-su-ro-ri": "ゴスロリ",
 "ha-i": "はい",
 "he-a-ri-bo-n": "ヘアリボン",
+"ho-n-to": "ほんと",
 "i-mo-u-to": "いもうと",
 "i-ra-ssha-i": "いらっしゃい",
 "ka": "か",
 "ka-a-pe-re-tto": "ケープレット",
 "ka-wa-i-i": "かわいい",
 "ke-i": "けい",
+"ko-n-ba-n-wa": "こんばんは",
 "ko-n-ni-chi-wa": "こんにちは！",
 "ku-ra-shi-kku-ro-ri-i": "クラシックロリー",
 "ku-tsu": "くつ",
 "kyo-u": "きょう",
 "ma-ka-se-te": "まかせて",
+"mi-ru": "みる",
+"na-ma-e": "なまえ",
 "na-ni": "なに",
 "o-su-su-me-sho-u-hi-n": "おすすめしょうひん",
 "ro-ri-i-ta": "ロリータ",
 "sa-n-kyuu": "サンキュー",
+"so-shi-te": "そして",
 "so-u": "そう",
 "su-go-i": "すごい",
+"su-ki": "すき",
 "ta-i-pu": "タイプ",
 "ta-no-shi-ka-tta": "たのしかった",
 "u-n": "うん",
+"u-ta-u": "うたう",
+"wa-ta-shi": "わたし",
 "ya-tta": "やった",
 "あお": {
 "_translation_id": "2bf",
@@ -104,7 +114,7 @@ entries = {
 "あなた": {
 "alternatives": ["a-na-ta"],
 "name": "あなた",
-"title": "you"
+"title": "You"
 },
 "あまろりー": {
 "_translation_id": "2c0",
@@ -128,6 +138,11 @@ entries = {
 "name": "いらっしゃい",
 "title": "Welcome"
 },
+"うたう": {
+"alternatives": ["u-ta-u"],
+"name": "うたう",
+"title": "Singing"
+},
 "うん": {
 "_translation_id": "2c2",
 "alternatives": ["u-n"],
@@ -140,6 +155,11 @@ entries = {
 "alternatives": ["e-e"],
 "name": "ええ",
 "title": "Huh"
+},
+"えーっと": {
+"alternatives": ["e-tto"],
+"name": "えーっと",
+"title": "Uhm..."
 },
 "おすすめしょうひん": {
 "_translation_id": "2c4",
@@ -155,7 +175,7 @@ entries = {
 "かわいい": {
 "alternatives": ["ka-wa-i-i"],
 "name": "かわいい",
-"title": "cute"
+"title": "Cute"
 },
 "きょう": {
 "alternatives": ["kyo-u"],
@@ -178,7 +198,7 @@ entries = {
 "げんき": {
 "alternatives": ["ge-n-ki"],
 "name": "げんき",
-"title": "fine"
+"title": "Fine"
 },
 "こんにちは！": {
 "_translation_id": "2c7",
@@ -187,29 +207,55 @@ entries = {
 "text": "",
 "title": "Hello"
 },
+"こんばんは": {
+"alternatives": ["ko-n-ba-n-wa"],
+"name": "こんばんは",
+"title": "Good afternoon"
+},
+"ごめん": {
+"alternatives": ["go-me-n"],
+"name": "ごめん",
+"title": "Sorry"
+},
+"すき": {
+"alternatives": ["su-ki"],
+"name": "すき",
+"title": "Like"
+},
 "すごい": {
 "alternatives": ["su-go-i"],
 "name": "すごい",
-"title": "amazing"
+"title": "Amazing"
 },
 "そう": {
 "alternatives": ["so-u"],
 "name": "そう",
 "title": "I see"
 },
+"そして": {
+"alternatives": ["so-shi-te"],
+"name": "そして",
+"title": "And"
+},
 "たのしかった": {
 "alternatives": ["ta-no-shi-ka-tta"],
-"name": "たのしかった"
+"name": "たのしかった",
+"title": "That was fun"
 },
 "です": {
 "alternatives": ["de-su"],
 "name": "です",
-"title": "to be"
+"title": "To be"
 },
 "なに": {
 "alternatives": ["na-ni"],
 "name": "なに",
 "title": "What"
+},
+"なまえ": {
+"alternatives": ["na-ma-e"],
+"name": "なまえ",
+"title": "Name"
 },
 "はい": {
 "_translation_id": "2c8",
@@ -219,8 +265,9 @@ entries = {
 "title": "Yes"
 },
 "ほんと": {
-"alternatives": ["for real"],
-"name": "ほんと"
+"alternatives": ["ho-n-to"],
+"name": "ほんと",
+"title": "For real"
 },
 "ぼうし": {
 "_translation_id": "2c9",
@@ -232,7 +279,12 @@ entries = {
 "まかせて": {
 "alternatives": ["ma-ka-se-te"],
 "name": "まかせて",
-"title": "leave it to me"
+"title": "Leave it to me"
+},
+"みる": {
+"alternatives": ["mi-ru"],
+"name": "みる",
+"title": "Watch"
 },
 "やった": {
 "_translation_id": "2ca",
@@ -240,11 +292,21 @@ entries = {
 "name": "やった",
 "title": "Hooray"
 },
+"わたし": {
+"alternatives": ["wa-ta-shi"],
+"name": "わたし",
+"title": "I"
+},
 "アクセサリー": {
 "_translation_id": "2cb",
 "alternatives": ["a-ku-se-so-ri-i"],
 "name": "アクセサリー",
 "title": "Accessory"
+},
+"アニメ": {
+"alternatives": ["a-ni-me"],
+"name": "アニメ",
+"title": "Anime"
 },
 "クラシックロリー": {
 "_translation_id": "2cc",
