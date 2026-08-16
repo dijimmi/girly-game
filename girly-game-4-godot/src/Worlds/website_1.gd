@@ -144,6 +144,13 @@ func change_page(page : String, new = true):
 	
 	for sub_node in shop_page.get_children():
 		if sub_node in pages[page] or sub_node == ads:
+			if sub_node.name == "FeaturedProducts":
+				for child in sub_node.get_children():
+					if child is ProductCategory:
+						for product : Product in child.get_products():
+							child.visible = product.level == curr_level
+						print("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
+					pass
 			sub_node.visible = true
 		else:
 			sub_node.visible = false
@@ -213,13 +220,13 @@ func _on_website_1_pressed(website : TextureButton) -> void:
 func _on_home_pressed() -> void:
 	change_page(ProductInfo.HOME)
 
-
 func _on_chat_pressed() -> void:
 	chat_layer.visible = !chat_layer.visible
 	
-	if chat_layer.visible:
+	if chat_screen.not_loaded:
 		chat_screen.load_conversation(Constants.VERONICA_CHAT)
 		chat_screen.continue_conversation(Constants.VERONICA_CHAT)
+		chat_screen.not_loaded = false
 
 
 func _on_view_product_page_buy_product(product: Product) -> void:	

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cts7fps42ouhy" path="res://src/UI/ChatUI/date.tscn" id="3_85g14"]
 [ext_resource type="PackedScene" uid="uid://f7fgl1v3dhay" path="res://src/UI/ChatUI/chat_bubble_recieved.tscn" id="3_vl1sr"]
 [ext_resource type="Script" uid="uid://dte8wedbs43iv" path="res://src/UI/ChatUI/text_field.gd" id="5_hkn2f"]
+[ext_resource type="Texture2D" uid="uid://72ukvaxva8ji" path="res://ui_chat_send.png" id="6_0ylnm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuhsr"]
 bg_color = Color(1, 1, 1, 1)
@@ -78,6 +79,15 @@ options_menu = NodePath("OptionsHover/OptionsMenu")
 layout_mode = 2
 theme_override_constants/separation = 0
 
+[node name="PanelContainer" type="PanelContainer" parent="ScreenWidgets" unique_id=1561784878]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScreenWidgets/PanelContainer" unique_id=1448113017]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Aoi"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="ScreenWidgets" unique_id=689813368]
 layout_mode = 2
 size_flags_vertical = 3
@@ -131,13 +141,16 @@ text_direction = 1
 [node name="SendButton" type="Button" parent="ScreenWidgets/TextBox/HBoxContainer" unique_id=360230653]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
-theme_override_colors/icon_normal_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
-theme_override_colors/icon_hover_color = Color(0.51007515, 0.51007515, 0.51007515, 1)
-theme_override_colors/icon_disabled_color = Color(1, 0.5399678, 0.48698187, 1)
+theme_override_colors/icon_normal_color = Color(0, 0.7607843, 0.14117648, 1)
+theme_override_colors/icon_pressed_color = Color(6.9789587e-07, 0.5155926, 0.08221496, 1)
+theme_override_colors/icon_hover_color = Color(0, 0.5784615, 0.09733329, 1)
+theme_override_colors/icon_hover_pressed_color = Color(2.23808e-06, 0.5413516, 0.08840928, 1)
+theme_override_colors/icon_disabled_color = Color(0.44445667, 0.44445664, 0.4444568, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_1cpni")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ag6lx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mog1e")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_wvj40")
+icon = ExtResource("6_0ylnm")
 expand_icon = true
 
 [node name="OptionsHover" type="CanvasLayer" parent="." unique_id=411041896]
