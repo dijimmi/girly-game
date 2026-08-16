@@ -54,6 +54,7 @@ func _ready() -> void:
 	
 	# TODO: remember to delete this once we call it elsewhere
 	new_website("2")
+	new_website("3")
 	
 	website_1.pressed.connect(_on_website_1_pressed.bind(website_1))
 	shop_page_seach_bar.search_prompted.connect(_on_search_prompted)
@@ -150,7 +151,8 @@ func change_page(page : String, new = true):
 			if sub_node.name == "FeaturedProducts":
 				for child in sub_node.get_children():
 					if child is ProductCategory:
-						for product : Product in child.get_products():
+						for product_thumb in child.get_products():
+							var product = product_thumb.product_dict
 							child.visible = product.level == curr_level
 						print("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
 					pass
