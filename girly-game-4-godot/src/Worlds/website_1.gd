@@ -34,30 +34,42 @@ var stack = [
 
 var active_page : String = ProductInfo.HOME
 
-
+ 
 var web_score = 0
-var curr_level = ProductInfo.Level.ONE
+var curr_level = ProductInfo.Level.THREE
 
 # USE THIS SIGNAL TOWARDS THE LEVEL MANAGER OR WHATEVER :)
 signal close_website_and_get_score(score : int)
+@export var bg: TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pages = {
 		ProductInfo.HOME:             [homepage],
-		ProductInfo.SHOP_PAGE_SEARCH: [shop_page, shop_page_seach_bar, products_list_page],
-		ProductInfo.FEATURED_PAGE:    [shop_page_seach_bar, shop_page, featured_page],
-		ProductInfo.SHOP_PAGE_BUY:    [shop_page_seach_bar, shop_page, view_product_page],
+		ProductInfo.SHOP_PAGE_SEARCH: [shop_page, shop_page_seach_bar, products_list_page, bg],
+		ProductInfo.FEATURED_PAGE:    [shop_page_seach_bar, shop_page, featured_page, bg],
+		ProductInfo.SHOP_PAGE_BUY:    [shop_page_seach_bar, shop_page, view_product_page, bg],
 		ProductInfo.HONSE:            [honse_page],
 	}
 	
-	init_products()
+	# TODO: remember to delete this once we call it elsewhere
+	#new_website("2")
 	
+	website_1.pressed.connect(_on_website_1_pressed.bind(website_1))
 	shop_page_seach_bar.search_prompted.connect(_on_search_prompted)
 	shop_page_seach_bar.pressed_logo_from_search_bar.connect(_on_website_1_pressed)
 	shop_page.product_clicked_from_category.connect(view_product)
 	
 	change_page(ProductInfo.HOME)
+
+
+func new_level(level : ProductInfo.Level):
+	curr_level = level
+	shop_page.clear_search_results()
+	init_products()
+	if level != ProductInfo.Level.ONE:
+		print("Level: ", str(level))
+		new_website(str(level + 1))
 
 
 func update_score(score_amt):
@@ -69,13 +81,27 @@ func update_score(score_amt):
 func init_products():
 	const path = "res://src/Resources/Products/"
 	
+	ProductInfo.products.clear()
+	
 	var files = DirAccess.get_files_at(path)
-	var id = 0
 	for file_name in files:
 		var loaded_product : Product = load(path + file_name)
-		loaded_product.id = id
 		if loaded_product.level == curr_level:
 			ProductInfo.products.append(loaded_product)
+@export_category("websites")
+@export var website_1: TextureButton
+@export var home_page_websites: GridContainer
+
+func new_website(level_string):
+	for son in home_page_websites.get_children():
+		if son.name == "Website" + level_string:
+			return
+	
+	var new_website_logo = website_1.duplicate()
+	new_website_logo.name = "Website" + level_string
+	new_website_logo.get_child(0).text = level_string
+	new_website_logo.pressed.connect(_on_website_1_pressed.bind(new_website_logo))
+	home_page_websites.add_child(new_website_logo)
 
 
 func view_product(dict, index = 0, _from_redo = false):
@@ -174,7 +200,13 @@ func _on_search_prompted(text):
 	change_page(ProductInfo.SHOP_PAGE_SEARCH)
 
 
-func _on_website_1_pressed() -> void:
+func _on_website_1_pressed(website : TextureButton) -> void:
+	var web = website.name.substr(website.name.length() - 1)
+	
+	print("WEBSITE PRESSED: ", web)
+	var level = (int(web) - 1)
+	new_level(level)
+	await get_tree().process_frame
 	change_page(ProductInfo.FEATURED_PAGE)
 
 
@@ -229,9 +261,17 @@ func _on_url_text_submitted(new_text: String) -> void:
 	if new_text.to_lower().contains("honse"):
 		url.text = "honse!.com"
 		change_page(ProductInfo.HONSE)
+		$Honse.play()
 
 @export var music_layer: CanvasLayer
 
 
 func _on_music_player_pressed() -> void:
 	music_layer.visible = !music_layer.visible
+
+
+func _on_chat_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		%Chat.self_modulate = Color(0.725, 0.725, 0.725, 1.0)
+	else:
+		%Chat.self_modulate = Color(1.0, 1.0, 1.0, 1.0)

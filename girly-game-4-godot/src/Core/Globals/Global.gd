@@ -51,6 +51,9 @@ var player_exp : Dictionary[String, float] ={
 	"を" : 0.0,
 	"ん" : 0.0
 }
+var katakana_dict : TranslateDictionary = load("uid://be8dikuw87xwb")
+var hiragana_dict : TranslateDictionary = load("uid://cbdooaaiqyw8d")
+
 func add_player_exp(key : String, value : float):
 	if key in player_exp:
 		player_exp[key] += value
@@ -67,4 +70,7 @@ var next_scene : String = ""
 var glossary : DialogicGlossary = load("uid://ctu427wqr6fj4")
 func unlock_word( word : String) -> void:
 	if word in glossary.entries:
+		glossary.entries[word].set("unlocked", true)
 		EventBus.unlock_word.emit(word)
+
+var font_to_use : FontFile

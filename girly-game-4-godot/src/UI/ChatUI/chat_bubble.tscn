@@ -31,7 +31,7 @@ theme_override_constants/margin_bottom = 10
 [node name="Message" type="RichTextLabel" parent="Bubble/Margins" unique_id=1352898321]
 custom_minimum_size = Vector2(50, 34)
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 scroll_active = false

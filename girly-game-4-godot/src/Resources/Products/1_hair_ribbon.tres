@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Product" format=3 uid="uid://5ifqv686wkoo"]
+
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_c5tl0"]
+
+[resource]
+script = ExtResource("1_c5tl0")
+product_name = "【DOLLCANDY】- バブルガム   ヘアリボン"
+level = 0
+accesory_type = "ヘアリボン"
+substyle = "クラシックロリー"
+mid_winner = true
+loser = false
+textures_path = "res://import/Art/shop/hair_ribbon"
+color_set1 = Array[Color]([Color(0.9490196, 0.7019608, 0.78431374, 1), Color(0.9789359, 0.9723874, 0.96674424, 1), Color(0.73, 0.97749996, 1, 1), Color(0, 0, 0, 1)])
+color_set2 = Array[Color]([Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 0, 1)])
+color_set3 = Array[Color]([Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 0, 1)])

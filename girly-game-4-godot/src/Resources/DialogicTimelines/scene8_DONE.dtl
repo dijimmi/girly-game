@@ -1,6 +1,6 @@
 I'm really nervous… #id:25a
 # 緊張する……。
-When will Ayumi arrive? #id:25b
+When will {LoveInterestName} arrive? #id:25b
 # アユミ、いつ来るんだ？
 Did I choose the wrong outfit? Is she mad at me? #id:25c
 # 選んだコーデ、外したか？ もしかしてなにか怒らせたか？
@@ -18,7 +18,7 @@ While I look for costume similar to the one Ayumi will be wearing, I hear my pho
 
 main_character: Hello? #id:262
 # main_character: もしもし。
-Ayumi: [main_character Name]! Where are you? #id:263
+love_interest: [main_character Name]! Where are you? #id:263
 # Ayumi: [main_character Name]！ 今どこ？
 
 main_character: I'm here! Next to the… #id:264
@@ -26,7 +26,7 @@ main_character: I'm here! Next to the… #id:264
 main_character: Anime booth. #id:265
 # main_character: アニメのブースの近く。
 
-Ayumi: Oh oh, I think I see you. #id:266
+love_interest: Oh oh, I think I see you. #id:266
 # Ayumi: あっ、いた。たぶん見つけた。
 
 main_character: Where??? #id:267
@@ -35,7 +35,7 @@ main_character: Where??? #id:267
 She hangs up. #id:268
 # アユミはそのまま通話を切った。
 
-Ayumi: [main_character Name]! @ #id:269
+love_interest: [main_character Name]! @ #id:269
 # Ayumi: [main_character Name]！
 
 Ayumi appears behind a wall. #id:26a
@@ -47,9 +47,9 @@ Before you can turn around, Ayumi walks in front of you, wearing the dress you p
 main_character: Ayumi! #id:26c
 # main_character: アユミ！
 
-Ayumi: Good to see you! #id:26d
+love_interest: Good to see you! #id:26d
 # Ayumi: 会えてよかった～！
-Ayumi: [main_character Name]~ @ #id:26e
+love_interest: [main_character Name]~ @ #id:26e
 # Ayumi: [main_character Name]〜。
 
 main_character: You look… #id:26f
@@ -62,11 +62,11 @@ main_character: sugoi… (in small text) #id:271
 main_character: Kawaii, very kawaii. (JP) #id:272
 # main_character: かわいい。すごく……かわいい。
 
-Ayumi: Arigatou~ @ #id:273
+love_interest: Arigatou~ @ #id:273
 # Ayumi: ありがとう〜。
-Ayumi: I really like the outfit you chose for me. #id:274
+love_interest: I really like the outfit you chose for me. #id:274
 # Ayumi: 選んでくれたコーデ、本当に気に入った。
-Ayumi: Thanks a lot! #id:275
+love_interest: Thanks a lot! #id:275
 # Ayumi: ありがとう！
 
 main_character: Ah, it's nothing. I'm glad you like it. #id:276
@@ -74,9 +74,9 @@ main_character: Ah, it's nothing. I'm glad you like it. #id:276
 main_character: I've become quite the fashionist, right? #id:277
 # main_character: もう俺、かなりのファッショニスタだろ？
 
-Ayumi: www @ #id:278
+love_interest: www @ #id:278
 # Ayumi:ふふ。
-Ayumi: un~ @ #id:279
+love_interest: un~ @ #id:279
 # Ayumi: うん、そうだね。
 
 main_character: Better than Aoi? #id:27a
@@ -99,7 +99,7 @@ Aoi: I just came to say hi and buy some things. #id:27f
 main_character: Oh I see I see. #id:280
 # main_character: そうか、そうか。
 
-Ayumi: Good to see you, Aoi! #id:281
+love_interest: Good to see you, Aoi! #id:281
 # Ayumi: アオイちゃんも会えてよかったぁ。
 
 Aoi: Likewise! #id:282
@@ -111,17 +111,17 @@ Aoi: Have fun! #id:284
 main_character: See ya! #id:285
 # main_character: またな！
 
-Ayumi: Sayonara! @ #id:286
+love_interest: Sayonara! @ #id:286
 # Ayumi: またね！
 
 Aoi leaves. #id:287
 # アオイは二人のもとを離れていった。
 
-Ayumi: Now that we're here, just the two of us… #id:288
+love_interest: Now that we're here, just the two of us… #id:288
 # Ayumi: じゃあ、ここからは…二人きりだね……。
-Ayumi: I wonder… #id:289
+love_interest: I wonder… #id:289
 # Ayumi: ってことは……。
-Ayumi: Does that make this… a date? #id:28a
+love_interest: Does that make this… a date? #id:28a
 # Ayumi: これって……もしかして、デート……なのかな？
 
 main_character: A DATE? #id:28b
@@ -135,21 +135,21 @@ main_character: Sorry, that caught me off guard. #id:28d
 main_character: Why do you say that? #id:28e
 # main_character: なんでそう思ったの？
 
-Ayumi: Well… #id:28f
+love_interest: Well… #id:28f
 # Ayumi: その……。
-Ayumi: I feel we've been friends for a while now… #id:290
+love_interest: I feel we've been friends for a while now… #id:290
 # Ayumi: 私たち、友達になってから少し経つでしょ……？
-Ayumi: And you know, since you've been so nice to me, helping me choose my outfits. #id:291
+love_interest: And you know, since you've been so nice to me, helping me choose my outfits. #id:291
 # Ayumi: それに、ずっと優しくしてくれて……服を選ぶのも手伝ってくれたし。
-Ayumi: I thought that meant that you like me. #id:292
+love_interest: I thought that meant that you like me. #id:292
 # Ayumi: だから……もしかして、私のことが好きなのかなって……。
 
 Oop, what's going on... #id:293
 # MISSING TRANSLATION
 
-Ayumi: {PlayerName}~ #id:294
+love_interest: {PlayerName}~ #id:294
 # MISSING TRANSLATION
-Ayumi: Do you like me? #id:295
+love_interest: Do you like me? #id:295
 # MISSING TRANSLATION
 
 What do I do now…? #id:296
@@ -164,7 +164,7 @@ Not that I didn't want this or anything, but… #id:299
 main_character: I… #id:29a
 # main_character: 俺……。
 
-Ayumi: EE? @ #id:29b
+love_interest: ええ? @ #id:29b
 # MISSING TRANSLATION
 
 main_character: I do... #id:29c
@@ -173,7 +173,7 @@ main_character: I do... #id:29c
 Ayumi: Hontou? #id:29d
 # Ayumi: 本当？
 
-main_character: Hai. I like you... a lot~ #id:29e
+main_character: はい. I like you... a lot~ #id:29e
 # MISSING TRANSLATION
 
 Why did I have to say it like that? #id:29f
@@ -217,7 +217,8 @@ Ayumi: www @ #id:2ae
 Ayumi: So… do you want to walk around with me? #id:2af
 # Ayumi: じゃあ……えっと、一緒に回らない？
 
-main_character: Very much so! #id:2b0
+main_character: yeah
+main_character: I do #id:2b0
 # MISSING TRANSLATION
 
 You walk around the mall with Ayumi talking about various things #id:2b1
@@ -232,4 +233,5 @@ Coincidences #id:2b4
 # ［ここにもう少し描写を追加予定］
 
 In the end, we went back to the park where we used to sit on the grass. # I need to change this cuz we don't have this art #id:2b6
+jump scene9_DONE/
 # MISSING TRANSLATION

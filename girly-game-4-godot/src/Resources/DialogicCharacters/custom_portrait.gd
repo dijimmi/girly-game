@@ -19,6 +19,7 @@ var does_custom_portrait_change := true
 func _should_do_portrait_update(_character: DialogicCharacter, _portrait:String) -> bool:
 	return true
 func _ready() -> void:
+
 	$Faces/Neutral.texture = load(expression_image)
 
 signal _change_expression
@@ -28,6 +29,7 @@ func _call_change_expression():
 func _update_portrait(_passed_character: DialogicCharacter, _passed_portrait: String) -> void:
 	$AnimationPlayer.play("change_sprite")
 	$Body.texture = load(body_image)
+	self.scale = Vector2(1,1)
 	await _change_expression
 	for face in $Faces.get_children():
 		face.hide()
@@ -64,8 +66,7 @@ func _set_mirror(is_mirrored: bool) -> void:
 func _get_covered_rect() -> Rect2:
 	# This will focus on the face.
 	# return Rect2($Faces/Anger.position+$Faces.position, $Faces/Anger.get_rect().size*$Faces/Anger.scale*$Faces.scale)
-	var size: Vector2 = $Body.get_rect().size
-	var scaled_size: Vector2 = size * $Body.scale
+	var scaled_size: Vector2 =  $Body.texture.get_size() * $Body.scale #size * $Body.scale
 	var position: Vector2 = $Body.position
 
 	return Rect2(position, scaled_size)

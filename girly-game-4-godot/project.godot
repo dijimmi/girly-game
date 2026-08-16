@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="girly-game4-godot"
-run/main_scene="uid://3gbqc8g1x28u"
+run/main_scene="uid://db4o5620hkek7"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -26,24 +26,24 @@ EventBus="*uid://6k2yk4tqekh"
 Global="*uid://clvrqagm1kgiq"
 Dialogue="*uid://2x6dsbwluld7"
 ProductInfo="*uid://itgrjwushly2"
+AudioManager="*uid://l705be311h5p"
 Tooltip="*uid://d4b0ahy63w48c"
 Constants="*uid://elfvujdn5hpr"
-AudioManager="*uid://l705be311h5p"
 
 [dialogic]
 
 directories/dch_directory={
+"Ayumi": "res://src/Resources/DialogicCharacters/love_interest.dch",
 "friend": "res://src/Resources/DialogicCharacters/friend.dch",
-"love_interest": "res://src/Resources/DialogicCharacters/love_interest.dch",
 "main_character": "res://src/Resources/DialogicCharacters/main_character.dch",
 "pres": "res://src/Resources/DialogicCharacters/pres.dch"
 }
 directories/dtl_directory={
 "scene1_DONE": "res://src/Resources/DialogicTimelines/scene1_DONE.dtl",
-"scene1_narration": "res://src/Resources/DialogicTimelines/scene1_narration.dtl",
-"scene2": "res://src/Resources/DialogicTimelines/scene2.dtl",
+"scene1_narration": "res://src/_Tests/scene1_narration.dtl",
+"scene2": "res://src/_Tests/scene2.dtl",
 "scene2_DONE": "res://src/Resources/DialogicTimelines/scene2_DONE.dtl",
-"scene3": "res://src/Resources/DialogicTimelines/scene3.dtl",
+"scene3": "res://src/_Tests/scene3.dtl",
 "scene3_DONE": "res://src/Resources/DialogicTimelines/scene3_DONE.dtl",
 "scene4_DONE": "res://src/Resources/DialogicTimelines/scene4_DONE.dtl",
 "scene5_DONE": "res://src/Resources/DialogicTimelines/scene5_DONE.dtl",
@@ -56,15 +56,14 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
-"CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
-"narration_style_dialogue": "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"
+"CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres", "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"]
+layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"]
 layout/default_style="res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
 variables={
 "FriendName": "Aoi",
-"LoveInterestName": "A",
+"LoveInterestName": "Ayumi",
 "PlayerName": "jfjdjfdsdfj",
 "PlayerNameJP": "あき",
 "PresName": "Club President"
@@ -89,13 +88,13 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 audio/channel_defaults={
 "": {
-"audio_bus": "",
+"audio_bus": "SoundEffects",
 "fade_length": 0.0,
 "loop": false,
 "volume": 0.0
 },
 "music": {
-"audio_bus": "",
+"audio_bus": "Music",
 "fade_length": 0.0,
 "loop": true,
 "volume": 0.0
@@ -104,7 +103,8 @@ audio/channel_defaults={
 glossary/glossary_files=["uid://ctu427wqr6fj4"]
 glossary/default_color=Color(1, 0.913737, 0.4479167, 1)
 text/autocolor_names=true
-translation/enabled=true
+audio/type_sound_bus="SoundEffects"
+translation/enabled=false
 translation/original_locale="en"
 translation/file_mode=0
 translation/translation_folder="res://src/Translations"
@@ -121,7 +121,6 @@ translation/intern/translation_folder="res://src/Translations"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor_plugins]
 

@@ -1,0 +1,17 @@
+[background arg="#000000ff" fade="0.0"]
+[style name="CustomDialogue"]
+I’ve recently become intersted in learning Japanese ever since I’ve grown closer to my friend {FriendName}.
+We met during our freshman year. I thought she was an exchange student, but I she actually moved here by herself!
+Ever since she moved here, she hasn't returned home.
+Until now.
+
+friend: {PlayerName}! I found an exchange program that goes to Japan! We should do it together!
+{FriendName} texted me late one night...
+She said in a voice message one day.
+I immediately agreed!
+I immediately agreed!
+[wait time="1.0" skippable="true"]
+And so, my journey to learn Japanese... it's finally starting.
+For real this time!
+[wait time="0.1" skippable="true"]
+jump scene2/

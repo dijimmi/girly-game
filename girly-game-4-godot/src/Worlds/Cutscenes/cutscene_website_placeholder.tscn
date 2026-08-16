@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c6ltsnf7brv0j"]
+
+[ext_resource type="Script" uid="uid://5ulpsjd74dp" path="res://src/Worlds/Cutscenes/cutscene_website_placeholder.gd" id="1_iudfv"]
+
+[node name="CutsceneWebsitePlaceholder" type="Control" unique_id=280917590 node_paths=PackedStringArray("animationPlayer")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_iudfv")
+animationPlayer = NodePath("AnimationPlayer")
+metadata/_custom_type_script = "uid://ygtkg1tswi38"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1796079017]

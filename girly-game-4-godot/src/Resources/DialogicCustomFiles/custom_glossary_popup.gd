@@ -37,8 +37,9 @@ enum ModulateModes {BASE_COLOR_ONLY, ENTRY_COLOR_ON_BOX, GLOBAL_BG_COLOR}
 
 const MISSING_INDEX := -1
 func get_pointer() -> Control:
-	return $Pointer
-
+	return $Node2D/Pointer
+func get_node2d() -> Node2D:
+	return $Node2D
 
 func get_title() -> Label:
 	return %Title
@@ -70,24 +71,32 @@ func _ready() -> void:
 ## Method that shows the bubble and fills in the info
 func _on_dialogic_display_dialog_text_meta_hover_started(meta: String) -> void:
 	var entry_info := DialogicUtil.autoload().Glossary.get_entry(meta)
-
+	var other_entry = DialogicUtil.autoload().Glossary.find_glossary(meta) #.glossaries #[0].entries
+	#Members/glossaries
 	if entry_info.is_empty():
 		return
 
-	get_pointer().show()
-	get_title().text = entry_info.title
-	get_text().text = entry_info.text
-	get_text().text = ['', '[center]', '[right]'][text_alignment] + get_text().text
-	get_pointer().global_position = get_pointer().get_global_mouse_position()
-
-	if title_color_mode == TextColorModes.ENTRY:
-		get_title().add_theme_color_override(&"font_color", entry_info.color)
-	if text_color_mode == TextColorModes.ENTRY:
-		get_text().add_theme_color_override(&"default_color", entry_info.color)
-	match box_modulate_mode:
-		ModulateModes.ENTRY_COLOR_ON_BOX:
-			get_panel().self_modulate = entry_info.color
-			get_panel_point().self_modulate = entry_info.color
+	anim_in()
+	print(other_entry.entries[meta])
+	if other_entry.entries[meta].get_or_add("unlocked", false):
+		get_title().show()
+		get_panel().get_node("VBox/HSeparator").show()
+		get_title().text = entry_info.title #should get from alternative
+		get_text().text = other_entry.entries[meta]["alternatives"][0]
+		get_text().text = ['', '[center]', '[right]'][text_alignment] + get_text().text
+	else :
+		get_title().hide()
+		get_panel().get_node("VBox/HSeparator").hide()
+		get_text().text = "???"
+	get_node2d().global_position = get_node2d().get_global_mouse_position() 
+	#if title_color_mode == TextColorModes.ENTRY:
+		#get_title().add_theme_color_override(&"font_color", entry_info.color)
+	#if text_color_mode == TextColorModes.ENTRY:
+		#get_text().add_theme_color_override(&"default_color", entry_info.color)
+	#match box_modulate_mode:
+		#ModulateModes.ENTRY_COLOR_ON_BOX:
+			#get_panel().self_modulate = entry_info.color
+			#get_panel_point().self_modulate = entry_info.color
 
 
 ## Method that keeps the bubble at mouse position when visible
@@ -97,14 +106,11 @@ func _process(_delta: float) -> void:
 
 	var pointer: Control = get_pointer()
 	if pointer.visible:
-		pointer.global_position = pointer.get_global_mouse_position()
-
+		get_node2d().global_position = get_node2d().get_global_mouse_position() #- Vector2(get_pointer().size.x / 2 , get_pointer().size.y)
 
 ## Method that hides the bubble
 func _on_dialogic_display_dialog_text_meta_hover_ended(_meta:String) -> void:
-	get_pointer().hide()
-
-
+	anim_out()
 
 func _apply_export_overrides() -> void:
 	# Apply fonts
@@ -119,7 +125,8 @@ func _apply_export_overrides() -> void:
 	if font:
 		title.add_theme_font_override(&"font", font)
 	title.horizontal_alignment = title_alignment as HorizontalAlignment
-
+	
+	font = Global.font_to_use
 	# Apply font & sizes
 	title.add_theme_font_size_override(&"font_size", font_title_size)
 	var labels: Array[RichTextLabel] = [get_text()]
@@ -161,3 +168,27 @@ func _apply_export_overrides() -> void:
 		ModulateModes.GLOBAL_BG_COLOR:
 			panel.self_modulate = get_global_setting(&'bg_color', box_base_modulate)
 			get_panel_point().self_modulate = get_global_setting(&'bg_color', box_base_modulate)
+
+
+var animTween : Tween
+func anim_in() -> void:
+	get_pointer().show()
+	$AnimationPlayer.play("pop")
+	if animTween:
+		animTween.kill()
+	animTween = create_tween()
+	animTween.set_trans(Tween.TRANS_CUBIC)
+	animTween.tween_property(%Panel,"position", Vector2(13,13),0.2)
+	animTween.set_parallel()
+	animTween.tween_property(%Panel,"modulate", Color(1.0, 1.0, 1.0, 1.0), 0.2)
+func anim_out() -> void:
+	$AnimationPlayer.stop()
+	if animTween:
+		animTween.kill()
+	animTween = create_tween()
+	animTween.set_trans(Tween.TRANS_CUBIC)
+	animTween.tween_property(%Panel,"position", Vector2(13, 109), 0.2)
+	animTween.set_parallel()
+	animTween.tween_property(%Panel,"modulate", Color(1.0, 1.0, 1.0, 0.0), 0.2)
+	await animTween.finished
+	get_pointer().hide()

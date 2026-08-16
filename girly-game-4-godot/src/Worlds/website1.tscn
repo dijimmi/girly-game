@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://3gbqc8g1x28u"]
 
+[ext_resource type="Theme" uid="uid://bpcan81im5njq" path="res://src/Resources/Themes/theme.tres" id="1_acry7"]
 [ext_resource type="Script" uid="uid://d2fxf1wskw5g0" path="res://src/Worlds/website_1.gd" id="1_hqkfm"]
 [ext_resource type="Script" uid="uid://orx1kc0prqx3" path="res://src/UI/Website/home_page.gd" id="2_11yjo"]
 [ext_resource type="Texture2D" uid="uid://d13eu1jmd3djd" path="res://import/Art/ui_tex/website/shop_bg.png" id="2_uvjsx"]
@@ -7,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://hhio3f6xmcau" path="res://import/Art/ui_tex/website/web_header_2.png" id="4_axus7"]
 [ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="4_b5nas"]
 [ext_resource type="Texture2D" uid="uid://d05xpjju0v8o0" path="res://import/Art/ui_tex/website/ui_web_back.png" id="4_en18u"]
+[ext_resource type="Texture2D" uid="uid://2aqv0xh4uwkn" path="res://import/Art/UIArt/Texture/ui_tex_rabbit_solid_transparent.png" id="4_kj6ta"]
 [ext_resource type="Texture2D" uid="uid://6l73nlxmtvk4" path="res://import/Art/ui_tex/website/ui_web_forward.png" id="5_qrb0t"]
 [ext_resource type="Script" uid="uid://clukmb2c5y1na" path="res://src/UI/Website/shop_page_search_bar.gd" id="5_shefs"]
 [ext_resource type="Script" uid="uid://bkraxeylrsb6q" path="res://src/UI/Website/products_page.gd" id="6_yym1m"]
@@ -14,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bb21jci4ag116" path="res://src/UI/Website/product_category.tscn" id="7_njpc8"]
 [ext_resource type="Script" uid="uid://cd12yptx1yqcp" path="res://src/Worlds/honse_page.gd" id="7_t3722"]
 [ext_resource type="Texture2D" uid="uid://bciht1eqxyjtp" path="res://honsetastic.jpg" id="7_yym1m"]
+[ext_resource type="FontFile" uid="uid://dksbyhngtpu87" path="res://import/Fonts/LINESeedJP-Bold.ttf" id="8_bicfs"]
 [ext_resource type="Texture2D" uid="uid://dreo8lff3hm7n" path="res://images.jpg" id="8_t3722"]
 [ext_resource type="Script" uid="uid://cwfpbg0nle6jm" path="res://src/UI/Website/view_product_page.gd" id="9_kvwn1"]
 [ext_resource type="PackedScene" uid="uid://dtf43equp8j4p" path="res://src/UI/Website/product_big_view.tscn" id="10_jqbq8"]
@@ -35,18 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://b7po2dpkkw2el" path="res://import/Art/ui_tex/website/ui_web_cart.png" id="23_en18u"]
 [ext_resource type="AudioStream" uid="uid://bk6dndhav1fxw" path="res://import/Music/Song/Aoi_ - harm1.wav" id="24_uvjsx"]
 [ext_resource type="AudioStream" uid="uid://syqp7gchjwx6" path="res://import/Music/Song/Aoi_ - harm2.wav" id="25_axus7"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_732hb"]
-bg_color = Color(1, 0, 0.34901962, 1)
-border_width_left = 10
-border_width_right = 10
-border_color = Color(1, 0, 0.34901962, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ly3u1"]
-bg_color = Color(1, 0.29000002, 0.5740001, 1)
-border_width_left = 10
-border_width_right = 10
-border_color = Color(1, 0.29000002, 0.5740001, 1)
+[ext_resource type="AudioStream" uid="uid://dkv7kqoxi2trt" path="res://import/Sounds/Voice 027.wav" id="33_ly3u1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_en18u"]
 bg_color = Color(1, 0.29000002, 0.5740001, 1)
@@ -62,28 +54,17 @@ border_width_right = 10
 border_width_bottom = 5
 border_color = Color(1, 0, 0.34901962, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mxsx2"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0mr5"]
+bg_color = Color(1, 0.9826667, 0.87, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(1, 0, 0.34901962, 1)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b5nas"]
-load_path = "res://.godot/imported/web_windowsxp_ui.png-7fd36d0416cace5eba47c726976eb6af.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_shefs"]
-atlas = SubResource("CompressedTexture2D_b5nas")
-region = Rect2(866, 0, 576, 184)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yym1m"]
-texture = SubResource("AtlasTexture_shefs")
-texture_margin_left = 96.0
-texture_margin_top = 31.0
-texture_margin_right = 96.0
-texture_margin_bottom = 31.0
-modulate_color = Color(0.6158285, 0.6158285, 0.6158285, 1)
+border_color = Color(0.87, 0.775605, 0.6003, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_palqw"]
 bg_color = Color(1, 0.29000002, 0.5740001, 1)
@@ -111,13 +92,42 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(1, 0.23529412, 0.1882353, 1)
 
-[node name="Website1" type="Control" unique_id=1482182095 node_paths=PackedStringArray("my_vbox", "url", "address_bar", "task_bar", "shop_page_seach_bar", "shop_page", "products_list_page", "view_product_page", "product_big_view", "featured_page", "ads", "homepage", "honse_page", "undo", "redo", "chat_layer", "chat_screen", "music_layer")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1yyee"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0, 0.34901962, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acry7"]
+bg_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0, 0.34901962, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_732hb"]
+bg_color = Color(1, 0, 0.34901962, 1)
+border_width_left = 10
+border_width_right = 10
+border_color = Color(1, 0, 0.34901962, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ly3u1"]
+bg_color = Color(1, 0.29000002, 0.5740001, 1)
+border_width_left = 10
+border_width_right = 10
+border_color = Color(1, 0.29000002, 0.5740001, 1)
+
+[node name="Website1" type="Control" unique_id=1482182095 node_paths=PackedStringArray("my_vbox", "url", "address_bar", "task_bar", "shop_page_seach_bar", "shop_page", "products_list_page", "view_product_page", "product_big_view", "featured_page", "ads", "homepage", "honse_page", "undo", "redo", "chat_layer", "chat_screen", "bg", "website_1", "home_page_websites", "music_layer")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_acry7")
 script = ExtResource("1_hqkfm")
 my_vbox = NodePath("VBoxContainer")
 url = NodePath("VBoxContainer/AddressBarBG/AddressBar/URL")
@@ -136,16 +146,31 @@ undo = NodePath("VBoxContainer/AddressBarBG/AddressBar/Undo")
 redo = NodePath("VBoxContainer/AddressBarBG/AddressBar/Redo")
 chat_layer = NodePath("ChatLayer")
 chat_screen = NodePath("ChatLayer/ChatScreen")
+bg = NodePath("VBoxContainer/ShopPageBG/BG")
+website_1 = NodePath("VBoxContainer/HomePageBG/VBoxContainer/HomePageWebsites/Website1")
+home_page_websites = NodePath("VBoxContainer/HomePageBG/VBoxContainer/HomePageWebsites")
 music_layer = NodePath("MusicLayer")
 
-[node name="BG" type="TextureRect" parent="." unique_id=2049766674]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1110464980]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_uvjsx")
+mouse_filter = 1
+color = Color(0.81899995, 0.88245, 0.9, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1503273727]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -979.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(1, 0.7, 0.8000001, 1)
 
 [node name="VBoxContainer" type="Control" parent="." unique_id=1753973209]
 layout_mode = 1
@@ -154,64 +179,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="AddressBarBG" type="Control" parent="VBoxContainer" unique_id=85514073]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 64.0
-grow_horizontal = 2
-
-[node name="AddressBar" type="HBoxContainer" parent="VBoxContainer/AddressBarBG" unique_id=1565693429]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 12.0
-offset_top = 10.0
-offset_right = -12.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 0
-
-[node name="Home" type="Button" parent="VBoxContainer/AddressBarBG/AddressBar" unique_id=1340394984]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_732hb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_732hb")
-theme_override_styles/hover = SubResource("StyleBoxFlat_732hb")
-icon = ExtResource("3_s0u1o")
-
-[node name="Undo" type="Button" parent="VBoxContainer/AddressBarBG/AddressBar" unique_id=1923905930]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_732hb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_732hb")
-theme_override_styles/hover = SubResource("StyleBoxFlat_732hb")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_732hb")
-icon = ExtResource("4_en18u")
-
-[node name="Redo" type="Button" parent="VBoxContainer/AddressBarBG/AddressBar" unique_id=839502283]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_732hb")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_732hb")
-theme_override_styles/hover = SubResource("StyleBoxFlat_732hb")
-icon = ExtResource("5_qrb0t")
-
-[node name="URL" type="LineEdit" parent="VBoxContainer/AddressBarBG/AddressBar" unique_id=97167190]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_ly3u1")
-
-[node name="Label" type="Label" parent="VBoxContainer/AddressBarBG/AddressBar/URL" unique_id=581091450]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 13.0
-offset_right = 343.0
-offset_bottom = 41.0
-theme_override_colors/font_color = Color(1, 1, 1, 0.78431374)
-theme_override_fonts/font = ExtResource("22_732hb")
-theme_override_font_sizes/font_size = 25
-text = "https://maisonrosette.world.com/"
 
 [node name="HomePageBG" type="Control" parent="VBoxContainer" unique_id=1566243328 node_paths=PackedStringArray("grid")]
 layout_mode = 1
@@ -223,15 +190,36 @@ offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_11yjo")
-grid = NodePath("VBoxContainer/GridContainer")
+grid = NodePath("VBoxContainer/HomePageWebsites")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HomePageBG" unique_id=1166477260]
+[node name="HomeBG" type="TextureRect" parent="VBoxContainer/HomePageBG" unique_id=1329327218]
+self_modulate = Color(0.40020004, 0.69, 0.66102, 0.39607844)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("4_kj6ta")
+stretch_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HomePageBG" unique_id=1166477260]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 52.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 31
+
+[node name="Label" type="Label" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=634568126]
+self_modulate = Color(0.9, 0.35099998, 0.51570004, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Web"
+horizontal_alignment = 1
 
 [node name="BookMarks" type="PanelContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=1909946765]
 layout_mode = 2
@@ -241,27 +229,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_en18u")
 layout_mode = 2
 
 [node name="ShowGames" type="Button" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1113590106]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_qrb0t")
 toggle_mode = true
-text = "Big View"
+text = "Games"
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=388935697]
+[node name="HomePageWebsites" type="GridContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=388935697]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
+theme_override_constants/h_separation = 91
 columns = 3
 
-[node name="Website1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/GridContainer" unique_id=205117791]
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 2
-texture_normal = ExtResource("7_axus7")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="GameThumbnail1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/GridContainer" unique_id=1613849403]
+[node name="GameThumbnail1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/HomePageWebsites" unique_id=1613849403]
 visible = false
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
@@ -269,62 +252,40 @@ texture_normal = ExtResource("4_b5nas")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="ShopPageSearchBar" type="Control" parent="VBoxContainer" unique_id=70517041 node_paths=PackedStringArray("search_bar", "shop_page")]
-visible = false
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 64.0
-offset_bottom = 174.0
-grow_horizontal = 2
-script = ExtResource("5_shefs")
-search_bar = NodePath("TopBar/SearchBar")
-shop_page = NodePath("../ShopPageBG")
+[node name="Website1" type="TextureButton" parent="VBoxContainer/HomePageBG/VBoxContainer/HomePageWebsites" unique_id=205117791]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+texture_normal = ExtResource("7_axus7")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="TopBar" type="Control" parent="VBoxContainer/ShopPageSearchBar" unique_id=484764868]
+[node name="Label" type="Label" parent="VBoxContainer/HomePageBG/VBoxContainer/HomePageWebsites/Website1" unique_id=607507136]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_bicfs")
+theme_override_font_sizes/font_size = 200
+text = "1"
+
+[node name="Panel" type="Panel" parent="VBoxContainer/HomePageBG/VBoxContainer/HomePageWebsites/Website1" unique_id=1095247749]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.13
 anchor_bottom = 1.0
-offset_left = 96.0
-offset_top = 16.0
-offset_right = -96.0
-offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 0
-
-[node name="WebHeader2" type="Sprite2D" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=956128099]
-position = Vector2(864, 151)
-texture = ExtResource("4_axus7")
-
-[node name="SearchBar" type="LineEdit" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=540348501]
-layout_mode = 0
-offset_left = 1274.0
-offset_top = 348.0
-offset_right = 1736.0
-offset_bottom = 410.0
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(1, 0, 0.34901962, 1)
-theme_override_colors/font_uneditable_color = Color(1, 0, 0.34901962, 1)
-theme_override_colors/font_placeholder_color = Color(1, 0.29000002, 0.5740001, 1)
-theme_override_colors/selection_color = Color(1, 0, 0.34901962, 1)
-theme_override_fonts/font = ExtResource("22_732hb")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_mxsx2")
-theme_override_styles/focus = SubResource("StyleBoxTexture_yym1m")
-placeholder_text = "  Search..."
-
-[node name="SearchButton" type="Button" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=1046398881]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 0
-offset_left = 1740.0
-offset_top = 348.0
-offset_right = 1810.0
-offset_bottom = 409.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_732hb")
-icon = ExtResource("12_s0u1o")
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v0mr5")
 
 [node name="HonsePage" type="Control" parent="VBoxContainer" unique_id=1680370493]
 visible = false
@@ -358,12 +319,24 @@ offset_top = 174.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("6_yym1m")
 products_list = NodePath("ProductsList/VBoxContainer")
 products_list_scroll = NodePath("ProductsList")
 view_product_page = NodePath("ViewProductPage")
 category_scene = ExtResource("7_njpc8")
 featured_products = NodePath("FeaturedProducts")
+
+[node name="BG" type="TextureRect" parent="VBoxContainer/ShopPageBG" unique_id=2049766674]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -174.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uvjsx")
 
 [node name="Ads" type="VBoxContainer" parent="VBoxContainer/ShopPageBG" unique_id=882573998]
 layout_mode = 0
@@ -474,6 +447,7 @@ offset_right = -360.0
 offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("9_kvwn1")
 buy_popup = NodePath("../ConfirmPurchase")
 product_big_view = NodePath("ProductBigView")
@@ -615,13 +589,75 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_gxqel")
 text = "No"
 
+[node name="ShopPageSearchBar" type="Control" parent="VBoxContainer" unique_id=70517041 node_paths=PackedStringArray("search_bar", "shop_page")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 103.0
+offset_bottom = 213.0
+grow_horizontal = 2
+mouse_filter = 1
+script = ExtResource("5_shefs")
+search_bar = NodePath("TopBar/SearchBar")
+shop_page = NodePath("../ShopPageBG")
+
+[node name="TopBar" type="Control" parent="VBoxContainer/ShopPageSearchBar" unique_id=484764868]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = 16.0
+offset_right = -96.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+mouse_filter = 1
+
+[node name="WebHeader2" type="TextureRect" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=95106520]
+layout_mode = 0
+offset_left = -97.0
+offset_top = -22.0
+offset_right = 1823.0
+offset_bottom = 313.0
+texture = ExtResource("4_axus7")
+
+[node name="SearchBar" type="LineEdit" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=540348501]
+layout_mode = 0
+offset_left = 1274.0
+offset_top = 348.0
+offset_right = 1736.0
+offset_bottom = 410.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 0, 0.34901962, 1)
+theme_override_colors/font_uneditable_color = Color(1, 0, 0.34901962, 1)
+theme_override_colors/font_placeholder_color = Color(1, 0.29000002, 0.5740001, 1)
+theme_override_colors/selection_color = Color(1, 0, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("22_732hb")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_1yyee")
+theme_override_styles/focus = SubResource("StyleBoxFlat_acry7")
+placeholder_text = "  Search..."
+
+[node name="SearchButton" type="Button" parent="VBoxContainer/ShopPageSearchBar/TopBar" unique_id=1046398881]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 1740.0
+offset_top = 348.0
+offset_right = 1810.0
+offset_bottom = 409.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_732hb")
+icon = ExtResource("12_s0u1o")
+
 [node name="TaskBarBG" type="Control" parent="VBoxContainer" unique_id=527215838]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -50.0
+offset_top = -70.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -630,8 +666,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -43.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(1, 0.29000002, 0.5740001, 1)
 
 [node name="Label" type="Label" parent="VBoxContainer/TaskBarBG/ColorRect" unique_id=1227643426]
@@ -651,48 +689,112 @@ theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 30
 text = "1:12 PM"
 
-[node name="TaskBar" type="HBoxContainer" parent="VBoxContainer/TaskBarBG" unique_id=1716832375]
-visible = false
+[node name="TaskBar" type="GridContainer" parent="VBoxContainer/TaskBarBG" unique_id=1163627851]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 41.0
+offset_top = -36.0
+offset_right = -1429.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
+columns = 3
 
 [node name="Browser" type="TextureButton" parent="VBoxContainer/TaskBarBG/TaskBar" unique_id=1739793474]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
 texture_normal = ExtResource("4_b5nas")
 ignore_texture_size = true
-stretch_mode = 5
+stretch_mode = 4
 
 [node name="Chat" type="TextureButton" parent="VBoxContainer/TaskBarBG/TaskBar" unique_id=1084701904]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
 texture_normal = ExtResource("14_shefs")
 ignore_texture_size = true
-stretch_mode = 5
+stretch_mode = 4
 
 [node name="MusicPlayer" type="TextureButton" parent="VBoxContainer/TaskBarBG/TaskBar" unique_id=875419768]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture_normal = ExtResource("18_jqbq8")
 ignore_texture_size = true
-stretch_mode = 5
+stretch_mode = 4
+
+[node name="AddressBarBG" type="Control" parent="VBoxContainer" unique_id=85514073]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 31.0
+offset_bottom = 111.0
+grow_horizontal = 2
+
+[node name="AddressBar" type="HBoxContainer" parent="VBoxContainer/AddressBarBG" unique_id=1565693429]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = -12.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+
+[node name="Home" type="Button" parent="VBoxContainer/AddressBarBG/AddressBar" unique_id=1340394984]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_732hb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_732hb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_732hb")
+icon = ExtResource("3_s0u1o")
+
+[node name="Undo" type="Button" parent="VBoxContainer/AddressBarBG/AddressBar" unique_id=1923905930]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_732hb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_732hb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_732hb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_732hb")
+icon = ExtResource("4_en18u")
+
+[node name="Redo" type="Button" parent="VBoxContainer/AddressBarBG/AddressBar" unique_id=839502283]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_732hb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_732hb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_732hb")
+icon = ExtResource("5_qrb0t")
+
+[node name="URL" type="LineEdit" parent="VBoxContainer/AddressBarBG/AddressBar" unique_id=97167190]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_ly3u1")
+placeholder_text = "https://maisonrosette.world.com/"
 
 [node name="Tooltip" parent="VBoxContainer" unique_id=814937963 instance=ExtResource("13_11yjo")]
-visible = false
 
 [node name="ChatLayer" type="CanvasLayer" parent="." unique_id=437557143]
 visible = false
 
 [node name="ChatScreen" parent="ChatLayer" unique_id=1878078702 instance=ExtResource("15_b5nas")]
-offset_left = -542.0
-offset_top = -133.0
-offset_right = -342.0
-offset_bottom = 267.0
+anchors_preset = -1
+anchor_right = 0.5864583
+anchor_bottom = 0.6675926
+offset_left = -916.0
+offset_top = -214.0
+offset_right = -682.0
+offset_bottom = 305.0
 metadata/_edit_use_anchors_ = true
 
 [node name="MusicLayer" type="CanvasLayer" parent="." unique_id=971382257]
@@ -703,42 +805,31 @@ anchor_left = 0.009000001
 anchor_top = 0.77500004
 anchor_right = 0.165
 anchor_bottom = 0.94100004
-offset_left = -0.2800007
-offset_top = -6.1035156e-05
-offset_right = 0.19998169
-offset_bottom = -0.16009521
+offset_left = 11.719999
+offset_top = -66.00006
+offset_right = 12.199982
+offset_bottom = -66.160095
 metadata/_edit_use_anchors_ = true
 
 [node name="Honse" type="AudioStreamPlayer" parent="." unique_id=961655352]
+stream = ExtResource("33_ly3u1")
 
 [node name="Song" type="AudioStreamPlayer" parent="." unique_id=245871462]
 stream = ExtResource("22_8vfry")
 volume_db = -22.829
-autoplay = true
 
 [node name="Song2" type="AudioStreamPlayer" parent="." unique_id=913007239]
 stream = ExtResource("23_dtfal")
 volume_db = 15.942
-autoplay = true
 
 [node name="Song3" type="AudioStreamPlayer" parent="." unique_id=962516138]
 stream = ExtResource("24_uvjsx")
-autoplay = true
 
 [node name="Song4" type="AudioStreamPlayer" parent="." unique_id=2040202689]
 stream = ExtResource("25_axus7")
-autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Home" to="." method="_on_home_pressed"]
-[connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Undo" to="." method="_on_undo_pressed"]
-[connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Redo" to="." method="_on_redo_pressed"]
-[connection signal="text_submitted" from="VBoxContainer/AddressBarBG/AddressBar/URL" to="." method="_on_url_text_submitted"]
 [connection signal="toggled" from="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer/ShowGames" to="VBoxContainer/HomePageBG" method="_on_big_view_toggled"]
-[connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/Website1" to="." method="_on_website_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/GridContainer/GameThumbnail1" to="VBoxContainer/HomePageBG" method="_on_game_thumbnail_1_pressed"]
-[connection signal="text_changed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_changed"]
-[connection signal="text_submitted" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_submitted"]
-[connection signal="pressed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchButton" to="VBoxContainer/ShopPageSearchBar" method="_on_search_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HomePageBG/VBoxContainer/HomePageWebsites/GameThumbnail1" to="VBoxContainer/HomePageBG" method="_on_game_thumbnail_1_pressed"]
 [connection signal="buy_product" from="VBoxContainer/ShopPageBG/ViewProductPage" to="." method="_on_view_product_page_buy_product"]
 [connection signal="gui_input" from="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo/ProductCategories" to="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo" method="_on_product_categories_gui_input"]
 [connection signal="meta_hover_ended" from="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo/ProductCategories" to="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo" method="_on_product_categories_meta_hover_ended"]
@@ -746,6 +837,14 @@ autoplay = true
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ViewProductPage/ProductInfo/BuyButton" to="VBoxContainer/ShopPageBG/ViewProductPage" method="_on_buy_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/Yes" to="VBoxContainer/ShopPageBG/ViewProductPage" method="_on_yes_pressed"]
 [connection signal="pressed" from="VBoxContainer/ShopPageBG/ConfirmPurchase/PanelContainer/No" to="VBoxContainer/ShopPageBG/ViewProductPage" method="_on_no_pressed"]
+[connection signal="text_changed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_changed"]
+[connection signal="text_submitted" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchBar" to="VBoxContainer/ShopPageSearchBar" method="_on_search_bar_text_submitted"]
+[connection signal="pressed" from="VBoxContainer/ShopPageSearchBar/TopBar/SearchButton" to="VBoxContainer/ShopPageSearchBar" method="_on_search_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/TaskBarBG/TaskBar/Chat" to="." method="_on_chat_pressed"]
+[connection signal="toggled" from="VBoxContainer/TaskBarBG/TaskBar/Chat" to="." method="_on_chat_toggled"]
 [connection signal="pressed" from="VBoxContainer/TaskBarBG/TaskBar/MusicPlayer" to="." method="_on_music_player_pressed"]
+[connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Undo" to="." method="_on_undo_pressed"]
+[connection signal="pressed" from="VBoxContainer/AddressBarBG/AddressBar/Redo" to="." method="_on_redo_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/AddressBarBG/AddressBar/URL" to="." method="_on_url_text_submitted"]
 [connection signal="hint_received" from="ChatLayer/ChatScreen" to="." method="_on_chat_screen_hint_received"]

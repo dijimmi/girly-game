@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cujs81f2uu363"]
+
+[ext_resource type="Texture2D" uid="uid://d1480vkikl0nb" path="res://import/Art/assets_girlyjam/full_art/Art 1/1_SpecialArtTop_WithAoi.png" id="1_1gtcq"]
+[ext_resource type="Script" uid="uid://blsjcvm6gvd78" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_ydtvf"]
+[ext_resource type="Texture2D" uid="uid://bmtnm2rknvj7" path="res://import/Art/assets_girlyjam/full_art/Art 1/3_SpecialArtBase.png" id="2_ydtvf"]
+[ext_resource type="Texture2D" uid="uid://c7jkcjm1bgl3h" path="res://import/Art/assets_girlyjam/full_art/Art 1/2_SpecialArtLace.png" id="3_1ca74"]
+[ext_resource type="Texture2D" uid="uid://dufp01cm21xy8" path="res://import/Art/assets_girlyjam/full_art/Art 1/4_SpecialArtTint.png" id="4_kefeo"]
+
+[node name="Node2D" type="Node" unique_id=660549081]
+script = ExtResource("1_ydtvf")
+metadata/_custom_type_script = "uid://blsjcvm6gvd78"
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=202011400]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_1gtcq")
+
+[node name="Sprite2D2" type="TextureRect" parent="." unique_id=375648300]
+modulate = Color(0.2509804, 0.1254902, 0.14509805, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ydtvf")
+
+[node name="Sprite2D3" type="TextureRect" parent="." unique_id=332038718]
+modulate = Color(0.81960785, 0.7294118, 0.6901961, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_1ca74")
+
+[node name="Sprite2D4" type="TextureRect" parent="." unique_id=576922258]
+modulate = Color(0.6356267, 0.5145376, 0.51069295, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_kefeo")

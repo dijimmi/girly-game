@@ -9,21 +9,22 @@ main_character: Got distracted. #id:143
 friend: Sure... #id:144
 # friend: まあ、いいけどさぁ……。
 
-Ayumi: Hey [main_character name], good to see you! @ #id:145
+love_interest: Hey [main_character name], good to see you! @ #id:145
 # Ayumi: あ、[main_character name]！ 来れたんだ！よかったぁ。
 
 main_character: Oh hey Ayumi #id:146
 # main_character: あ、アユミ。
-main_character: You look… #id:147
+main_character: You look… 
+main_character: cute #id:147
 # main_character: 今日の服……。
 
 [comfortable: I am! #id:148
-cute (kawaii): aw, arigatou gozaimazu @ #id:149
+love_interest: aw, arigatou @ #id:149
 # cute（kawaii）：わ、ありがとうございます。
 ] #id:14a
 # MISSING TRANSLATION
 
-Ayumi: It was definitely thanks to you though, you were a great help! #id:14b
+love_interest: It was definitely thanks to you though, you were a great help! #id:14b
 # Ayumi: でも、本当に[main_character name]のおかげだよ。すごく助かった！
 
 friend: [main_character name]~ @ #id:14c
@@ -33,7 +34,7 @@ I look at Aoi with a serious look, hoping she can read my mind #id:14d
 # 俺は真顔でアオイを見つめる。目だけで意図が伝わることを祈りながら。
 "Don't embarrass me in front of her!" #id:14e
 # 「頼むから、アユミの前で変なことを言わないでくれ！」
-However, Ayumi doesnt seem to notice #id:14f
+However, {LoveInterestName} doesnt seem to notice #id:14f
 # けれど、アユミは気づいていないらしい。
 
 main_character: It was nothing! #id:150
@@ -49,7 +50,7 @@ main_character: Oh, whatever... #id:153
 
 update friend (sumg)
 
-Ayumi: www @ #id:154
+love_interest: www @ #id:154
 # Ayumi:ふふっ。
 
 main_character: Also, how did you do on your test? #id:155
@@ -68,9 +69,9 @@ main_character: You hang out with me, that's smart. #id:159
 friend: Pff- #id:15a
 # MISSING TRANSLATION
 
-Ayumi: www @ #id:15b
+love_interest: www @ #id:15b
 # Ayumi:あははっ。
-Ayumi: You look like you're really good friends talking to each other like that. @ #id:15c
+love_interest: You look like you're really good friends talking to each other like that. @ #id:15c
 # Ayumi: 二人と本当に仲いいよね。なんでも言い合えてる感じ。
 
 main_character: Yeah, we are. #id:15d
@@ -79,7 +80,7 @@ main_character: Yeah, we are. #id:15d
 friend: [main_character name] is my bestie, he's a really good person. #id:15e
 # friend: [main_character name]は私の親友だからね！いいやつだから。
 
-Ayumi: How so? #id:15f
+love_interest: How so? #id:15f
 # Ayumi: たとえば？
 
 friend: Well… #id:160
@@ -98,9 +99,9 @@ friend: It's big thanks to him that I'm able to speak English so fluently. #id:1
 main_character: As I said, I'm smart. #id:165
 # MISSING TRANSLATION
 
-Ayumi: www @ #id:166
+love_interest: www @ #id:166
 # Ayumi: ふふっ、あははは。
-Ayumi: That sounds really nice of you, [main_character name] @ #id:167
+love_interest: That sounds really nice of you, [main_character name] @ #id:167
 # Ayumi: そうだったんだ。すごく優しいんだね、[main_character name]。
 
 main_character: Arigatou~ #id:168
@@ -116,8 +117,6 @@ main_character: Alright! #id:16b
 main_character: I'll help you guys up. #id:16c
 # MISSING TRANSLATION
 
-- epic transition #id:16d
-
 pres: Lolita fashion isn't just about asthetic but also empowerment, and freedom. #id:16e
 # pres: ロリータファッションは、ただ見た目の美しさを楽しむだけのものではありません。自分らしさを肯定する力や、自由に自分を表現する喜びにもつながっています。
 8888888 #id:16f
@@ -126,7 +125,7 @@ pres: Lolita fashion isn't just about asthetic but also empowerment, and freedom
 main_character: It's really interesting learning about this. #id:170
 # main_character: こういうの、結構面白いな。
 
-Ayumi: Un! @ #id:171
+love_interest: うん! @ #id:171
 # MISSING TRANSLATION
 
 friend: Alright guys, I need to leave now if I want to make it to the movies. #id:172
@@ -146,7 +145,7 @@ main_character: I'll give you that. #id:176
 friend: Alright, bye~ #id:177
 # MISSING TRANSLATION
 
-Ayumi: Sayonara~ #id:178
+love_interest: Sayonara~ #id:178
 # MISSING TRANSLATION
 
 pres: Thanks everyone for coming! #id:179
@@ -155,7 +154,7 @@ pres: Thanks everyone for coming! #id:179
 main_character: Thank you for hosting! #id:17a
 # main_character: こちらこそ、ありがとうございました！
 
-Ayumi: Arigato gozaimasu @ #id:17b
+love_interest: Arigato gozaimasu @ #id:17b
 # MISSING TRANSLATION
 
 pres: See you at the movies! #id:17c
@@ -164,13 +163,13 @@ pres: See you at the movies! #id:17c
 main_character: See you! #id:17d
 # main_character: はい！また！
 
-Ayumi: See you, sensei! #id:17e
+love_interest: See you, sensei! #id:17e
 # MISSING TRANSLATION
 
 a small pause #id:17f
 # 少し間が空く。
 
-Ayumi: I think im going to stay here a bit and enjoy the breeze. #id:180
+love_interest: I think im going to stay here a bit and enjoy the breeze. #id:180
 # Ayumi: 私、もう少しここに残って、風に当たっていこうかな。
 
 main_character: Hm? #id:181
@@ -178,31 +177,31 @@ main_character: Hm? #id:181
 main_character: Mind if I join you? #id:182
 # main_character: 俺も一緒に残っていい？
 
-Ayumi: Oh okay! #id:183
+love_interest: Oh okay! #id:183
 # Ayumi: 全然、いいよ！
 
 I sit down in the grass (maybe sound effect) #id:184
 # 俺も芝生に腰を下ろす。（SEを入れてもいいかも）
 
-Ayumi: Ah, this is nice. #id:185
+love_interest: Ah, this is nice. #id:185
 # Ayumi: あー、気持ちいいね。
-Ayumi: I really like sitting down and just feeling the breeze you know? #id:186
+love_interest: I really like sitting down and just feeling the breeze you know? #id:186
 # Ayumi: こうやって座って、ただ風を感じるの好きなの。
 
 main_character: By yourself? #id:187
 # main_character: 一人で？
 
-Ayumi: Usually, yeah #id:188
+love_interest: Usually, yeah #id:188
 # Ayumi: うん、だいたい一人。
-Ayumi: My friends usually just hang out playing videogames, going to the movies… #id:189
+love_interest: My friends usually just hang out playing videogames, going to the movies… #id:189
 # Ayumi: 友達はゲームしたり、映画に行ったりして遊ぶことが多いんだけど……。
-Ayumi: But I like talking, chlling. #id:18a
+love_interest: But I like talking, chlling. #id:18a
 # Ayumi: 私は、のんびり話したりするほうが好きで。
 
 main_character: Sou desu #id:18b
 # main_character: そうですか。
 
-Ayumi: What about you? What do you like to do with your friends? #id:18c
+love_interest: What about you? What do you like to do with your friends? #id:18c
 # Ayumi: [main_character name]は？ 友達とは何して過ごすのが好き？
 
 main_character: I'm really down to whatever. #id:18d
@@ -212,34 +211,34 @@ main_character: Watching movies, dining out, going to arcades, talking, it varie
 main_character: But I get you. Not everyone wants to just chill. #id:18f
 # main_character: でも、言いたいことはわかる。みんながみんな、ただのんびりしたいわけじゃないもんな。
 
-Ayumi: Yeah… #id:190
+love_interest: Yeah… #id:190
 # Ayumi: うん……。
 
 I catch myself staring at Ayumi's hair moving with the wind. #id:191
 # 風に揺れるアユミの髪を、いつの間にか目で追っていた。
 
-Ayumi: [main_character Name] @ #id:192
+love_interest: [main_character Name] @ #id:192
 # Ayumi: [main_character Name]。
 
 main_character: Yeah? #id:193
 # main_character: ん？
 
-Ayumi: Can I ask you a weird question? #id:194
+love_interest: Can I ask you a weird question? #id:194
 # Ayumi: ちょっと変なこと聞いてもいいかな？
 
 main_character: Ask me anything, go ahead. #id:195
 # main_character: なんでもどうぞ。
 
-Ayumi: Do you ever feel like… #id:196
+love_interest: Do you ever feel like… #id:196
 # Ayumi: その……。
-Ayumi: You can't be yourself with your friends? #id:197
+love_interest: You can't be yourself with your friends? #id:197
 # Ayumi: 友達といるとき、「素の自分でいられない」って思うこと…ある？
-Ayumi: Or with a friend? #id:198
+love_interest: Or with a friend? #id:198
 # Ayumi: friendと一緒のときも？
 
 main_character: Hmm, I don't think so, no. #id:199
 # main_character: うーん、たぶんないかな。
-main_character: Especially not with friend, she's my best friend. #id:19a
+main_character: Especially not with {FriendName}, she's my best friend. #id:19a
 # main_character: 特にfriendの前ではないな。あいつは親友だし。
 main_character: And with my other friends… #id:19b
 # main_character: 他の友達については……。
@@ -250,15 +249,15 @@ main_character: It depends on how much trust I have in them. #id:19d
 main_character: Does that make sense? #id:19e
 # main_character: ……伝わる？
 
-Ayumi: Un! #id:19f
+love_interest: Un! #id:19f
 # Ayumi: うん！
 
 main_character: Why do you ask? #id:1a0
 # main_character: どうしてそんなこと聞くんだ？
 
-Ayumi: I don't know… #id:1a1
+love_interest: I don't know… #id:1a1
 # Ayumi: わからないけど……。
-Ayumi: I feel like my friends would mock me if they knew I went to a fashion club… #id:1a2
+main_character: I feel like my friends would mock me if they knew I went to a fashion club… #id:1a2
 # Ayumi: 私、ファッション部に入ってるって友達に知られたら、笑われる気がして……。
 
 main_character: Really? #id:1a3
@@ -266,9 +265,9 @@ main_character: Really? #id:1a3
 main_character: Isn't fashion like something big in Japan? #id:1a4
 # main_character: 日本ってファッション盛んなんじゃないの？
 
-Ayumi: It is, but I don't know... #id:1a5
+love_interest: It is, but I don't know... #id:1a5
 # Ayumi: そうなんだけど……なんていうか。
-Ayumi: It's a little embarrassing. #id:1a6
+love_interest: It's a little embarrassing. #id:1a6
 # Ayumi: ちょっと恥ずかしくて。
 
 main_character: Nah, I'm sure they won't mock you! #id:1a7
@@ -276,9 +275,9 @@ main_character: Nah, I'm sure they won't mock you! #id:1a7
 main_character: Especially if they're good friends like {friend} is to me #id:1a8
 # main_character: 少なくとも、{friend}みたいに仲のいい友達ならさ。
 
-Ayumi: I'm not that close with any of my friends. #id:1a9
+love_interest: I'm not that close with any of my friends. #id:1a9
 # Ayumi: 私、どの友達ともそこまで仲が良いわけじゃないんだ。
-Ayumi: I could never joke around like that haha. #id:1aa
+love_interest: I could never joke around like that haha. #id:1aa
 # Ayumi: あんなふうに冗談言い合ったりなんて、できないし…はは。
 
 main_character: I think you should give a shot still! #id:1ab
@@ -288,23 +287,23 @@ main_character: Tell them, and see how they react. #id:1ac
 main_character: I'm sure they'll be more than okay with it. #id:1ad
 # main_character: きっと、思ってるよりずっと普通に受け入れてくれるよ。
 
-Ayumi: You think? #id:1ae
+love_interest: You think? #id:1ae
 # Ayumi: そうかな？
 
 main_character: un! @ #id:1af
 # main_character: うん！
 
-Ayumi: Hmm #id:1b0
+love_interest: Hmm #id:1b0
 # Ayumi: うーん……。
-Ayumi: I'll think about it then. #id:1b1
+love_interest: I'll think about it then. #id:1b1
 # Ayumi: じゃあ、考えてみる。
-Ayumi: Thank you. #id:1b2
+love_interest: Thank you. #id:1b2
 # Ayumi: ありがとう。
 
 main_character: Ah it's no biggie. #id:1b3
 # main_character: いや、全然。
 
-Ayumi: Anyhow, I think we better get going to the movies, or we'll be late. #id:1b4
+love_interest: Anyhow, I think we better get going to the movies, or we'll be late. #id:1b4
 # Ayumi: そろそろ映画館に行ったほうがいいかも。遅れちゃう。
 
 main_character: Good idea. #id:1b5
@@ -312,7 +311,7 @@ main_character: Good idea. #id:1b5
 main_character: And Ayumi? #id:1b6
 # main_character: ……あと、アユミ。
 
-Ayumi: eh? #id:1b7
+love_interest: eh? #id:1b7
 # Ayumi: え？
 
 main_character: I think it's cool you like fashion. It fits you really well. #id:1b8
@@ -320,9 +319,9 @@ main_character: I think it's cool you like fashion. It fits you really well. #id
 [choice – tell her she looks pretty or not] #id:1b9
 # ［選択肢：アユミを「きれいだ」と褒める／褒めない］
 
-Ayumi: ee? @ #id:1ba
+love_interest: ee? @ #id:1ba
 # Ayumi: えっ？
-Ayumi: Arigatou gozaimasu~ @ #id:1bb
+love_interest: Arigatou gozaimasu~ @ #id:1bb
 # Ayumi: ありがとうございます〜。
 Ayumi: Let's go! #id:1bc
 # Ayumi: 行こっ！

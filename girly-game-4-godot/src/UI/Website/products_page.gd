@@ -30,11 +30,14 @@ func _ready() -> void:
 	await get_tree().process_frame
 	
 	add_category(ProductInfo.FEATURED)
-	
-	for product in ProductInfo.products:
-		if not product.category in categories_names:
-			categories_names.append(product.category)
-			add_category(product.category)
+
+
+func add_featured_products():
+	for child : ProductCategory in products_list.get_children():
+		if child.category == ProductInfo.FEATURED:
+			clear_search_results()
+			child.add_products_by_category()
+		
 
 
 func load_state(page: String, from_undo: bool) -> void:
@@ -59,6 +62,7 @@ func load_state(page: String, from_undo: bool) -> void:
 		view_product_page.setup_page(state[0], state[1])
 	
 	elif page == ProductInfo.FEATURED_PAGE:
+		add_featured_products()
 		show_featured()
 
 
@@ -106,6 +110,7 @@ func add_category(category_name : String, mode : String = "category"):
 	var new_cat = category_scene.instantiate()
 	new_cat.set_category(ProductInfo.make_clickable(new_cat.category_name, category_name))
 	new_cat.product_clicked_from_thumbnail.connect(_on_product_clicked_from_thumbnail)
+	new_cat.category = category_name
 	
 	# setup functions for the category scene
 	if mode == "category":
@@ -124,6 +129,7 @@ func add_category(category_name : String, mode : String = "category"):
 
 
 func _add_featured_category(category_node : Container):
+	
 	category_node.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	category_node.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	featured_products.add_child(category_node)

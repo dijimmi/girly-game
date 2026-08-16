@@ -1,7 +1,7 @@
 {
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
-&"_translation_id": "2da",
+&"_translation_id": "",
 &"color": Color(0.08627451, 0.42352942, 0.5803922, 1),
 &"custom_info": {
 "TextBoxInfo": Color(0.83, 0.783935, 0.5229, 1),
@@ -24,7 +24,9 @@
 "body_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Base.png\"",
 "emotion": "3",
 "expression_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Eyes4.png\"",
-"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
+"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\"",
+"portrait_height": "1080.0",
+"portrait_width": "1080.0"
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -36,7 +38,9 @@
 "body_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Base.png\"",
 "emotion": "1",
 "expression_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Eyes2.png\"",
-"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
+"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\"",
+"portrait_height": "1080.0",
+"portrait_width": "1080.0"
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -47,7 +51,9 @@
 "export_overrides": {
 "body_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Base.png\"",
 "expression_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Eyes1.png\"",
-"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
+"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\"",
+"portrait_height": "1080.0",
+"portrait_width": "0.0"
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -59,7 +65,9 @@
 "body_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Base.png\"",
 "emotion": "2",
 "expression_image": "\"res://import/Art/portrait/Pres/Portrait_FriendB_Eyes3.png\"",
-"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\""
+"image": "\"res://import/Art/CharacterArt/Portrait_Base.png\"",
+"portrait_height": "1080.0",
+"portrait_width": "1080.0"
 },
 "mirror": false,
 "offset": Vector2(0, 0),

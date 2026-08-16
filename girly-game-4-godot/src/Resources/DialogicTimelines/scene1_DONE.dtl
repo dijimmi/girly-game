@@ -1,5 +1,4 @@
 [background arg="#000000ff" fade="0.0"]
-[style name="narration_style_dialogue"]
 
 I've recently become intersted in learning Japanese ever since I've grown closer to my friend {FriendName}. #id:3a
 # 俺は{FriendName}と親しくなるにつれて、俺は日本語をちゃんと勉強してみたいと思うようになった。
@@ -32,4 +31,3 @@ For real this time! #id:46
 # 今度こそ、本当に！
 [wait time="0.1" skippable="true"]
 jump scene2_DONE/
-audio -
