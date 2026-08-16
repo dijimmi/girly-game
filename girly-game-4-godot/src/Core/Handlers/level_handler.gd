@@ -7,6 +7,7 @@ func _ready() -> void:
 	assert(scene_array.size() != 0,"[level_handler] no scenes in scene_array")
 	EventBus.load_scene.connect(_load_scene)
 	Dialogic.timeline_ended.connect(_load_scene)
+	_load_scene("main menu")
 
 var cur_level
 var cur_level_name

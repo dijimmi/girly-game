@@ -57,7 +57,8 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
-"CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
+"CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
+"narration_style_dialogue": "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres", "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"]

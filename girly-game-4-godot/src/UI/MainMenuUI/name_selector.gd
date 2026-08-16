@@ -17,6 +17,7 @@ func select_name():
 	if not _is_name(written_text):
 		confirmation_label.text += "\nIT'S NOT VOICED BY ANY CHARACTER"
 	confirmation_popup.visible = true
+	print(written_text)
 
 
 func _input(_event: InputEvent) -> void:
