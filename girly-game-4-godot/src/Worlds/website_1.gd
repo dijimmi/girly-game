@@ -37,7 +37,7 @@ var active_page : String = ProductInfo.HOME
  
 var web_score = 0
 
-var curr_level = ProductInfo.Level.ONE
+var curr_level : int = ProductInfo.Level.ONE
 
 # USE THIS SIGNAL TOWARDS THE LEVEL MANAGER OR WHATEVER :)
 signal close_website_and_get_score(score : int)
@@ -53,12 +53,13 @@ func _ready() -> void:
 		ProductInfo.HONSE:            [honse_page],
 	}
 	
-	# curr_level = Dialogic.VAR.LEVEL
+	curr_level = Dialogic.VAR.LEVEL
 	
 	# TODO: remember to delete this once we call it elsewhere
 	if curr_level == ProductInfo.Level.TWO:
 		new_website("2")
 	elif curr_level == ProductInfo.Level.THREE:
+		new_website("2")
 		new_website("3")
 	
 	website_1.pressed.connect(_on_website_1_pressed.bind(website_1))
@@ -240,7 +241,7 @@ func _on_chat_pressed() -> void:
 
 
 func _on_view_product_page_buy_product(product: Product) -> void:	
-	# curr_level = Dialogic.VAR.LEVEL
+	curr_level = Dialogic.VAR.LEVEL
 	
 	if product.level == curr_level:
 		if product.winner:
@@ -261,12 +262,18 @@ func _on_view_product_page_buy_product(product: Product) -> void:
 		update_score(0)
 	
 	print("New score: ", str(web_score))
+	close_website()
 	close_website_and_get_score.emit(web_score)
 	#TODO: ADD FUNCTION TO GO BACK TO DIALOGIC SCENE AND UPDATE OVERALL SCORE
 
 
+func close_website():
+	visible = false
+	EventBus.load_scene.emit("website_ender")
+ 
+
 func _on_chat_screen_hint_received(_hint_num: Variant) -> void:
-	# curr_level = Dialogic.VAR.LEVEL
+	curr_level = Dialogic.VAR.LEVEL
 	
 	if curr_level == ProductInfo.Level.ONE:
 		update_score(-250)

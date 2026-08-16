@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0jqsl5n6wwer"
+path="res://.godot/imported/today was fun今日は楽しかった-1.mp3-f389a2ebd2d26b7b9b8ce5824a352228.mp3str"
+
+[deps]
+
+source_file="res://import/Voices/Ayumi/ayumi_CUT/today was fun今日は楽しかった/today was fun今日は楽しかった-1.mp3"
+dest_files=["res://.godot/imported/today was fun今日は楽しかった-1.mp3-f389a2ebd2d26b7b9b8ce5824a352228.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
