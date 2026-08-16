@@ -10,6 +10,7 @@ When you walk out of the meeting room, you see Ayumi walking by #id:1bf
 main_character: Ayumi! #id:1c0
 # main_character: アユミ！
 
+join love_interest center (Worried)
 love_interest: Oh hey {PlayerName} ~ #id:1c1
 # Ayumi: あ、[main_character name]。
 
@@ -34,16 +35,18 @@ main_character: Sure, I can go. #id:1c8
 love_interest: Great! #id:1c9
 # Ayumi: …よかった。
 
+update love_interest left 
+join Aoi right 
 Aoi: Yo! Can I join you? #id:1ca
 # Aoi: よっ！ 私も行っていい？
 
-love_interest: Aoi! @ #id:1cb
+love_interest: Aoi! #id:1cb
 # Ayumi: アオイちゃん！
 love_interest: Sure, come with! #id:1cc
 # Ayumi: もちろん、一緒に行こ！
 love_interest: The more the merrier, as you americans say #id:1cd
 # Ayumi: ほら、アメリカじゃ「多ければ多いほど楽しい」って言うんだよね？
-love_interest: www @ #id:1ce
+love_interest: www #id:1ce
 # Ayumi: …あはは
 jump scene7_5_DONE/
 # MISSING TRANSLATION
