@@ -69,5 +69,6 @@ main_character: Alright fine. But only to learn Japanese, not for any other reas
 update friend (Smile) [animation="Bounce" length="0.4"]
 friend (Smile): やった！ #id:66
 # friend (Joy): やったぁ！
-do Dialogue.set_next_scene("cutscene fashion club")
+# do Dialogue.set_next_scene("cutscene fashion club")
+jump scene3_DONE/
 # MISSING TRANSLATION

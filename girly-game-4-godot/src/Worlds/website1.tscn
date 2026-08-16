@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://2aqv0xh4uwkn" path="res://import/Art/UIArt/Texture/ui_tex_rabbit_solid_transparent.png" id="4_kj6ta"]
 [ext_resource type="Texture2D" uid="uid://6l73nlxmtvk4" path="res://import/Art/ui_tex/website/ui_web_forward.png" id="5_qrb0t"]
 [ext_resource type="Script" uid="uid://clukmb2c5y1na" path="res://src/UI/Website/shop_page_search_bar.gd" id="5_shefs"]
+[ext_resource type="Texture2D" uid="uid://dl76r0ccdudn5" path="res://Girly_CoverArt_Small.png" id="6_kj6ta"]
 [ext_resource type="Script" uid="uid://bkraxeylrsb6q" path="res://src/UI/Website/products_page.gd" id="6_yym1m"]
 [ext_resource type="Texture2D" uid="uid://ctl5qsg2w4eg4" path="res://import/Art/ui_tex/website/web_logo_3.png" id="7_axus7"]
 [ext_resource type="PackedScene" uid="uid://bb21jci4ag116" path="res://src/UI/Website/product_category.tscn" id="7_njpc8"]
@@ -214,13 +215,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 31
 
-[node name="Label" type="Label" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=634568126]
-self_modulate = Color(0.9, 0.35099998, 0.51570004, 1)
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Web"
-horizontal_alignment = 1
-
 [node name="BookMarks" type="PanelContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=1909946765]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_en18u")
@@ -229,13 +223,19 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_en18u")
 layout_mode = 2
 
 [node name="ShowGames" type="Button" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1113590106]
-visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_qrb0t")
 toggle_mode = true
 text = "Games"
+
+[node name="Label" type="Label" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=634568126]
+self_modulate = Color(0.9, 0.35099998, 0.51570004, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Web"
+horizontal_alignment = 1
 
 [node name="HomePageWebsites" type="GridContainer" parent="VBoxContainer/HomePageBG/VBoxContainer" unique_id=388935697]
 layout_mode = 2
@@ -248,7 +248,7 @@ columns = 3
 visible = false
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-texture_normal = ExtResource("4_b5nas")
+texture_normal = ExtResource("6_kj6ta")
 ignore_texture_size = true
 stretch_mode = 5
 

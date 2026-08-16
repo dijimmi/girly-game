@@ -23,6 +23,6 @@ func _on_big_view_toggled(toggled_on: bool) -> void:
 
 func _on_game_thumbnail_1_pressed() -> void:
 	if OS.has_feature("web"):
-		JavaScriptBridge.eval("window.open('https://godotengine.org', '_blank').focus();")
+		JavaScriptBridge.eval("window.open('https://heartcat.itch.io/cake-drill-space-girl', '_blank').focus();")
 	else:
-		OS.shell_open("https://godotengine.org")
+		OS.shell_open("https://heartcat.itch.io/cake-drill-space-girl")

@@ -1,3 +1,5 @@
+[background scene="res://src/Resources/FullArtBG/fullart1.tscn" fade="0.0"]
+friend: Looks who's finally here. #id:141
 friend: Looks who's finally here. #id:141
 set {LEVEL} = 2.0
 # friend: あー！やっと来た〜。

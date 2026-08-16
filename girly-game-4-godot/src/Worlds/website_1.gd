@@ -84,7 +84,6 @@ func update_score(score_amt):
 	
 	print("Current Score: ", str(web_score))
 
-
 func init_products():
 	const path = "res://src/Resources/Products/"
 	
@@ -92,7 +91,17 @@ func init_products():
 	
 	var files = DirAccess.get_files_at(path)
 	for file_name in files:
+		file_name = file_name.trim_suffix(".remap")   # <-- clave
+		
+		# ignorar cualquier cosa que no sea un recurso
+		if not (file_name.ends_with(".tres") or file_name.ends_with(".res")):
+			continue
+		
 		var loaded_product : Product = load(path + file_name)
+		if loaded_product == null:
+			push_warning("No se pudo cargar: " + file_name)
+			continue
+		
 		if loaded_product.level == curr_level:
 			ProductInfo.products.append(loaded_product)
 	

@@ -37,6 +37,7 @@ She hangs up. #id:268
 
 love_interest: [main_character Name]! @ #id:269
 # Ayumi: [main_character Name]！
+[background scene="res://src/Resources/FullArtBG/fullart3.tscn" fade="0.0"]
 
 Ayumi appears behind a wall. #id:26a
 # MISSING TRANSLATION
@@ -233,5 +234,5 @@ Coincidences #id:2b4
 # ［ここにもう少し描写を追加予定］
 
 In the end, we went back to the park where we used to sit on the grass. # I need to change this cuz we don't have this art #id:2b6
-jump scene9_DONE/
+do Dialogue.set_next_scene("website1")
 # MISSING TRANSLATION

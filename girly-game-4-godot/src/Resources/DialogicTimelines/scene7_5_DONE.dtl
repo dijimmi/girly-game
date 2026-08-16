@@ -1,5 +1,5 @@
 # Scene 8.5: last emotional layer from Sakura, backstory learning perhaps. maybe gives you a hint as to whether or not you're on the right path (let's say she holds your hand or hugs you if you are doing good, if not, then she doesn't)
-[background fade="0.0"]
+[background scene="res://src/Resources/FullArtBG/fullart2.tscn" fade="0.0"]
 do AudioManager.load_music("scene7-5")
 
 We arrive at the coffee shop and Aoi helps me order a cup of tea for myself and for her. #id:1d0

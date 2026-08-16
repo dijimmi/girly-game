@@ -51,7 +51,7 @@ friend (Happy): It's a new club, give it time... #id:74
 # friend (NeutralSpeaking): できたばかりの部活らしいよ。
 friend: Oh look, another one is joining! #id:75
 leave friend
-join Ayumi center
+join  center
 # friend (JoySPeaking): あ、見て。もう一人来たよ。
 
 Ayumi: Here's my signature! Thanks! #id:76
@@ -67,7 +67,7 @@ She's... she's... #id:7b
 
 {FriendName}'s piercing gaze interrupt my thoughts. #id:7c
 # MISSING TRANSLATION
-leave Ayumi
+leave 
 join friend center
 [voice path="res://import/Voices/Aoi/Frank_2.wav" volume="0.0"]
 
@@ -83,7 +83,7 @@ update friend (Neutral)
 
 Ayumi walks towards us. #id:80
 # MISSING TRANSLATION
-join Ayumi left [animation="Slide From Left"]
+join  left [animation="Slide From Left"]
 update friend right
 
 friend: こんにちは! #id:81
@@ -122,7 +122,7 @@ Ayumi (Happy): Ayumi です! #id:8a
 Ayumi: And you? #id:8b
 # Ayumi: あなたたちは？
 
-update Ayumi (Neutral)
+update 
 main_character: I'm {PlayerName}, nice to meet you. #id:8c
 # main_character: {main_character name}です。よろしく。
 [voice path="res://import/Voices/Aoi/Aoi_8.wav" volume="0.0"]
@@ -153,7 +153,7 @@ update friend (Neutral)
 
 Ayumi (Happy): Do you come from the US? #id:95
 # Ayumi: 二人はアメリカから来たの？
-update Ayumi (Neutral)
+update 
 
 main_character: Yeah, we do, although {friend} is originally from Japan, but she moved to the US to study. #id:96
 # main_character: うん、二人ともアメリカから来たんだ。でもfriendはもともと日本出身で、勉強するためにアメリカへ引っ越してきた。
@@ -164,7 +164,7 @@ main_character: Do you like fashion like Aoi? #id:97
 
 Ayumi (Happy): はい! I do, though I'm not very knowledgeble. #id:98
 # Ayumi: うん、好き！ でも、そんなに詳しいわけじゃないけど……。
-update Ayumi (Neutral)
+update 
 
 friend (Smug): I got you covered! #id:99
 # friend: それなら私に任せて！

@@ -29,6 +29,6 @@ And so, my journey to learn Japanese... it's finally starting. #id:45
 # こうして、俺の日本語学習の旅が……ついに始まる。
 For real this time! #id:46
 # 今度こそ、本当に！
-do Dialogue.set_next_scene("website1")
+#do Dialogue.set_next_scene("website1")
 [wait time="0.1" skippable="true"]
-# jump scene2_DONE/
+ jump scene2_DONE/
