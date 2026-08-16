@@ -18,4 +18,9 @@ func _load_scene(cue : String = Global.next_scene):
 	var level = scene_array[cue].instantiate()
 	cur_level = level
 	cur_level_name = cue
+	$AnimationPlayer.play("trans_in")
+	await $AnimationPlayer.animation_finished
 	add_child(level)
+	$AnimationPlayer.play("trans_out")
+
+	

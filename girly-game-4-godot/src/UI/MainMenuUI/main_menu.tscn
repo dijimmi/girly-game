@@ -379,11 +379,13 @@ layout_mode = 2
 text = "Load Save"
 
 [node name="ChoseScene" type="Button" parent="Control/Buttons" unique_id=1172147581]
+visible = false
 custom_minimum_size = Vector2(128, 24)
 layout_mode = 2
 text = "Chose Scene"
 
 [node name="PlaytestButton" type="Button" parent="Control/Buttons" unique_id=1202402097]
+visible = false
 custom_minimum_size = Vector2(128, 24)
 layout_mode = 2
 text = "Playtest"

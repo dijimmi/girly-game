@@ -7,6 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://3gbqc8g1x28u" path="res://src/Worlds/website1.tscn" id="5_j1ikt"]
 [ext_resource type="PackedScene" uid="uid://c6ltsnf7brv0j" path="res://src/Worlds/Cutscenes/cutscene_website_placeholder.tscn" id="6_m66gv"]
 [ext_resource type="PackedScene" uid="uid://dbjofwn4i8ycc" path="res://src/Worlds/website_ender.tscn" id="7_qntjh"]
+[ext_resource type="Shader" uid="uid://cq6j3m74gnsuo" path="res://src/Core/Handlers/level_handler.tres" id="8_vsnvo"]
+[ext_resource type="Texture2D" uid="uid://c822nv0f36rgh" path="res://import/Art/UIArt/MainMenu/texture_rays.png" id="9_epka4"]
+[ext_resource type="Texture2D" uid="uid://d4ebv7fc2pi5e" path="res://import/Art/UIArt/MainMenu/dress_icon_white.png" id="10_epka4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mrd4b"]
+shader = ExtResource("8_vsnvo")
+shader_parameter/speed = 0.2000000095
+shader_parameter/Texture2DParameter = ExtResource("9_epka4")
 
 [sub_resource type="Animation" id="Animation_3mgl7"]
 length = 0.001
@@ -22,9 +30,22 @@ tracks/0/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_rnf1n"]
 resource_name = "trans_in"
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -37,9 +58,36 @@ tracks/0/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IconAnimationPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.23333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"icon_spin", -1, 1.0, false],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_q84wo"]
 resource_name = "trans_out"
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -47,10 +95,22 @@ tracks/0/path = NodePath("CanvasLayer:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.8666667),
+"times": PackedFloat32Array(0.6),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sipf8"]
@@ -60,7 +120,44 @@ _data = {
 &"trans_out": SubResource("Animation_q84wo")
 }
 
+[sub_resource type="Animation" id="Animation_epka4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CanvasLayer/ColorRect/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_r23fw"]
+resource_name = "icon_spin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CanvasLayer/ColorRect/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.93333334),
+"transitions": PackedFloat32Array(7.2099996, 0.5547846, 1),
+"update": 0,
+"values": [0.0, -3.141592653589793, -6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v6vub"]
+_data = {
+&"RESET": SubResource("Animation_epka4"),
+&"icon_spin": SubResource("Animation_r23fw")
+}
+
 [node name="LevelHandler" type="Control" unique_id=1058136623]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,9 +175,13 @@ scene_array = Dictionary[String, PackedScene]({
 })
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1557219362]
+process_mode = 3
+layer = 100
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1110529816]
+material = SubResource("ShaderMaterial_mrd4b")
+clip_contents = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -88,22 +189,32 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.13077214, 0.13077214, 0.13077211, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/ColorRect" unique_id=1096707647]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -155.0
-offset_top = -11.5
-offset_right = 155.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "our super cool loading/transition screen"
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ColorRect" unique_id=1101332180]
+layout_mode = 0
+offset_top = -20.999998
+offset_right = 1936.0
+offset_bottom = 69.0
+rotation = 0.004238013
+color = Color(0.92156863, 0.4117647, 0.53333336, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/ColorRect" unique_id=1810281070]
+layout_mode = 0
+offset_top = 1017.0
+offset_right = 1936.0
+offset_bottom = 1195.3291
+rotation = -0.022749785
+color = Color(0.92156863, 0.4117647, 0.53333336, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect" unique_id=1903289925]
+self_modulate = Color(0.92, 0.414, 0.5320665, 1)
+position = Vector2(952, 570)
+texture = ExtResource("10_epka4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=16945664]
 libraries/ = SubResource("AnimationLibrary_sipf8")
+
+[node name="IconAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1945124092]
+root_node = NodePath("../AnimationPlayer")
+libraries/ = SubResource("AnimationLibrary_v6vub")
 
 [node name="Cutscenes" type="CanvasLayer" parent="." unique_id=524578417]
