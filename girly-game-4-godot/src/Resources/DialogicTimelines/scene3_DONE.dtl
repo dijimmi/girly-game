@@ -4,34 +4,34 @@
 # @ MEANS VOICED DIALOGUE
 
 join pres (Happy) left [mirrored="true"]
-[voice volume="0.0"]
+[voice path="res://import/Voices/Presi/President_Lines - mp3 files/President_Lines - segment 1.mp3" volume="0.0"]
 pres (Happy): いらっしゃい !  Hello! Nice to meet ya'll! #id:67
 # pres: いらっしゃい！ ハロー、ナイス・トゥ・ミーチュー！
-[voice volume="0.0"]
-pres: Are you guys interested in joining the club? @ #id:68
+[voice path="res://import/Voices/Presi/President_Lines - mp3 files/President_Lines - segment 6.mp3" volume="0.0"]
+pres: Are you guys interested in joining the club? #id:68
 # pres (Joy): 二人とも、入部希望？
 update pres (Neutral)
 join friend right
-[voice path="res://import/Voices/Aoi/Aoi_5.wav" volume="0.0" bus="Voices"]
+[voice path="res://import/Voices/Aoi/Aoi_hai.wav" volume="0.0" bus="Voices"]
 friend (Smile): うん！ #id:69
 # MISSING TRANSLATION
 update friend (Neutral)
 main_character: I guess so... #id:6a
 # main_character: まあ……そんな感じです。
-[voice volume="0.0"]
+[voice path="res://import/Voices/Presi/President_Lines - mp3 files/President_Lines - segment 11.mp3" volume="0.0"]
 pres (Happy): Alright, you just need to sign here, and there please. #id:6b
 # pres (Joy): じゃあ、こことここに名前を書いてね。
 do Dialogue.start_minigame(Dialogic.VAR.PlayerNameJP, "drawing")
 # MISSING TRANSLATION
-[voice volume="0.0"]
+[voice path="res://import/Voices/Presi/President_Lines - mp3 files/President_Lines - segment 16.mp3" volume="0.0"]
 pres (JoySpeaking): サンキュー! #id:6c
 # pres (JoySpeaking): サンキュー！
-[voice volume="0.0"]
+[voice path="res://import/Voices/Presi/President_Lines - mp3 files/President_Lines - segment 23.mp3" volume="0.0"]
 pres: You can look around and hang out, we'll be starting our meeting soon. #id:6d
 # pres: 始まるまでは、部内を適当に見て回ったりしてくつろいでいって。もうすぐミーティング始めるから。
 main_character: Thank you. #id:6e
 # main_character: ありがとうございます。
-[voice path="res://import/Voices/Aoi/Aoi_6.wav" volume="0.0"]
+[voice path="res://import/Voices/Aoi/Aoi_hai.wav" volume="0.0"]
 
 friend (Joy): はーい~ #id:6f
 # friend (Joy): はーい。
@@ -39,7 +39,7 @@ leave pres
 update friend center [move_time="0.5"]
 main_character: Alright so... I joined. Now I can leave, right? #id:70
 # main_character: よし……入部したし、俺もう帰っていいよな？
-[voice path="res://import/Voices/Aoi/Aoi_7.wav" volume="0.0"]
+[voice path="res://import/Voices/Aoi/Aoi_eeh.wav" volume="0.0"]
 friend (Confused): ええ?!! #id:71
 # friend (NeutralSpeaking): ええっ！？
 main_character: I'm just messing with you. #id:72
@@ -51,7 +51,7 @@ friend (Happy): It's a new club, give it time... #id:74
 # friend (NeutralSpeaking): できたばかりの部活らしいよ。
 friend: Oh look, another one is joining! #id:75
 leave friend
-join  center
+join love_interest center
 # friend (JoySPeaking): あ、見て。もう一人来たよ。
 
 Ayumi: Here's my signature! Thanks! #id:76
@@ -83,7 +83,7 @@ update friend (Neutral)
 
 Ayumi walks towards us. #id:80
 # MISSING TRANSLATION
-join  left [animation="Slide From Left"]
+join  center [animation="Slide From Left"]
 update friend right
 
 friend: こんにちは! #id:81
@@ -96,7 +96,7 @@ Ayumi (Neutral): Hm? #id:83
 # Ayumi: ん？
 Ayumi (Smile): Ah! Are you two the new exchange students? Hello! #id:84
 # Ayumi: あっ！ 二人が新しく来た留学生さん？ 初めまして！
-[voice path="res://import/Voices/Aoi/Aoi_5.wav" volume="0.0" bus="Voices"]
+[voice path="res://import/Voices/Aoi/Aoi_un.wav" volume="0.0" bus="Voices"]
 
 friend (Happy): うん! #id:85
 # friend: うん！
@@ -112,11 +112,11 @@ main_character: (gets kicked) Ow! #id:88
 # main_character: （蹴られる）痛っ！
 
 update friend (Neutral)
-[voice volume="0.0" bus="Voices"]
+[voice path="res://import/Voices/Ayumi/pff-www1.wav" volume="0.0" bus="Voices"]
 Ayumi (Laugh): pff- www #id:89
 # Ayumi: ふふっ
-[voice volume="0.0" bus="Voices"]
-Ayumi (Happy): Ayumi です! #id:8a
+[voice path="res://import/Voices/Ayumi/introduction1.wav" volume="0.0" bus="Voices"]
+Ayumi (Happy): Nice to meet you! Ayumi です! #id:8a
 # MISSING TRANSLATION
 
 Ayumi: And you? #id:8b
@@ -125,14 +125,14 @@ Ayumi: And you? #id:8b
 update 
 main_character: I'm {PlayerName}, nice to meet you. #id:8c
 # main_character: {main_character name}です。よろしく。
-[voice path="res://import/Voices/Aoi/Aoi_8.wav" volume="0.0"]
+[voice path="res://import/Voices/Aoi/Aoi_desu.wav" volume="0.0"]
 friend (Smile): Aoi です! #id:8d
 # MISSING TRANSLATION
 update friend (Neutral)
 
 main_character: Are you also a transfer student, Ayumi? #id:8e
 # main_character: アユミも留学生なの？
-[voice volume="0.0"]
+[voice path="res://import/Voices/Ayumi/zenzen1.wav" volume="0.0"]
 
 Ayumi (Happy): ぜんぜん~ #id:8f
 # Ayumi: ううん、違うよ〜。
@@ -145,7 +145,7 @@ Ayumi (Smile): So I know English too! #id:92
 
 main_character: Ooh, interesting. #id:93
 # main_character: へえ、そうなんだ。
-[voice path="res://import/Voices/Aoi/Aoi_9.wav" volume="0.0"]
+[voice path="res://import/Voices/Aoi/Aoi_sugoi.wav" volume="0.0"]
 
 friend (Smile): すごい! #id:94
 # friend: すごい！
@@ -160,7 +160,7 @@ main_character: Yeah, we do, although {friend} is originally from Japan, but she
 
 main_character: Do you like fashion like Aoi? #id:97
 # main_character: アオイみたいに、アユミもファッションが好きなの？
-[voice volume="0.0"]
+[voice path="res://import/Voices/Ayumi/ayumi_CUT/yes+noはい、いいえ/yes+noはい、いいえ-1A.mp3" volume="0.0"]
 
 Ayumi (Happy): はい! I do, though I'm not very knowledgeble. #id:98
 # Ayumi: うん、好き！ でも、そんなに詳しいわけじゃないけど……。

@@ -1,5 +1,5 @@
 join friend left
-join  right
+join  center
 friend (Smile): It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
 # friend: Jファッション好きの人たちと話せて楽しかった〜！ まだ初日なのに、もういろいろ勉強になったよ！
 
@@ -124,6 +124,5 @@ Ayumi (Smile): See you later! #id:c8
 # Ayumi: じゃあ、またね！
 
 # jump scene5_DONE/
-[cue website 1 minigame] #id:c9
 # ［Webサイト1のミニゲームへ］
 do Dialogue.set_next_scene("website1")
