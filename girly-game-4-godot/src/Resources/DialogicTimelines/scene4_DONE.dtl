@@ -1,5 +1,5 @@
-join friend left 
-join Ayumi right
+join friend left
+join  right
 friend (Smile): It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
 # friend: Jファッション好きの人たちと話せて楽しかった〜！ まだ初日なのに、もういろいろ勉強になったよ！
 
@@ -24,12 +24,12 @@ friend (Confused): Anyways, I'm going to talk to the President about something, 
 main_character: Alright, bye bye #id:a4
 # main_character: はいはい、じゃあな。「じゃねー」
 
-leave friend 
+leave friend
 
 Ayumi (Happy): いもうと なの? @ #id:a5
 # MISSING TRANSLATION
 
-update Ayumi (Neutral)
+update 
 main_character: Uhh, if you're asking if she's my sister, no, she's my best friend. #id:a6
 # main_character: えーっと……あいつが俺の妹かって聞いてるなら、違うよ。俺の親友。
 
@@ -40,7 +40,7 @@ Ayumi (Smile): You do seem like good friends, haha. #id:a8
 
 main_character: Yeah, we are. #id:a9
 # main_character: まあな。
-update Ayumi (Neutral)
+update 
 main_character: We're pretty different though. She's crazy over fashion, while I'm… #id:aa
 # main_character: でも、結構正反対なんだ。あいつはファッション大好きで、俺は……。
 
@@ -61,7 +61,7 @@ love_interest: I don't know, I've always seen kawaii-fashion and knew it existed
 love_interest: I've bought a few pieces, but I'm no expert. #id:b0
 # Ayumi: 何着か買ってはいるけど、全然詳しいってほどじゃないよ。
 
-update Ayumi (Neutral)
+update 
 main_character: I'm sure your outfits look great! #id:b1
 # MISSING TRANSLATION
 
@@ -102,7 +102,7 @@ main_character: I just want to practice Japanese a bit- #id:bf
 main_character: So you just have to send me a website and I'll check it out! #id:c0
 # main_character: だからサイトだけ送ってくれれば、俺が見てみるよ！
 
-update Ayumi (Confused)
+update 
 Ayumi: Sou... @ #id:c1
 # Ayumi: …そう。
 love_interest: I... #id:c2
@@ -112,7 +112,7 @@ Ayumi (Smile): I think I'm okay with that! #id:c3
 Ayumi (Happy): I'll give you my number just in case. #id:c4
 # Ayumi: …念のため、連絡先も教えておくね。
 
-update Ayumi (Neutral)
+update 
 main_character: Arigatou. #id:c5
 # main_character: ありがとう。
 main_character: I'll send you the link when I choose it. #id:c6
@@ -123,6 +123,7 @@ Ayumi (Happy): うん、まかせて! @ #id:c7
 Ayumi (Smile): See you later! #id:c8
 # Ayumi: じゃあ、またね！
 
-jump scene5_DONE/
+# jump scene5_DONE/
 [cue website 1 minigame] #id:c9
 # ［Webサイト1のミニゲームへ］
+do Dialogue.set_next_scene("website1")
