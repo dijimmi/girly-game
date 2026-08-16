@@ -331,12 +331,9 @@ main_character: It's getting late. #id:250
 love_interest: Yeah, we should home soon. #id:251
 # MISSING TRANSLATION
 
-You stand up. #id:252
-# 俺は席を立つ。
-
 love_interest: [main_character name]~ #id:253
 # MISSING TRANSLATION
-love_interest: thanks for listening to me #id:254
+love_interest: Thanks for listening to me #id:254
 # MISSING TRANSLATION
 
 main_character: Anytime, {LoveInterestName} #id:255
@@ -351,6 +348,10 @@ friend: It's nothing! #id:257
 love_interest: I'll see you around! #id:258
 # Ayumi: じゃあ、またね。
 
-[prompt last website 3 minigame → in the minigame ayumi will tell you about the big fashion event at the mall. If it doesn't end up happening, then ill add the dialogue here] #id:259
-jump scene8_DONE/
-# ［最後のWebサイト3ミニゲームへ → ミニゲーム内で、アユミからモールで開催される大きなファッションイベントについて聞く。実装しない場合は、ここに会話を追加する］
+Aoi gets up and leaves.
+[background scene="res://src/Resources/FullArtBG/fullart2.tscn" fade="0.0"]
+love_interest: Hey, so before you go, I wanted to ask...
+love_interest: Would you like to pick out my dress for a Fashion Con next week?
+main_character: Sure, I'd love to!
+love_interest: Thanks! Just make sure it's REALLY PINK
+do Dialogue.set_next_scene("website1")
