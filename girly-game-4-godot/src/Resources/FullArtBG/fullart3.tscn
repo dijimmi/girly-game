@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c40retpa26tci"]
+
+[ext_resource type="Script" uid="uid://blsjcvm6gvd78" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_bf0et"]
+[ext_resource type="Texture2D" uid="uid://cganijmfwwy8w" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_WithAoi.png" id="2_f6sb2"]
+[ext_resource type="Texture2D" uid="uid://dmg5vbui4ife8" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye1.png" id="3_8y8wk"]
+[ext_resource type="Texture2D" uid="uid://2eg7bgxuojxa" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ao_Eye1.png" id="4_p3qsh"]
+
+[node name="Node2D2" type="Node" unique_id=2169453]
+script = ExtResource("1_bf0et")
+metadata/_custom_type_script = "uid://blsjcvm6gvd78"
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=937441622]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_f6sb2")
+
+[node name="Expression" type="TextureRect" parent="." unique_id=583950768]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_8y8wk")
+
+[node name="ExpressionAoi" type="TextureRect" parent="." unique_id=571673829]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_p3qsh")

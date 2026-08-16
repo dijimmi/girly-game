@@ -36,7 +36,8 @@ var active_page : String = ProductInfo.HOME
 
  
 var web_score = 0
-var curr_level = ProductInfo.Level.THREE
+
+var curr_level = ProductInfo.Level.ONE
 
 # USE THIS SIGNAL TOWARDS THE LEVEL MANAGER OR WHATEVER :)
 signal close_website_and_get_score(score : int)
@@ -52,8 +53,13 @@ func _ready() -> void:
 		ProductInfo.HONSE:            [honse_page],
 	}
 	
+	# curr_level = Dialogic.VAR.LEVEL
+	
 	# TODO: remember to delete this once we call it elsewhere
-	#new_website("2")
+	if curr_level == ProductInfo.Level.TWO:
+		new_website("2")
+	elif curr_level == ProductInfo.Level.THREE:
+		new_website("3")
 	
 	website_1.pressed.connect(_on_website_1_pressed.bind(website_1))
 	shop_page_seach_bar.search_prompted.connect(_on_search_prompted)
@@ -88,6 +94,9 @@ func init_products():
 		var loaded_product : Product = load(path + file_name)
 		if loaded_product.level == curr_level:
 			ProductInfo.products.append(loaded_product)
+	
+	shop_page.add_featured_products()
+
 @export_category("websites")
 @export var website_1: TextureButton
 @export var home_page_websites: GridContainer
@@ -144,6 +153,14 @@ func change_page(page : String, new = true):
 	
 	for sub_node in shop_page.get_children():
 		if sub_node in pages[page] or sub_node == ads:
+			if sub_node.name == "FeaturedProducts":
+				for child in sub_node.get_children():
+					if child is ProductCategory:
+						for product_thumb in child.get_products():
+							var product = product_thumb.product_dict
+							child.visible = product.level == curr_level
+						print("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
+					pass
 			sub_node.visible = true
 		else:
 			sub_node.visible = false
@@ -213,30 +230,33 @@ func _on_website_1_pressed(website : TextureButton) -> void:
 func _on_home_pressed() -> void:
 	change_page(ProductInfo.HOME)
 
-
 func _on_chat_pressed() -> void:
 	chat_layer.visible = !chat_layer.visible
 	
-	if chat_layer.visible:
+	if chat_screen.not_loaded:
 		chat_screen.load_conversation(Constants.VERONICA_CHAT)
 		chat_screen.continue_conversation(Constants.VERONICA_CHAT)
+		chat_screen.not_loaded = false
 
 
 func _on_view_product_page_buy_product(product: Product) -> void:	
-	if product.winner:
-		if product.level == ProductInfo.Level.ONE:
-			update_score(500)
-		elif product.level == ProductInfo.Level.TWO:
-			update_score(750)
-		elif product.level == ProductInfo.Level.THREE:
-			update_score(1000)
-	elif product.mid_winner:
-		if product.level == ProductInfo.Level.ONE:
-			update_score(250)
-		elif product.level == ProductInfo.Level.TWO:
-			update_score(375)
-		elif product.level == ProductInfo.Level.THREE:
-			update_score(500)
+	# curr_level = Dialogic.VAR.LEVEL
+	
+	if product.level == curr_level:
+		if product.winner:
+			if curr_level == ProductInfo.Level.ONE:
+				update_score(500)
+			elif curr_level == ProductInfo.Level.TWO:
+				update_score(750)
+			elif curr_level == ProductInfo.Level.THREE:
+				update_score(1000)
+		elif product.mid_winner:
+			if curr_level == ProductInfo.Level.ONE:
+				update_score(250)
+			elif curr_level == ProductInfo.Level.TWO:
+				update_score(375)
+			elif curr_level == ProductInfo.Level.THREE:
+				update_score(500)
 	else:
 		update_score(0)
 	
@@ -246,6 +266,8 @@ func _on_view_product_page_buy_product(product: Product) -> void:
 
 
 func _on_chat_screen_hint_received(_hint_num: Variant) -> void:
+	# curr_level = Dialogic.VAR.LEVEL
+	
 	if curr_level == ProductInfo.Level.ONE:
 		update_score(-250)
 	elif curr_level == ProductInfo.Level.TWO:

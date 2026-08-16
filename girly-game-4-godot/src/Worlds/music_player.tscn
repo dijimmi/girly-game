@@ -11,15 +11,31 @@
 [ext_resource type="Texture2D" uid="uid://hd284xu3jrgk" path="res://import/Art/ui_tex/website/img_web_vol.png" id="8_rimpb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vfry"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+bg_color = Color(0, 0, 0, 0.49019608)
+border_width_left = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 0.49019608)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_odkhn"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m8is"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6bnn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vno5r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8f05v"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rkxfx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x7vau"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3nd3o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eitwk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_62to2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4814"]
 
@@ -121,16 +137,28 @@ mouse_filter = 1
 [node name="Back" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=549654954]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_odkhn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7m8is")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d6bnn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vno5r")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8f05v")
 icon = ExtResource("4_rimpb")
 
 [node name="PlayPause" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=239824338]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_rkxfx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x7vau")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3nd3o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_eitwk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_62to2")
 icon = ExtResource("5_mxld2")
 
 [node name="Forward" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=223567348]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_v4814")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_x7vau")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3nd3o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_eitwk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_62to2")
 icon = ExtResource("6_4j605")
 
 [node name="Control" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2038559247]
@@ -172,10 +200,11 @@ bus = &"Music"
 
 [node name="NextSongs" type="VBoxContainer" parent="." unique_id=1114873002]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="VolumeControl" type="Control" parent="." unique_id=318996837]
 layout_mode = 2
-mouse_filter = 1
+mouse_filter = 2
 
 [node name="VolumeBtn" type="Button" parent="VolumeControl" unique_id=706482849]
 layout_mode = 0

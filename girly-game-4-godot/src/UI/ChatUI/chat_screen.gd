@@ -79,6 +79,8 @@ var first_time : Dictionary = {
 	Constants.VERONICA_CHAT : true
 }
 
+var not_loaded = true
+
 signal hint_received(hint_num)
 
 # Called when the node enters the scene tree for the first time.

@@ -7,6 +7,7 @@ script = ExtResource("1_84maq")
 product_name = "ブランド8"
 level = 1
 substyle = "ゴスロリ"
+featured = true
 textures_path = "res://import/Art/shop/outfit_b"
 color_set1 = Array[Color]([Color(0.050980393, 0.050980393, 0.050980393, 1), Color(0.0448, 0.053200003, 0.07, 1), Color(0.06666667, 0.07450981, 0.09019608, 1)])
 color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

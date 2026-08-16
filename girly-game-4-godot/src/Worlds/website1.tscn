@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bb21jci4ag116" path="res://src/UI/Website/product_category.tscn" id="7_njpc8"]
 [ext_resource type="Script" uid="uid://cd12yptx1yqcp" path="res://src/Worlds/honse_page.gd" id="7_t3722"]
 [ext_resource type="Texture2D" uid="uid://bciht1eqxyjtp" path="res://honsetastic.jpg" id="7_yym1m"]
-[ext_resource type="FontFile" uid="uid://dksbyhngtpu87" path="res://import/Fonts/LINESeedJP-Bold.ttf" id="8_bicfs"]
+[ext_resource type="FontFile" uid="uid://blxcvhf81n8nq" path="res://import/Font/amoresa-aged.otf" id="8_acry7"]
 [ext_resource type="Texture2D" uid="uid://dreo8lff3hm7n" path="res://images.jpg" id="8_t3722"]
 [ext_resource type="Script" uid="uid://cwfpbg0nle6jm" path="res://src/UI/Website/view_product_page.gd" id="9_kvwn1"]
 [ext_resource type="PackedScene" uid="uid://dtf43equp8j4p" path="res://src/UI/Website/product_big_view.tscn" id="10_jqbq8"]
@@ -271,8 +271,10 @@ offset_top = -11.5
 offset_bottom = 11.5
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("8_bicfs")
+theme_override_colors/font_color = Color(0.92941177, 0.4745098, 0.6039216, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.53333336)
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("8_acry7")
 theme_override_font_sizes/font_size = 200
 text = "1"
 
@@ -410,6 +412,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/ShopPageBG/FeaturedProducts" unique_id=1735584603]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -438,6 +441,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="ViewProductPage" type="Control" parent="VBoxContainer/ShopPageBG" unique_id=1542293147 node_paths=PackedStringArray("buy_popup", "product_big_view", "product_info")]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -793,25 +797,25 @@ visible = false
 anchors_preset = -1
 anchor_right = 0.5864583
 anchor_bottom = 0.6675926
-offset_left = -916.0
-offset_top = -214.0
-offset_right = -682.0
-offset_bottom = 305.0
+offset_left = -914.0
+offset_top = -276.0
+offset_right = -680.0
+offset_bottom = 243.0
 metadata/_edit_use_anchors_ = true
 
 [node name="MusicLayer" type="CanvasLayer" parent="." unique_id=971382257]
+visible = false
 
 [node name="PanelContainer" parent="MusicLayer" unique_id=1197386428 instance=ExtResource("20_kvwn1")]
 anchors_preset = -1
 anchor_left = 0.009000001
-anchor_top = 0.77500004
-anchor_right = 0.165
-anchor_bottom = 0.94100004
-offset_left = 11.719999
-offset_top = -66.00006
-offset_right = 12.199982
-offset_bottom = -66.160095
-metadata/_edit_use_anchors_ = true
+anchor_top = 0.71400005
+anchor_right = 0.15900001
+anchor_bottom = 0.88000005
+offset_left = 235.72
+offset_top = 16.879944
+offset_right = 247.71997
+offset_bottom = 16.719849
 
 [node name="Honse" type="AudioStreamPlayer" parent="." unique_id=961655352]
 stream = ExtResource("33_ly3u1")

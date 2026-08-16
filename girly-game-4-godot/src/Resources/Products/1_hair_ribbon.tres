@@ -8,6 +8,7 @@ product_name = "【DOLLCANDY】- バブルガム   ヘアリボン"
 level = 0
 accesory_type = "ヘアリボン"
 substyle = "クラシックロリー"
+featured = true
 mid_winner = true
 loser = false
 textures_path = "res://import/Art/shop/hair_ribbon"

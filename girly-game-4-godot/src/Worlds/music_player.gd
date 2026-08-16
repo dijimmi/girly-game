@@ -40,6 +40,8 @@ var songs = [
 ]
 
 var song_index: int = 0
+var next_song_1_index: int = 0
+var next_song_2_index: int = 0
 var current_value: float = 0.0
 var is_dragging: bool = false
 
@@ -47,17 +49,15 @@ var is_dragging: bool = false
 func _ready() -> void:
 	await get_tree().process_frame
 	
-	#_route_existing_music_players()
-	#_init_volume_slider()
-	#
-	## Start the first song
-	#setup_song(0, true)
-	#
-	#next_song_1_label.text = songs[0]["title"]
-	#next_song_2_label.text = songs[1]["title"]
-	#
-	#next_song_1_bg.gui_input.connect(_on_next_song_1_input)
-	#next_song_2_bg.gui_input.connect(_on_next_song_2_input)
+	_route_existing_music_players()
+	_init_volume_slider()
+	
+	# Start the first song
+	setup_song(0, true)
+	
+	next_song_1_bg.gui_input.connect(_on_next_song_1_input)
+	next_song_2_bg.gui_input.connect(_on_next_song_2_input)
+	current_song.finished.connect(_on_current_song_finished)
 
 
 func setup_song(index: int, play: bool = true) -> void:
@@ -74,6 +74,7 @@ func setup_song(index: int, play: bool = true) -> void:
 	song_thumbnail.texture = songs[index]["image"]
 	song_name.text = songs[index]["title"]
 	aritst_name.text = songs[index]["artist"]
+	_update_up_next()
 	
 	current_song.stop()
 	current_song.stream_paused = false
@@ -85,6 +86,13 @@ func setup_song(index: int, play: bool = true) -> void:
 	
 	if play:
 		current_song.play()
+
+
+func _update_up_next() -> void:
+	next_song_1_index = (song_index + 1) % songs.size()
+	next_song_2_index = (song_index + 2) % songs.size()
+	next_song_1_label.text = songs[next_song_1_index]["title"]
+	next_song_2_label.text = songs[next_song_2_index]["title"]
 
 
 func _process(_delta: float) -> void:
@@ -155,6 +163,10 @@ func _on_forward_pressed() -> void:
 		song_index = 0
 	
 	setup_song(song_index)
+
+
+func _on_current_song_finished() -> void:
+	_on_forward_pressed()
 
 
 func _route_existing_music_players() -> void:
@@ -256,9 +268,9 @@ func update_volume_icon() -> void:
 
 func _on_next_song_1_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
-		setup_song(0)
+		setup_song(next_song_1_index)
 
 
 func _on_next_song_2_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
-		setup_song(1)
+		setup_song(next_song_2_index)
