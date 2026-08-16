@@ -1,4 +1,5 @@
 join pres center
+set {LEVEL} = 1.0
 pres (Happy): Hello everyone! Konnichiha! @ #id:ca
 # pres: みんな、ハロー！ 「こんにちは」！
 main_character: Hello! #id:cb
@@ -307,3 +308,4 @@ main_character: See ya! #id:13f
 
 [cue website 2 minigame] #id:140
 # ［Webサイト2のミニゲームへ］
+do Dialogue.set_next_scene("website1")

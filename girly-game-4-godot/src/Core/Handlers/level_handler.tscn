@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://w0xct215t6of" path="res://src/Worlds/Cutscenes/cutscene_fashion_club.tscn" id="4_1yjvo"]
 [ext_resource type="PackedScene" uid="uid://3gbqc8g1x28u" path="res://src/Worlds/website1.tscn" id="5_j1ikt"]
 [ext_resource type="PackedScene" uid="uid://c6ltsnf7brv0j" path="res://src/Worlds/Cutscenes/cutscene_website_placeholder.tscn" id="6_m66gv"]
+[ext_resource type="PackedScene" uid="uid://dbjofwn4i8ycc" path="res://src/Worlds/website_ender.tscn" id="7_qntjh"]
 
 [sub_resource type="Animation" id="Animation_3mgl7"]
 length = 0.001
@@ -72,6 +73,7 @@ scene_array = Dictionary[String, PackedScene]({
 "main menu": ExtResource("3_sipf8"),
 "scene1": ExtResource("2_q84wo"),
 "website1": ExtResource("5_j1ikt"),
+"website_ender": ExtResource("7_qntjh"),
 "website_placeholder": ExtResource("6_m66gv")
 })
 
