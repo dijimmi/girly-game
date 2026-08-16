@@ -1,6 +1,7 @@
 [background arg="res://import/Art/BackgroundArt/bg_river_afternoon.png" fade="0.0"]
 join pres center
 set {LEVEL} = 1.0
+do AudioManager.load_music("scene2")
 pres (Happy): Hello everyone! こんにちは! @ #id:ca
 # pres: みんな、ハロー！ 「こんにちは」！
 main_character: Hello! #id:cb

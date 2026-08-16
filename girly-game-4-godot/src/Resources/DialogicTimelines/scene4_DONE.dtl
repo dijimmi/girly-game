@@ -1,7 +1,6 @@
 [background arg="res://import/Art/BackgroundArt/bg_fashion_club.png" fade="0.5" wait="true"]
-join friend left
 friend: It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
-friend (Smile): It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
+do AudioManager.load_music("scene2")
 # friend: Jファッション好きの人たちと話せて楽しかった〜！ まだ初日なのに、もういろいろ勉強になったよ！
 
 main_character: うそつき! I'm sure you knew all that already. #id:a0
@@ -101,14 +100,6 @@ love_interest: I think I'm okay with that! #id:c3
 love_interest: I'll give you my number just in case. #id:c4
 # Ayumi: …念のため、連絡先も教えておくね。
 
-love_interest: I was thinking I wanted something from the brand DOLLCANDY
-
-love_interest: Though it's not necessary!
-
-love_interest: I mainly want something with pastel colors, and that covers my head.
-
-main_character: Got it!
-
 main_character: ありがとう. #id:c5
 # main_character: ありがとう。
 main_character: I'll send you the link when I choose it. #id:c6
@@ -118,7 +109,5 @@ love_interest: うん、まかせて! #id:c7
 # MISSING TRANSLATION
 love_interest: See you later! #id:c8
 # Ayumi: じゃあ、またね！
-
-# jump scene5_DONE/
+do Dialogue.set_next_scene("website_placeholder")
 # ［Webサイト1のミニゲームへ］
-do Dialogue.set_next_scene("website1")

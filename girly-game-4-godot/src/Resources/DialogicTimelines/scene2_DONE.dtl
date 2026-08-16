@@ -1,5 +1,6 @@
 [background arg="res://import/Art/BackgroundArt/bg_corridor_afternoon.png" fade="1.0" wait="true"]
 [style name="CustomDialogue"]
+do AudioManager.load_music("scene2")
 {FriendName} and I walk together through the hallways, getting used to our surroundings. #id:47
 # MISSING TRANSLATION
 Even though we've been here for a few weeks already, it still feels so different from back home. #id:48

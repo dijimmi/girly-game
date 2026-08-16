@@ -2,6 +2,7 @@
 # Scene 8: no fashion reunion this time, maybe it gets skipped and you see Sakura in the hallways or smth and ask her why she didn’t go to the reunion and invite her out to talk about it.
 
 Really odd that Ayumi wasnt here. She said she would be here… #id:1be
+do AudioManager.load_music("scene2")
 # アユミが来ないなんて変だな。来るって言ってたはずなのに……。
 
 When you walk out of the meeting room, you see Ayumi walking by #id:1bf

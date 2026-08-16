@@ -35,7 +35,7 @@ FA="*uid://b6mx13o3twmpr"
 [dialogic]
 
 directories/dch_directory={
-"Ayumi": "res://src/Resources/DialogicCharacters/Ayumii.dch",
+"Ayumii": "res://src/Resources/DialogicCharacters/Ayumii.dch",
 "friend": "res://src/Resources/DialogicCharacters/friend.dch",
 "love_interest": "res://src/Resources/DialogicCharacters/love_interest.dch",
 "main_character": "res://src/Resources/DialogicCharacters/main_character.dch",
