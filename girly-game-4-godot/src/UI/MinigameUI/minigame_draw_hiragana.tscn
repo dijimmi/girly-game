@@ -226,7 +226,7 @@ _data = {
 &"minigame_out": SubResource("Animation_lp4k3")
 }
 
-[node name="DrawHiragana" type="Control" unique_id=2074376187]
+[node name="DrawHiragana" type="Control" unique_id=2074376187 groups=["DrawingMinigame"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -348,7 +348,7 @@ offset_bottom = 247.0
 grow_horizontal = 0
 texture_normal = ExtResource("8_uopbp")
 
-[node name="ExitButton" type="TextureButton" parent="ExitButton2" unique_id=299052913]
+[node name="ExitButton" type="TextureButton" parent="ExitButton2" unique_id=299052913 groups=["DrawingMinigame"]]
 self_modulate = Color(0, 0, 0, 1)
 show_behind_parent = true
 layout_mode = 1

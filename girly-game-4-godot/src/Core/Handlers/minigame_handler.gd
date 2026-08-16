@@ -34,12 +34,22 @@ func _start_minigames(meta : String) -> void:
 func exit_minigames() -> void:
 	minigame_skipped = true
 	EventBus.minigame_end.emit()
+var  skip_drawing : bool = false
+var katakana_dict = Global.katakana_dict
 func _choose_minigame_order() -> void:
+	var banned_keys = katakana_dict.keys()
+	if word_to_learn in banned_keys:
+		skip_drawing = true
 	minigame_order.clear()
 	var minigames = []
+	
 	for child in get_children():
 		if child is Control:
-			minigames.append(child)
+			if skip_drawing:
+				if !child.is_in_group("DrawingMinigame"):
+					minigames.append(child)
+			else:
+				minigames
 	for i in rounds:
 		var chosen_minigame = minigames.pick_random()
 		minigame_order.append(chosen_minigame)
