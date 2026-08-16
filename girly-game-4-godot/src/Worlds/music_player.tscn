@@ -11,11 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://hd284xu3jrgk" path="res://import/Art/ui_tex/website/img_web_vol.png" id="8_rimpb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vfry"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+bg_color = Color(0, 0, 0, 0.49019608)
+border_width_left = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 0.49019608)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_odkhn"]
 
