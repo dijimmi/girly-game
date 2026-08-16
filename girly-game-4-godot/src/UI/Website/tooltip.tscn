@@ -7,6 +7,7 @@
 texture = ExtResource("2_kf5vl")
 
 [node name="Tooltip" type="CanvasLayer" unique_id=814937963 node_paths=PackedStringArray("virtual_label", "tooltip_bg", "jp_word", "romaji_word", "word_definition")]
+visible = false
 script = ExtResource("1_hfqbf")
 virtual_label = NodePath("PanelContainer/Label")
 tooltip_bg = NodePath("PanelContainer")
