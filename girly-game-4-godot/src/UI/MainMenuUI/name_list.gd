@@ -12,24 +12,8 @@ var default_name = {
 
 
 var names = [
-	{"name": "さとう",
-	"voiced_by" : ["lover","friend","president"]
-	},
-	{"name": "Evil Itachi",
-	"voiced_by" : ["lover","friend","president"]
-	},
-	{"name": "Boruto",
-	"voiced_by" : ["lover","friend","president"]
-	},
-	{"name": "Onii-chan",
-	"voiced_by" : ["lover",]
-	},
-	{"name": "Nue",
-	"voiced_by" : ["lover","president"]
-	},
-	{"name": "sample text",
-	"voiced_by" : ["lover","president"]
-	},
+	{"name": "Frank",
+	"voiced_by" : ["lover","friend"]}
 ]
 
 # Called when the node enters the scene tree for the first time.

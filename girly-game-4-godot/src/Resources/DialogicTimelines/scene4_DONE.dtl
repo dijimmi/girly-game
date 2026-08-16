@@ -1,5 +1,7 @@
 [background arg="res://import/Art/BackgroundArt/bg_fashion_club.png" fade="0.5" wait="true"]
+join friend left
 friend: It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
+friend (Smile): It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
 # friend: Jファッション好きの人たちと話せて楽しかった〜！ まだ初日なのに、もういろいろ勉強になったよ！
 
 main_character: うそつき! I'm sure you knew all that already. #id:a0
@@ -108,5 +110,7 @@ love_interest: うん、まかせて! #id:c7
 # MISSING TRANSLATION
 love_interest: See you later! #id:c8
 # Ayumi: じゃあ、またね！
-do Dialogue.set_next_scene("website_placeholder")
+
+# jump scene5_DONE/
 # ［Webサイト1のミニゲームへ］
+do Dialogue.set_next_scene("website1")

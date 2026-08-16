@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://c80o7qc46ome3"]
 
-[ext_resource type="Script" uid="uid://blsjcvm6gvd78" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_nd1sg"]
+[ext_resource type="Script" uid="uid://q1l68j17spco" path="res://src/Resources/FullArtBG/fullart_2.gd" id="1_0rr7f"]
 [ext_resource type="Texture2D" uid="uid://dbylg4viiyqxb" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee.png" id="1_utiny"]
-[ext_resource type="Texture2D" uid="uid://dmg5vbui4ife8" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye1.png" id="2_nd1sg"]
+[ext_resource type="Texture2D" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye1.png" id="2_nd1sg"]
+[ext_resource type="Texture2D" uid="uid://cganijmfwwy8w" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_WithAoi.png" id="3_pl170"]
+[ext_resource type="Texture2D" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ao_Eye1.png" id="5_6gb84"]
 
 [node name="Node2D" type="Node" unique_id=1760562375]
-script = ExtResource("1_nd1sg")
+script = ExtResource("1_0rr7f")
 metadata/_custom_type_script = "uid://blsjcvm6gvd78"
 
 [node name="Sprite2D" type="TextureRect" parent="." unique_id=1794058821]
@@ -22,6 +24,21 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_utiny")
 
+[node name="Sprite2D2" type="TextureRect" parent="." unique_id=1863461632]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pl170")
+
 [node name="Expression" type="TextureRect" parent="." unique_id=604727230]
 anchors_preset = 8
 anchor_left = 0.5
@@ -35,3 +52,18 @@ offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_nd1sg")
+
+[node name="ExpressionAoi" type="TextureRect" parent="." unique_id=1625618094]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_6gb84")

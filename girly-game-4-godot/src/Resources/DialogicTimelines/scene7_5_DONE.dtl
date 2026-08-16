@@ -6,6 +6,7 @@ We arrive at the coffee shop and Aoi helps me order a cup of tea for myself and 
 # 喫茶店に着くと、アオイが俺の分と自分の分のお茶を注文するのを手伝ってくれた。
 The three of you sit down #id:1d1
 # 三人で席に着く。
+do FA.change_expression("Ayumi", "ph")
 
 main_character: {friend name} Told me she'll be here soon. #id:1d2
 # main_character: {friend name}が、もうすぐ来るって言ってた。
@@ -19,6 +20,7 @@ main_character: So, だいじょうぶ　? #id:1d4
 love_interest: daijoubu janai desu… #id:1d5
 # MISSING TRANSLATION
 love_interest: I told my friends… like you said. #id:1d6
+do FA.change_expression("Aoi", "p")
 # Ayumi: 友達に話したの……[main_character name]に言われたとおり。
 love_interest: And most of them were excited about it. #id:1d7
 # Ayumi: ほとんどの子はね、楽しそうに話を聞いてくれたんだ。

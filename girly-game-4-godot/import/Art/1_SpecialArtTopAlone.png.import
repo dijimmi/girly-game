@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2eg7bgxuojxa"
-path="res://.godot/imported/2_SpecialArtCoffee_Ao_Eye1.png-6f3f0d61b162ac991ba99dc619293eaa.ctex"
+uid="uid://binryi7wgexop"
+path="res://.godot/imported/1_SpecialArtTopAlone.png-a414602aa55a1dd44faa56050506475e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ao_Eye1.png"
-dest_files=["res://.godot/imported/2_SpecialArtCoffee_Ao_Eye1.png-6f3f0d61b162ac991ba99dc619293eaa.ctex"]
+source_file="res://import/Art/1_SpecialArtTopAlone.png"
+dest_files=["res://.godot/imported/1_SpecialArtTopAlone.png-a414602aa55a1dd44faa56050506475e.ctex"]
 
 [params]
 

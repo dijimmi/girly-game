@@ -710,6 +710,7 @@ size_flags_vertical = 8
 columns = 3
 
 [node name="Browser" type="TextureButton" parent="VBoxContainer/TaskBarBG/TaskBar" unique_id=1739793474]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -721,6 +722,7 @@ stretch_mode = 4
 
 [node name="Chat" type="TextureButton" parent="VBoxContainer/TaskBarBG/TaskBar" unique_id=1084701904]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -804,7 +806,6 @@ offset_bottom = 243.0
 metadata/_edit_use_anchors_ = true
 
 [node name="MusicLayer" type="CanvasLayer" parent="." unique_id=971382257]
-visible = false
 
 [node name="PanelContainer" parent="MusicLayer" unique_id=1197386428 instance=ExtResource("20_kvwn1")]
 anchors_preset = -1
@@ -812,10 +813,10 @@ anchor_left = 0.009000001
 anchor_top = 0.71400005
 anchor_right = 0.15900001
 anchor_bottom = 0.88000005
-offset_left = 235.72
-offset_top = 16.879944
-offset_right = 247.71997
-offset_bottom = 16.719849
+offset_left = -5.2800007
+offset_top = 17.879944
+offset_right = 6.7199707
+offset_bottom = 17.719849
 
 [node name="Honse" type="AudioStreamPlayer" parent="." unique_id=961655352]
 stream = ExtResource("33_ly3u1")

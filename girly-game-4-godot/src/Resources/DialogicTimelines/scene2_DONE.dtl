@@ -22,7 +22,7 @@ main_character: But I'm not interested in your fashion kei whatever, {FriendName
 # main_character: でも俺、お前の言う「おしゃれ」だか何だかにはあんまり興味ないんだって{FriendName}！
 friend (Happy): But you'd be so... #id:50
 # MISSING TRANSLATION
-[voice path="res://import/Voices/Aoi/Aoi_1.wav" volume="0.0" bus="Voices"]
+[voice path="res://import/Voices/Aoi/Aoi_kawaii.wav" volume="0.0" bus="Voices"]
 friend (Smile): Kawaii! #id:51
 # MISSING TRANSLATION
 update friend (Neutral)
@@ -36,7 +36,7 @@ main_character: Ugh… I don't want to… #id:55
 # main_character: んー……やっぱ行きたくない……。
 friend (Happy): Don't you want to learn more japanese? You can meet Japanese people in here! #id:56
 # friend (JoySPeaking): 日本語、もっと覚えたいんでしょ？ ここなら日本人とも知り合えるよ！
-[voice path="res://import/Voices/Aoi/Aoi_2.wav" volume="0.0" bus="Voices"]
+[voice path="res://import/Voices/Aoi/Aoi_kanojo_mo.wav" volume="0.0" bus="Voices"]
 friend (Mischievous): かのじょ も みつかる かも~ #id:57
 # MISSING TRANSLATION
 main_character: A... what? #id:5a
@@ -65,7 +65,7 @@ main_character: ... #id:64
 # main_character: ……。
 main_character: Alright fine. But only to learn Japanese, not for any other reasons… #id:65
 # main_character: ……わかったよ、入部すればいいんだろ。ただし日本語の勉強のためだからな。それ以外の理由じゃないから……。
-[voice path="res://import/Voices/Aoi/Aoi_4.wav" volume="1.5" bus="Voices"]
+[voice path="res://import/Voices/Aoi/Aoi_yatta.wav" volume="1.5" bus="Voices"]
 update friend (Smile) [animation="Bounce" length="0.4"]
 friend (Smile): やった！ #id:66
 leave friend

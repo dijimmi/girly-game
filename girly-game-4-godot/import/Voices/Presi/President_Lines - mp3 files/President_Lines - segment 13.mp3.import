@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://icft88v2yqaq"
+path="res://.godot/imported/President_Lines - segment 13.mp3-6a9a75ff53f06d68ecadb0cd2fea24d4.mp3str"
+
+[deps]
+
+source_file="res://import/Voices/Presi/President_Lines - mp3 files/President_Lines - segment 13.mp3"
+dest_files=["res://.godot/imported/President_Lines - segment 13.mp3-6a9a75ff53f06d68ecadb0cd2fea24d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
