@@ -1,11 +1,218 @@
 [gd_scene format=3 uid="uid://c6ojot2ko0pnp"]
 
 [ext_resource type="Script" uid="uid://bhrvdg5ftyble" path="res://src/UI/MinigameUI/minigame_draw_hiragana.gd" id="1_k6yt4"]
+[ext_resource type="Theme" uid="uid://bpcan81im5njq" path="res://src/Resources/Themes/theme.tres" id="1_xam24"]
 [ext_resource type="PackedScene" uid="uid://ckjywq7d7pc5d" path="res://src/Entity/drawing_frame.tscn" id="2_vhj4k"]
 [ext_resource type="Texture2D" uid="uid://btqi3441eaut5" path="res://import/Art/UIArt/Hiragana/handakuten.png" id="3_217i8"]
 [ext_resource type="Texture2D" uid="uid://cocu2tg20h3di" path="res://import/Art/UIArt/Hiragana/dakuten.png" id="4_f73qd"]
 [ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/UIArt/Hiragana/a_1.png" id="4_lkbmo"]
+[ext_resource type="Texture2D" uid="uid://nuf238yqaa41" path="res://import/Art/UIArt/MainMenu/button1.png" id="8_uopbp"]
+[ext_resource type="Texture2D" uid="uid://co8l3sv2nlfmd" path="res://import/Art/UIArt/MainMenu/button1_bg.png" id="9_lp4k3"]
 [ext_resource type="Texture2D" uid="uid://bjqv567gklwfr" path="res://import/Art/UIArt/Hiragana/hiragana_writing_background.png" id="12_2lagt"]
+
+[sub_resource type="Gradient" id="Gradient_tsmec"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.54275095, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.52156866, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xam24"]
+gradient = SubResource("Gradient_tsmec")
+
+[sub_resource type="Animation" id="Animation_xam24"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DrawingFrame:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Instructions:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ExitButton2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Rounds:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_uopbp"]
+resource_name = "minigame_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:self_modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DrawingFrame:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03333333, 0.36666667, 0.53333336, 0.6666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1.2, 1.2), Vector2(0.9, 0.9), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DrawingFrame:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.16666667, 0.39999998),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Instructions:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.23333332, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Rounds/TextureRect:rotation")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.26666668, 0.4, 0.46666664, 0.53333336),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.20943951023931956, 0.17453292519943295, -0.08726646259971647, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ExitButton2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Rounds:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lp4k3"]
+resource_name = "minigame_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rounds:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lp4k3"]
+_data = {
+&"RESET": SubResource("Animation_xam24"),
+&"minigame_in": SubResource("Animation_uopbp"),
+&"minigame_out": SubResource("Animation_lp4k3")
+}
 
 [node name="DrawHiragana" type="Control" unique_id=2074376187]
 layout_mode = 3
@@ -15,9 +222,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("1_xam24")
 script = ExtResource("1_k6yt4")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1334012961]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_xam24")
+
 [node name="DrawingFrame" parent="." unique_id=614917709 node_paths=PackedStringArray("label") instance=ExtResource("2_vhj4k")]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(384, 384)
 layout_mode = 1
 anchors_preset = 8
@@ -29,6 +248,7 @@ offset_left = -192.0
 offset_top = -222.0
 offset_right = 192.0
 offset_bottom = 162.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 mouse_default_cursor_shape = 2
 ten_pictures = Dictionary[String, Texture2D]({
 "dakuten": ExtResource("4_f73qd"),
@@ -104,22 +324,43 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 
-[node name="ExitButton" type="Button" parent="." unique_id=126063775]
-layout_mode = 0
-offset_left = 1087.0
-offset_top = 31.0
-offset_right = 1119.0
-offset_bottom = 62.0
-text = "X"
+[node name="ExitButton2" type="TextureButton" parent="." unique_id=171327982]
+self_modulate = Color(0.6121493, 0.76957625, 0.8362116, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -517.0
+offset_top = 77.0
+offset_right = -17.0
+offset_bottom = 247.0
+grow_horizontal = 0
+texture_normal = ExtResource("8_uopbp")
 
-[node name="Rounds" type="Label" parent="." unique_id=994470717]
-layout_mode = 0
-offset_left = 52.0
-offset_top = 57.0
-offset_right = 129.0
-offset_bottom = 126.0
-theme_override_font_sizes/font_size = 50
-text = "0/0"
+[node name="ExitButton" type="TextureButton" parent="ExitButton2" unique_id=299052913]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture_normal = ExtResource("9_lp4k3")
+
+[node name="Label" type="Label" parent="ExitButton2" unique_id=763309931]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Skip ->"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Instructions" type="Label" parent="." unique_id=1984616786]
 layout_mode = 1
@@ -127,11 +368,11 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -122.0
-offset_top = 47.0
+offset_top = 102.0
 offset_right = 122.0
-offset_bottom = 90.0
+offset_bottom = 175.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "word"
 horizontal_alignment = 1
 
@@ -145,11 +386,47 @@ offset_right = 122.0
 offset_bottom = 43.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.07970453, 0.6542565, 0.82694465, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "word"
 horizontal_alignment = 1
 visible_characters = 0
 visible_characters_behavior = 1
 visible_ratio = 0.0
 
-[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[node name="Rounds" type="Label" parent="." unique_id=472923597]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 31.0
+offset_right = 334.0
+offset_bottom = 148.0
+theme_override_font_sizes/font_size = 80
+text = "0/0"
+
+[node name="TextureRect" type="TextureRect" parent="Rounds" unique_id=1479937747]
+self_modulate = Color(1, 0.88566667, 0.51, 1)
+show_behind_parent = true
+layout_mode = 0
+offset_left = -180.0
+offset_top = 26.0
+offset_right = 320.0
+offset_bottom = 196.0
+rotation = -0.20943952
+texture = ExtResource("8_uopbp")
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="Rounds/TextureRect" unique_id=881727553]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_lp4k3")
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2115143470]
+libraries/ = SubResource("AnimationLibrary_lp4k3")
+
+[connection signal="pressed" from="ExitButton2" to="." method="_on_exit_button_pressed"]

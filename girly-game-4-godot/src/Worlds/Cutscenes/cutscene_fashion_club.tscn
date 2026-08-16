@@ -246,12 +246,12 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = -27.0
 offset_top = -7.0
-offset_right = 1168.0
-offset_bottom = 40.0
+offset_right = 1938.0
+offset_bottom = 107.0
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=732926237]
 layout_mode = 0
 offset_left = -22.0
-offset_top = 617.0
-offset_right = 1196.0
-offset_bottom = 664.0
+offset_top = 985.0
+offset_right = 1981.0
+offset_bottom = 1093.0

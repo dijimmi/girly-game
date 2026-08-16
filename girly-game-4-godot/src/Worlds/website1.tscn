@@ -311,6 +311,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="ShopPageBG" type="Control" parent="VBoxContainer" unique_id=1604782043 node_paths=PackedStringArray("products_list", "products_list_scroll", "view_product_page", "featured_products")]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -590,6 +591,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_gxqel")
 text = "No"
 
 [node name="ShopPageSearchBar" type="Control" parent="VBoxContainer" unique_id=70517041 node_paths=PackedStringArray("search_bar", "shop_page")]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0

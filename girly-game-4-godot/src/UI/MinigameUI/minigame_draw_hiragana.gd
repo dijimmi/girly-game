@@ -135,7 +135,7 @@ func update_guide(hint : String = "") -> void:
 	if hint != "":
 		texture_rect.texture = Texture2D.new()
 		return
-		
+	
 	$DrawingFrame/TextureRectMini.texture = Texture2D.new()
 	$DrawingFrame/TextureRect.texture = Texture2D.new()
 	

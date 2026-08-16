@@ -121,6 +121,7 @@ translation/intern/translation_folder="res://src/Translations"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 

@@ -15,10 +15,13 @@ func _ready() -> void:
 
 func start_minigame(meta : String) -> void:
 	update_rounds()
-
+	var previous_round = clamp(get_parent().current_rounds-1, 0, get_parent().rounds)
+	if !get_parent().minigame_order.get(previous_round) == self:
+		$AnimationPlayer.play("minigame_in")
 	fill_words(meta)
 	self.show()
 func end_minigame() -> void:
+	var next_round = get_parent().current_rounds + 1
 	hide()
 	for button in %WordsEN.get_children()+%WordsJP.get_children():
 		button.disabled = false
@@ -34,10 +37,10 @@ func connect_buttons() -> void:
 		answer_button.toggled.connect(_on_clicked.bind(false, answer_button))
 		answer_button.mouse_entered.connect(_on_button_mouse_entered)
 var stored_word : String = ""
-func _on_clicked(toggled_on : bool ,jp : bool ,button : Button) -> void:
+func _on_clicked(toggled_on : bool ,jp : bool ,button : TextureButton) -> void:
 	if !toggled_on:
 		return
-	var word = button.text
+	var word = button.get_node("Label").text
 
 	if jp:
 		if stored_word == answers_dictionary[word]:
@@ -70,15 +73,15 @@ func clear_buttons() -> void:
 		if button.button_pressed:
 			button.set_pressed_no_signal(false)
 
-func disable_buttons(jp: bool, button : Button) -> void:
-	var button1 : String = button.text
+func disable_buttons(jp: bool, button : TextureButton) -> void:
+	var button1 : String = button.get_node("Label").text
 	var button2 : String
 	if jp:
 		button2 = answers_dictionary[button1]
 	else:
 		button2 = answers_dictionary.find_key(button1)
 	for child in %WordsEN.get_children() + %WordsJP.get_children():
-		if child.text == button1 or child.text == button2:
+		if child.get_node("Label").text == button1 or child.get_node("Label").text == button2:
 			child.set_pressed_no_signal(false)
 			child.disabled = true
 	stored_word = ""
@@ -104,8 +107,8 @@ func fill_words(meta : String) -> void:
 		var button = JP_children.pick_random()
 		var answer_button = EN_children.pick_random()
 		
-		button.text = word
-		answer_button.text = answer
+		button.get_node("Label").text = word
+		answer_button.get_node("Label").text = answer
 		
 		words.erase(word)
 		JP_children.erase(button)

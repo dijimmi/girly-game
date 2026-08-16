@@ -307,7 +307,6 @@ func recognise_line(i : int = get_parent().current_line) -> bool:
 			total_lines.append(line[i])
 
 	if total_lines.has(lines[i]):
-		AudioManager.play_random_sfx($Effects, good_line)
 		result = true
 	else:
 		AudioManager.play_sfx($Effects, wrong_line)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ckjywq7d7pc5d"]
 
 [ext_resource type="Script" uid="uid://clx471qcjq7xq" path="res://src/Entity/drawing_frame.gd" id="1_0fp2c"]
+[ext_resource type="Texture2D" uid="uid://b4y770wc8kst3" path="res://import/Art/UIArt/drawing_frame_back.png" id="1_38r3r"]
 [ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/UIArt/Hiragana/a_1.png" id="2_0fp2c"]
 [ext_resource type="Texture2D" uid="uid://bqfrwslqyop7t" path="res://import/Art/UIArt/Hiragana/a_2.png" id="3_r3aw1"]
 [ext_resource type="Texture2D" uid="uid://b2rq0v36lsn7n" path="res://import/Art/UIArt/Hiragana/a_3.png" id="4_6tgpr"]
@@ -152,6 +153,7 @@
 [ext_resource type="Texture2D" uid="uid://cwfxnej4fmgtp" path="res://import/Art/UIArt/Hiragana/wo_3.png" id="148_erpoe"]
 [ext_resource type="Texture2D" uid="uid://f70vylf5im1y" path="res://import/Art/UIArt/Hiragana/n_full.png" id="149_p45xg"]
 [ext_resource type="Texture2D" uid="uid://ka8h4u7q7g4x" path="res://import/Art/UIArt/Hiragana/n_1.png" id="150_10mjj"]
+[ext_resource type="Texture2D" uid="uid://bbmjq0mti2ke" path="res://import/Art/UIArt/drawing_frame_front.png" id="154_cxqn1"]
 
 [sub_resource type="Resource" id="Resource_6tgpr"]
 script = ExtResource("6_gy7ka")
@@ -579,14 +581,14 @@ frames = Dictionary[String, Texture2D]({
 })
 metadata/_custom_type_script = "uid://d07ct3l8h0lsp"
 
-[node name="DrawingFrame" type="ColorRect" unique_id=614917709]
+[node name="DrawingFrame" type="TextureRect" unique_id=200128519]
 clip_contents = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+texture = ExtResource("1_38r3r")
 script = ExtResource("1_0fp2c")
 hiragana_picture = Dictionary[String, ExtResource("6_gy7ka")]({
 "あ": SubResource("Resource_6tgpr"),
@@ -655,3 +657,14 @@ offset_bottom = 114.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "character not recognised"
+
+[node name="Line" type="TextureRect" parent="." unique_id=1110188666]
+modulate = Color(0.92, 0.78200006, 0.85330003, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.99, 0.99)
+texture = ExtResource("154_cxqn1")
