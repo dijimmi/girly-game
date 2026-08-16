@@ -108,7 +108,7 @@ entries = {
 "alternatives": ["u-n"],
 "extra": "",
 "name": "うん",
-"title": "Yes/That's right"
+"title": "Yeah"
 },
 "ええ": {
 "_translation_id": "2c3",
@@ -160,7 +160,7 @@ entries = {
 "_translation_id": "2ca",
 "alternatives": ["ya-tta"],
 "name": "やった",
-"title": "Yay/Hooray"
+"title": "Hooray"
 },
 "アクセサリー": {
 "_translation_id": "2cb",

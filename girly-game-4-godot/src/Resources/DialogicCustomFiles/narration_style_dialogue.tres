@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="4_8f05v"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="5_x7vau"]
 [ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="6_3nd3o"]
-[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="7_eitwk"]
 [ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="8_62to2"]
 [ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="9_5skjj"]
 [ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="10_5fuci"]
@@ -31,10 +30,12 @@ scene = ExtResource("5_x7vau")
 [sub_resource type="Resource" id="Resource_svbu3"]
 script = ExtResource("2_d6bnn")
 scene = ExtResource("6_3nd3o")
-
-[sub_resource type="Resource" id="Resource_ti7mb"]
-script = ExtResource("2_d6bnn")
-scene = ExtResource("7_eitwk")
+overrides = {
+"name_label_box_modulate": "Color(0, 0, 0, 0)",
+"name_label_custom_color": "Color(1, 1, 1, 0)",
+"name_label_use_character_color": "false",
+"name_label_use_global_color": "false"
+}
 
 [sub_resource type="Resource" id="Resource_n1luf"]
 script = ExtResource("2_d6bnn")
@@ -51,16 +52,15 @@ scene = ExtResource("10_5fuci")
 [resource]
 script = ExtResource("11_hb8m6")
 name = "narration_style_dialogue"
-layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
+layer_list = Array[String](["10", "11", "12", "13", "15", "16", "17"])
 layer_info = {
 "": SubResource("Resource_ek6lt"),
 "10": SubResource("Resource_3vp0t"),
 "11": SubResource("Resource_t1aun"),
 "12": SubResource("Resource_hvrgi"),
 "13": SubResource("Resource_svbu3"),
-"14": SubResource("Resource_ti7mb"),
 "15": SubResource("Resource_n1luf"),
 "16": SubResource("Resource_m5xod"),
 "17": SubResource("Resource_vryku")
 }
-metadata/_latest_layer = "14"
+metadata/_latest_layer = "13"

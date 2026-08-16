@@ -12,7 +12,8 @@ extends DialogicLayoutBase
 @export_file('*.ttf', '*.tres') var global_font: String = ""
 @export var global_font_size: int = 18
 
-
+func _ready():
+	global_font = Global.font_to_use.resource_path 
 func _apply_export_overrides() -> void:
 	# apply layer
 	set(&'layer', canvas_layer)

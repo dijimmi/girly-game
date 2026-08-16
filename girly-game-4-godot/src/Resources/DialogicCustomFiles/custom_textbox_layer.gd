@@ -38,7 +38,7 @@ enum AnimationsNewText {NONE, WIGGLE}
 
 @export_subgroup('Font')
 @export var text_use_global_font: bool = true
-@export_file('*.ttf', '*.tres') var normal_font: String = ""
+#@export_file('*.ttf', '*.tres') var normal_font: String = Global.font_to_use.resource_path
 @export_file('*.ttf', '*.tres') var bold_font: String = ""
 @export_file('*.ttf', '*.tres') var italics_font: String = ""
 @export_file('*.ttf', '*.tres') var bold_italics_font: String = ""
@@ -72,7 +72,7 @@ enum AnimationsNewText {NONE, WIGGLE}
 
 @export_subgroup('Font')
 @export var name_label_use_global_font: bool = true
-@export_file('*.ttf', '*.tres') var name_label_font: String = ""
+#@export_file('*.ttf', '*.tres') var name_label_font: String = Global.font_to_use.resource_path
 @export var name_label_use_global_font_size: bool = true
 @export var name_label_custom_font_size: int = 15
 
@@ -147,20 +147,14 @@ func _apply_export_overrides() -> void:
 
 func _ready() -> void:
 	DialogicUtil.autoload().Text.speaker_updated.connect(change_textbox_tex)
+
 func change_textbox_tex(_character : DialogicCharacter) -> void:
-	#if !character.custom_info.keys().has("TextBoxInfo"):
-		#return
 	var dialog_text_panel = %DialogTextPanel
 	var name_label_panel = %NameLabelPanel
-	#var ninerect_textbox = %NineRectTextbox
-	#var ninerect_texture = %NineRectTexture
-	dialog_text_panel.self_modulate = Color(1.0, 1.0, 1.0, 0.0) #character.custom_info["TextBoxInfo"]
-	#ninerect_textbox.self_modulate = character.custom_info["TextBoxInfo"]
+
+	dialog_text_panel.self_modulate = Color(1.0, 1.0, 1.0, 0.0) 
 	name_label_panel.self_modulate = Color("ffffffff")
-	#ninerect_texture.texture = load(character.custom_info["TextboxTexture"])
-	#ninerect_texture.self_modulate = character.custom_info["TextBoxInfo"] 
-	#ninerect_textbox.self_modulate.h += 50
-	#ninerect_textbox.self_modulate.a = 158.0/255.0
+
 ## Applies all text box settings to the scene.
 ## Except the box animations.
 func _apply_box_settings() -> void:
@@ -194,12 +188,7 @@ func _apply_name_label_settings() -> void:
 		name_label.add_theme_font_size_override(&"font_size", get_global_setting(&'font_size', name_label_custom_font_size) as int)
 	else:
 		name_label.add_theme_font_size_override(&"font_size", name_label_custom_font_size)
-
-	if name_label_use_global_font and get_global_setting(&'font', false):
-		name_label.add_theme_font_override(&'font', load(get_global_setting(&'font', '') as String) as Font)
-	elif not name_label_font.is_empty():
-		name_label.add_theme_font_override(&'font', load(name_label_font) as Font)
-
+ 
 	if name_label_use_global_color:
 		name_label.add_theme_color_override(&"font_color", get_global_setting(&'font_color', name_label_custom_color) as Color)
 	else:
@@ -231,7 +220,7 @@ func _apply_name_label_settings() -> void:
 func _apply_text_settings() -> void:
 	var dialog_text: DialogicNode_DialogText = %DialogicNode_DialogText
 	dialog_text.alignment = text_alignment as DialogicNode_DialogText.Alignment
-
+	
 	if text_use_global_size:
 		text_size = get_global_setting(&'font_size', text_size)
 	dialog_text.add_theme_font_size_override(&"normal_font_size", text_size)
@@ -243,18 +232,6 @@ func _apply_text_settings() -> void:
 		dialog_text.add_theme_color_override(&"default_color", get_global_setting(&'font_color', text_custom_color) as Color)
 	else:
 		dialog_text.add_theme_color_override(&"default_color", text_custom_color)
-
-	if text_use_global_font and get_global_setting(&'font', false):
-		dialog_text.add_theme_font_override(&"normal_font", load(get_global_setting(&'font', '') as String) as Font)
-	elif !normal_font.is_empty():
-		dialog_text.add_theme_font_override(&"normal_font", load(normal_font) as Font)
-	if !bold_font.is_empty():
-		dialog_text.add_theme_font_override(&"bold_font", load(bold_font) as Font)
-	if !italics_font.is_empty():
-		dialog_text.add_theme_font_override(&"italics_font", load(italics_font) as Font)
-	if !bold_italics_font.is_empty():
-		dialog_text.add_theme_font_override(&"bold_italics_font", load(bold_italics_font) as Font)
-
 
 ## Applies all indicator settings to the scene.
 func _apply_indicator_settings() -> void:

@@ -51,8 +51,8 @@ func _on_meta_clicked(meta : Variant) -> void:
 	await  _color_tween_finished
 	clicked = false
 
-@export var clicked_color : Color = Color(0.563, 0.21, 0.387, 1.0)
-@export var hover_color : Color = Color(1.0, 1.0, 1.0, 1.0)
+@export var clicked_color : Color = Color(0.56, 0.495, 0.207, 1.0)
+@export var hover_color : Color = Color(1.0, 0.906, 0.49, 1.0)
 var text_color  : Color #text color
 var base_color  : Color #glossary color
 var current_color : Color

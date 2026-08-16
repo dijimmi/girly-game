@@ -3,7 +3,16 @@ extends Control
 var difficulty : int = 0
 var word_to_teach : String = ""
 
+@export var on_skipped_sound : AudioStream = load("uid://dcxhhblaywrvd")
+@export var correct_word : Array[AudioStream] = [
+	load("uid://doi7ogbhahgqm"),
+	load("uid://bphd57c1dudby"),
+	load("uid://bmbt4yj8ul5q7"),
+]
+
+
 func start_minigame(meta : String) -> void:
+	print("Draw start")
 	if meta == "" or meta == null:
 		return
 	word_to_teach = meta
@@ -61,7 +70,6 @@ func _get_mid_exp(letters : PackedStringArray) -> float:
 	result = m / letters.size()
 	return result
 
-
 #_______-DIFFICULTY 0-_______#
 var current_symbol : int = 0
 var current_character  : String = ""
@@ -86,12 +94,14 @@ func update_current_character(hint : String = ""):
 		current_character = word_to_teach[current_symbol]
 	if hint != "":
 		current_character = hint
+
 #______-DIFFICULTY 1-2-______#
 func verify_symbol() -> void:
 	if difficulty == 0:
 		return 
 	if $DrawingFrame.recognise_character():
-		await get_tree().create_timer(0.1).timeout
+		#await get_tree().create_timer(0.1).timeout
+		AudioManager.play_random_sfx($DrawingFrame/Effects, correct_word)
 		next_symbol()
 	elif $DrawingFrame.recognise_character() == false:
 		$DrawingFrame.clear_frame()
@@ -103,6 +113,7 @@ func next_symbol() -> void:
 	current_symbol += 1
 	update_current_character()
 	if current_symbol >= word_to_teach.length():
+		AudioManager.play_random_sfx($DrawingFrame/Effects,correct_word)
 		end_minigame()
 		return
 	if word_to_teach[current_symbol] in $DrawingFrame.mini_hiragana_dictionary:
@@ -113,6 +124,8 @@ func next_symbol() -> void:
 		update_current_character($DrawingFrame.handakuten_hiragana_dictionary[word_to_teach[current_symbol]])
 	update_guide()
 func update_guide(hint : String = "") -> void:
+	update_rounds()
+	update_instructions()
 	var frames_dict : Dictionary = {}
 	var current_letter : String
 	var texture_rect = $DrawingFrame/TextureRect
@@ -148,3 +161,16 @@ func update_guide(hint : String = "") -> void:
 		1:
 			frame = frames_dict["full"]
 	texture_rect.texture = frame
+func update_instructions() -> void:
+	$Instructions.text = word_to_teach
+	$Instructions/Ratio.text = word_to_teach
+	$Instructions/Ratio.visible_ratio = current_symbol / float(word_to_teach.length())
+func update_rounds() -> void:
+	$Rounds.text = str(get_parent().current_rounds) + "/" + str(get_parent().rounds)
+
+func _on_exit_button_pressed() -> void:
+	AudioManager.play_sfx($DrawingFrame/Stroke, on_skipped_sound)
+	
+	EventBus.minigame_skipped.emit()
+	get_parent().exit_minigames()
+	end_minigame()

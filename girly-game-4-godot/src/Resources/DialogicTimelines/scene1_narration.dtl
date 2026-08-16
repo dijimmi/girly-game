@@ -1,11 +1,11 @@
 [background arg="#000000ff" fade="0.0"]
-[style name="narration_style_dialogue"]
-I’ve recently become intersted in learning Japanese ever since I’ve grown closer to my friend {FriendName}. #id:20
-I met her in high school a few years ago when she transferred from Japan. #id:21
-Ever since she came to the US, she hasn't returned home until now. #id:22
-friend: {PlayerName} I found an exchange program to Japan, we should go! #id:23
-She said in a voice message one day. #id:24
-I immediately agreed! #id:25
+[style name="CustomDialogue"]
+I’ve recently become intersted in learning Japanese ever since I’ve grown closer to my friend {FriendName}.
+I met her in high school a few years ago when she transferred from Japan.
+Ever since she came to the US, she hasn't returned home until now.
+friend: {PlayerName} I found an exchange program to Japan, we should go!
+She said in a voice message one day.
+I immediately agreed!
 [wait time="1.0" skippable="true"]
 And so begun my journey to learn Japanese... #id:26
 For real this time. #id:27

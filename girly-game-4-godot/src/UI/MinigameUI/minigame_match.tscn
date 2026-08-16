@@ -10,3 +10,117 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_huaos")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1858220723]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -423.0
+offset_top = -102.5
+offset_right = 423.0
+offset_bottom = 102.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 113
+
+[node name="WordsJP" type="HBoxContainer" parent="VBoxContainer" unique_id=463865759]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+
+[node name="Button" type="Button" parent="VBoxContainer/WordsJP" unique_id=1414090507]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+toggle_mode = true
+text = "???"
+clip_text = true
+
+[node name="Button2" type="Button" parent="VBoxContainer/WordsJP" unique_id=223432824]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+toggle_mode = true
+text = "???"
+clip_text = true
+
+[node name="Button3" type="Button" parent="VBoxContainer/WordsJP" unique_id=620008884]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+toggle_mode = true
+text = "???"
+clip_text = true
+
+[node name="WordsEN" type="HBoxContainer" parent="VBoxContainer" unique_id=1585375014]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+
+[node name="Button" type="Button" parent="VBoxContainer/WordsEN" unique_id=1427890550]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+toggle_mode = true
+text = "???"
+clip_text = true
+
+[node name="Button2" type="Button" parent="VBoxContainer/WordsEN" unique_id=1003846103]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+toggle_mode = true
+text = "???"
+clip_text = true
+
+[node name="Button3" type="Button" parent="VBoxContainer/WordsEN" unique_id=479412160]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+toggle_mode = true
+text = "???"
+clip_text = true
+
+[node name="ExitButton" type="Button" parent="." unique_id=2004063728]
+layout_mode = 0
+offset_left = 1087.0
+offset_top = 31.0
+offset_right = 1119.0
+offset_bottom = 62.0
+text = "X"
+
+[node name="Rounds" type="Label" parent="." unique_id=556159605]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 57.0
+offset_right = 129.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 50
+text = "0/0"
+
+[node name="Instructions" type="Label" parent="." unique_id=1643110896]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.0
+offset_top = 47.0
+offset_right = 122.0
+offset_bottom = 134.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Match the words
+"
+
+[node name="Button" type="AudioStreamPlayer" parent="." unique_id=1619909515]
+max_polyphony = 50
+bus = &"SoundEffects"
+
+[node name="Effects" type="AudioStreamPlayer" parent="." unique_id=2055427512]
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

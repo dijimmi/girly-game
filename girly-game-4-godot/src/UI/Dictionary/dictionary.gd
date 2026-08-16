@@ -32,7 +32,6 @@ func _ready() -> void:
 func _word_clicked(word : String) -> void:
 	update_word_details(word)
 func _unlock_word(word) -> void:
-	glossary.entries[word].set("unlocked", true)
 	buttons_dict[word].update_dict_word(word, glossary.entries[word]["unlocked"])
 
 @export_category("word description")

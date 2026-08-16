@@ -28,6 +28,8 @@ const TITLE_PROPERTY := "title"
 const TEXT_PROPERTY := "text"
 ## Property in a glossary entry.
 const EXTRA_PROPERTY := "extra"
+
+const UNLOCKED := "unlocked"
 ## Property in a glossary entry. The translation ID of the entry.
 ## May be empty if the entry has not been translated yet.
 const TRANSLATION_PROPERTY := "_translation_id"
