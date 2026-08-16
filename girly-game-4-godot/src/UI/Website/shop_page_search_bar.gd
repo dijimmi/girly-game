@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Control
 
 @export var search_bar : LineEdit
 @export var shop_page : ShopPage

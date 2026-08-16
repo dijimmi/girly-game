@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends Control
 
 @export var product_name : RichTextLabel
 @export var product_description : RichTextLabel

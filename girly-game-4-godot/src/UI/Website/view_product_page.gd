@@ -1,9 +1,9 @@
 class_name ViewProductPage
-extends HBoxContainer
+extends Control
 
 @export var buy_popup : CanvasLayer
 @export var product_big_view : VBoxContainer
-@export var product_info : VBoxContainer
+@export var product_info : Control
 
 var curr_product : Product
 

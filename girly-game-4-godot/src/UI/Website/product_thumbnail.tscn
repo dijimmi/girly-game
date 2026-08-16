@@ -1,20 +1,22 @@
 [gd_scene format=3 uid="uid://drxjnq3fmknhi"]
 
 [ext_resource type="Script" uid="uid://col1e77wbqaxe" path="res://src/UI/Website/product_thumbnail.gd" id="1_31fjj"]
+[ext_resource type="Texture2D" uid="uid://kyv0wnmp4fbf" path="res://import/Art/ui_tex/website/product_bg.png" id="2_se6kq"]
 
-[node name="ProductThumbnail" type="VBoxContainer" unique_id=1907573936 node_paths=PackedStringArray("title", "image_bg", "base_img", "tint_img", "top_img")]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_61dra"]
+texture = ExtResource("2_se6kq")
+
+[node name="ProductThumbnail" type="VBoxContainer" unique_id=1907573936 node_paths=PackedStringArray("title", "image_bg")]
 offset_right = 100.0
 offset_bottom = 150.0
 script = ExtResource("1_31fjj")
 title = NodePath("Description")
 image_bg = NodePath("PanelContainer")
-base_img = NodePath("")
-tint_img = NodePath("")
-top_img = NodePath("")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=31477571]
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_61dra")
 
 [node name="Description" type="RichTextLabel" parent="." unique_id=1984189260]
 layout_mode = 2

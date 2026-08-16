@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Control
 
 func save_state(_page, _undo):
 	pass

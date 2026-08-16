@@ -1,11 +1,11 @@
 class_name ShopPage
-extends PanelContainer
+extends Control
 
 @export var products_list : VBoxContainer
 @export var products_list_scroll : ScrollContainer
 @export var view_product_page : ViewProductPage
 @export var category_scene : PackedScene
-@export var featured_products : PanelContainer
+@export var featured_products : Control
 
 signal product_clicked_from_category(product)
 

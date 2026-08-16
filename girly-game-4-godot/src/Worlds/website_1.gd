@@ -1,22 +1,22 @@
 extends Control
 
-@export var my_vbox : VBoxContainer
+@export var my_vbox : Control
 @export var url: LineEdit
 
-@export var address_bar : PanelContainer
-@export var task_bar : PanelContainer
+@export var address_bar : Control
+@export var task_bar : Control
 
-@export var shop_page_seach_bar : PanelContainer
+@export var shop_page_seach_bar : Control
 
 @export var shop_page : ShopPage
 @export var products_list_page : ScrollContainer
-@export var view_product_page : HBoxContainer
+@export var view_product_page : Control
 @export var product_big_view : VBoxContainer
-@export var featured_page : PanelContainer
-@export var ads : VBoxContainer
+@export var featured_page : Control
+@export var ads : Control
 
-@export var homepage : PanelContainer
-@export var honse_page: PanelContainer
+@export var homepage : Control
+@export var honse_page: Control
 
 @export var undo : Button
 @export var redo : Button
@@ -124,7 +124,7 @@ func change_page(page : String, new = true):
 
 
 func save_state(page):
-	for node : Container in pages[page]:
+	for node : Control in pages[page]:
 		if node in my_vbox.get_children():
 			if node.has_method("save_state"):
 				node.save_state(page, stack.count(page))
@@ -140,7 +140,7 @@ func save_state(page):
 func load_state(from_undo : bool):
 	var page = stack[stack_idx]
 	
-	for node : Container in pages[page]:
+	for node : Control in pages[page]:
 		if node in my_vbox.get_children():
 			if node.has_method("load_state"):
 				node.load_state(page, from_undo)
