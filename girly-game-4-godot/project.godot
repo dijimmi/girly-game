@@ -29,7 +29,7 @@ ProductInfo="*uid://itgrjwushly2"
 AudioManager="*uid://l705be311h5p"
 Tooltip="*uid://d4b0ahy63w48c"
 Constants="*uid://elfvujdn5hpr"
-FullArtChange="*uid://pilv5vcojh35"
+FA="*uid://b6mx13o3twmpr"
 
 [dialogic]
 
@@ -57,7 +57,8 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
-"CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
+"CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres",
+"narration_style_dialogue": "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres", "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"]
@@ -142,7 +143,6 @@ folder_colors={
 [global_group]
 
 Lines=""
-DrawingMinigame=""
 
 [input]
 
