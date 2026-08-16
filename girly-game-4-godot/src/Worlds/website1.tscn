@@ -416,7 +416,6 @@ autoplay = true
 
 [node name="Song3" type="AudioStreamPlayer" parent="." unique_id=962516138]
 stream = ExtResource("24_uvjsx")
-autoplay = true
 
 [node name="Song4" type="AudioStreamPlayer" parent="." unique_id=2040202689]
 stream = ExtResource("25_axus7")

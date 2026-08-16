@@ -52,9 +52,8 @@ friend (Happy): It's a new club, give it time... #id:74
 friend: Oh look, another one is joining! #id:75
 # friend (JoySPeaking): あ、見て。もう一人来たよ。
 
-Ayumi: (JP) Here it is. (enters the scene) #id:76
+Ayumi: Here's my signature! Thanks! #id:76
 # MISSING TRANSLATION
-[Maybe Ayumi could say something like "This is the place!". Could be a good chance to show her personality/speaking style in a quick way.] #id:77
 I look at the new girl… She's so… #id:78
 # 新しく入ってきた女の子を見る。……なんていうか、その……。
 Kawaii! #id:79
@@ -66,87 +65,107 @@ She's... she's... #id:7b
 
 My {FriendName}'s piercing gaze interrupt my thoughts. #id:7c
 # MISSING TRANSLATION
+[voice path="res://import/Voices/Aoi/Frank_2.wav" volume="0.0"]
 
-friend: Ohoho {PlayerName}~ you like her? #id:7d
+friend (Mischievous): Ohoho {PlayerName}~ you like her? #id:7d
 # friend: ほほ〜う、{PlayerName}〜？ {PlayerName}ってああいう娘がタイプ？
 
 main_character: What? No! What are you talking about? #id:7e
 # main_character: は？ 違うって！ 何言ってんだよ？
 
-friend: Oh, nothing! #id:7f
+friend (Smile): Oh, nothing! #id:7f
 # friend: べつに〜？
+update friend (Neutral)
 
 Ayumi walks towards us. #id:80
 # MISSING TRANSLATION
+join Ayumi (Smile) center
 
-friend: こんにちは! @ #id:81
+friend (Smile): こんにちは! #id:81
 # friend: こんにちは！
 main_character: Hello… #id:82
 # main_character: こ、こんにちは……。
+update friend (Neutral)
 
-Ayumi: Hm? #id:83
+Ayumi (Neutral): Hm? #id:83
 # Ayumi: ん？
-Ayumi: Ah! Are you two the new exchange students, hello! #id:84
+Ayumi (Smile): Ah! Are you two the new exchange students? Hello! #id:84
 # Ayumi: あっ！ 二人が新しく来た留学生さん？ 初めまして！
+[voice path="res://import/Voices/Aoi/Aoi_5.wav" volume="0.0" bus="Voices"]
 
-friend: うん! @ #id:85
+friend (Happy): うん! #id:85
 # friend: うん！
 friend: We just joined! #id:86
 # friend: 私たち、今入部したばかりなの！
+update friend (Neutral)
 
 main_character: Yeah, she dragged me here... #id:87
 # main_character: まあ、俺はこいつに引っ張ってこられただけだけど……。
 
+update friend (Mischievous)
 main_character: (gets kicked) Ow! #id:88
 # main_character: （蹴られる）痛っ！
 
-Ayumi: pff- www @ #id:89
+update friend (Neutral)
+[voice volume="0.0" bus="Voices"]
+Ayumi (Laugh): pff- www #id:89
 # Ayumi: ふふっ
-Ayumi: Ayumi です! @ #id:8a
+[voice volume="0.0" bus="Voices"]
+Ayumi (Happy): Ayumi です! #id:8a
 # MISSING TRANSLATION
 
 Ayumi: And you? #id:8b
 # Ayumi: あなたたちは？
 
-main_character: I'm {main_character name}, nice to meet you. #id:8c
+update Ayumi (Neutral)
+main_character: I'm {PlayerName}, nice to meet you. #id:8c
 # main_character: {main_character name}です。よろしく。
-friend: Aoi です! @ #id:8d
+[voice path="res://import/Voices/Aoi/Aoi_8.wav" volume="0.0"]
+friend (Smile): Aoi です! #id:8d
 # MISSING TRANSLATION
+update friend (Neutral)
 
 main_character: Are you also a transfer student, Ayumi? #id:8e
 # main_character: アユミも留学生なの？
+[voice volume="0.0"]
 
-Ayumi: ぜんぜん~ #id:8f
+Ayumi (Happy): ぜんぜん~ #id:8f
 # Ayumi: ううん、違うよ〜。
 Ayumi: I reside here in Japan. #id:90
 # Ayumi: 私は日本に住んでるよ。
 Ayumi: Though my father is from the USA. #id:91
 # Ayumi: お父さんはアメリカ人だけどね。
-Ayumi: So I know English too! #id:92
+Ayumi (Smile): So I know English too! #id:92
 # MISSING TRANSLATION
 
 main_character: Oh, interesting. #id:93
 # main_character: へえ、そうなんだ。
+[voice path="res://import/Voices/Aoi/Aoi_9.wav" volume="0.0"]
 
-friend: Sugoi! @ #id:94
+friend (Smile): すごい! #id:94
 # friend: すごい！
+update friend (Neutral)
 
-Ayumi: Do you come from the US? #id:95
+Ayumi (Happy): Do you come from the US? #id:95
 # Ayumi: 二人はアメリカから来たの？
+update Ayumi (Neutral)
 
 main_character: Yeah, we do, although {friend} is originally from Japan, but she moved to the US to study. #id:96
 # main_character: うん、二人ともアメリカから来たんだ。でもfriendはもともと日本出身で、勉強するためにアメリカへ引っ越してきた。
 
 main_character: Do you like fashion like Aoi? #id:97
 # main_character: アオイみたいに、アユミもファッションが好きなの？
+[voice volume="0.0"]
 
-Ayumi: Hai! I do, though I'm not very knowledgeble. #id:98
+Ayumi (Happy): はい! I do, though I'm not very knowledgeble. #id:98
 # Ayumi: うん、好き！ でも、そんなに詳しいわけじゃないけど……。
+update Ayumi (Neutral)
 
-friend: I got you covered! #id:99
+friend (Smug): I got you covered! #id:99
 # friend: それなら私に任せて！
 
-Ayumi: Hontou!? @ #id:9a
+[voice volume="0.0"]
+Ayumi (Excited): ほんとう!? #id:9a
 # Ayumi: 本当！？
 
 main_character: Yeah, she's an expert on that stuff. #id:9b
@@ -157,9 +176,8 @@ Ayumi: (JP) That's great! @ #id:9c
 
 Presi: Okay guys, let's get started! #id:9d
 # Presi: それじゃあみんな、そろそろ始めるよ！
-friend: It's starting! We should hurry to join them! #id:9e
+friend (Happy): It's starting! We should hurry to join them! #id:9e
 # friend: 始まるって！ 私たちも行こ！
 # replace this with a small transition
 # ＃ここは短いトランジションに差し替える。
-do Dialogue.set_next_scene("main menu")
-# MISSING TRANSLATION
+jump scene4_DONE/
