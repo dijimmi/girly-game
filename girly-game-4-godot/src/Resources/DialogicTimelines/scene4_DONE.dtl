@@ -1,46 +1,35 @@
-join friend left
-join  right
-friend (Smile): It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
+[background arg="res://import/Art/BackgroundArt/bg_fashion_club.png" fade="0.5" wait="true"]
+friend: It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
 # friend: Jファッション好きの人たちと話せて楽しかった〜！ まだ初日なのに、もういろいろ勉強になったよ！
 
-update friend (Neutral)
 main_character: うそつき! I'm sure you knew all that already. #id:a0
 # main_character: 「嘘だ」！ どうせ全部知ってたくせに。
 
-update friend (Mischievous)
 friend: Oh, so that word you do know? #id:a1
 # friend: あ、その言葉は知ってるんだ？
 
 main_character: I know some… #id:a2
-# main_character: 少しくらいは……。
+# main_character: 少しくらいは……。 
 
-update friend (Neutral)
-Ayumi (Laugh): www @
-
-
-friend (Confused): Anyways, I'm going to talk to the President about something, I'll catch you outside. #id:a3
+friend: Anyways, I'm going to talk to the President about something, I'll catch you outside. #id:a3
 # friend: それより、私ちょっと部長に話があるから。外で待ってて！
 
 main_character: Alright, bye bye #id:a4
 # main_character: はいはい、じゃあな。「じゃねー」
 
-leave friend
-
-Ayumi (Happy): いもうと なの? @ #id:a5
+love_interest: いもうと なの? #id:a5
 # MISSING TRANSLATION
 
-update 
 main_character: Uhh, if you're asking if she's my sister, no, she's my best friend. #id:a6
 # main_character: えーっと……あいつが俺の妹かって聞いてるなら、違うよ。俺の親友。
 
-Ayumi (Happy): Aaah~ #id:a7
+love_interest: Ah I see! #id:a7
 # Ayumi: ああ〜。
-Ayumi (Smile): You do seem like good friends, haha. #id:a8
+love_interest: You do seem like good friends, haha. #id:a8
 # Ayumi: 本当に仲が良さそうだね、ふふ。
 
 main_character: Yeah, we are. #id:a9
 # main_character: まあな。
-update 
 main_character: We're pretty different though. She's crazy over fashion, while I'm… #id:aa
 # main_character: でも、結構正反対なんだ。あいつはファッション大好きで、俺は……。
 
@@ -50,7 +39,7 @@ main_character: We're pretty different though. She's crazy over fashion, while I
 main_character: Still learning- #id:ac
 # main_character: まだ勉強中ってところ。
 
-Ayumi (Confused): そう... @ #id:ad
+love_interest: そう... #id:ad
 # Ayumi: そうなんだ…。
 
 main_character: You surely know more than me too... #id:ae
@@ -61,19 +50,18 @@ love_interest: I don't know, I've always seen kawaii-fashion and knew it existed
 love_interest: I've bought a few pieces, but I'm no expert. #id:b0
 # Ayumi: 何着か買ってはいるけど、全然詳しいってほどじゃないよ。
 
-update 
 main_character: I'm sure your outfits look great! #id:b1
 # MISSING TRANSLATION
 
-Ayumi (Smile): Arigatou~ @ #id:b2
+love_interest: Arigatou~ #id:b2
 # Ayumi: ありがとう〜。
-Ayumi (Happy): Ah, the President needs to lock the room, we should go, it was nice to meet you! #id:b3
+love_interest: Ah, the President needs to lock the room, we should go, it was nice to meet you! #id:b3
 # Ayumi: あ、部長が部室を閉めるみたい。そろそろ出なきゃ。今日は話せてよかった！
 
 main_character: Wait… #id:b4
 # main_character: なぁ…。
 
-Ayumi (Confused): EE? @ #id:b5
+love_interest: Eh? #id:b5
 # Ayumi: え？
 
 main_character: I was wondering… #id:b6
@@ -88,9 +76,9 @@ main_character: Go easy on me though. #id:ba
 # main_character: ただ、初心者だからお手柔らかに頼むんだが。
 audio "res://import/Voices/Aoi/Aoi_eeh.wav"
 
-Ayumi (Worried): EE? @ #id:bb
+love_interest: ええ? #id:bb
 # Ayumi: え？
-main_character: Nani? #id:bc
+main_character:なに? #id:bc
 # Ayumi: なに？
 Ayumi: You want choose my next oufit? #id:bd
 # Ayumi: 次の私のコーデを、{PlayerName}が選んでくれるの？
@@ -102,28 +90,23 @@ main_character: I just want to practice Japanese a bit- #id:bf
 main_character: So you just have to send me a website and I'll check it out! #id:c0
 # main_character: だからサイトだけ送ってくれれば、俺が見てみるよ！
 
-update 
-Ayumi: Sou... @ #id:c1
+love_interest: そう... #id:c1
 # Ayumi: …そう。
 love_interest: I... #id:c2
 # Ayumi: 私……。
-Ayumi (Smile): I think I'm okay with that! #id:c3
+love_interest: I think I'm okay with that! #id:c3
 # Ayumi: うん……それなら、お願いしてみようかな。
-Ayumi (Happy): I'll give you my number just in case. #id:c4
+love_interest: I'll give you my number just in case. #id:c4
 # Ayumi: …念のため、連絡先も教えておくね。
 
-update 
-main_character: Arigatou. #id:c5
+main_character: ありがとう. #id:c5
 # main_character: ありがとう。
 main_character: I'll send you the link when I choose it. #id:c6
 # main_character: 選んだらリンク送るよ。
 
-Ayumi (Happy): うん、まかせて! @ #id:c7
+love_interest: うん、まかせて! #id:c7
 # MISSING TRANSLATION
-Ayumi (Smile): See you later! #id:c8
+love_interest: See you later! #id:c8
 # Ayumi: じゃあ、またね！
-
-# jump scene5_DONE/
-[cue website 1 minigame] #id:c9
+do Dialogue.set_next_scene("website_placeholder")
 # ［Webサイト1のミニゲームへ］
-do Dialogue.set_next_scene("website1")

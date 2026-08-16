@@ -60,7 +60,7 @@ layout/style_directory={
 "CustomDialogue": "res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"]
+layout/style_list=["res://src/Resources/DialogicCustomFiles/custom_dialogue.tres", "res://src/Resources/DialogicCustomFiles/narration_style_dialogue.tres"]
 layout/default_style="res://src/Resources/DialogicCustomFiles/custom_dialogue.tres"
 variables={
 "FriendName": "Aoi",

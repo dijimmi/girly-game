@@ -51,5 +51,3 @@ func _on_check_box_toggled(toggled_on: bool) -> void:
 	theme_.set_font("font", "Label", font_string)
 	theme_.set_font("normal_font", "RichTextLabel", font_string)
 	Global.font_to_use = font_string
-
-	

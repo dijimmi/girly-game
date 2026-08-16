@@ -33,7 +33,7 @@ main_character: Thank you. #id:6e
 # main_character: ありがとうございます。
 [voice path="res://import/Voices/Aoi/Aoi_6.wav" volume="0.0"]
 
-friend (Joy): はーい~ #id:6f
+friend (Smile): はーい~ #id:6f
 # friend (Joy): はーい。
 leave pres
 update friend center [move_time="0.5"]
@@ -83,7 +83,7 @@ update friend (Neutral)
 
 Ayumi walks towards us. #id:80
 # MISSING TRANSLATION
-join  left [animation="Slide From Left"]
+join  center [animation="Slide From Left"]
 update friend right
 
 friend: こんにちは! #id:81

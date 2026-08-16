@@ -55,26 +55,41 @@ entries = {
 "Glossary/2bd/2d6/name": "ロリータ",
 "a-ku-se-so-ri-i": "アクセサリー",
 "a-ma-ro-ri-i": "あまろりー",
+"a-na-ta": "あなた",
 "a-o": "あお",
+"a-ri-ga-to-u": "ありがとう",
 "bo-n-ne-tto": "ボンネット",
 "bo-u-shi": "ぼうし",
 "cho-o-ka-a": "チョーカー",
 "co-re-ku-sho-n": "コレクション",
+"de-su": "です",
 "du-re-su": "ドレス",
 "e-e": "ええ",
+"faa-sho-n": "ファッション",
+"for real": "ほんと",
+"ge-n-ki": "げんき",
 "go-su-ro-ri": "ゴスロリ",
 "ha-i": "はい",
 "he-a-ri-bo-n": "ヘアリボン",
+"i-mo-u-to": "いもうと",
 "i-ra-ssha-i": "いらっしゃい",
+"ka": "か",
 "ka-a-pe-re-tto": "ケープレット",
+"ka-wa-i-i": "かわいい",
 "ke-i": "けい",
 "ko-n-ni-chi-wa": "こんにちは！",
 "ku-ra-shi-kku-ro-ri-i": "クラシックロリー",
 "ku-tsu": "くつ",
+"kyo-u": "きょう",
+"ma-ka-se-te": "まかせて",
+"na-ni": "なに",
 "o-su-su-me-sho-u-hi-n": "おすすめしょうひん",
 "ro-ri-i-ta": "ロリータ",
 "sa-n-kyuu": "サンキュー",
+"so-u": "そう",
+"su-go-i": "すごい",
 "ta-i-pu": "タイプ",
+"ta-no-shi-ka-tta": "たのしかった",
 "u-n": "うん",
 "ya-tta": "やった",
 "あお": {
@@ -86,11 +101,26 @@ entries = {
 "text": "[ol] (n) blue / green",
 "title": "Blue"
 },
+"あなた": {
+"alternatives": ["a-na-ta"],
+"name": "あなた",
+"title": "you"
+},
 "あまろりー": {
 "_translation_id": "2c0",
 "alternatives": ["a-ma-ro-ri-i"],
 "name": "あまろりー",
 "title": "Sweet Lolita"
+},
+"ありがとう": {
+"alternatives": ["a-ri-ga-to-u"],
+"name": "ありがとう",
+"title": "Thank you"
+},
+"いもうと": {
+"alternatives": ["i-mo-u-to"],
+"name": "いもうと",
+"title": "Sister"
 },
 "いらっしゃい": {
 "_translation_id": "2c1",
@@ -117,6 +147,21 @@ entries = {
 "name": "おすすめしょうひん",
 "title": "Featured Products"
 },
+"か": {
+"alternatives": ["ka"],
+"name": "か",
+"title": "(?) interrogation mark"
+},
+"かわいい": {
+"alternatives": ["ka-wa-i-i"],
+"name": "かわいい",
+"title": "cute"
+},
+"きょう": {
+"alternatives": ["kyo-u"],
+"name": "きょう",
+"title": "Today"
+},
 "くつ": {
 "_translation_id": "2c5",
 "alternatives": ["ku-tsu"],
@@ -130,12 +175,41 @@ entries = {
 "text": "Variation of the collection",
 "title": "Substyle"
 },
+"げんき": {
+"alternatives": ["ge-n-ki"],
+"name": "げんき",
+"title": "fine"
+},
 "こんにちは！": {
 "_translation_id": "2c7",
 "alternatives": ["ko-n-ni-chi-wa"],
 "name": "こんにちは！",
 "text": "",
 "title": "Hello"
+},
+"すごい": {
+"alternatives": ["su-go-i"],
+"name": "すごい",
+"title": "amazing"
+},
+"そう": {
+"alternatives": ["so-u"],
+"name": "そう",
+"title": "I see"
+},
+"たのしかった": {
+"alternatives": ["ta-no-shi-ka-tta"],
+"name": "たのしかった"
+},
+"です": {
+"alternatives": ["de-su"],
+"name": "です",
+"title": "to be"
+},
+"なに": {
+"alternatives": ["na-ni"],
+"name": "なに",
+"title": "What"
 },
 "はい": {
 "_translation_id": "2c8",
@@ -144,12 +218,21 @@ entries = {
 "text": "",
 "title": "Yes"
 },
+"ほんと": {
+"alternatives": ["for real"],
+"name": "ほんと"
+},
 "ぼうし": {
 "_translation_id": "2c9",
 "alternatives": ["bo-u-shi"],
 "name": "ぼうし",
 "text": "Head Accessory",
 "title": "Hat"
+},
+"まかせて": {
+"alternatives": ["ma-ka-se-te"],
+"name": "まかせて",
+"title": "leave it to me"
 },
 "やった": {
 "_translation_id": "2ca",
@@ -216,9 +299,15 @@ entries = {
 "name": "ドレス",
 "title": "Dress"
 },
+"ファッション": {
+"alternatives": ["faa-sho-n"],
+"name": "ファッション",
+"title": "Fashion"
+},
 "ヘアリボン": {
 "_translation_id": "2d4",
 "alternatives": ["he-a-ri-bo-n"],
+"case_sensitive": true,
 "name": "ヘアリボン",
 "title": "Hair Ribbon"
 },

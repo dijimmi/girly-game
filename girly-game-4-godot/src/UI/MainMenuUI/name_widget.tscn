@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://t0m3phmtrupv"]
 
 [ext_resource type="Script" uid="uid://dukm4lj7n65b" path="res://src/UI/MainMenuUI/name_widget.gd" id="1_p178a"]
-[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="1_xc8fy"]
-[ext_resource type="Texture2D" uid="uid://bg57fpq2v6tbh" path="res://image.png" id="3_n66r4"]
+[ext_resource type="Texture2D" uid="uid://btnh2htcoontv" path="res://import/Art/UIArt/MainMenu/bow_icon.png" id="2_6c5mf"]
+[ext_resource type="Texture2D" uid="uid://j7qvhuaeuk7v" path="res://import/Art/UIArt/MainMenu/dress_icon.png" id="3_h02mo"]
 
 [node name="NameWidget" type="PanelContainer" unique_id=915354676 node_paths=PackedStringArray("name_label", "lover_icon", "friend_icon", "president_icon")]
 custom_minimum_size = Vector2(200, 50)
@@ -41,8 +41,8 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 4
-texture_normal = ExtResource("1_xc8fy")
-texture_disabled = ExtResource("3_n66r4")
+texture_normal = ExtResource("2_6c5mf")
+texture_disabled = ExtResource("3_h02mo")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -50,8 +50,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 4
-texture_normal = ExtResource("1_xc8fy")
-texture_disabled = ExtResource("3_n66r4")
+texture_normal = ExtResource("2_6c5mf")
+texture_disabled = ExtResource("3_h02mo")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -59,8 +59,8 @@ stretch_mode = 4
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 4
-texture_normal = ExtResource("1_xc8fy")
-texture_disabled = ExtResource("3_n66r4")
+texture_normal = ExtResource("2_6c5mf")
+texture_disabled = ExtResource("3_h02mo")
 ignore_texture_size = true
 stretch_mode = 4
 

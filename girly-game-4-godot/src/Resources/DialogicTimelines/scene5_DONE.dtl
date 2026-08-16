@@ -1,10 +1,10 @@
 join pres center
 set {LEVEL} = 1.0
-pres (Happy): Hello everyone! Konnichiha! @ #id:ca
+pres (Happy): Hello everyone! こんにちは! @ #id:ca
 # pres: みんな、ハロー！ 「こんにちは」！
 main_character: Hello! #id:cb
 # main_character: こんにちは！
-pres (Confused): is Aoi not coming to the meetup, [main_character name]? #id:cc
+pres (Confused): is Aoi not coming to the meetup, {PlayerName}? #id:cc
 # pres: [main_character name]、アオイさんは今日来ないの？
 main_character: I'm not sure, I thought she was already here. #id:cd
 # main_character: わからないです。もう来てると思ってました。
@@ -39,15 +39,15 @@ At least Aoi isn't here. #id:d7
 I wouldn't want her to see me like this, how embarrassing. #id:d8
 # こんな顔してるところを見られたら、あいつに絶対からかわれていたに違いない。
 
-main_character: Konnichiha, genki desu ka? #id:d9
+main_character: こんにちは, げんき です か? #id:d9
 # Ayumi: こんにちは、元気ですか？
 
-main_character: Genki desu! #id:da
+main_character: げんき です! #id:da
 # main_character: 元気です！
-main_character: Anata wa kawaii desu! #id:db
+main_character: あなた は かわいい です! #id:db
 # main_character: あなたは、かわいいです！
 
-love_interest: Arigatou! #id:dc
+love_interest: ありがとう! #id:dc
 # Ayumi: …ありがとう！
 love_interest: What you bought fit me very well, thank you so much! #id:dd
 # Ayumi: 選んでくれたもの、すごくよかった。本当にありがとう！
@@ -55,27 +55,27 @@ love_interest: What you bought fit me very well, thank you so much! #id:dd
 main_character: No problem! It helped me learn some Japanese so I don't mind. #id:de
 # main_character: 全然！ 日本語の勉強にもなったし、むしろ俺のほうが助かったよ。
 
-love_interest: Hontou? #id:df
+love_interest: ほんと? #id:df
 # Ayumi: …本当？
 
 main_character: うん! #id:e0
 # main_character: うん！
-main_character: ロリータファッションは、かわいいです #id:e1
+main_character: ロリータ ファッション は、かわいい です #id:e1
 # main_character: （日本語）ロリータファッションは、かわいいです。
 main_character: I think I said it right. #id:e2
 # main_character: 今の、合ってたよな？
 
-love_interest: Hai #id:e3
+love_interest: はい #id:e3
 # MISSING TRANSLATION
 
-love_interest: Sugoi! #id:e4
+love_interest: すごい! #id:e4
 # Aoi: すごい！
 friend: You look so pretty! #id:e5
 # Aoi: アユミちゃん、すっごくかわいい！
 
 love_interest: Aoi! #id:e6
 # Ayumi: アオイちゃん！
-love_interest: Arigatou~ #id:e7
+love_interest: ありがとう~ #id:e7
 # Ayumi: ありがとう〜。
 
 main_character: Hey, Aoi, I'm glad you made it! #id:e8

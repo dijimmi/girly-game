@@ -68,6 +68,7 @@ main_character: Alright fine. But only to learn Japanese, not for any other reas
 [voice path="res://import/Voices/Aoi/Aoi_4.wav" volume="1.5" bus="Voices"]
 update friend (Smile) [animation="Bounce" length="0.4"]
 friend (Smile): やった！ #id:66
+leave friend
 # friend (Joy): やったぁ！
 # do Dialogue.set_next_scene("cutscene fashion club")
 jump scene3_DONE/
