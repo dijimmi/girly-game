@@ -71,6 +71,7 @@ entries = {
 "ge-n-ki": "げんき",
 "go-me-n": "ごめん",
 "go-su-ro-ri": "ゴスロリ",
+"go-za-i-ma-su": "ございます",
 "ha-i": "はい",
 "he-a-ri-bo-n": "ヘアリボン",
 "ho-n-to": "ほんと",
@@ -92,6 +93,8 @@ entries = {
 "o-su-su-me-sho-u-hi-n": "おすすめしょうひん",
 "ro-ri-i-ta": "ロリータ",
 "sa-n-kyuu": "サンキュー",
+"sa-yo-na-ra": "さよなら",
+"se-n-se-i": "せんせい",
 "so-shi-te": "そして",
 "so-u": "そう",
 "su-go-i": "すごい",
@@ -212,10 +215,20 @@ entries = {
 "name": "こんばんは",
 "title": "Good afternoon"
 },
+"ございます": {
+"alternatives": ["go-za-i-ma-su"],
+"name": "ございます",
+"title": "So much"
+},
 "ごめん": {
 "alternatives": ["go-me-n"],
 "name": "ごめん",
 "title": "Sorry"
+},
+"さよなら": {
+"alternatives": ["sa-yo-na-ra"],
+"name": "さよなら",
+"title": "Goodbye"
 },
 "すき": {
 "alternatives": ["su-ki"],
@@ -226,6 +239,11 @@ entries = {
 "alternatives": ["su-go-i"],
 "name": "すごい",
 "title": "Amazing"
+},
+"せんせい": {
+"alternatives": ["se-n-se-i"],
+"name": "せんせい",
+"title": "teacher"
 },
 "そう": {
 "alternatives": ["so-u"],
