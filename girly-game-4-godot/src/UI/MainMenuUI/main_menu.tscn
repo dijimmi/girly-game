@@ -177,7 +177,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0.099999994, 0.9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(4500, 277), Vector2(1216, 277)]
+"values": [Vector2(1950, 277), Vector2(1216, 277)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -410,13 +410,13 @@ texture = ExtResource("10_j0bnl")
 [node name="Dress" type="Sprite2D" parent="Control" unique_id=206703308]
 z_index = -1
 position = Vector2(467, 724.56)
-scale = Vector2(0.26, 0.26)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("11_2x0sk")
 
 [node name="Bow2" type="Sprite2D" parent="Control" unique_id=1870903258]
 z_index = -1
 position = Vector2(766, 724.56)
-scale = Vector2(0.26, 0.26)
+scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("10_j0bnl")
 
 [node name="Character" type="TextureRect" parent="Control" unique_id=1356573708]
@@ -438,6 +438,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 0.00024414063
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2

@@ -37,7 +37,7 @@ func _play_hovered_anim() -> void:
 	_play_hover_tween = create_tween()
 	_play_hover_tween.set_trans(Tween.TRANS_ELASTIC)
 	_play_hover_tween.set_parallel(true)
-	_play_hover_tween.tween_property($Control/Play, "position", Vector2(596.58,151.0), 0.4)
+	_play_hover_tween.tween_property($Control/Play, "position", Vector2(1100,277.0), 0.4)
 	_play_hover_tween.tween_property($Control/Play, "self_modulate", Color("83d2e6"), 0.4)
 	_play_hover_tween.tween_property($Control/Play/TextureRect, "self_modulate", Color("e6e6e6ff"), 0.4)
 func _play_hovered_anim_stop() -> void:
@@ -46,7 +46,7 @@ func _play_hovered_anim_stop() -> void:
 	_play_hover_tween = create_tween()
 	_play_hover_tween.set_trans(Tween.TRANS_ELASTIC)
 	_play_hover_tween.set_parallel(true)
-	_play_hover_tween.tween_property($Control/Play, "position", Vector2(657.0,151.0), 0.4)
+	_play_hover_tween.tween_property($Control/Play, "position", Vector2(1216,277.0), 0.4)
 	_play_hover_tween.tween_property($Control/Play, "self_modulate", Color("bd6280"), 0.4)
 	_play_hover_tween.tween_property($Control/Play/TextureRect, "self_modulate", Color("000000"), 0.4)
 
