@@ -21,7 +21,7 @@ main_character: I guess so... #id:6a
 [voice volume="0.0"]
 pres (Happy): Alright, you just need to sign here, and there please. #id:6b
 # pres (Joy): じゃあ、こことここに名前を書いてね。
-do Dialogue.start_minigame(Dialogic.VAR.PlayerNameJP)
+do Dialogue.start_minigame(Dialogic.VAR.PlayerNameJP, "drawing")
 # MISSING TRANSLATION
 [voice volume="0.0"]
 pres (JoySpeaking): サンキュー! #id:6c

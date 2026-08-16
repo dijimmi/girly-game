@@ -19,7 +19,8 @@ var sfx_volume : float = 0.0
 	"main menu" : load("res://import/Music/Dijimmi_LearningJapanese_G maj_96.mp3"),
 	"scene1" : null,
 	"scene2" : load("res://import/Music/Dijimmi_VN-Opening_82.mp3"),
-	"cutscene fashion" : load("res://import/Music/Dijimmi_VN-Reunion_84.mp3")
+	"cutscene fashion" : load("res://import/Music/Dijimmi_VN-Reunion_84.mp3"),
+	"scene7-5" : load("uid://dbojthef2jt64")
 }
 func load_music(cue : String):
 	if cue in music_array.keys():

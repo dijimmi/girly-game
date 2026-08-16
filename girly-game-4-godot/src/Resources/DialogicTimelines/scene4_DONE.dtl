@@ -108,5 +108,5 @@ love_interest: うん、まかせて! #id:c7
 # MISSING TRANSLATION
 love_interest: See you later! #id:c8
 # Ayumi: じゃあ、またね！
-do Dialogue.set_next_scene("website1")
+do Dialogue.set_next_scene("website_placeholder")
 # ［Webサイト1のミニゲームへ］
