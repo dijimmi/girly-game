@@ -7,6 +7,7 @@ script = ExtResource("1_3nyad")
 product_name = "【DOLLCANDY】- バブルガムくつ"
 level = 2
 accesory_type = "くつ"
+featured = true
 textures_path = "res://import/Art/shop/shoes"
 color_set1 = Array[Color]([Color(0.9490196, 0.7019608, 0.78431374, 1), Color(1, 1, 1, 1), Color(0.9490196, 0.7019608, 0.78431374, 1), Color(0.6117647, 0.96862745, 1, 1), Color(0.92, 0.8556, 0.8556, 1)])
 color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

@@ -36,7 +36,8 @@ var active_page : String = ProductInfo.HOME
 
  
 var web_score = 0
-var curr_level = ProductInfo.Level.THREE
+
+var curr_level = ProductInfo.Level.ONE
 
 # USE THIS SIGNAL TOWARDS THE LEVEL MANAGER OR WHATEVER :)
 signal close_website_and_get_score(score : int)
@@ -52,9 +53,13 @@ func _ready() -> void:
 		ProductInfo.HONSE:            [honse_page],
 	}
 	
+	# curr_level = Dialogic.VAR.LEVEL
+	
 	# TODO: remember to delete this once we call it elsewhere
-	new_website("2")
-	new_website("3")
+	if curr_level == ProductInfo.Level.TWO:
+		new_website("2")
+	elif curr_level == ProductInfo.Level.THREE:
+		new_website("3")
 	
 	website_1.pressed.connect(_on_website_1_pressed.bind(website_1))
 	shop_page_seach_bar.search_prompted.connect(_on_search_prompted)
@@ -235,20 +240,23 @@ func _on_chat_pressed() -> void:
 
 
 func _on_view_product_page_buy_product(product: Product) -> void:	
-	if product.winner:
-		if product.level == ProductInfo.Level.ONE:
-			update_score(500)
-		elif product.level == ProductInfo.Level.TWO:
-			update_score(750)
-		elif product.level == ProductInfo.Level.THREE:
-			update_score(1000)
-	elif product.mid_winner:
-		if product.level == ProductInfo.Level.ONE:
-			update_score(250)
-		elif product.level == ProductInfo.Level.TWO:
-			update_score(375)
-		elif product.level == ProductInfo.Level.THREE:
-			update_score(500)
+	# curr_level = Dialogic.VAR.LEVEL
+	
+	if product.level == curr_level:
+		if product.winner:
+			if curr_level == ProductInfo.Level.ONE:
+				update_score(500)
+			elif curr_level == ProductInfo.Level.TWO:
+				update_score(750)
+			elif curr_level == ProductInfo.Level.THREE:
+				update_score(1000)
+		elif product.mid_winner:
+			if curr_level == ProductInfo.Level.ONE:
+				update_score(250)
+			elif curr_level == ProductInfo.Level.TWO:
+				update_score(375)
+			elif curr_level == ProductInfo.Level.THREE:
+				update_score(500)
 	else:
 		update_score(0)
 	
@@ -258,6 +266,8 @@ func _on_view_product_page_buy_product(product: Product) -> void:
 
 
 func _on_chat_screen_hint_received(_hint_num: Variant) -> void:
+	# curr_level = Dialogic.VAR.LEVEL
+	
 	if curr_level == ProductInfo.Level.ONE:
 		update_score(-250)
 	elif curr_level == ProductInfo.Level.TWO:

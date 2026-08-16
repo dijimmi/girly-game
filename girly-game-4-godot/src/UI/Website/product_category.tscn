@@ -36,7 +36,7 @@ vertical_alignment = 1
 
 [node name="ProductsList" type="GridContainer" parent="." unique_id=1940305566]
 layout_mode = 2
-columns = 3
+columns = 4
 
 [connection signal="gui_input" from="CategoryName" to="." method="_on_category_name_gui_input"]
 [connection signal="meta_hover_ended" from="CategoryName" to="." method="_on_category_name_meta_hover_ended"]
