@@ -1,7 +1,7 @@
-love_interest: I had so much fun today. #id:2b7
+Ayumi: I had so much fun today. #id:2b7
 # Ayumi: 今日は本当に楽しかった。
 do AudioManager.load_music("outro")
-love_interest: Thanks for helping me choose my outfit, and all that… #id:2b8
+Ayumi: Thanks for helping me choose my outfit, and all that… #id:2b8
 # Ayumi: 服を選ぶのを手伝ってくれたことも、それ以外のことも……ありがとう。
 
 main_character: My pleasure~ #id:2b9

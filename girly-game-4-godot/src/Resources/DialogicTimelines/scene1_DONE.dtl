@@ -31,4 +31,4 @@ For real this time! #id:46
 # 今度こそ、本当に！
 # #do Dialogue.set_next_scene("website1")
 [wait time="0.1" skippable="true"]
-do Dialogue.set_next_scene("website1")
+jump scene2_DONE/

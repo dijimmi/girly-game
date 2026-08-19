@@ -51,7 +51,7 @@ friend (Happy): It's a new club, give it time... #id:74
 # friend (NeutralSpeaking): できたばかりの部活らしいよ。
 friend: Oh look, another one is joining! #id:75
 leave friend
-join love_interest center
+join Ayumi center
 # friend (JoySPeaking): あ、見て。もう一人来たよ。
 
 Ayumi: Here's my signature! Thanks! #id:76

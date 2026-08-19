@@ -32,9 +32,9 @@ Ayumi: {PlayerName}! @ #id:d3
 main_character: Ayumi! #id:d4
 # main_character: アユミ！
 
-love_interest: Taking a look at her outfit, I feel my cheeks burning. #id:d5
+Ayumi: Taking a look at her outfit, I feel my cheeks burning. #id:d5
 # 彼女を見た瞬間、顔が熱くなるのを感じた。
-love_interest: I was not expecting her to look so pretty… #id:d6
+Ayumi: I was not expecting her to look so pretty… #id:d6
 # こんなに綺麗に着こなしてくるなんて、思ってもみなかった……。
 At least Aoi isn't here. #id:d7
 # アオイがまだ来てなくて助かった。
@@ -49,15 +49,15 @@ main_character: げんき です! #id:da
 main_character: あなた は かわいい です! #id:db
 # main_character: あなたは、かわいいです！
 
-love_interest: ありがとう! #id:dc
+Ayumi: ありがとう! #id:dc
 # Ayumi: …ありがとう！
-love_interest: What you bought fit me very well, thank you so much! #id:dd
+Ayumi: What you bought fit me very well, thank you so much! #id:dd
 # Ayumi: 選んでくれたもの、すごくよかった。本当にありがとう！
 
 main_character: No problem! It helped me learn some Japanese so I don't mind. #id:de
 # main_character: 全然！ 日本語の勉強にもなったし、むしろ俺のほうが助かったよ。
 
-love_interest: ほんと? #id:df
+Ayumi: ほんと? #id:df
 # Ayumi: …本当？
 
 main_character: うん! #id:e0
@@ -67,7 +67,7 @@ main_character: ロリータ ファッション は、かわいい です #id:e1
 main_character: I think I said it right. #id:e2
 # main_character: 今の、合ってたよな？
 
-love_interest: はい #id:e3
+Ayumi: はい #id:e3
 # MISSING TRANSLATION
 [background scene="res://src/Resources/FullArtBG/fullart1_w_aoi.tscn" fade="0.0"]
 
@@ -76,22 +76,22 @@ friend: すごい! #id:e4
 friend: You look so pretty! #id:e5
 # Aoi: アユミちゃん、すっごくかわいい！
 
-love_interest: Aoi! #id:e6
+Ayumi: Aoi! #id:e6
 # Ayumi: アオイちゃん！
-love_interest: ありがとう~ #id:e7
+Ayumi: ありがとう~ #id:e7
 # Ayumi: ありがとう〜。
 
 main_character: Hey, Aoi, I'm glad you made it! #id:e8
 # main_character: お、アオイ！ 間に合ってよかった！
 
-love_interest: I did! #id:e9
+Ayumi: I did! #id:e9
 # Aoi: 間に合ったよ！
-love_interest: I lost track of time and almost didn't make it, but I did. #id:ea
+Ayumi: I lost track of time and almost didn't make it, but I did. #id:ea
 # Aoi: ちょっと時間を忘れてて、危うく間に合わないところだったけど……ぎりぎりセーフ！
 
-love_interest: I'm glad you made it too, Aoi! #id:eb
+Ayumi: I'm glad you made it too, Aoi! #id:eb
 # Ayumi: アオイちゃんも来られてよかった！
-love_interest: Let's have a great time! #id:ec
+Ayumi: Let's have a great time! #id:ec
 # Ayumi: 今日も楽しもうね！
 # MISSING TRANSLATION
 [background arg="#000000ff" fade="0.0"]
@@ -100,7 +100,7 @@ After a few group activities, the presdent says their goodbyes and the other mem
 # いくつかグループ活動を終えると、部長が締めの挨拶をして、他の部員たちも帰っていった。
 [background scene="res://src/Resources/FullArtBG/fullart1.tscn" fade="0.0"]
 
-love_interest: きょう　は　たのしかった！ #id:ef
+Ayumi: きょう　は　たのしかった！ #id:ef
 # Ayumi: 今日は楽しかった！
 
 main_character: Yeah, definitely! #id:f0
@@ -110,9 +110,9 @@ main_character: It's cool to learn about Japanese culture. #id:f1
 main_character: And also listen to you guys talk in Japanese even though I don't understand half of it, haha. #id:f2
 # main_character: みんなが日本語で話してるのを聞くのも楽しいしな。まあ、半分もわかってないけどなぁ
 
-love_interest: www #id:f3
+Ayumi: www #id:f3
 # Ayumi:ふふ
-love_interest: You'll get there one day, keep practicing! #id:f4
+Ayumi: You'll get there one day, keep practicing! #id:f4
 # Ayumi: そのうちわかるようになるよ。練習あるのみ！だね
 
 main_character: I will, I will... #id:f5
@@ -122,15 +122,15 @@ main_character: Actually, I was thinking, if you had the time... #id:f6
 main_character: Could help me practice my japanese skills? #id:f7
 # main_character: 日本語の練習、付き合ってくれない？
 
-love_interest: How so? #id:f8
+Ayumi: How so? #id:f8
 # Ayumi: どんなふうに？
 
 main_character: Well, I don't know, talk to me about yourself, but in Japanese and I'll try to figure out what you're saying. #id:f9
 # main_character: そうだな……アユミ自身のことを、日本語で話してみてよ。俺がどこまで意味をつかめるか試してみたい。
 
-love_interest: Hmm okay! #id:fa
+Ayumi: Hmm okay! #id:fa
 # Ayumi: うーん、いいよ！
-love_interest: Let's start easy then. #id:fb
+Ayumi: Let's start easy then. #id:fb
 
 Ayumi: ファッション, うたう, だんす　そして　アニメ　を　みる　が　すき　です. #id:103
 # Ayumi: ［日本語で］着飾ることと、歌うことと、踊ること。それから、もちろんアニメを見るのも好き。

@@ -34,18 +34,14 @@ FA="*uid://b6mx13o3twmpr"
 [dialogic]
 
 directories/dch_directory={
-"Ayumii": "res://src/Resources/DialogicCharacters/Ayumii.dch",
+"Ayumi": "res://src/Resources/DialogicCharacters/Ayumi.dch",
 "friend": "res://src/Resources/DialogicCharacters/friend.dch",
-"love_interest": "res://src/Resources/DialogicCharacters/love_interest.dch",
 "main_character": "res://src/Resources/DialogicCharacters/main_character.dch",
 "pres": "res://src/Resources/DialogicCharacters/pres.dch"
 }
 directories/dtl_directory={
 "scene1_DONE": "res://src/Resources/DialogicTimelines/scene1_DONE.dtl",
-"scene1_narration": "res://src/_Tests/scene1_narration.dtl",
-"scene2": "res://src/_Tests/scene2.dtl",
 "scene2_DONE": "res://src/Resources/DialogicTimelines/scene2_DONE.dtl",
-"scene3": "res://src/_Tests/scene3.dtl",
 "scene3_DONE": "res://src/Resources/DialogicTimelines/scene3_DONE.dtl",
 "scene4_DONE": "res://src/Resources/DialogicTimelines/scene4_DONE.dtl",
 "scene5_DONE": "res://src/Resources/DialogicTimelines/scene5_DONE.dtl",
