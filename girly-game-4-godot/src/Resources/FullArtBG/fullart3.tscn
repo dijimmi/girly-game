@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c40retpa26tci"]
 
 [ext_resource type="Script" uid="uid://blsjcvm6gvd78" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_bf0et"]
-[ext_resource type="Texture2D" uid="uid://bhyaomm2r0jrm" path="res://import/Art/assets_girlyjam/full_art/Art 3/1_SpecialArtTopAlone.png" id="2_8y8wk"]
+[ext_resource type="Texture2D" uid="uid://bv8yxt8prufp7" path="res://import/Art/full_art/Art 3/1_SpecialArtTopAlone.png" id="2_8y8wk"]
 [ext_resource type="Texture2D" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye1.png" id="3_8y8wk"]
-[ext_resource type="Texture2D" uid="uid://dxbtkc0h86dia" path="res://import/Art/assets_girlyjam/full_art/Art 3/4_SpecialArtTopAlone_Base.png" id="3_p3qsh"]
-[ext_resource type="Texture2D" uid="uid://bfas18fxb8377" path="res://import/Art/assets_girlyjam/full_art/Art 3/3_SpecialArtTopAlone_Lace.png" id="4_c2fc6"]
-[ext_resource type="Texture2D" uid="uid://d08rt1csn1m6u" path="res://import/Art/assets_girlyjam/full_art/Art 3/2_SpecialArtTopAlone_Tint.png" id="5_fn4mj"]
+[ext_resource type="Texture2D" uid="uid://dxbtkc0h86dia" path="res://import/Art/full_art/Art 3/4_SpecialArtTopAlone_Base.png" id="3_p3qsh"]
+[ext_resource type="Texture2D" uid="uid://bfas18fxb8377" path="res://import/Art/full_art/Art 3/3_SpecialArtTopAlone_Lace.png" id="4_c2fc6"]
+[ext_resource type="Texture2D" uid="uid://d08rt1csn1m6u" path="res://import/Art/full_art/Art 3/2_SpecialArtTopAlone_Tint.png" id="5_fn4mj"]
 
 [node name="Node2D2" type="Node" unique_id=2169453]
 script = ExtResource("1_bf0et")

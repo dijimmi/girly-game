@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cjq7bgam8osyw" path="res://src/UI/Website/product_category.gd" id="1_dc83p"]
 [ext_resource type="PackedScene" uid="uid://drxjnq3fmknhi" path="res://src/UI/Website/product_thumbnail.tscn" id="1_lybnk"]
-[ext_resource type="FontFile" uid="uid://cf4maub1xnmmb" path="res://import/Font/KGMissSteward.ttf" id="3_pmjk4"]
 
 [node name="Category" type="VBoxContainer" unique_id=1200025618 node_paths=PackedStringArray("category_name", "product_grid")]
 anchors_preset = 8
@@ -24,7 +23,6 @@ product_thumbnail = ExtResource("1_lybnk")
 [node name="CategoryName" type="RichTextLabel" parent="." unique_id=1610326819]
 layout_mode = 2
 theme_override_colors/default_color = Color(1, 0, 0.34901962, 1)
-theme_override_fonts/normal_font = ExtResource("3_pmjk4")
 theme_override_font_sizes/normal_font_size = 45
 bbcode_enabled = true
 text = "[url=\"hi\"]FEATURED PRODUCTS[/url]"

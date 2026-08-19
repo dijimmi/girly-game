@@ -1,13 +1,18 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://dr06sukifi4iv"]
 
 [ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_3nyad"]
+[ext_resource type="Texture2D" uid="uid://dwq3t6nb8n58b" path="res://import/Art/shop/shoes/shoe_base.png" id="2_y2mf3"]
+[ext_resource type="Texture2D" uid="uid://ch2jmi6hau2wu" path="res://import/Art/shop/shoes/shoe_tint.png" id="3_k71xq"]
+[ext_resource type="Texture2D" uid="uid://djt4tgkroavt8" path="res://import/Art/shop/shoes/shoe_lace.png" id="4_spvo2"]
+[ext_resource type="Texture2D" uid="uid://c3crmm0s1wkce" path="res://import/Art/shop/shoes/shoe_straps.png" id="5_e64oc"]
+[ext_resource type="Texture2D" uid="uid://rabnj6lna8w4" path="res://import/Art/shop/shoes/shoe_top.png" id="6_troeo"]
 
 [resource]
 script = ExtResource("1_3nyad")
 product_name = "【DOLLCANDY】- バブルガムくつ"
-level = 2
+level = 0
 accesory_type = "くつ"
 featured = true
-textures_path = "res://import/Art/shop/shoes"
+textures = Array[Texture]([ExtResource("2_y2mf3"), ExtResource("3_k71xq"), ExtResource("4_spvo2"), ExtResource("5_e64oc"), ExtResource("6_troeo")])
 color_set1 = Array[Color]([Color(0.9490196, 0.7019608, 0.78431374, 1), Color(1, 1, 1, 1), Color(0.9490196, 0.7019608, 0.78431374, 1), Color(0.6117647, 0.96862745, 1, 1), Color(0.92, 0.8556, 0.8556, 1)])
 color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

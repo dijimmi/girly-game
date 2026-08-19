@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cjya42uw7j128" path="res://src/Worlds/scene1.tscn" id="2_q84wo"]
 [ext_resource type="PackedScene" uid="uid://b87xryrg3eybu" path="res://src/UI/MainMenuUI/main_menu.tscn" id="3_sipf8"]
 [ext_resource type="PackedScene" uid="uid://w0xct215t6of" path="res://src/Worlds/Cutscenes/cutscene_fashion_club.tscn" id="4_1yjvo"]
-[ext_resource type="PackedScene" uid="uid://3gbqc8g1x28u" path="res://src/Worlds/website1.tscn" id="5_j1ikt"]
+[ext_resource type="PackedScene" uid="uid://d12df3c2gdp4c" path="res://src/Worlds/website1.tscn" id="5_j1ikt"]
 [ext_resource type="PackedScene" uid="uid://c6ltsnf7brv0j" path="res://src/Worlds/Cutscenes/cutscene_website_placeholder.tscn" id="6_m66gv"]
 [ext_resource type="PackedScene" uid="uid://dbjofwn4i8ycc" path="res://src/Worlds/website_ender.tscn" id="7_qntjh"]
 [ext_resource type="Shader" uid="uid://cq6j3m74gnsuo" path="res://src/Core/Handlers/level_handler.tres" id="8_vsnvo"]
@@ -173,6 +173,7 @@ scene_array = Dictionary[String, PackedScene]({
 "website_ender": ExtResource("7_qntjh"),
 "website_placeholder": ExtResource("6_m66gv")
 })
+main_menu = ExtResource("3_sipf8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1557219362]
 process_mode = 3

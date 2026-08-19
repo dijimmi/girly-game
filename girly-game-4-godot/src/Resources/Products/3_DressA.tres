@@ -1,13 +1,17 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://goffnugiiy85"]
 
 [ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_kkvcb"]
+[ext_resource type="Texture2D" uid="uid://unixvxl7dj5v" path="res://import/Art/shop/outfit_a/outfit_a_base.png" id="2_eqb5u"]
+[ext_resource type="Texture2D" uid="uid://du8m435dadvq7" path="res://import/Art/shop/outfit_a/outfit_a_tint.png" id="3_eqb5u"]
+[ext_resource type="Texture2D" uid="uid://d0uv3sxqq61ni" path="res://import/Art/shop/outfit_a/outfit_a_lace.png" id="4_qf51t"]
+[ext_resource type="Texture2D" uid="uid://ce0a1l7efsbo3" path="res://import/Art/shop/outfit_a/outfit_a_top.png" id="5_oejuf"]
 
 [resource]
 script = ExtResource("1_kkvcb")
 product_name = "ブランド7"
-level = 2
+level = 0
 substyle = "クラシックロリー"
 featured = true
-textures_path = "res://import/Art/shop/outfit_a"
+textures = Array[Texture]([ExtResource("2_eqb5u"), ExtResource("3_eqb5u"), ExtResource("4_qf51t"), ExtResource("5_oejuf")])
 color_set1 = Array[Color]([Color(0.2509804, 0.1254902, 0.14509805, 1), Color(0.81960785, 0.7294118, 0.6901961, 1), Color(0.72156864, 0.60784316, 0.6039216, 1)])
 color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

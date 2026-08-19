@@ -1,6 +1,10 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://b3qllwfh67nhj"]
 
 [ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_8gtbp"]
+[ext_resource type="Texture2D" uid="uid://by3r4gb7ywddx" path="res://import/Art/shop/hat/hat_base.png" id="2_fwn55"]
+[ext_resource type="Texture2D" uid="uid://tjoc0o6sbed6" path="res://import/Art/shop/hat/hat_tint.png" id="3_t7rkp"]
+[ext_resource type="Texture2D" uid="uid://ckkgsh27phlqp" path="res://import/Art/shop/hat/hat_lace.png" id="4_wa1w2"]
+[ext_resource type="Texture2D" uid="uid://duugsjtfpgl1i" path="res://import/Art/shop/hat/hat_top.png" id="5_3l5gu"]
 
 [resource]
 script = ExtResource("1_8gtbp")
@@ -10,5 +14,5 @@ accesory_type = "ぼうし"
 substyle = "クラシックロリー"
 featured = true
 winner = true
-textures_path = "res://import/Art/shop/hat"
+textures = Array[Texture]([ExtResource("2_fwn55"), ExtResource("3_t7rkp"), ExtResource("4_wa1w2"), ExtResource("5_3l5gu")])
 color_set1 = Array[Color]([Color(0.7995831, 0.92313135, 0.96972114, 1), Color(1, 1, 1, 1), Color(0.7995831, 0.92313135, 0.96972114, 1), Color(0.7995831, 0.92313135, 0.96972114, 1)])

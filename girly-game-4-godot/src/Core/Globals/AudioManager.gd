@@ -20,7 +20,7 @@ var sfx_volume : float = 0.0
 	"scene1" : null,
 	"scene2" : load("res://import/Music/Dijimmi_VN-Opening_82.mp3"),
 	"cutscene fashion" : load("res://import/Music/Dijimmi_VN-Reunion_84.mp3"),
-	"scene7-5" : load("uid://dbojthef2jt64")
+	"scene7-5" : load("uid://dbojthef2jt64"),
 	"outro" : load("uid://cg04kj8ggpg76")
 }
 func load_music(cue : String):

@@ -1,6 +1,10 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://c4yeixpws6cus"]
 
 [ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_bcjjk"]
+[ext_resource type="Texture2D" uid="uid://dlk84m1chte45" path="res://import/Art/shop/bonnet/bonnet_base.png" id="2_qgx5d"]
+[ext_resource type="Texture2D" uid="uid://bdl8llp0g60t2" path="res://import/Art/shop/bonnet/bonnet_lace.png" id="3_3760q"]
+[ext_resource type="Texture2D" uid="uid://cst717u3h8l5s" path="res://import/Art/shop/bonnet/bonnet_top.png" id="4_5xv4h"]
+[ext_resource type="Texture2D" uid="uid://cjuda5f2ebry6" path="res://import/Art/shop/bonnet/bonnet_tint.png" id="4_3760q"]
 
 [resource]
 script = ExtResource("1_bcjjk")
@@ -9,7 +13,7 @@ level = 0
 accesory_type = "ボンネット"
 substyle = "ゴスロリ"
 featured = true
-textures_path = "res://import/Art/shop/bonnet"
+textures = Array[Texture]([ExtResource("2_qgx5d"), ExtResource("3_3760q"), ExtResource("4_3760q"), ExtResource("4_5xv4h")])
 color_set1 = Array[Color]([Color(0.050980393, 0.050980393, 0.050980393, 1), Color(0.0666, 0.07596, 0.09, 1), Color(0.06666667, 0.07450981, 0.09019608, 1), Color(1, 1, 1, 1)])
 color_set2 = Array[Color]([Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 0, 1)])
 color_set3 = Array[Color]([Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 0, 1)])

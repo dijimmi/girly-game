@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c80o7qc46ome3"]
 
 [ext_resource type="Script" uid="uid://q1l68j17spco" path="res://src/Resources/FullArtBG/fullart_2.gd" id="1_0rr7f"]
-[ext_resource type="Texture2D" uid="uid://dbylg4viiyqxb" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee.png" id="1_utiny"]
+[ext_resource type="Texture2D" uid="uid://dbylg4viiyqxb" path="res://import/Art/full_art/Art 2/2_SpecialArtCoffee.png" id="1_utiny"]
 [ext_resource type="Texture2D" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye1.png" id="2_nd1sg"]
-[ext_resource type="Texture2D" uid="uid://cganijmfwwy8w" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_WithAoi.png" id="3_pl170"]
+[ext_resource type="Texture2D" uid="uid://cganijmfwwy8w" path="res://import/Art/full_art/Art 2/2_SpecialArtCoffee_WithAoi.png" id="3_pl170"]
 [ext_resource type="Texture2D" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ao_Eye1.png" id="5_6gb84"]
 
 [node name="Node2D" type="Node" unique_id=1760562375]

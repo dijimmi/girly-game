@@ -22,7 +22,7 @@ extends Resource
 @export var keywords : Array[String] = []
 
 @export_category("Texture Directory")
-@export_dir var textures_path : String = "res://import/Art/shop/ss/a_outfit/"
+@export var textures : Array[Texture] = []
 
 @export_category("Colors")
 @export var color_set1 : Array[Color] = [Color.GREEN, Color.GREEN, Color.GREEN]
@@ -48,24 +48,16 @@ func get_keywords():
 
 
 func get_texture_rect_list() -> Array[TextureRect]:
+	
 	var list : Array = []
 	
-	var texture_files = DirAccess.get_files_at(textures_path)
-	for texture : String in texture_files:
-		if not texture.ends_with(".png"):
-			continue
-		if texture.contains("base_"):
-			continue
-		
+	for texture : Texture in textures:
 		var texture_rect = TextureRect.new()
-		var loaded_texture = load("%s/%s" % [textures_path, texture])
-		assert(loaded_texture != null, "This shit is null bro")
-		
-		texture_rect.texture = loaded_texture
+	
+		texture_rect.texture = texture
 		texture_rect.expand_mode = TextureRect.EXPAND_FIT_HEIGHT_PROPORTIONAL
 		list.append(texture_rect)
 	
-	#print("Product: %s, Textures %d" % [product_name, texture_files.size()])
 	return list
 
 

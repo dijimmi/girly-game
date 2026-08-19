@@ -1,14 +1,18 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://b6uepykbi27af"]
 
 [ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_7nmcc"]
+[ext_resource type="Texture2D" uid="uid://dgjkpcjpr5r8k" path="res://import/Art/shop/capelet/capelet_base.png" id="2_ssds2"]
+[ext_resource type="Texture2D" uid="uid://rp2cxg6726hw" path="res://import/Art/shop/capelet/capelet_tint.png" id="3_8054o"]
+[ext_resource type="Texture2D" uid="uid://ckvedog1d7dqh" path="res://import/Art/shop/capelet/capelet_lace.png" id="4_scswk"]
+[ext_resource type="Texture2D" uid="uid://cgmw8gq8wud0f" path="res://import/Art/shop/capelet/capelet_top.png" id="5_fiy6k"]
 
 [resource]
 script = ExtResource("1_7nmcc")
 product_name = "ブランド2"
-level = 1
+level = 0
 accesory_type = "ケープレット"
 substyle = "クラシックロリー"
 featured = true
-textures_path = "res://import/Art/shop/capelet"
+textures = Array[Texture]([ExtResource("2_ssds2"), ExtResource("3_8054o"), ExtResource("4_scswk"), ExtResource("5_fiy6k")])
 color_set1 = Array[Color]([Color(0.7, 0.65683335, 0.63, 1), Color(0.77, 0.73919994, 0.7238, 1), Color(0.609375, 0.65, 0.5525, 1)])
 color_set2 = Array[Color]([Color(0.8082752, 0.8197135, 0.9198505, 1), Color(0.9435958, 0.7821072, 0.7808012, 1), Color(0.76345414, 0.83986825, 0.8963909, 1)])

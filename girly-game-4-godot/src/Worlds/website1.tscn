@@ -34,7 +34,6 @@
 [ext_resource type="PackedScene" uid="uid://brosbmba0e5x7" path="res://src/Worlds/music_player.tscn" id="20_kvwn1"]
 [ext_resource type="Texture2D" uid="uid://ck0kmald4pu25" path="res://import/Art/ui_tex/website/web_popup.png" id="21_gxqel"]
 [ext_resource type="AudioStream" uid="uid://dljvtfvlssi5h" path="res://import/Music/Song/re_mas1.wav" id="22_8vfry"]
-[ext_resource type="FontFile" uid="uid://cf4maub1xnmmb" path="res://import/Font/KGMissSteward.ttf" id="22_732hb"]
 [ext_resource type="AudioStream" uid="uid://cqrl87jb6ks5y" path="res://import/Music/Song/Aoi_ - main.wav" id="23_dtfal"]
 [ext_resource type="Texture2D" uid="uid://b7po2dpkkw2el" path="res://import/Art/ui_tex/website/ui_web_cart.png" id="23_en18u"]
 [ext_resource type="AudioStream" uid="uid://bk6dndhav1fxw" path="res://import/Music/Song/Aoi_ - harm1.wav" id="24_uvjsx"]
@@ -224,7 +223,6 @@ layout_mode = 2
 
 [node name="ShowGames" type="Button" parent="VBoxContainer/HomePageBG/VBoxContainer/BookMarks/HBoxContainer" unique_id=1113590106]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_qrb0t")
 toggle_mode = true
@@ -480,7 +478,6 @@ offset_top = 90.0
 offset_right = 439.0
 offset_bottom = 145.0
 theme_override_colors/default_color = Color(1, 0, 0.34901962, 1)
-theme_override_fonts/normal_font = ExtResource("22_732hb")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "Ultra Girly Pet Fox"
@@ -493,7 +490,6 @@ offset_top = 171.0
 offset_right = 439.0
 offset_bottom = 307.0
 theme_override_colors/default_color = Color(1, 0, 0.34901962, 1)
-theme_override_fonts/normal_font = ExtResource("22_732hb")
 theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
 text = "Collection: Lolita
@@ -509,7 +505,6 @@ offset_top = 347.0
 offset_right = 245.0
 offset_bottom = 402.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_palqw")
 text = "Purchase"
@@ -562,7 +557,6 @@ offset_right = 300.0
 offset_bottom = 250.0
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(0.5759606, 1.6966089e-06, 3.3691526e-07, 1)
-theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 24
 text = "Would you like to purchase
 this item?"
@@ -577,7 +571,6 @@ offset_left = 23.0
 offset_top = 245.0
 offset_right = 139.0
 offset_bottom = 289.0
-theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_0i42j")
 text = "Yes"
@@ -589,7 +582,6 @@ offset_left = 171.0
 offset_top = 245.0
 offset_right = 280.0
 offset_bottom = 288.0
-theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_gxqel")
 text = "No"
@@ -641,7 +633,6 @@ theme_override_colors/font_color = Color(1, 0, 0.34901962, 1)
 theme_override_colors/font_uneditable_color = Color(1, 0, 0.34901962, 1)
 theme_override_colors/font_placeholder_color = Color(1, 0.29000002, 0.5740001, 1)
 theme_override_colors/selection_color = Color(1, 0, 0.34901962, 1)
-theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_1yyee")
 theme_override_styles/focus = SubResource("StyleBoxFlat_acry7")
@@ -691,7 +682,6 @@ offset_right = -27.0
 offset_bottom = 11.5
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("22_732hb")
 theme_override_font_sizes/font_size = 30
 text = "1:12 PM"
 
