@@ -21,7 +21,7 @@
 &"portraits": {
 "Confused": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base_NoOutline.png\"",
 "emotion": "3",
 "expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_4.png\"",
 "image": "",
@@ -35,7 +35,7 @@
 },
 "Happy": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base_NoOutline.png\"",
 "emotion": "1",
 "expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_2.png\"",
 "image": "",
@@ -49,7 +49,7 @@
 },
 "Mischievous": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base_NoOutline.png\"",
 "emotion": "4",
 "expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_5_Mischiveous.png\"",
 "image": "",
@@ -63,7 +63,7 @@
 },
 "Neutral": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base_NoOutline.png\"",
 "expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_1.png\"",
 "image": "",
 "portrait_height": "1420.0",
@@ -76,7 +76,7 @@
 },
 "Smile": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base_NoOutline.png\"",
 "emotion": "2",
 "expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_3.png\"",
 "image": "",
@@ -90,7 +90,7 @@
 },
 "Smug": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base.png\"",
+"body_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Base_NoOutline.png\"",
 "emotion": "5",
 "expression_image": "\"res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_6_Smug.png\"",
 "image": "",

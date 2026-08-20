@@ -5,12 +5,15 @@ extends DialogicPortrait
 enum Faces {NEUTRAL, HAPPY, SMILE, CONFUSED, LAUGH, WORRIED, EXCITED}
 
 @export_group('Main')
+## Apparently, every body image need a -532.5 y offset to look okay in the sprite.
+## This is set through the positions of the Body node and the Faces node.
 @export_file var body_image := ""
 @export_file var expression_image := ""
 
 @export var emotion: Faces = Faces.NEUTRAL
 @export var portrait_width: int
 @export var portrait_height: int
+@export var WARNING : String = "Apparently, every body image need a -532.5 y offset to look okay in the sprite."
 
 var does_custom_portrait_change := true
 

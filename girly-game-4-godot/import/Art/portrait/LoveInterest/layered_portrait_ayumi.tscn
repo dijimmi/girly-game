@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d0krdcu8lmkgu"]
+
+[ext_resource type="Script" uid="uid://cfwf5d8exox4f" path="res://addons/dialogic/Modules/LayeredPortrait/custom_layered_portrait.gd" id="1_uubi5"]
+[ext_resource type="Texture2D" uid="uid://cwc8f1ksk6oqp" path="res://import/Art/portrait/LoveInterest/Portrait_Base.png" id="2_46y82"]
+[ext_resource type="Texture2D" uid="uid://bwd3yf2hchmee" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_1_Neutral.png" id="3_4ysrq"]
+[ext_resource type="Texture2D" uid="uid://ddvp1r2r8f25o" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_2_Happy.png" id="4_5k1d3"]
+
+[node name="LayeredPortrait" type="CanvasGroup" unique_id=1037405511]
+script = ExtResource("1_uubi5")
+
+[node name="Layer1" type="Sprite2D" parent="." unique_id=972863491]
+texture = ExtResource("2_46y82")
+
+[node name="Group1" type="Node2D" parent="." unique_id=1958920372]
+
+[node name="Layer1" type="Sprite2D" parent="Group1" unique_id=1690769936]
+texture = ExtResource("3_4ysrq")
+
+[node name="Layer2" type="Sprite2D" parent="Group1" unique_id=1308691926]
+texture = ExtResource("4_5k1d3")

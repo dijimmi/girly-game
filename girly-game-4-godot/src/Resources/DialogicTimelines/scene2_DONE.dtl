@@ -1,4 +1,4 @@
-[background arg="res://import/Art/BackgroundArt/bg_corridor_afternoon.png" fade="1.0" wait="true"]
+[background arg="res://import/Art/bg/bg_corridor_afternoon.png" fade="1.0" wait="true"]
 [style name="CustomDialogue"]
 do AudioManager.load_music("scene2")
 {FriendName} and I walk together through the hallways, getting used to our surroundings. #id:47
@@ -6,8 +6,8 @@ do AudioManager.load_music("scene2")
 Even though we've been here for a few weeks already, it still feels so different from back home. #id:48
 # MISSING TRANSLATION
 join friend (Happy) center [animation="Fade In"]
-[voice path="res://import/Voices/Aoi/" volume="0.0"]
-friend: {PlayerName}, look a Japanese fashion club! #id:49
+[voice volume="0.0"]
+friend (Smile): {PlayerName}, look a Japanese fashion club! #id:49
 # MISSING TRANSLATION
 main_character: Japanese fashion club? #id:4a
 # MISSING TRANSLATION
@@ -22,7 +22,6 @@ friend (Neutral): Come on, it's gonna be fun! #id:4e
 main_character: But I'm not interested in your fashion kei whatever, {FriendName}! #id:4f
 # main_character: でも俺、お前の言う「おしゃれ」だか何だかにはあんまり興味ないんだって{FriendName}！
 friend (Happy): But you'd be so... #id:50
-# MISSING TRANSLATION
 [voice path="res://import/Voices/Aoi/Aoi_kawaii.wav" volume="0.0" bus="Voices"]
 friend (Smile): Kawaii! #id:51
 # MISSING TRANSLATION

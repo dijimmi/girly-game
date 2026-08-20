@@ -21,7 +21,7 @@
 &"portraits": {
 "Confused": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base.png\"",
+"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base_NoOutline.png\"",
 "emotion": "3",
 "expression_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Eyes_4_Confused.png\"",
 "image": "",
@@ -29,13 +29,13 @@
 "portrait_width": "852.0"
 },
 "mirror": false,
-"offset": Vector2(0, 0),
+"offset": Vector2(0, 324),
 "scale": 1,
 "scene": "res://src/Resources/DialogicCharacters/custom_portrait.tscn"
 },
 "Excited": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base.png\"",
+"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base_NoOutline.png\"",
 "emotion": "6",
 "expression_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Eyes_7_Excited.png\"",
 "image": "",
@@ -49,7 +49,7 @@
 },
 "Happy": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base.png\"",
+"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base_NoOutline.png\"",
 "emotion": "1",
 "expression_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Eyes_2_Happy.png\"",
 "image": "",
@@ -63,7 +63,7 @@
 },
 "Laugh": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base.png\"",
+"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base_NoOutline.png\"",
 "emotion": "4",
 "expression_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Eyes_5_Laugh.png\"",
 "image": "",
@@ -77,7 +77,7 @@
 },
 "Neutral": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base.png\"",
+"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base_NoOutline.png\"",
 "expression_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Eyes_1_Neutral.png\"",
 "image": "",
 "portrait_height": "648.0",
@@ -90,7 +90,7 @@
 },
 "Smile": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base.png\"",
+"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base_NoOutline.png\"",
 "emotion": "2",
 "expression_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Eyes_3_Smile.png\"",
 "image": "",
@@ -104,7 +104,7 @@
 },
 "Worried": {
 "export_overrides": {
-"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base.png\"",
+"body_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Base_NoOutline.png\"",
 "emotion": "5",
 "expression_image": "\"res://import/Art/portrait/LoveInterest/Portrait_Eyes_6_Worried.png\"",
 "image": "",
