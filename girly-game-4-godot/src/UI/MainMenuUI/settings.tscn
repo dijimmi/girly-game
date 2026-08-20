@@ -4,12 +4,12 @@
 [ext_resource type="Theme" uid="uid://bpcan81im5njq" path="res://src/Resources/Themes/theme.tres" id="1_kow2s"]
 [ext_resource type="FontFile" uid="uid://cysl0xtptx3lf" path="res://import/Fonts/MochiyPopOne-Regular.ttf" id="3_su7nk"]
 [ext_resource type="FontFile" uid="uid://dksbyhngtpu87" path="res://import/Fonts/LINESeedJP-Bold.ttf" id="4_kow2s"]
-[ext_resource type="Texture2D" uid="uid://df6surut75ojb" path="res://import/Art/UIArt/9rect.png" id="5_hsrey"]
-[ext_resource type="Texture2D" uid="uid://bcbdy1g2o51" path="res://import/Art/UIArt/MainMenu/checkbox_off.png" id="6_fyf51"]
-[ext_resource type="Texture2D" uid="uid://p0tpg51jlhcc" path="res://import/Art/UIArt/MainMenu/checkbox.png" id="7_wenl1"]
-[ext_resource type="Texture2D" uid="uid://b0rkgql2fm63x" path="res://import/Art/UIArt/9rect_highlight.png" id="8_mhits"]
-[ext_resource type="Texture2D" uid="uid://nuf238yqaa41" path="res://import/Art/UIArt/MainMenu/button1.png" id="9_wenl1"]
-[ext_resource type="Texture2D" uid="uid://co8l3sv2nlfmd" path="res://import/Art/UIArt/MainMenu/button1_bg.png" id="10_mhits"]
+[ext_resource type="Texture2D" uid="uid://df6surut75ojb" path="res://import/Art/ui_art/9rect.png" id="5_hsrey"]
+[ext_resource type="Texture2D" uid="uid://bcbdy1g2o51" path="res://import/Art/ui_art/MainMenu/checkbox_off.png" id="6_fyf51"]
+[ext_resource type="Texture2D" uid="uid://p0tpg51jlhcc" path="res://import/Art/ui_art/MainMenu/checkbox.png" id="7_wenl1"]
+[ext_resource type="Texture2D" uid="uid://b0rkgql2fm63x" path="res://import/Art/ui_art/9rect_highlight.png" id="8_mhits"]
+[ext_resource type="Texture2D" uid="uid://nuf238yqaa41" path="res://import/Art/ui_art/MainMenu/button1.png" id="9_wenl1"]
+[ext_resource type="Texture2D" uid="uid://co8l3sv2nlfmd" path="res://import/Art/ui_art/MainMenu/button1_bg.png" id="10_mhits"]
 
 [node name="Settings" type="Control" unique_id=1000439076]
 z_index = 5

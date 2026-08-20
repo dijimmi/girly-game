@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://cjya42uw7j128" path="res://src/Worlds/scene1.tscn" id="2_q84wo"]
 [ext_resource type="PackedScene" uid="uid://b87xryrg3eybu" path="res://src/UI/MainMenuUI/main_menu.tscn" id="3_sipf8"]
 [ext_resource type="PackedScene" uid="uid://w0xct215t6of" path="res://src/Worlds/Cutscenes/cutscene_fashion_club.tscn" id="4_1yjvo"]
-[ext_resource type="PackedScene" uid="uid://d12df3c2gdp4c" path="res://src/Worlds/website1.tscn" id="5_j1ikt"]
+[ext_resource type="PackedScene" uid="uid://3gbqc8g1x28u" path="res://src/Worlds/website1.tscn" id="5_j1ikt"]
 [ext_resource type="PackedScene" uid="uid://c6ltsnf7brv0j" path="res://src/Worlds/Cutscenes/cutscene_website_placeholder.tscn" id="6_m66gv"]
 [ext_resource type="PackedScene" uid="uid://dbjofwn4i8ycc" path="res://src/Worlds/website_ender.tscn" id="7_qntjh"]
 [ext_resource type="Shader" uid="uid://cq6j3m74gnsuo" path="res://src/Core/Handlers/level_handler.tres" id="8_vsnvo"]
-[ext_resource type="Texture2D" uid="uid://c822nv0f36rgh" path="res://import/Art/UIArt/MainMenu/texture_rays.png" id="9_epka4"]
-[ext_resource type="Texture2D" uid="uid://d4ebv7fc2pi5e" path="res://import/Art/UIArt/MainMenu/dress_icon_white.png" id="10_epka4"]
+[ext_resource type="Texture2D" uid="uid://c822nv0f36rgh" path="res://import/Art/ui_art/MainMenu/texture_rays.png" id="9_epka4"]
+[ext_resource type="Texture2D" uid="uid://d4ebv7fc2pi5e" path="res://import/Art/ui_art/MainMenu/dress_icon_white.png" id="10_epka4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mrd4b"]
 shader = ExtResource("8_vsnvo")

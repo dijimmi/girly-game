@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0hh1pskdca3r" path="res://src/Resources/DialogicCustomFiles/custom_glossary_popup.gd" id="1_5vldw"]
 [ext_resource type="Theme" uid="uid://bpcan81im5njq" path="res://src/Resources/Themes/theme.tres" id="1_anl6j"]
-[ext_resource type="Texture2D" uid="uid://2aqv0xh4uwkn" path="res://import/Art/UIArt/Texture/ui_tex_rabbit_solid_transparent.png" id="2_dnhuk"]
+[ext_resource type="Texture2D" uid="uid://2aqv0xh4uwkn" path="res://import/Art/ui_art/Texture/ui_tex_rabbit_solid_transparent.png" id="2_dnhuk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnhuk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

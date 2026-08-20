@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://bhrvdg5ftyble" path="res://src/UI/MinigameUI/minigame_draw_hiragana.gd" id="1_k6yt4"]
 [ext_resource type="Theme" uid="uid://bpcan81im5njq" path="res://src/Resources/Themes/theme.tres" id="1_xam24"]
 [ext_resource type="PackedScene" uid="uid://ckjywq7d7pc5d" path="res://src/Entity/drawing_frame.tscn" id="2_vhj4k"]
-[ext_resource type="Texture2D" uid="uid://btqi3441eaut5" path="res://import/Art/UIArt/Hiragana/handakuten.png" id="3_217i8"]
-[ext_resource type="Texture2D" uid="uid://cocu2tg20h3di" path="res://import/Art/UIArt/Hiragana/dakuten.png" id="4_f73qd"]
-[ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/UIArt/Hiragana/a_1.png" id="4_lkbmo"]
-[ext_resource type="Texture2D" uid="uid://nuf238yqaa41" path="res://import/Art/UIArt/MainMenu/button1.png" id="8_uopbp"]
-[ext_resource type="Texture2D" uid="uid://co8l3sv2nlfmd" path="res://import/Art/UIArt/MainMenu/button1_bg.png" id="9_lp4k3"]
-[ext_resource type="Texture2D" uid="uid://bjqv567gklwfr" path="res://import/Art/UIArt/Hiragana/hiragana_writing_background.png" id="12_2lagt"]
+[ext_resource type="Texture2D" uid="uid://btqi3441eaut5" path="res://import/Art/ui_art/Hiragana/handakuten.png" id="3_217i8"]
+[ext_resource type="Texture2D" uid="uid://cocu2tg20h3di" path="res://import/Art/ui_art/Hiragana/dakuten.png" id="4_f73qd"]
+[ext_resource type="Texture2D" uid="uid://dyp0mihqdbhgk" path="res://import/Art/ui_art/Hiragana/a_1.png" id="4_lkbmo"]
+[ext_resource type="Texture2D" uid="uid://nuf238yqaa41" path="res://import/Art/ui_art/MainMenu/button1.png" id="8_uopbp"]
+[ext_resource type="Texture2D" uid="uid://co8l3sv2nlfmd" path="res://import/Art/ui_art/MainMenu/button1_bg.png" id="9_lp4k3"]
+[ext_resource type="Texture2D" uid="uid://bjqv567gklwfr" path="res://import/Art/ui_art/Hiragana/hiragana_writing_background.png" id="12_2lagt"]
 
 [sub_resource type="Gradient" id="Gradient_tsmec"]
 interpolation_mode = 2

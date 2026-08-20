@@ -2,11 +2,11 @@
 
 [ext_resource type="Theme" uid="uid://bpcan81im5njq" path="res://src/Resources/Themes/theme.tres" id="1_6qwmn"]
 [ext_resource type="Script" uid="uid://mq78tlq6ml6j" path="res://src/UI/MinigameUI/minigame_match.gd" id="1_huaos"]
-[ext_resource type="Texture2D" uid="uid://nuf238yqaa41" path="res://import/Art/UIArt/MainMenu/button1.png" id="3_ov83n"]
-[ext_resource type="Texture2D" uid="uid://cje7nqkejsj7b" path="res://import/Art/UIArt/MainMenu/small_button.png" id="3_tsmec"]
-[ext_resource type="Texture2D" uid="uid://bvhirlaux6waw" path="res://import/Art/UIArt/MainMenu/small_button_selected.png" id="4_lnlii"]
-[ext_resource type="Texture2D" uid="uid://co8l3sv2nlfmd" path="res://import/Art/UIArt/MainMenu/button1_bg.png" id="4_ps2u2"]
-[ext_resource type="Texture2D" uid="uid://2v5va6rt6jct" path="res://import/Art/UIArt/MainMenu/small_button_disabled.png" id="5_22ioj"]
+[ext_resource type="Texture2D" uid="uid://nuf238yqaa41" path="res://import/Art/ui_art/MainMenu/button1.png" id="3_ov83n"]
+[ext_resource type="Texture2D" uid="uid://cje7nqkejsj7b" path="res://import/Art/ui_art/MainMenu/small_button.png" id="3_tsmec"]
+[ext_resource type="Texture2D" uid="uid://bvhirlaux6waw" path="res://import/Art/ui_art/MainMenu/small_button_selected.png" id="4_lnlii"]
+[ext_resource type="Texture2D" uid="uid://co8l3sv2nlfmd" path="res://import/Art/ui_art/MainMenu/button1_bg.png" id="4_ps2u2"]
+[ext_resource type="Texture2D" uid="uid://2v5va6rt6jct" path="res://import/Art/ui_art/MainMenu/small_button_disabled.png" id="5_22ioj"]
 
 [sub_resource type="Gradient" id="Gradient_tsmec"]
 interpolation_mode = 2
