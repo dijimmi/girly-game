@@ -79,8 +79,8 @@ entries = {
 "ho-n-to": "ほんと",
 "i-mo-u-to": "いもうと",
 "i-ra-ssha-i": "いらっしゃい",
-"ka": "か",
 "ka-a-pe-re-tto": "ケープレット",
+"ka-no-jo": "かのじょ",
 "ka-wa-i-i": "かわいい",
 "ke-i": "けい",
 "ko-n-ba-n-wa": "こんばんは",
@@ -172,10 +172,10 @@ entries = {
 "name": "おすすめしょうひん",
 "title": "Featured Products"
 },
-"か": {
-"alternatives": ["ka"],
-"name": "か",
-"title": "(?) interrogation mark"
+"かのじょ": {
+"alternatives": ["ka-no-jo"],
+"name": "かのじょ",
+"title": "Girlfriend"
 },
 "かわいい": {
 "alternatives": ["ka-wa-i-i"],

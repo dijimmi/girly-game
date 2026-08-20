@@ -11,7 +11,7 @@
 [sub_resource type="Gradient" id="Gradient_tsmec"]
 interpolation_mode = 2
 offsets = PackedFloat32Array(0, 0.54275095, 1)
-colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.43137255, 1, 1, 1, 0)
+colors = PackedColorArray(0.07058824, 0.08235294, 0.16078432, 0, 0.072, 0.080800004, 0.16, 0.43137255, 0.0704, 0.08234665, 0.16, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_v0mr5"]
 gradient = SubResource("Gradient_tsmec")

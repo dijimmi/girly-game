@@ -13,9 +13,9 @@
 [sub_resource type="Gradient" id="Gradient_tsmec"]
 interpolation_mode = 2
 offsets = PackedFloat32Array(0, 0.54275095, 1)
-colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.52156866, 1, 1, 1, 0)
+colors = PackedColorArray(0.07058824, 0.08235294, 0.16078432, 0, 0.072, 0.080800004, 0.16, 0.43137255, 0.0704, 0.08234665, 0.16, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_xam24"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v0mr5"]
 gradient = SubResource("Gradient_tsmec")
 
 [sub_resource type="Animation" id="Animation_xam24"]
@@ -226,7 +226,7 @@ _data = {
 &"minigame_out": SubResource("Animation_lp4k3")
 }
 
-[node name="DrawHiragana" type="Control" unique_id=2074376187 groups=["DrawingMinigame"]]
+[node name="DrawHiragana" type="Control" unique_id=2074376187]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -245,7 +245,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = SubResource("GradientTexture2D_xam24")
+texture = SubResource("GradientTexture2D_v0mr5")
 
 [node name="DrawingFrame" parent="." unique_id=614917709 node_paths=PackedStringArray("label") instance=ExtResource("2_vhj4k")]
 custom_minimum_size = Vector2(384, 384)
@@ -306,6 +306,7 @@ grow_vertical = 0
 expand_mode = 2
 
 [node name="TextureRectParticle" type="TextureRect" parent="DrawingFrame" unique_id=912643335]
+visible = false
 self_modulate = Color(1, 1, 1, 0.21960784)
 layout_mode = 1
 anchors_preset = 15
@@ -348,7 +349,7 @@ offset_bottom = 247.0
 grow_horizontal = 0
 texture_normal = ExtResource("8_uopbp")
 
-[node name="ExitButton" type="TextureButton" parent="ExitButton2" unique_id=299052913 groups=["DrawingMinigame"]]
+[node name="ExitButton" type="TextureButton" parent="ExitButton2" unique_id=299052913]
 self_modulate = Color(0, 0, 0, 1)
 show_behind_parent = true
 layout_mode = 1

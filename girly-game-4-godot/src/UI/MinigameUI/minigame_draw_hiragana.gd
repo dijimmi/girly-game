@@ -12,6 +12,7 @@ var word_to_teach : String = ""
 
 
 func start_minigame(meta : String) -> void:
+	print(get_parent().rounds)
 	if meta == "" or meta == null:
 		return
 	word_to_teach = meta
@@ -31,15 +32,20 @@ func start_minigame(meta : String) -> void:
 func end_minigame() -> void:
 	update_guide("null")
 	var next_round = get_parent().current_rounds + 1
+	print(next_round," ", get_parent().rounds)
 	if next_round > get_parent().rounds:
+		print("no next round")
 		$AnimationPlayer.play("minigame_out")
 	elif !get_parent().minigame_order.get(clamp(next_round,0,get_parent().rounds)) == self:
+		print("next round isn't me")
 		$AnimationPlayer.play("minigame_out")
 	$DrawingFrame.clear_frame()
 	$DrawingFrame.clear_label()
 	EventBus.minigame_round_end.emit()
 	for letter in word_to_teach.rsplit():
 		Global.add_player_exp(letter, 0.01)
+	print("drawing minigame end")
+	self.hide()
 func _calculate_difficulty() -> Array[int]:
 	var result : Array[int] = []
 	var instances : float = _get_instances()
@@ -140,11 +146,11 @@ func update_guide(hint : String = "") -> void:
 	if current_symbol < word_to_teach.length():
 		current_letter = word_to_teach[current_symbol]
 	if hint != "":
-		texture_rect.texture = Texture2D.new()
+		texture_rect.texture = null
 		return
 	
-	$DrawingFrame/TextureRectMini.texture = Texture2D.new()
-	$DrawingFrame/TextureRect.texture = Texture2D.new()
+	$DrawingFrame/TextureRectMini.texture = null
+	$DrawingFrame/TextureRect.texture = null
 	
 	if word_to_teach[current_symbol] in $DrawingFrame.mini_hiragana_dictionary:
 		texture_rect = $DrawingFrame/TextureRectMini
@@ -161,7 +167,7 @@ func update_guide(hint : String = "") -> void:
 		return
 	frames_dict = $DrawingFrame.hiragana_picture[current_letter].frames
 	
-	var frame : Texture2D = Texture2D.new()
+	var frame : Texture2D = null
 	match difficulty:
 		0:
 			frame = frames_dict[str(current_line+1)]
@@ -177,7 +183,7 @@ func update_rounds() -> void:
 
 func _on_exit_button_pressed() -> void:
 	AudioManager.play_sfx($DrawingFrame/Stroke, on_skipped_sound)
-	
+	print("skipped")
 	EventBus.minigame_skipped.emit()
 	get_parent().exit_minigames()
 	end_minigame()

@@ -25,14 +25,18 @@ func start_minigame(meta : String) -> void:
 func end_minigame() -> void:
 	var next_round = get_parent().current_rounds + 1
 	if next_round > get_parent().rounds:
+		print("no next round")
 		$AnimationPlayer.play("minigame_out")
 	elif !get_parent().minigame_order.get(clamp(next_round,0,get_parent().rounds)) == self:
+		print("next round isn't me")
 		$AnimationPlayer.play("minigame_out")
 	
 	for button in %WordsEN.get_children()+%WordsJP.get_children():
 		button.disabled = false
 		button.set_pressed_no_signal(false)
 	EventBus.minigame_round_end.emit()
+	print("matching minigame end")
+	self.hide()
 
 #______________-LOGIC-______________#
 func connect_buttons() -> void:

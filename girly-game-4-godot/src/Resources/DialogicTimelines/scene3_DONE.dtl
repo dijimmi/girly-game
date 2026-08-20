@@ -1,4 +1,4 @@
-[background arg="res://import/Art/BackgroundArt/bg_fashion_club.png" fade="1.0" wait="true"]
+[background arg="res://import/Art/bg/bg_fashion_club.png" fade="1.0" wait="true"]
 [style name="CustomDialogue"]
 
 # @ MEANS VOICED DIALOGUE
