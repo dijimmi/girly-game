@@ -1,0 +1,14 @@
+[remap]
+
+importer="inkgd.ink"
+type="Resource"
+uid="uid://b6e4v8by82uwt"
+path="res://.godot/imported/scene2.ink-e044e8d64de0b134d1a1395f58a230a5.res"
+
+[deps]
+
+source_file="res://src/VisualNovelTemplate/InkStory/Scene1/scene2.ink"
+dest_files=["res://.godot/imported/scene2.ink-e044e8d64de0b134d1a1395f58a230a5.res"]
+
+[params]
+

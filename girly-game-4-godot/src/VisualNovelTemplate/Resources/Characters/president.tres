@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CharacterInfo" format=3 uid="uid://c25pug8mj6lm"]
+
+[ext_resource type="Script" uid="uid://7nr1cui7y5lx" path="res://src/VisualNovelTemplate/Resources/Characters/characterinfo.gd" id="1_aphu0"]
+
+[resource]
+script = ExtResource("1_aphu0")
+metadata/_custom_type_script = "uid://7nr1cui7y5lx"

@@ -31,8 +31,11 @@ func setup(character : CharacterInfo):
 
 ## Changes the expression of the current character into the new expression given.[br]
 ## [br]
-## [b][color=orange]WARNING:[/color][/b] If no valid expression is given, it will hide all expressions.
+## [b][color=orange]WARNING:[/color][/b] If an unvalid expression is given, it will hide all expressions.
 func change_expression(new_expression : String):
+	if new_expression == null or new_expression == "":
+		return
+	
 	for expr : TextureRect in expressions.get_children():
 		if expr.name.to_lower() == new_expression.to_lower():
 			expr.show()

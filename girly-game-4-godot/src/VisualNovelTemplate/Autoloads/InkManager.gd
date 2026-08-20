@@ -26,7 +26,7 @@ extends Node
 @onready var _ink_player : InkPlayer = InkPlayer.new()
 
 ## Path for the story file already compiled into '.json' format.
-const _ink_file_json : String = "res://src/VisualNovelTemplate/InkStory/story.ink.json"
+const _ink_file_json : String = "res://src/VisualNovelTemplate/InkStory/Scene1/story.ink.json"
 
 ## MUST be connected to the method in your [TestingVN] that handles how choices are portrayed in
 ## a story. This signal is emitted when [method continue_story] detects that there are choices to be made.
@@ -65,15 +65,35 @@ func _get_parsed_line() -> StoryMessage:
 	var elements = []
 	var parsed_line : StoryMessage = StoryMessage.new()
 	
+	while text.strip_edges() == "":
+		print("Empty Text: '%s' " % text)
+		text = _ink_player.continue_story()
 	# Parsing method
+	
 	if text.contains(":"):
 		elements = text.split(":")
+		var name_and_expression : PackedStringArray = elements[0].split(" ")
+		
+		var cname : String = name_and_expression[0]
+		var expression : String = ""
+		if name_and_expression.size() > 1:
+			expression = name_and_expression.get(1).replace("(", "").replace(")", "")
+			
+		elements[0] = cname
+		elements.append(expression)
+		
 	else:
 		elements.append("")
 		elements.append(text)
+		elements.append("")
 		
 	parsed_line.character = elements[0]
 	parsed_line.message = elements[1]
+	
+	if elements.get(2) == "":
+		parsed_line.expression = ""
+	else:
+		parsed_line.expression = elements.get(2)
 	
 	return parsed_line
 

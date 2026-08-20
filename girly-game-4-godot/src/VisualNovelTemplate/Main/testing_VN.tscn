@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://7nr1cui7y5lx" path="res://src/VisualNovelTemplate/Resources/Characters/characterinfo.gd" id="2_8m5dr"]
 [ext_resource type="Resource" uid="uid://drtlqbxfvdb3s" path="res://src/VisualNovelTemplate/Resources/Characters/ayumi.tres" id="3_3qs08"]
 [ext_resource type="Texture2D" uid="uid://cdyiii4tg2uy5" path="res://import/Art/bg/bg_school_gate.png" id="4_ehddr"]
+[ext_resource type="Resource" uid="uid://dlee1gjkggjmx" path="res://src/VisualNovelTemplate/Resources/Characters/aoi.tres" id="4_mk3tg"]
+[ext_resource type="Resource" uid="uid://c25pug8mj6lm" path="res://src/VisualNovelTemplate/Resources/Characters/president.tres" id="5_ukiac"]
 [ext_resource type="PackedScene" uid="uid://prn58dje400g" path="res://src/VisualNovelTemplate/Main/CharacterSprite/character_sprite.tscn" id="6_jy4ox"]
+[ext_resource type="AudioStream" uid="uid://bb28sj6v8a85f" path="res://import/Music/Dijimmi_VN-Reunion_84.mp3" id="7_ukiac"]
 [ext_resource type="PackedScene" uid="uid://delyravv8ivr2" path="res://src/VisualNovelTemplate/Main/Textbox/vn_text_box.tscn" id="8_gupco"]
 
 [node name="VisualNovel" type="Control" unique_id=1798825500 node_paths=PackedStringArray("background_img", "textbox", "choices_buttons")]
@@ -19,10 +22,15 @@ background_img = NodePath("BGImage")
 textbox = NodePath("VNTextBox")
 choices_buttons = NodePath("ChoicesPlaceholder")
 characters = Dictionary[String, ExtResource("2_8m5dr")]({
-"Ayumi": ExtResource("3_3qs08")
+"Aoi": ExtResource("4_mk3tg"),
+"Ayumi": ExtResource("3_3qs08"),
+"President": ExtResource("5_ukiac")
 })
 backgrounds = Dictionary[String, Texture]({
 "intro": ExtResource("4_ehddr")
+})
+music_tracks = Dictionary[String, AudioStream]({
+"intro": ExtResource("7_ukiac")
 })
 character_sprite_scene = ExtResource("6_jy4ox")
 
@@ -33,6 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("4_ehddr")
 
 [node name="VNTextBox" parent="." unique_id=244194875 instance=ExtResource("8_gupco")]
 layout_mode = 1
@@ -52,3 +61,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Voice" type="AudioStreamPlayer" parent="." unique_id=592490985]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1751673009]
+
+[node name="SoundEffects" type="AudioStreamPlayer" parent="." unique_id=241246901]

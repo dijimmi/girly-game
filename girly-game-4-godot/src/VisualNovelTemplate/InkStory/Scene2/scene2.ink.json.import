@@ -1,0 +1,15 @@
+[remap]
+
+importer="inkgd.ink.json"
+type="Resource"
+uid="uid://dyovulceugpyu"
+path="res://.godot/imported/scene2.ink.json-9ff4bb58466729857579289af23e44b6.res"
+
+[deps]
+
+source_file="res://src/VisualNovelTemplate/InkStory/Scene2/scene2.ink.json"
+dest_files=["res://.godot/imported/scene2.ink.json-9ff4bb58466729857579289af23e44b6.res"]
+
+[params]
+
+compress=true

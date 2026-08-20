@@ -21,12 +21,12 @@ func setup(character_name : String, story_text : String):
 
 func animate_arrow():
 	arrow.show()
-	var dur = 0.25
-	var pos = arrow.global_position.y
+	var dur = 0.5
+	var pos = arrow.global_position.x
 	arrow_tween = create_tween().set_loops()
 	
-	arrow_tween.tween_property(arrow, "global_position:y", pos - 10, dur)
-	arrow_tween.tween_property(arrow, "global_position:y", pos,      dur)
+	arrow_tween.tween_property(arrow, "global_position:x", pos - 10, dur)
+	arrow_tween.tween_property(arrow, "global_position:x", pos,      dur)
 
 
 func _on_button_pressed():

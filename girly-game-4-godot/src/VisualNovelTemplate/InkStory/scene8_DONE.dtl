@@ -1,0 +1,238 @@
+I'm really nervous… #id:25a
+# 緊張する……。
+do AudioManager.load_music("scene2")
+When will {LoveInterestName} arrive? #id:25b
+# アユミ、いつ来るんだ？
+Did I choose the wrong outfit? Is she mad at me? #id:25c
+# 選んだコーデ、外したか？ もしかしてなにか怒らせたか？
+… #id:25d
+# ……。
+What has gotten into me? #id:25e
+# 俺、なんか変だ。
+Being anxious is so unlike me… #id:25f
+# MISSING TRANSLATION
+
+I look at the other people that have gathered here. They all wear different fashion styles. #id:260
+# 集まっている人たちを見回す。みんな、思い思いのファッションに身を包んでいる。
+While I look for costume similar to the one Ayumi will be wearing, I hear my phone ring in my pocket. #id:261
+# アユミが着てくるはずのコーデに似た人影を探していると、ポケットのスマホが鳴った。
+
+main_character: Hello? #id:262
+# main_character: もしもし。
+Ayumi: [main_character Name]! Where are you? #id:263
+# Ayumi: [main_character Name]！ 今どこ？
+
+main_character: I'm here! Next to the… #id:264
+# main_character: もう着いてる！ えっと……。
+main_character: Anime booth. #id:265
+# main_character: アニメのブースの近く。
+
+Ayumi: Oh oh, I think I see you. #id:266
+# Ayumi: あっ、いた。たぶん見つけた。
+
+main_character: Where??? #id:267
+# main_character: どこ！？
+
+She hangs up. #id:268
+# アユミはそのまま通話を切った。
+
+Ayumi: [main_character Name]! @ #id:269
+# Ayumi: [main_character Name]！
+
+Ayumi appears behind a wall. #id:26a
+# MISSING TRANSLATION
+
+Before you can turn around, Ayumi walks in front of you, wearing the dress you picked out for her. #id:26b
+# 振り向くより先に、アユミが俺の正面へ回り込んでくる。俺が選んだ服を、その身にまとって。
+
+main_character: Ayumi! #id:26c
+# main_character: アユミ！
+
+Ayumi: Good to see you! #id:26d
+# Ayumi: 会えてよかった～！
+Ayumi: [main_character Name]~ @ #id:26e
+# Ayumi: [main_character Name]〜。
+
+main_character: You look… #id:26f
+# main_character: その服……。
+I hold myself back before I say something embarrassing. #id:270
+# 何か恥ずかしいことを口走りそうになって、慌てて飲み込む。
+
+main_character: sugoi… (in small text) #id:271
+# main_character: すごい……。（小さい文字）
+main_character: Kawaii, very kawaii. (JP) #id:272
+# main_character: かわいい。すごく……かわいい。
+
+Ayumi: Arigatou~ @ #id:273
+# Ayumi: ありがとう〜。
+Ayumi: I really like the outfit you chose for me. #id:274
+# Ayumi: 選んでくれたコーデ、本当に気に入った。
+Ayumi: Thanks a lot! #id:275
+# Ayumi: ありがとう！
+
+main_character: Ah, it's nothing. I'm glad you like it. #id:276
+# main_character: いや、全然。気に入ってくれたならよかった。
+main_character: I've become quite the fashionist, right? #id:277
+# main_character: もう俺、かなりのファッショニスタだろ？
+
+Ayumi: www @ #id:278
+# Ayumi:ふふ。
+Ayumi: un~ @ #id:279
+# Ayumi: うん、そうだね。
+
+main_character: Better than Aoi? #id:27a
+# main_character: アオイより上だな。
+
+Aoi: Did I hear my name? #id:27b
+# Aoi: 今、私の名前聞こえたんだけど？
+
+main_character: Aoi! #id:27c
+# main_character: アオイ！
+
+main_character: I didn't know you'd be here. #id:27d
+# main_character: お前も来るなんて聞いてなかったぞ。
+
+Aoi: Surprise surprise. #id:27e
+# Aoi: サプラ〜イズ。
+Aoi: I just came to say hi and buy some things. #id:27f
+# Aoi: ちょっと顔を出して、ついでに買い物もしていこうかなって。
+
+main_character: Oh I see I see. #id:280
+# main_character: そうか、そうか。
+
+Ayumi: Good to see you, Aoi! #id:281
+# Ayumi: アオイちゃんも会えてよかったぁ。
+
+Aoi: Likewise! #id:282
+# Aoi: ねー。
+Aoi: I'll see you two later. #id:283
+# Aoi: じゃあ、私はまたあとでね。
+Aoi: Have fun! #id:284
+# Aoi: 二人とも楽しんでね！
+main_character: See ya! #id:285
+# main_character: またな！
+
+Ayumi: Sayonara! @ #id:286
+# Ayumi: またね！
+
+Aoi leaves. #id:287
+# アオイは二人のもとを離れていった。
+
+Ayumi: Now that we're here, just the two of us… #id:288
+# Ayumi: じゃあ、ここからは…二人きりだね……。
+Ayumi: I wonder… #id:289
+# Ayumi: ってことは……。
+Ayumi: Does that make this… a date? #id:28a
+# Ayumi: これって……もしかして、デート……なのかな？
+
+main_character: A DATE? #id:28b
+# main_character: デート！？
+
+I clear my throat. #id:28c
+# 俺は咳払いをする。
+
+main_character: Sorry, that caught me off guard. #id:28d
+# main_character: ごめん、びっくりした。
+main_character: Why do you say that? #id:28e
+# main_character: なんでそう思ったの？
+
+Ayumi: Well… #id:28f
+# Ayumi: その……。
+Ayumi: I feel we've been friends for a while now… #id:290
+# Ayumi: 私たち、友達になってから少し経つでしょ……？
+Ayumi: And you know, since you've been so nice to me, helping me choose my outfits. #id:291
+# Ayumi: それに、ずっと優しくしてくれて……服を選ぶのも手伝ってくれたし。
+Ayumi: I thought that meant that you like me. #id:292
+# Ayumi: だから……もしかして、私のことが好きなのかなって……。
+
+Oop, what's going on... #id:293
+# MISSING TRANSLATION
+
+Ayumi: {PlayerName}~ #id:294
+# MISSING TRANSLATION
+Ayumi: Do you like me? #id:295
+# MISSING TRANSLATION
+
+What do I do now…? #id:296
+# どうする、俺……？
+I never thought this would happen... #id:297
+# MISSING TRANSLATION
+Not like this... #id:298
+# MISSING TRANSLATION
+Not that I didn't want this or anything, but… #id:299
+# いや、こうなるのが嫌だったわけじゃない。むしろ……。
+
+main_character: I… #id:29a
+# main_character: 俺……。
+
+Ayumi: ええ? @ #id:29b
+# MISSING TRANSLATION
+
+main_character: I do... #id:29c
+# main_character: うん……好きだ。
+
+Ayumi: Hontou? #id:29d
+# Ayumi: 本当？
+
+main_character: はい. I like you... a lot~ #id:29e
+# MISSING TRANSLATION
+
+Why did I have to say it like that? #id:29f
+# MISSING TRANSLATION
+I sound so cringe! #id:2a0
+# MISSING TRANSLATION
+
+Ayumi: That makes me so happy! (JP) @ #id:2a1
+# MISSING TRANSLATION
+Ayumi: www @ #id:2a2
+# Ayumi:はは、ふふふ。
+Ayumi: To be honest… #id:2a3
+# Ayumi: 実はね……。
+Ayumi: I was afraid to be wrong, so I cheated a little bit. #id:2a4
+# Ayumi: 勘違いだったら、怖かったから、ちょっとだけズルしたんだ。
+Ayumi: And I asked Aoi first. #id:2a5
+# Ayumi: 先にアオイちゃんに聞いちゃったの。
+
+main_character: What!? #id:2a6
+# main_character: えっ！？
+
+Ayumi: www @ #id:2a7
+# Ayumi:ふふふ。
+Ayumi: That's why she was here. #id:2a8
+# Ayumi: だから、アオイちゃんもここに来てたんだ。
+Ayumi: To help me get past my nervousness. #id:2a9
+# Ayumi: 私が逃げちゃわないように、背中を押してもらってたんだ。
+
+main_character: Tch- Aoi… #id:2aa
+# main_character: ちっ……アオイめ……。
+main_character: I'm gonna have a talk with her once I get home… #id:2ab
+# main_character: 帰ったら、あいつをちょっと問い詰めないとな……。
+main_character: She is in so much trouble… #id:2ac
+# main_character: たっぷり文句を言ってやる……。
+
+Ayumi and I look at each other and laugh. #id:2ad
+# MISSING TRANSLATION
+
+Ayumi: www @ #id:2ae
+# Ayumi: あはは。
+Ayumi: So… do you want to walk around with me? #id:2af
+# Ayumi: じゃあ……えっと、一緒に回らない？
+
+main_character: yeah
+main_character: I do #id:2b0
+# MISSING TRANSLATION
+
+You walk around the mall with Ayumi talking about various things #id:2b1
+# アユミと一緒にモールを歩きながら、いろいろなことを話した。
+Fashion #id:2b2
+# ファッションのこと。
+Friends #id:2b3
+# 友達のこと。
+Coincidences #id:2b4
+# いくつもの偶然のこと。
+[more description but Im lazy to write it] #id:2b5
+# ［ここにもう少し描写を追加予定］
+
+In the end, we went back to the park where we used to sit on the grass. # I need to change this cuz we don't have this art #id:2b6
+jump scene9_DONE/
+# MISSING TRANSLATION

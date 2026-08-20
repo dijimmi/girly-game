@@ -1,10 +1,46 @@
 [gd_scene format=3 uid="uid://delyravv8ivr2"]
 
-[ext_resource type="Script" uid="uid://40sd7yq5vc8y" path="res://VisualNovelTemplate/Main/Textbox/textbox.gd" id="1_7dbm2"]
-[ext_resource type="Script" uid="uid://m7fe5xfp0y7c" path="res://VisualNovelTemplate/Main/Textbox/character_name.gd" id="2_goxu7"]
-[ext_resource type="Texture2D" uid="uid://c4uq1rr4s3jeb" path="res://icon.svg" id="3_tx58k"]
-[ext_resource type="Script" uid="uid://c2hcfwhjl7p7c" path="res://VisualNovelTemplate/Main/Textbox/story_test.gd" id="4_tffni"]
-[ext_resource type="Texture2D" uid="uid://bkk42x0h1xneq" path="res://assets/sink-29.png" id="5_73h18"]
+[ext_resource type="Script" uid="uid://40sd7yq5vc8y" path="res://src/VisualNovelTemplate/Main/Textbox/textbox.gd" id="1_7dbm2"]
+[ext_resource type="Script" uid="uid://m7fe5xfp0y7c" path="res://src/VisualNovelTemplate/Main/Textbox/character_name.gd" id="2_goxu7"]
+[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="3_tx58k"]
+[ext_resource type="Script" uid="uid://c2hcfwhjl7p7c" path="res://src/VisualNovelTemplate/Main/Textbox/story_test.gd" id="4_tffni"]
+[ext_resource type="Script" uid="uid://crprd2ksceo3w" path="res://src/VisualNovelTemplate/Main/Textbox/bg.gd" id="4_wgulj"]
+[ext_resource type="Shader" uid="uid://ch1u5euemkya5" path="res://src/UI/inventory/scrolling.gdshader" id="5_wf50m"]
+[ext_resource type="Texture2D" uid="uid://tm63rd851xyn" path="res://import/Art/ui_tex/ui_tex_rabbit_solid.png" id="6_pnao0"]
+[ext_resource type="Texture2D" uid="uid://6l73nlxmtvk4" path="res://import/Art/ui_tex/website/ui_web_forward.png" id="8_yjncy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5y7bv"]
+bg_color = Color(1, 0.56, 0.8313334, 0.40392157)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86jij"]
+bg_color = Color(1, 0.56, 0.8313334, 0.70980394)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5y7bv"]
+shader = ExtResource("5_wf50m")
+shader_parameter/speed = 0.1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgulj"]
+bg_color = Color(1, 0.56, 0.8313334, 0)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqkrb"]
 
@@ -30,6 +66,7 @@ arrow = NodePath("TextBox/Arrow")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5y7bv")
 
 [node name="Margins" type="MarginContainer" parent="NameContainer" unique_id=562555765]
 layout_mode = 2
@@ -41,6 +78,7 @@ theme_override_constants/margin_bottom = 10
 [node name="CharacterName" type="RichTextLabel" parent="NameContainer/Margins" unique_id=1145688118]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
 text = "Character Name"
 fit_content = true
 scroll_active = false
@@ -63,6 +101,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="TextBoxBG" type="TextureRect" parent="TextBox" unique_id=1286323453]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,6 +109,41 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_tx58k")
+
+[node name="BG" type="Panel" parent="TextBox" unique_id=782000142]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_86jij")
+script = ExtResource("4_wgulj")
+
+[node name="TextureRect" type="TextureRect" parent="TextBox/BG" unique_id=2146761555]
+modulate = Color(1, 0.56, 0.8313334, 0.40392157)
+texture_repeat = 2
+material = SubResource("ShaderMaterial_5y7bv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_pnao0")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="BGBorder" type="Panel" parent="TextBox" unique_id=298063186]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wgulj")
 
 [node name="Margins" type="MarginContainer" parent="TextBox" unique_id=755914299]
 layout_mode = 0
@@ -84,6 +158,8 @@ theme_override_constants/margin_bottom = 30
 layout_mode = 2
 mouse_filter = 1
 theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
 text = "texto"
 fit_content = true
 scroll_active = false
@@ -99,7 +175,7 @@ offset_right = 970.0
 offset_bottom = 270.0
 size_flags_horizontal = 8
 size_flags_vertical = 8
-texture = ExtResource("5_73h18")
+texture = ExtResource("8_yjncy")
 expand_mode = 1
 stretch_mode = 4
 

@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="CharacterInfo" format=3 uid="uid://dlee1gjkggjmx"]
+
+[ext_resource type="Script" uid="uid://7nr1cui7y5lx" path="res://src/VisualNovelTemplate/Resources/Characters/characterinfo.gd" id="1_0c7nx"]
+[ext_resource type="Texture2D" uid="uid://gbxai1uwctmj" path="res://import/Art/portrait/Friend/Portrait_FriendA_Base_NoOutline.png" id="1_1tnux"]
+[ext_resource type="Texture2D" uid="uid://5yttonvqtxws" path="res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_1.png" id="2_mshjn"]
+[ext_resource type="Texture2D" uid="uid://dybb8jq3efro" path="res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_3.png" id="3_pjh2n"]
+[ext_resource type="Texture2D" uid="uid://c2rcc37uyio20" path="res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_5_Mischiveous.png" id="4_uvsy0"]
+[ext_resource type="Texture2D" uid="uid://ddqkqiq8hmifx" path="res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_2.png" id="5_bftr5"]
+[ext_resource type="Texture2D" uid="uid://dwbqcqh4wn2a2" path="res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_4.png" id="6_rmasq"]
+[ext_resource type="Texture2D" uid="uid://11iohakukrhb" path="res://import/Art/portrait/Friend/Portrait_FriendA_Eyes_6_Smug.png" id="7_30og0"]
+[ext_resource type="AudioStream" uid="uid://dwi4c6q3pm416" path="res://import/Voices/Aoi/Aoi_kawaii.wav" id="9_sknfs"]
+[ext_resource type="AudioStream" uid="uid://dsc12aldila7x" path="res://import/Voices/Aoi/Aoi_kanojo_mo.wav" id="10_8cyar"]
+[ext_resource type="AudioStream" uid="uid://cbb20riky5gkc" path="res://import/Voices/Aoi/Aoi_eeh.wav" id="11_rd50n"]
+[ext_resource type="AudioStream" uid="uid://buevixgidwprg" path="res://import/Voices/Aoi/Aoi_un.wav" id="12_0ysif"]
+[ext_resource type="AudioStream" uid="uid://3puipobjjafn" path="res://import/Voices/Aoi/Aoi_hai.wav" id="13_rmasq"]
+[ext_resource type="AudioStream" uid="uid://cgnv2k5fga43g" path="res://import/Voices/Aoi/Aoi_desu.wav" id="14_30og0"]
+[ext_resource type="AudioStream" uid="uid://difa72svu8au1" path="res://import/Voices/Aoi/Aoi_sugoi.wav" id="15_sknfs"]
+[ext_resource type="AudioStream" uid="uid://h5eoxxgw2nxs" path="res://import/Voices/Aoi/Aoi_yatta.wav" id="16_8cyar"]
+[ext_resource type="AudioStream" uid="uid://d0u5leeygocbi" path="res://import/Voices/Aoi/Aoi_ima_waratta.wav" id="17_rd50n"]
+
+[resource]
+script = ExtResource("1_0c7nx")
+my_name = "Aoi"
+base_portrait = ExtResource("1_1tnux")
+expression_portraits = Dictionary[String, Texture]({
+"Confused": ExtResource("6_rmasq"),
+"Happy": ExtResource("5_bftr5"),
+"Mischevious": ExtResource("4_uvsy0"),
+"Neutral": ExtResource("2_mshjn"),
+"Smile": ExtResource("3_pjh2n"),
+"Smug": ExtResource("7_30og0")
+})
+voicelines = Dictionary[String, AudioStream]({
+"aoi_desu": ExtResource("14_30og0"),
+"eeh": ExtResource("11_rd50n"),
+"hai": ExtResource("13_rmasq"),
+"kanojo": ExtResource("10_8cyar"),
+"kawaii": ExtResource("9_sknfs"),
+"sugoi": ExtResource("15_sknfs"),
+"un": ExtResource("12_0ysif"),
+"waratta": ExtResource("17_rd50n"),
+"yatta": ExtResource("16_8cyar")
+})
+metadata/_custom_type_script = "uid://7nr1cui7y5lx"
