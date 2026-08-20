@@ -125,7 +125,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../CanvasLayer/ColorRect/Sprite2D:rotation")
+tracks/0/path = NodePath("../CanvasLayer/ColorRect/Control/Sprite2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -140,7 +140,7 @@ resource_name = "icon_spin"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../CanvasLayer/ColorRect/Sprite2D:rotation")
+tracks/0/path = NodePath("../CanvasLayer/ColorRect/Control/Sprite2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -191,24 +191,44 @@ grow_vertical = 2
 color = Color(0.13077214, 0.13077214, 0.13077211, 1)
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/ColorRect" unique_id=1101332180]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_top = -20.999998
-offset_right = 1936.0
-offset_bottom = 69.0
+offset_right = 16.0
+offset_bottom = -1011.0
 rotation = 0.004238013
 color = Color(0.92156863, 0.4117647, 0.53333336, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer/ColorRect" unique_id=1810281070]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.984
 offset_top = 1017.0
-offset_right = 1936.0
-offset_bottom = 1195.3291
+offset_right = 16.0
+offset_bottom = 132.60913
 rotation = -0.022749785
 color = Color(0.92156863, 0.4117647, 0.53333336, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect" unique_id=1903289925]
+[node name="Control" type="Control" parent="CanvasLayer/ColorRect" unique_id=981898102]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ColorRect/Control" unique_id=1903289925]
 self_modulate = Color(0.92, 0.414, 0.5320665, 1)
-position = Vector2(952, 570)
+position = Vector2(12, 50)
 texture = ExtResource("10_epka4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=16945664]
