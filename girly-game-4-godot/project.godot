@@ -51,7 +51,6 @@ directories/dtl_directory={
 "InkStory/scene7_5_DONE": "res://src/VisualNovelTemplate/InkStory/scene7_5_DONE.dtl",
 "InkStory/scene8_DONE": "res://src/VisualNovelTemplate/InkStory/scene8_DONE.dtl",
 "InkStory/scene9_DONE": "res://src/VisualNovelTemplate/InkStory/scene9_DONE.dtl",
-"Scene1/scene1_DONE": "res://src/VisualNovelTemplate/InkStory/Scene1/scene1_DONE.dtl",
 "Scene2/scene2_DONE": "res://src/VisualNovelTemplate/InkStory/Scene2/scene2_DONE.dtl",
 "scene1_DONE": "res://src/Resources/DialogicTimelines/scene1_DONE.dtl",
 "scene2_DONE": "res://src/Resources/DialogicTimelines/scene2_DONE.dtl",

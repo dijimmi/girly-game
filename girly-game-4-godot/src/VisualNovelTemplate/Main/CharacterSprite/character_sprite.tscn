@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://btsj0m4qbtpxv" path="res://src/VisualNovelTemplate/Main/CharacterSprite/character_sprite.gd" id="1_33y5c"]
 [ext_resource type="PackedScene" uid="uid://bxxkmmucm8fvc" path="res://src/VisualNovelTemplate/Main/CharacterSprite/portrait_expression.tscn" id="2_t8ndx"]
+[ext_resource type="Texture2D" uid="uid://bwd3yf2hchmee" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_1_Neutral.png" id="3_5cta6"]
 
 [node name="CharacterSprite" type="Control" unique_id=480421720 node_paths=PackedStringArray("base_sprite", "expressions")]
 custom_minimum_size = Vector2(822, 1080)
@@ -43,3 +44,4 @@ grow_vertical = 2
 
 [node name="Default" parent="BaseSprite/Expressions" unique_id=241444444 instance=ExtResource("2_t8ndx")]
 layout_mode = 1
+texture = ExtResource("3_5cta6")

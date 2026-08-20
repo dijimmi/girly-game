@@ -21,18 +21,15 @@ I played a big role in her English learning journey, yet I never tried to learn 
 
 Until now. #id:41
 
-friend: {PlayerName}! I found an exchange program that goes to Japan! We should do it together! #id:42
-# friend: {PlayerName}！ 日本に行ける交換留学プログラム見つけたの！ 一緒に行こうよ！
+Aoi: {PlayerName}! I found an exchange program that goes to Japan! We should do it together! #id:42
+
 {FriendName} texted me late one night... #id:43
-# ある日の夜遅く、{FriendName}からそんなメッセージが届いた……。
+
 I immediately agreed! #id:44
-# 俺は二つ返事でOKと返した。
-[wait time="1.0" skippable="true"]
+
+
 And so, my journey to learn Japanese... it's finally starting. #id:45
-# こうして、俺の日本語学習の旅が……ついに始まる。
+
 For real this time! #id:46
-# 今度こそ、本当に！
-# #do Dialogue.set_next_scene("website1")
-[wait time="0.1" skippable="true"]
 
 -> start2

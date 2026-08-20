@@ -1,7 +1,32 @@
 [gd_resource type="Resource" script_class="CharacterInfo" format=3 uid="uid://c25pug8mj6lm"]
 
 [ext_resource type="Script" uid="uid://7nr1cui7y5lx" path="res://src/VisualNovelTemplate/Resources/Characters/characterinfo.gd" id="1_aphu0"]
+[ext_resource type="Texture2D" uid="uid://cr4nnt4354dmu" path="res://import/Art/portrait/Pres/Portrait_FriendB_Base.png" id="1_q8762"]
+[ext_resource type="Texture2D" uid="uid://bfocdvf261hwi" path="res://import/Art/portrait/Pres/Portrait_FriendB_Eyes2.png" id="2_gvg47"]
+[ext_resource type="Texture2D" uid="uid://c5uddwruij37q" path="res://import/Art/portrait/Pres/Portrait_FriendB_Eyes1.png" id="3_gghj7"]
+[ext_resource type="Texture2D" uid="uid://dxrlxa0loy0j1" path="res://import/Art/portrait/Pres/Portrait_FriendB_Eyes3.png" id="4_dvfh5"]
+[ext_resource type="Texture2D" uid="uid://difflc214frbh" path="res://import/Art/portrait/Pres/Portrait_FriendB_Eyes4.png" id="5_oeisw"]
+[ext_resource type="AudioStream" uid="uid://cghr7mt132pgx" path="res://import/Voices/Presi/President_irasshai_1.mp3" id="7_oeisw"]
+[ext_resource type="AudioStream" uid="uid://dyolx6m08nthy" path="res://import/Voices/Presi/President_signhere_1.mp3" id="8_drtby"]
+[ext_resource type="AudioStream" uid="uid://baat7d0h2ixo8" path="res://import/Voices/Presi/President_sankyu_1.mp3" id="9_hs80j"]
+[ext_resource type="AudioStream" uid="uid://c54j4o45ytxdf" path="res://import/Voices/Presi/President_starting_1.mp3" id="10_8ta5f"]
+[ext_resource type="AudioStream" uid="uid://wspjkiit86hd" path="res://import/Voices/Presi/President_interested_1.mp3" id="11_drtby"]
 
 [resource]
 script = ExtResource("1_aphu0")
+my_name = "President"
+base_portrait = ExtResource("1_q8762")
+expression_portraits = Dictionary[String, Texture]({
+"Confused": ExtResource("5_oeisw"),
+"Happy": ExtResource("2_gvg47"),
+"Neutral": ExtResource("3_gghj7"),
+"Smile": ExtResource("4_dvfh5")
+})
+voicelines = Dictionary[String, AudioStream]({
+"hangout": ExtResource("10_8ta5f"),
+"irasshai": ExtResource("7_oeisw"),
+"joining": ExtResource("11_drtby"),
+"sankyu": ExtResource("9_hs80j"),
+"sign": ExtResource("8_drtby")
+})
 metadata/_custom_type_script = "uid://7nr1cui7y5lx"

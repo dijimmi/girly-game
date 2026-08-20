@@ -1,5 +1,6 @@
 INCLUDE scene1.ink
 INCLUDE scene2.ink
+INCLUDE scene3.ink
 
 EXTERNAL background(key)
 EXTERNAL load_scene(scene)

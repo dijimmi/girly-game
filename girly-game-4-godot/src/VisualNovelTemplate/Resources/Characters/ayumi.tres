@@ -3,11 +3,37 @@
 [ext_resource type="Texture2D" uid="uid://bu1bofotlbgrk" path="res://import/Art/portrait/LoveInterest/Portrait_Base_NoOutline.png" id="1_16ann"]
 [ext_resource type="Script" uid="uid://7nr1cui7y5lx" path="res://src/VisualNovelTemplate/Resources/Characters/characterinfo.gd" id="1_nyqcu"]
 [ext_resource type="Texture2D" uid="uid://cyr07io3xparu" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_3_Smile.png" id="2_2ilpu"]
+[ext_resource type="Texture2D" uid="uid://dt5xm4k4c04qa" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_4_Confused.png" id="3_bndr4"]
+[ext_resource type="Texture2D" uid="uid://we56gaqn3ano" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_7_Excited.png" id="4_ksach"]
+[ext_resource type="Texture2D" uid="uid://ddvp1r2r8f25o" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_2_Happy.png" id="5_fptng"]
+[ext_resource type="Texture2D" uid="uid://cerykmyqxxoqu" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_5_Laugh.png" id="6_ps2ir"]
+[ext_resource type="Texture2D" uid="uid://bwd3yf2hchmee" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_1_Neutral.png" id="7_f3w3l"]
+[ext_resource type="Texture2D" uid="uid://20so868es1ob" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_6_Worried.png" id="8_dtwul"]
+[ext_resource type="AudioStream" uid="uid://cys2t2ab20n5" path="res://import/Voices/Ayumi/pff-www1.wav" id="10_ps2ir"]
+[ext_resource type="AudioStream" uid="uid://dpme2ss5a3ogg" path="res://import/Voices/Ayumi/pff-www2.wav" id="11_f3w3l"]
+[ext_resource type="AudioStream" uid="uid://bimge2y8wc50u" path="res://import/Voices/Ayumi/ayumi_CUT/common_lines/common_lines-1A.mp3" id="12_dtwul"]
+[ext_resource type="AudioStream" uid="uid://hdlsdcjvypwn" path="res://import/Voices/Ayumi/zenzen1.wav" id="13_xmgaq"]
+[ext_resource type="AudioStream" uid="uid://bhoaxaq2qvdac" path="res://import/Voices/Ayumi/zenzen2.wav" id="14_ajhpw"]
+[ext_resource type="AudioStream" uid="uid://d2kymkbnvvt0s" path="res://import/Voices/Ayumi/ayumi_CUT/yes+noはい、いいえ/yes+noはい、いいえ-1A.mp3" id="15_qweo4"]
 
 [resource]
 script = ExtResource("1_nyqcu")
 my_name = "Ayumi"
 base_portrait = ExtResource("1_16ann")
 expression_portraits = Dictionary[String, Texture]({
-"Smile": ExtResource("2_2ilpu")
+"Confused": ExtResource("3_bndr4"),
+"Excited": ExtResource("4_ksach"),
+"Happy": ExtResource("5_fptng"),
+"Laugh": ExtResource("6_ps2ir"),
+"Neutral": ExtResource("7_f3w3l"),
+"Smile": ExtResource("2_2ilpu"),
+"Worried": ExtResource("8_dtwul")
+})
+voicelines = Dictionary[String, AudioStream]({
+"hai": ExtResource("15_qweo4"),
+"nice_to_meet": ExtResource("12_dtwul"),
+"pff_www1": ExtResource("10_ps2ir"),
+"pff_www2": ExtResource("11_f3w3l"),
+"zenzen1": ExtResource("13_xmgaq"),
+"zenzen2": ExtResource("14_ajhpw")
 })
