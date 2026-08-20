@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cjya42uw7j128"]
+
+[ext_resource type="Script" uid="uid://c48b845ht4mco" path="res://src/Worlds/scene_1.gd" id="1_dvtqf"]
+[ext_resource type="PackedScene" uid="uid://co20vnddnt84h" path="res://src/UI/MainMenuUI/name_selector.tscn" id="2_rstx6"]
+
+[node name="Scene1" type="Node2D" unique_id=1513923094]
+script = ExtResource("1_dvtqf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=546482483]
+process_mode = 2
+process_priority = 20
+layer = 20
+
+[node name="NameSelector" parent="CanvasLayer" unique_id=566193423 instance=ExtResource("2_rstx6")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1919859718]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -276.0
+offset_right = 74.0
+offset_bottom = -253.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "What's your name?"

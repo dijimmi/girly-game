@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxwn15shq0k77"]
 
-[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="1_llbsw"]
+[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://import/_Placeholders/icon.svg" id="1_llbsw"]
 [ext_resource type="Shader" uid="uid://ch1u5euemkya5" path="res://src/UI/inventory/scrolling.gdshader" id="1_vqbv0"]
 [ext_resource type="Texture2D" uid="uid://dswwkiwydm0ko" path="res://import/Art/ui_tex/ui_tex_rabbit_soft.png" id="2_vqbv0"]
 

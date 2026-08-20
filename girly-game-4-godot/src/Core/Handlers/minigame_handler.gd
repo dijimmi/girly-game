@@ -1,5 +1,5 @@
 class_name MinigameHandler extends CanvasLayer
-@export var on_round_finished_sound : AudioStream = load("uid://rw3pxis8eg2c")
+@export var on_round_finished_sound : AudioStream = load("uid://bkq38ataeu6d7")
 @export var on_finished_minigames_sount : AudioStream = load("uid://blytba7cx1ee1")
 var rounds : int = 3
 var current_rounds : int = 0

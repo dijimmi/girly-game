@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d4b0ahy63w48c"]
 
-[ext_resource type="Script" uid="uid://bobikxclxs6en" path="res://src/Worlds/tooltip.gd" id="1_hfqbf"]
+[ext_resource type="Script" uid="uid://bobikxclxs6en" path="res://src/Entity/tooltip.gd" id="1_hfqbf"]
 [ext_resource type="Texture2D" uid="uid://dyq7nstgp3yk2" path="res://src/Resources/UIElements/window.tres" id="2_kf5vl"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3rxhf"]

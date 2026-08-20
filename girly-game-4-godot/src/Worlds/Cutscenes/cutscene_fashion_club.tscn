@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://w0xct215t6of"]
 
 [ext_resource type="Script" uid="uid://b3r0bmisgxq7a" path="res://src/Worlds/Cutscenes/cutscene_fashion_club.gd" id="1_djoak"]
-[ext_resource type="Texture2D" uid="uid://buuhwgkvabyem" path="res://import/Art/BackgroundArt/bg_fashion_club.png" id="2_osaa5"]
+[ext_resource type="Texture2D" uid="uid://ix746sa326s5" path="res://import/Art/bg/bg_fashion_club.png" id="2_osaa5"]
 
 [sub_resource type="Animation" id="Animation_osaa5"]
 length = 0.001

@@ -2,8 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cganijmfwwy8w" path="res://import/Art/full_art/Art 2/2_SpecialArtCoffee_WithAoi.png" id="1_2owvk"]
 [ext_resource type="Script" uid="uid://blsjcvm6gvd78" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_cjn55"]
-[ext_resource type="Texture2D" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ayu_Eye1.png" id="2_2owvk"]
-[ext_resource type="Texture2D" path="res://import/Art/assets_girlyjam/full_art/Art 2/2_SpecialArtCoffee_Ao_Eye1.png" id="3_cjn55"]
 
 [node name="Node2D2" type="Node" unique_id=2169453]
 script = ExtResource("1_cjn55")
@@ -35,7 +33,6 @@ offset_right = 960.0
 offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_2owvk")
 
 [node name="ExpressionAoi" type="TextureRect" parent="." unique_id=571673829]
 anchors_preset = 8
@@ -49,4 +46,3 @@ offset_right = 960.0
 offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_cjn55")

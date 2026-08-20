@@ -13,7 +13,7 @@ config_version=5
 config/name="girly-game4-godot"
 run/main_scene="uid://db4o5620hkek7"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://import/_Placeholders/icon.svg"
 
 [audio]
 

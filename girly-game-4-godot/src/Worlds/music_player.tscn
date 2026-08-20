@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brosbmba0e5x7"]
 
 [ext_resource type="Script" uid="uid://b1vlohb4ms43f" path="res://src/Worlds/music_player.gd" id="1_o7svr"]
-[ext_resource type="Texture2D" uid="uid://bciht1eqxyjtp" path="res://honsetastic.jpg" id="2_18c66"]
+[ext_resource type="Texture2D" uid="uid://bciht1eqxyjtp" path="res://import/Art/other_games/honsetastic.jpg" id="2_18c66"]
 [ext_resource type="Texture2D" uid="uid://b3w3pdlowat15" path="res://import/Art/ui_tex/website/img_web_vol_mute.png" id="2_mxld2"]
 [ext_resource type="AudioStream" uid="uid://bex6hlykmru1o" path="res://import/Music/結んだ末は_mas.wav" id="3_18c66"]
 [ext_resource type="Texture2D" uid="uid://4d6txtixtbm7" path="res://import/Art/ui_tex/website/ui_web_rewind.png" id="4_rimpb"]

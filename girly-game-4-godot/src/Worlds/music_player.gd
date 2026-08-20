@@ -28,14 +28,14 @@ var songs = [
 	{
 		"title": "結んだ末は (feat. カゼヒキ)",
 		"artist": "あいすここあ",
-		"image": preload("res://mu2.png"),
-		"file": preload("res://import/Music/結んだ末は_mas.wav"),
+		"image": preload("uid://bcy25rjjjf2oj"), #mu2.png
+		"file": preload("uid://bex6hlykmru1o"), #結んだ末は_mas
 	},
 	{
 		"title": "Website",
 		"artist": "OWMG",
-		"image": preload("res://icon.svg"),
-		"file": preload("res://import/Music/Dijimmi_LearningJapanese_G maj_96.mp3"),
+		"image": preload("uid://6jtbpbyxv7tt"), #icon.svg
+		"file": preload("uid://dy71tjj1kvkh3"), #Dijimmi_LearningJapanese_G maj_96.mp3
 	},
 ]
 

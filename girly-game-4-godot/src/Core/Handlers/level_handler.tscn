@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://coewybkmll6s4"]
 
 [ext_resource type="Script" uid="uid://cw2ru4khhs3fd" path="res://src/Core/Handlers/level_handler.gd" id="1_rnf1n"]
-[ext_resource type="PackedScene" uid="uid://cjya42uw7j128" path="res://src/Worlds/scene1.tscn" id="2_q84wo"]
+[ext_resource type="PackedScene" uid="uid://cjya42uw7j128" path="res://src/Worlds/scene_1.tscn" id="2_q84wo"]
 [ext_resource type="PackedScene" uid="uid://b87xryrg3eybu" path="res://src/UI/MainMenuUI/main_menu.tscn" id="3_sipf8"]
 [ext_resource type="PackedScene" uid="uid://w0xct215t6of" path="res://src/Worlds/Cutscenes/cutscene_fashion_club.tscn" id="4_1yjvo"]
 [ext_resource type="PackedScene" uid="uid://3gbqc8g1x28u" path="res://src/Worlds/website1.tscn" id="5_j1ikt"]

@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cw8nlpskumrhl" path="res://src/UI/Dictionary/dictionary.gd" id="1_p4bu3"]
 [ext_resource type="Resource" uid="uid://ctu427wqr6fj4" path="res://src/Resources/DialogicCustomFiles/glossary_words.tres" id="2_lwnmy"]
 [ext_resource type="PackedScene" uid="uid://mu6qvv2bagnd" path="res://src/UI/Dictionary/word.tscn" id="3_1pmtp"]
-[ext_resource type="Texture2D" uid="uid://bg57fpq2v6tbh" path="res://image.png" id="4_6gvq8"]
-[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="5_lwnmy"]
+[ext_resource type="Texture2D" uid="uid://bg57fpq2v6tbh" path="res://import/_Placeholders/image.png" id="4_6gvq8"]
+[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://import/_Placeholders/icon.svg" id="5_lwnmy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0mr5"]
 content_margin_left = 24.0

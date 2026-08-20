@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://40sd7yq5vc8y" path="res://src/VisualNovelTemplate/Main/Textbox/textbox.gd" id="1_7dbm2"]
 [ext_resource type="Script" uid="uid://m7fe5xfp0y7c" path="res://src/VisualNovelTemplate/Main/Textbox/character_name.gd" id="2_goxu7"]
-[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://icon.svg" id="3_tx58k"]
+[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://import/_Placeholders/icon.svg" id="3_tx58k"]
 [ext_resource type="Script" uid="uid://c2hcfwhjl7p7c" path="res://src/VisualNovelTemplate/Main/Textbox/story_test.gd" id="4_tffni"]
 [ext_resource type="Script" uid="uid://crprd2ksceo3w" path="res://src/VisualNovelTemplate/Main/Textbox/bg.gd" id="4_wgulj"]
 [ext_resource type="Shader" uid="uid://ch1u5euemkya5" path="res://src/UI/inventory/scrolling.gdshader" id="5_wf50m"]

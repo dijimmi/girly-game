@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbjofwn4i8ycc"]
 
-[ext_resource type="Script" uid="uid://desnghqkkkr81" path="res://website_ender.gd" id="1_uyyj4"]
+[ext_resource type="Script" uid="uid://desnghqkkkr81" path="res://src/Worlds/website_ender.gd" id="1_uyyj4"]
 
 [node name="WebsiteEnder" type="Control" unique_id=1705302309]
 layout_mode = 3

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://db4o5620hkek7"]
+
+[ext_resource type="PackedScene" uid="uid://coewybkmll6s4" path="res://src/Core/Handlers/level_handler.tscn" id="2_dixjx"]
+
+[node name="Game" type="Node" unique_id=1306341400]
+
+[node name="LevelHandler" parent="." unique_id=186740295 instance=ExtResource("2_dixjx")]
