@@ -1,0 +1,14 @@
+[remap]
+
+importer="inkgd.ink.json"
+type="Resource"
+uid="uid://tndp88fo3arg"
+valid=false
+
+[deps]
+
+source_file="res://src/UI/ChatUI/Conversations/conversations.json"
+
+[params]
+
+compress=true

@@ -6,7 +6,6 @@ do AudioManager.load_music("scene2")
 Even though we've been here for a few weeks already, it still feels so different from back home. #id:48
 # MISSING TRANSLATION
 join friend (Happy) center [animation="Fade In"]
-[voice volume="0.0"]
 friend (Smile): {PlayerName}, look a Japanese fashion club! #id:49
 # MISSING TRANSLATION
 main_character: Japanese fashion club? #id:4a
@@ -24,9 +23,9 @@ main_character: But I'm not interested in your fashion kei whatever, {FriendName
 friend (Happy): But you'd be so... #id:50
 [voice path="res://import/Voices/Aoi/Aoi_kawaii.wav" volume="0.0" bus="Voices"]
 friend (Smile): Kawaii! #id:51
-# MISSING TRANSLATION
-update friend (Neutral)
+
 main_character: Yeah, but it's not something I'm going to wear. #id:52
+update friend (Neutral)
 # main_character: いや、服がかわいくても俺が着るわけじゃないだろ。
 main_character: Are there even fashion trends for men? #id:53
 # main_character: そもそも男向けにも、そういうファッションの流行ってあるの？

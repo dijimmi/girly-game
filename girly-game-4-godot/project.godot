@@ -30,6 +30,9 @@ AudioManager="*uid://l705be311h5p"
 Tooltip="*uid://d4b0ahy63w48c"
 Constants="*uid://elfvujdn5hpr"
 FA="*uid://b6mx13o3twmpr"
+InkManager="*uid://dn1wi5ueme1nn"
+StoryManager="*uid://ddrmlg1sa6wjf"
+__InkRuntime="*uid://7biylw8orh61"
 
 [dialogic]
 
@@ -125,7 +128,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/inkgd/plugin.cfg")
 
 [file_customization]
 
@@ -144,6 +147,10 @@ Lines=""
 [gui]
 
 theme/custom_font="uid://ocveomkg0q74"
+
+[inkgd]
+
+register_templates=true
 
 [input]
 

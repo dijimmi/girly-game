@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterInfo" format=3 uid="uid://drtlqbxfvdb3s"]
+
+[ext_resource type="Texture2D" uid="uid://bu1bofotlbgrk" path="res://import/Art/portrait/LoveInterest/Portrait_Base_NoOutline.png" id="1_16ann"]
+[ext_resource type="Script" uid="uid://7nr1cui7y5lx" path="res://src/VisualNovelTemplate/Resources/Characters/characterinfo.gd" id="1_nyqcu"]
+[ext_resource type="Texture2D" uid="uid://cyr07io3xparu" path="res://import/Art/portrait/LoveInterest/Portrait_Eyes_3_Smile.png" id="2_2ilpu"]
+
+[resource]
+script = ExtResource("1_nyqcu")
+my_name = "Ayumi"
+base_portrait = ExtResource("1_16ann")
+expression_portraits = Dictionary[String, Texture]({
+"Smile": ExtResource("2_2ilpu")
+})
