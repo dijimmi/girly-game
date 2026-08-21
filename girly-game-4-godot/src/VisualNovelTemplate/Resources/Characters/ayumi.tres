@@ -15,6 +15,13 @@
 [ext_resource type="AudioStream" uid="uid://hdlsdcjvypwn" path="res://import/Voices/Ayumi/zenzen1.wav" id="13_xmgaq"]
 [ext_resource type="AudioStream" uid="uid://bhoaxaq2qvdac" path="res://import/Voices/Ayumi/zenzen2.wav" id="14_ajhpw"]
 [ext_resource type="AudioStream" uid="uid://d2kymkbnvvt0s" path="res://import/Voices/Ayumi/ayumi_CUT/yes+noはい、いいえ/yes+noはい、いいえ-1A.mp3" id="15_qweo4"]
+[ext_resource type="AudioStream" uid="uid://7f3uvei5j0vu" path="res://import/Voices/Ayumi/ayumi_CUT/yes+noはい、いいえ/yes+noはい、いいえ-1B.mp3" id="16_ajhpw"]
+[ext_resource type="AudioStream" uid="uid://bwse0gmt26lid" path="res://import/Voices/Ayumi/imuotonno.wav" id="17_gjxyd"]
+[ext_resource type="AudioStream" uid="uid://b5k3tqpu6lbdh" path="res://import/Voices/Ayumi/imuotonano1.wav" id="18_iaage"]
+[ext_resource type="AudioStream" uid="uid://savat6tyvsoy" path="res://import/Voices/Ayumi/honto1.wav" id="19_eypi4"]
+[ext_resource type="AudioStream" uid="uid://b1ttcyjq44k84" path="res://import/Voices/Ayumi/honto2.wav" id="20_wxu5m"]
+[ext_resource type="AudioStream" uid="uid://cv0uejmynthf" path="res://import/Voices/Ayumi/ee2.wav" id="21_so58f"]
+[ext_resource type="AudioStream" uid="uid://bekfkdn3e4fu4" path="res://import/Voices/Ayumi/ayumi_CUT/common_lines/common_lines-5A.mp3" id="22_iaage"]
 
 [resource]
 script = ExtResource("1_nyqcu")
@@ -30,7 +37,15 @@ expression_portraits = Dictionary[String, Texture]({
 "Worried": ExtResource("8_dtwul")
 })
 voicelines = Dictionary[String, AudioStream]({
-"hai": ExtResource("15_qweo4"),
+"arigatou1": ExtResource("22_iaage"),
+"eeh1": ExtResource("21_so58f"),
+"eeh2": ExtResource("21_so58f"),
+"hai1": ExtResource("15_qweo4"),
+"hai2": ExtResource("16_ajhpw"),
+"hontou1": ExtResource("19_eypi4"),
+"hontou2": ExtResource("20_wxu5m"),
+"imouto1": ExtResource("17_gjxyd"),
+"imouto2": ExtResource("18_iaage"),
 "nice_to_meet": ExtResource("12_dtwul"),
 "pff_www1": ExtResource("10_ps2ir"),
 "pff_www2": ExtResource("11_f3w3l"),

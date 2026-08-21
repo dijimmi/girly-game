@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bg28q0q3uqcyr"
+path="res://.godot/imported/DidYouSmile_EB maj_82_(DateOrReveal).mp3-29b349a5617cf1ac2749ae8e9d3df048.mp3str"
+
+[deps]
+
+source_file="res://import/Music/RecentTracks/DidYouSmile_EB maj_82_(DateOrReveal).mp3"
+dest_files=["res://.godot/imported/DidYouSmile_EB maj_82_(DateOrReveal).mp3-29b349a5617cf1ac2749ae8e9d3df048.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -8,9 +8,13 @@
 [ext_resource type="Resource" uid="uid://c25pug8mj6lm" path="res://src/VisualNovelTemplate/Resources/Characters/president.tres" id="5_ukiac"]
 [ext_resource type="PackedScene" uid="uid://prn58dje400g" path="res://src/VisualNovelTemplate/Main/CharacterSprite/character_sprite.tscn" id="6_jy4ox"]
 [ext_resource type="Texture2D" uid="uid://bi6t6fljt7sql" path="res://import/Art/bg/bg_corridor_afternoon.png" id="7_al86y"]
-[ext_resource type="AudioStream" uid="uid://bb28sj6v8a85f" path="res://import/Music/Dijimmi_VN-Reunion_84.mp3" id="7_ukiac"]
 [ext_resource type="Texture2D" uid="uid://ix746sa326s5" path="res://import/Art/bg/bg_fashion_club.png" id="8_8lvqf"]
 [ext_resource type="PackedScene" uid="uid://delyravv8ivr2" path="res://src/VisualNovelTemplate/Main/Textbox/vn_text_box.tscn" id="8_gupco"]
+[ext_resource type="AudioStream" uid="uid://c8kgo8qunqcrp" path="res://import/Music/RecentTracks/LearningJapanese_G maj_96_(Intro).mp3" id="9_e7bd3"]
+[ext_resource type="AudioStream" uid="uid://bpo83krvq1bv5" path="res://import/Music/RecentTracks/FashionPresident_D min_82_(Reunion).mp3" id="10_45nfr"]
+[ext_resource type="AudioStream" uid="uid://bg28q0q3uqcyr" path="res://import/Music/RecentTracks/DidYouSmile_EB maj_82_(DateOrReveal).mp3" id="11_6tfmv"]
+[ext_resource type="AudioStream" uid="uid://b0i2oyxt5ik7u" path="res://import/Music/RecentTracks/Reunion_102_(Website).mp3" id="12_taxy3"]
+[ext_resource type="AudioStream" uid="uid://cuq5sgn8qlh3x" path="res://import/Sounds/Dijimmi_Stinger_G maj_96.mp3" id="13_elscf"]
 
 [node name="VisualNovel" type="Control" unique_id=1798825500 node_paths=PackedStringArray("background_img", "textbox", "choices_buttons")]
 layout_mode = 3
@@ -34,7 +38,13 @@ backgrounds = Dictionary[String, Texture]({
 "intro": ExtResource("4_ehddr")
 })
 music_tracks = Dictionary[String, AudioStream]({
-"intro": ExtResource("7_ukiac")
+"date": ExtResource("11_6tfmv"),
+"intro": ExtResource("9_e7bd3"),
+"reunion": ExtResource("10_45nfr"),
+"website": ExtResource("12_taxy3")
+})
+sound_effects = Dictionary[String, AudioStream]({
+"stinger": ExtResource("13_elscf")
 })
 character_sprite_scene = ExtResource("6_jy4ox")
 

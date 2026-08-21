@@ -2,7 +2,6 @@
 
 ~ background("river_afternoon")
 ~ play_music("scene2")
-~ LEVEL = 1.0
 
 ~ move("President", CENTER)
 ~ show_or_hide("President", true)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8kgo8qunqcrp"
+path="res://.godot/imported/LearningJapanese_G maj_96_(Intro).mp3-6c0adb00bb7ba809d8aed6d4440a5be8.mp3str"
+
+[deps]
+
+source_file="res://import/Music/RecentTracks/LearningJapanese_G maj_96_(Intro).mp3"
+dest_files=["res://.godot/imported/LearningJapanese_G maj_96_(Intro).mp3-6c0adb00bb7ba809d8aed6d4440a5be8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

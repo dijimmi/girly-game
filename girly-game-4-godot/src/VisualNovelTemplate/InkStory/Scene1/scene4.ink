@@ -1,9 +1,7 @@
 === start4 ===
 
 ~ background("fashion_club")
-// ~ play_music("scene2")
 
-~ move("Aoi", CENTER)
 ~ show_or_hide("Aoi", true)
 
 Aoi (Happy): It was so nice meeting other people that are into J-fashion~ it's only our first day and I've already learned so many things! #id:9f
@@ -24,7 +22,7 @@ main_character: Alright, bye bye
 ~ move("Ayumi", CENTER)
 ~ show_or_hide("Ayumi", true)
 
-// ~ speak("Ayumi", "imouto")
+~ speak("Ayumi", "imouto1")
 Ayumi (Confused): いもうと なの? #id:a5
 
 main_character: Uhh, if you're asking if she's my sister, no, she's my best friend. #id:a6
@@ -32,6 +30,7 @@ main_character: Uhh, if you're asking if she's my sister, no, she's my best frie
 Ayumi (Smile): Ah I see! #id:a7
 Ayumi (Laugh): You do seem like good friends, haha. #id:a8
 
+~ change_expression("Ayumi", "Neutral")
 main_character: Yeah, we are. #id:a9
 main_character: We're pretty different though. She's crazy over fashion, while I'm… #id:aa
 
@@ -40,26 +39,28 @@ main_character: We're pretty different though. She's crazy over fashion, while I
 
 main_character: Still learning- #id:ac
 
-Ayumi (Neutral): そう... #id:ad
+Ayumi (Confused): そう... #id:ad
 
+~ change_expression("Ayumi", "Neutral")
 main_character: You surely know more than me though... #id:ae
 
-Ayumi (Smile): I don't know, I've always seen kawaii-fashion and knew it existed, but it's when I tried it on that something felt like it just clicked. #id:af
+Ayumi (Confused): I don't know, I've always seen kawaii-fashion and knew it existed, but it's when I tried it on that something felt like it just clicked. #id:af
 
-Ayumi (Neutral): I've bought a few pieces, but I'm no expert. #id:b0
+Ayumi (Confused): I've bought a few pieces, but I'm no expert. #id:b0
 
+~ change_expression("Ayumi", "Neutral")
 main_character: I'm sure your outfits look great! #id:b1
 
 ~ animate("Ayumi", "pulse")
-// ~ speak("Ayumi", "arigatou1")
-Ayumi (Happy): Arigatou~
+~ speak("Ayumi", "arigatou1")
+Ayumi (Smile): Arigatou~
 
 Ayumi (Neutral): Ah, the President needs to lock the room, we should go, it was nice to meet you! #id:b3
 
 main_character: Wait… #id:b4
 
 ~ animate("Ayumi", "pulse")
-// ~ speak("Ayumi", "eeh1")
+~ speak("Ayumi", "eeh1")
 Ayumi (Worried): Eh? #id:b5
 
 main_character: I was wondering… #id:b6
@@ -76,16 +77,16 @@ Ayumi (Worried): なに? #id:bc
 
 Ayumi (Confused): You want choose my next oufit? #id:bd
 
+~ change_expression("Ayumi", "Worried")
 main_character: No no, not choose, just pick out an accessory for you. #id:be
 main_character: I just want to practice Japanese a bit- #id:bf
 main_character: So you just have to send me a website and I'll check it out! #id:c0
 
 ~ change_expression("Ayumi", "Neutral")
-Ayumi (Neutral): そう... #id:c1
-Ayumi (Neutral): I... #id:c2
-~ change_expression("Ayumi", "Smile")
+Ayumi (Confused): そう... #id:c1
+Ayumi (Confused): I... #id:c2
 Ayumi (Smile): I think I'm okay with that! #id:c3
-Ayumi (Smile): I'll give you my number just in case. #id:c4
+Ayumi (Neutral): I'll give you my number just in case. #id:c4
 
 main_character: ありがとう. #id:c5
 main_character: I'll send you the link when I choose it. #id:c6

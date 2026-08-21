@@ -1,6 +1,7 @@
 === start3 ===
 
 ~ background("fashion_club")
+~ play_music("reunion")
 
 ~ move("Aoi", RIGHTEST)
 ~ move("President", LEFT)
@@ -162,5 +163,8 @@ Ayumi: That's great!
 President (Happy): Okay guys, let's get started!
 
 Aoi (Happy): It's starting! We should hurry to join them!
+
+~ show_or_hide("Ayumi", false)
+~ show_or_hide("Aoi", false)
 
 -> start4

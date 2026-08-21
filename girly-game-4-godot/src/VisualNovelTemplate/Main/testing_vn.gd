@@ -17,9 +17,7 @@ var character_sprites: Dictionary[String, CharacterSprite]
 @export var sound_effects: Dictionary[String, AudioStream]
 
 @export_category("Misc")
-@export_group("Misc")
 @export var character_sprite_scene: PackedScene
-@export var level1 : String
 
 var curr_player
 var choices_added = false
@@ -187,8 +185,8 @@ func async_EXT_move_character(who: String, where: int):
 
 
 func EXT_load_scene(scene : String):
-	if "level" in scene:
-		get_tree().change_scene_to_file(level1)
+	scene = scene
+	pass
 
 
 func EXT_background(key : String):
