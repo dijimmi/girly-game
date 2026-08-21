@@ -126,6 +126,8 @@ func _bind_external_functions() -> void:
 
 
 func EXT_change_expression(who: String, new_exp: String):
+	if who.strip_edges() == "" or new_exp.strip_edges() == "":
+		return
 	if not who in character_sprites.keys():
 		push_error("Bro wtf, why you giving me an invalid character, that's not nice")
 		return
@@ -140,7 +142,11 @@ func EXT_show_or_hide(who: String, appear: bool):
 
 func async_EXT_show_or_hide(who: String, appear: bool):
 	var character: CharacterSprite = character_sprites.get(who)
-	var tween : Tween = create_tween()
+	
+	if tween and tween.is_running():
+		await tween.finished
+	
+	tween = create_tween()
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_trans(Tween.TRANS_BACK)
 	if appear:
@@ -151,6 +157,8 @@ func async_EXT_show_or_hide(who: String, appear: bool):
 		character.show()
 		
 		tween.tween_property(character, "global_position:x", init_pos, dur)
+		
+		await tween.finished
 		
 	else:
 		var init_pos : float = character.global_position.x
@@ -167,8 +175,15 @@ func async_EXT_show_or_hide(who: String, appear: bool):
 
 
 func EXT_move_character(who: String, where: int):
+	async_EXT_move_character(who, where)
+
+
+func async_EXT_move_character(who: String, where: int):
+	if tween and tween.is_running():
+		await tween.finished
+		
 	var character : CharacterSprite = character_sprites[who]
-	character.move_to(where)
+	character.move_to(where, tween)
 
 
 func EXT_load_scene(scene : String):
@@ -198,8 +213,16 @@ func EXT_play_sfx(which: String):
 	$SoundEffects.stream = sound
 	$SoundEffects.play()
 
+var tween : Tween
 
 func EXT_animate(who: String, which: String):
+	async_EXT_animate(who, which)
+
+
+func async_EXT_animate(who: String, which: String):
+	if tween and tween.is_running():
+		await tween.finished
+		
 	match which:
 		"zoom_in":
 			zoom_in_animation(who)
@@ -214,7 +237,7 @@ func reset_zoom_animation(who: String):
 	var scale_param = Vector2(1.0, 1.0)
 	var final_pos = 0.0
 	var dur = 1.0
-	var tween: Tween = create_tween()
+	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_CIRC)
 	
@@ -227,7 +250,7 @@ func zoom_in_animation(who: String):
 	var scale_param = character.scale + Vector2(0.8, 0.8)
 	var final_pos = character.global_position.y + 5
 	var dur = 0.5
-	var tween: Tween = create_tween()
+	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_SPRING)
 	
@@ -241,7 +264,7 @@ func pulse_animation(who: String):
 	var scale_param = character.scale + Vector2(0.1, 0.1)
 	var dur = 0.2
 	
-	var tween: Tween = create_tween()
+	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_SPRING)
 	

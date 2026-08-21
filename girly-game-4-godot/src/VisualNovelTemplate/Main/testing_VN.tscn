@@ -7,7 +7,9 @@
 [ext_resource type="Resource" uid="uid://dlee1gjkggjmx" path="res://src/VisualNovelTemplate/Resources/Characters/aoi.tres" id="4_mk3tg"]
 [ext_resource type="Resource" uid="uid://c25pug8mj6lm" path="res://src/VisualNovelTemplate/Resources/Characters/president.tres" id="5_ukiac"]
 [ext_resource type="PackedScene" uid="uid://prn58dje400g" path="res://src/VisualNovelTemplate/Main/CharacterSprite/character_sprite.tscn" id="6_jy4ox"]
+[ext_resource type="Texture2D" uid="uid://bi6t6fljt7sql" path="res://import/Art/bg/bg_corridor_afternoon.png" id="7_al86y"]
 [ext_resource type="AudioStream" uid="uid://bb28sj6v8a85f" path="res://import/Music/Dijimmi_VN-Reunion_84.mp3" id="7_ukiac"]
+[ext_resource type="Texture2D" uid="uid://ix746sa326s5" path="res://import/Art/bg/bg_fashion_club.png" id="8_8lvqf"]
 [ext_resource type="PackedScene" uid="uid://delyravv8ivr2" path="res://src/VisualNovelTemplate/Main/Textbox/vn_text_box.tscn" id="8_gupco"]
 
 [node name="VisualNovel" type="Control" unique_id=1798825500 node_paths=PackedStringArray("background_img", "textbox", "choices_buttons")]
@@ -27,6 +29,8 @@ characters = Dictionary[String, ExtResource("2_8m5dr")]({
 "President": ExtResource("5_ukiac")
 })
 backgrounds = Dictionary[String, Texture]({
+"fashion_club": ExtResource("8_8lvqf"),
+"hallway": ExtResource("7_al86y"),
 "intro": ExtResource("4_ehddr")
 })
 music_tracks = Dictionary[String, AudioStream]({
@@ -45,6 +49,10 @@ texture = ExtResource("4_ehddr")
 
 [node name="VNTextBox" parent="." unique_id=244194875 instance=ExtResource("8_gupco")]
 layout_mode = 1
+offset_left = -500.0
+offset_top = -380.0
+offset_right = 500.0
+offset_bottom = -13.0
 
 [node name="ChoicesPlaceholder" type="HBoxContainer" parent="." unique_id=1845500620]
 layout_mode = 1

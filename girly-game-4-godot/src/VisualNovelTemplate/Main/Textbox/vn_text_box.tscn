@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://40sd7yq5vc8y" path="res://src/VisualNovelTemplate/Main/Textbox/textbox.gd" id="1_7dbm2"]
 [ext_resource type="Script" uid="uid://m7fe5xfp0y7c" path="res://src/VisualNovelTemplate/Main/Textbox/character_name.gd" id="2_goxu7"]
-[ext_resource type="Texture2D" uid="uid://6jtbpbyxv7tt" path="res://import/_Placeholders/icon.svg" id="3_tx58k"]
 [ext_resource type="Script" uid="uid://c2hcfwhjl7p7c" path="res://src/VisualNovelTemplate/Main/Textbox/story_test.gd" id="4_tffni"]
 [ext_resource type="Script" uid="uid://crprd2ksceo3w" path="res://src/VisualNovelTemplate/Main/Textbox/bg.gd" id="4_wgulj"]
 [ext_resource type="Shader" uid="uid://ch1u5euemkya5" path="res://src/UI/inventory/scrolling.gdshader" id="5_wf50m"]
@@ -100,16 +99,6 @@ offset_right = 500.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="TextBoxBG" type="TextureRect" parent="TextBox" unique_id=1286323453]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_tx58k")
-
 [node name="BG" type="Panel" parent="TextBox" unique_id=782000142]
 clip_contents = true
 layout_mode = 1
@@ -168,16 +157,61 @@ script = ExtResource("4_tffni")
 
 [node name="Arrow" type="TextureRect" parent="TextBox" unique_id=1929647718]
 custom_minimum_size = Vector2(50, 50)
-layout_mode = 0
-offset_left = 920.0
-offset_top = 220.0
-offset_right = 970.0
-offset_bottom = 270.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.92
+anchor_top = 0.73300004
+anchor_right = 0.97
+anchor_bottom = 0.90000004
+offset_top = 0.099990845
+grow_horizontal = 0
+grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
 texture = ExtResource("8_yjncy")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextBox" unique_id=410983527]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -238.5
+offset_top = -40.0
+offset_right = 238.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Back" type="Button" parent="TextBox/HBoxContainer" unique_id=2063717392]
+layout_mode = 2
+text = "back"
+
+[node name="Skip" type="Button" parent="TextBox/HBoxContainer" unique_id=941957136]
+layout_mode = 2
+text = "skip"
+
+[node name="Auto" type="Button" parent="TextBox/HBoxContainer" unique_id=1567292886]
+layout_mode = 2
+text = "auto"
+
+[node name="Save" type="Button" parent="TextBox/HBoxContainer" unique_id=4048455]
+layout_mode = 2
+text = "save"
+
+[node name="Load" type="Button" parent="TextBox/HBoxContainer" unique_id=1563331945]
+layout_mode = 2
+text = "load"
+
+[node name="Main Menu" type="Button" parent="TextBox/HBoxContainer" unique_id=34662782]
+layout_mode = 2
+text = "main menu"
+
+[node name="Dictionary" type="Button" parent="TextBox/HBoxContainer" unique_id=2088824759]
+layout_mode = 2
+text = "dicitonary"
 
 [node name="Button" type="Button" parent="TextBox" unique_id=647156014]
 layout_mode = 0

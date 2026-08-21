@@ -43,5 +43,14 @@ func change_expression(new_expression : String):
 			expr.hide()
 
 
-func move_to(preset : Positions):
-	global_position = positions[preset]
+func move_to(preset : Positions, tween : Tween):
+	if tween and tween.is_running():
+		await tween.finished
+		
+	tween = create_tween()
+	tween.set_ease(Tween.EASE_IN)
+	tween.set_trans(Tween.TRANS_SINE)
+	var final_pos = positions[preset]
+	var duration = 1.0
+	
+	tween.tween_property(self, "global_position", final_pos, duration)
