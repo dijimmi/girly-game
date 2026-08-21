@@ -49,6 +49,10 @@ texture = ExtResource("4_ehddr")
 
 [node name="VNTextBox" parent="." unique_id=244194875 instance=ExtResource("8_gupco")]
 layout_mode = 1
+offset_left = -500.0
+offset_top = -380.0
+offset_right = 500.0
+offset_bottom = -13.0
 
 [node name="ChoicesPlaceholder" type="HBoxContainer" parent="." unique_id=1845500620]
 layout_mode = 1

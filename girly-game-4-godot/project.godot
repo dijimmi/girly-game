@@ -43,14 +43,6 @@ directories/dch_directory={
 "pres": "res://src/Resources/DialogicCharacters/pres.dch"
 }
 directories/dtl_directory={
-"InkStory/scene3_DONE": "res://src/VisualNovelTemplate/InkStory/scene3_DONE.dtl",
-"InkStory/scene4_DONE": "res://src/VisualNovelTemplate/InkStory/scene4_DONE.dtl",
-"InkStory/scene5_DONE": "res://src/VisualNovelTemplate/InkStory/scene5_DONE.dtl",
-"InkStory/scene6_DONE": "res://src/VisualNovelTemplate/InkStory/scene6_DONE.dtl",
-"InkStory/scene7_1_done": "res://src/VisualNovelTemplate/InkStory/scene7_1_done.dtl",
-"InkStory/scene7_5_DONE": "res://src/VisualNovelTemplate/InkStory/scene7_5_DONE.dtl",
-"InkStory/scene8_DONE": "res://src/VisualNovelTemplate/InkStory/scene8_DONE.dtl",
-"InkStory/scene9_DONE": "res://src/VisualNovelTemplate/InkStory/scene9_DONE.dtl",
 "Scene2/scene2_DONE": "res://src/VisualNovelTemplate/InkStory/Scene2/scene2_DONE.dtl",
 "scene1_DONE": "res://src/Resources/DialogicTimelines/scene1_DONE.dtl",
 "scene2_DONE": "res://src/Resources/DialogicTimelines/scene2_DONE.dtl",
@@ -132,6 +124,7 @@ translation/intern/translation_folder="res://src/Translations"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

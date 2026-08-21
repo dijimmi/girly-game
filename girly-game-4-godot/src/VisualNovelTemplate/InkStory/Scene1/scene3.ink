@@ -163,4 +163,4 @@ President (Happy): Okay guys, let's get started!
 
 Aoi (Happy): It's starting! We should hurry to join them!
 
--> END
+-> start4

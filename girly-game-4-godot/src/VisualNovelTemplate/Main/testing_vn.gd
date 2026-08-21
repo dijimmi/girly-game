@@ -175,8 +175,15 @@ func async_EXT_show_or_hide(who: String, appear: bool):
 
 
 func EXT_move_character(who: String, where: int):
+	async_EXT_move_character(who, where)
+
+
+func async_EXT_move_character(who: String, where: int):
+	if tween and tween.is_running():
+		await tween.finished
+		
 	var character : CharacterSprite = character_sprites[who]
-	character.move_to(where)
+	character.move_to(where, tween)
 
 
 func EXT_load_scene(scene : String):
