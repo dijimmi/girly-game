@@ -35,4 +35,7 @@ func animate_arrow():
 
 
 func _on_button_pressed():
-	continued_story.emit()
+	if story_text_label.get_curr_text().length() > story_text_label.visible_char:
+		story_text_label.show_full_text()
+	else:
+		continued_story.emit()
