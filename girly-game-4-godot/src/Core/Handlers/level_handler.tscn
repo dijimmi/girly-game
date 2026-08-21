@@ -198,6 +198,8 @@ anchor_bottom = 1.0
 offset_top = -20.999998
 offset_right = 16.0
 offset_bottom = -1011.0
+grow_horizontal = 2
+grow_vertical = 2
 rotation = 0.004238013
 color = Color(0.92156863, 0.4117647, 0.53333336, 1)
 
