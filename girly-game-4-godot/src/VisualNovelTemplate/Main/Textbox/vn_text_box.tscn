@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://crprd2ksceo3w" path="res://src/VisualNovelTemplate/Main/Textbox/bg.gd" id="4_wgulj"]
 [ext_resource type="Shader" uid="uid://ch1u5euemkya5" path="res://src/UI/inventory/scrolling.gdshader" id="5_wf50m"]
 [ext_resource type="Texture2D" uid="uid://tm63rd851xyn" path="res://import/Art/ui_tex/ui_tex_rabbit_solid.png" id="6_pnao0"]
+[ext_resource type="Script" uid="uid://7nmf26jiu4n" path="res://src/VisualNovelTemplate/Main/Textbox/history.gd" id="8_wgulj"]
 [ext_resource type="Texture2D" uid="uid://6l73nlxmtvk4" path="res://import/Art/ui_tex/website/ui_web_forward.png" id="8_yjncy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5y7bv"]
@@ -51,7 +52,7 @@ corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m8jnu"]
 
-[node name="VNTextBox" type="Control" unique_id=244194875 node_paths=PackedStringArray("character_name_label", "story_text_label", "arrow")]
+[node name="VNTextBox" type="Control" unique_id=244194875 node_paths=PackedStringArray("character_name_label", "story_text_label", "arrow", "history_layer")]
 custom_minimum_size = Vector2(1000, 367)
 layout_mode = 3
 anchors_preset = 7
@@ -68,6 +69,7 @@ script = ExtResource("1_7dbm2")
 character_name_label = NodePath("NameContainer/Margins/CharacterName")
 story_text_label = NodePath("TextBox/Margins/StoryText")
 arrow = NodePath("TextBox/Arrow")
+history_layer = NodePath("HistoryLayer")
 
 [node name="NameContainer" type="PanelContainer" parent="." unique_id=66167367]
 layout_mode = 0
@@ -180,6 +182,16 @@ texture = ExtResource("8_yjncy")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="ContinueStoryButton" type="Button" parent="TextBox" unique_id=647156014]
+layout_mode = 0
+offset_right = 1000.0
+offset_bottom = 300.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkrb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j0bnl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2x0sk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gcbk2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m8jnu")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="TextBox" unique_id=410983527]
 layout_mode = 1
 anchors_preset = 7
@@ -192,6 +204,10 @@ offset_top = -40.0
 offset_right = 238.5
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="History" type="Button" parent="TextBox/HBoxContainer" unique_id=1423853173]
+layout_mode = 2
+text = "history"
 
 [node name="Back" type="Button" parent="TextBox/HBoxContainer" unique_id=2063717392]
 layout_mode = 2
@@ -221,14 +237,65 @@ text = "main menu"
 layout_mode = 2
 text = "dicitonary"
 
-[node name="ContinueStoryButton" type="Button" parent="TextBox" unique_id=647156014]
-layout_mode = 0
-offset_right = 1000.0
-offset_bottom = 300.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_dqkrb")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_j0bnl")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_2x0sk")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_gcbk2")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_m8jnu")
+[node name="HistoryLayer" type="CanvasLayer" parent="." unique_id=192864698 node_paths=PackedStringArray("messages_list", "history")]
+visible = false
+script = ExtResource("8_wgulj")
+messages_list = NodePath("HistoryNode/MarginContainer/Scroll/MessagesList")
+history = NodePath("HistoryNode/MarginContainer/Scroll/MessagesList/History")
+
+[node name="HistoryNode" type="Control" parent="HistoryLayer" unique_id=699292058]
+custom_minimum_size = Vector2(1000, 1080)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Background" type="ColorRect" parent="HistoryLayer/HistoryNode" unique_id=683509353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.30588236)
+
+[node name="MarginContainer" type="MarginContainer" parent="HistoryLayer/HistoryNode" unique_id=1357080282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Scroll" type="ScrollContainer" parent="HistoryLayer/HistoryNode/MarginContainer" unique_id=1369634039]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MessagesList" type="VBoxContainer" parent="HistoryLayer/HistoryNode/MarginContainer/Scroll" unique_id=632644967]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="History" type="RichTextLabel" parent="HistoryLayer/HistoryNode/MarginContainer/Scroll/MessagesList" unique_id=1747778504]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 24
+text = "History"
+fit_content = true
+scroll_active = false
 
 [connection signal="pressed" from="TextBox/ContinueStoryButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TextBox/HBoxContainer/History" to="." method="_on_history_pressed"]
+[connection signal="pressed" from="TextBox/HBoxContainer/Back" to="." method="_on_back_pressed"]

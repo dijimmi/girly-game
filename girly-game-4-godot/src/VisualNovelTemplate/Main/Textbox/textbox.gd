@@ -4,6 +4,8 @@ extends Control
 @export var character_name_label: CharacterNameLabel
 @export var story_text_label: StoryText
 @export var arrow: TextureRect
+@export var history_layer: StoryHistory
+
 var arrow_tween : Tween
 var init_arrow_pos : float
 
@@ -22,6 +24,7 @@ func setup(character_name : String, story_text : String):
 	
 	character_name_label.setup(character_name)
 	story_text_label.setup(story_text)
+	history_layer.setup(character_name, story_text)
 
 
 func animate_arrow():
@@ -39,3 +42,15 @@ func _on_button_pressed():
 		story_text_label.show_full_text()
 	else:
 		continued_story.emit()
+
+
+func _on_back_pressed() -> void:
+	print("Going back :)")
+	history_layer.delete_last_message()
+	await get_tree().process_frame
+	
+	InkManager.go_back()
+
+
+func _on_history_pressed() -> void:
+	history_layer.visible = not history_layer.visible

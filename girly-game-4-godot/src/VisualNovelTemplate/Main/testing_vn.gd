@@ -66,7 +66,7 @@ func _add_all_characters():
 	for char_info in characters.values():
 		var ch: CharacterSprite = character_sprite_scene.instantiate()
 		ch.setup(char_info)
-		ch.pivot_offset_ratio
+		ch.pivot_offset_ratio = Vector2(0.5, 0.5)
 		ch.hide()
 		character_sprites[char_info.my_name] = ch
 		background_img.add_sibling(ch)

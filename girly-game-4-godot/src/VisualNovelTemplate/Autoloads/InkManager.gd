@@ -6,19 +6,19 @@ extends Node
 ##  [br]
 ## This script handles ONLY Ink logic and its files, meaning it does not handle where 
 ## you put the text or the choice buttons.[br]
-##  [br]
+## [br]
 ## To handle that, you must connect your story text (e.g. the Label
-## in your textbox) to the signal [signal next_line_reached] which emits a Dictionary
+## in your textbox) to the signal [signal next_line_reached] which emits a [StoryMessage] resource
 ## with the current parsing method.[br]
-##  [br]
+## [br]
 ## [b]Current Parsing Method[/b] (check [method _get_parsed_line] for more details)[br]
 ## Example line on Ink:[br]
-## Emma: Hello, everyone![br]
+## Emma (Happy): Hello, everyone![br]
 ## [codeblock]
-## var parsed_line : Dictionary = {
-## 	"character" : "Emma",
-## 	"message" : "Hello, everyone!"
-## }
+## var parsed_line : StoryMessage = StoryMessage.new()
+## parsed_line.character = "Emma"
+## parsed_line.message = "Hello, everyone!"
+## parsed_line.expression = "Happy"
 ## [/codeblock]
 
 ## Handles all the methods available from inkgd to read and parse story text from .ink files
@@ -27,6 +27,7 @@ extends Node
 
 ## Path for the story file already compiled into '.json' format.
 const _ink_file_json : String = "res://src/VisualNovelTemplate/InkStory/Scene1/story.ink.json"
+const _ink_save_file : String = "res://src/VisualNovelTemplate/InkStory/Saves/save.json"
 
 ## MUST be connected to the method in your [TestingVN] that handles how choices are portrayed in
 ## a story. This signal is emitted when [method continue_story] detects that there are choices to be made.
@@ -40,9 +41,11 @@ signal choices_reached(choices : Array)
 signal next_line_reached(line_elements : Dictionary)
 
 ## Stores the functions that are going to be binded from ink.
-var _to_bind : Array[Dictionary] = [
+var _to_bind : Array[Dictionary] = []
 
-]
+## Stores the previous states to be able to go back to them.
+var _stack : Array[String] = []
+
 ## If the story is loaded succesfully this will signal the ink player of it.
 func _story_loaded(successfully: bool) -> void:
 	if !successfully:
@@ -58,8 +61,8 @@ func _bind_all() -> void:
 	for binded in _to_bind:
 		_ink_player.bind_external_function(binded["ink"], binded['node'], binded['gd'])
 
-## Returns a dictionary containing the elements of a line, such as character name
-## and its message. [b]Change this to support expressions[/b]
+## Returns a [StoryMessage] resource containing the elements of a line, such as character name,
+## message and expression. 
 func _get_parsed_line() -> StoryMessage:
 	var text = _ink_player.continue_story()
 	var elements = []
@@ -133,6 +136,7 @@ func bind_to_ink(ink_function : String, gd_method : Callable, origin_script : Ob
 func continue_story() -> void:
 	# If the story has more dialogue, it will continue
 	if _ink_player.can_continue:
+		_save_to_stack()
 		next_line_reached.emit(_get_parsed_line())
 	# If the story has a choice, it will add those choices to the
 	# to the options menu
@@ -172,6 +176,31 @@ func load_json(file_path : String) -> Dictionary:
 	var data = JSON.parse_string(file.get_as_text())
 	file.close()
 	return data
+
+
+func save_state():
+	_ink_player.save_state_to_path(_ink_save_file)
+
+
+func load_state():
+	return _ink_player.load_state_from_path(_ink_save_file)
+
+
+func _save_to_stack():
+	var curr_state = _ink_player.get_state()
+	print("State Saved: ", curr_state)
+	_stack.append(curr_state)
+
+
+func go_back():
+	if _stack.size() <= 1:
+		print("Story stack is empty!")
+		return
+		
+	_stack.pop_back()
+	var last_state = _stack.pop_back()
+	_ink_player.set_state(last_state)
+	continue_story()
 
 
 func _observe_variables(variables_list):
