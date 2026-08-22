@@ -1,15 +1,43 @@
 class_name TestingVN
 extends Control
 
+
 @export_group("Main Nodes")
+## [TextureRect] for the background image currently in the story. Its texture will
+## be updated when the method [method EXT_background] is called.
+## @experimental: Multiple layers to account for character expressions may be added.
 @export var background_img: TextureRect
+
+## [VNTextBox] that handles the text being shown to the player. Currently it handles
+## setting up the [StoryText] and the [CharacterNameLabel].
+## @experimental
 @export var textbox: VNTextBox
+
+## Placeholder choice buttons. When choices are prompted, [Button] nodes will
+## be added to this node and displayed to the user to make their decision.
+## @deprecated: Just a placeholder for now. Not recommended to use.
 @export var choices_buttons: HBoxContainer
 
 @export_category("Assets")
 @export_group("Visual Assets")
+## Holds the characters in the story using their name as a [b]key[/b], and their
+## [CharacterInfo] as the value.[br]
+## [br]
+## Here you should add all the characters you want to use in your story, initialized
+## manually or by using the [method CharacterInfo.setup] method.
 @export var characters: Dictionary[String, CharacterInfo]
+
+## Stores the backgrounds to be used in the story, using an arbitrary key to your
+## choice that identifies each background.[br]
+## [br]
+## [b]KEEP IN MIND[/b] the key you use for the background will be the same key you
+## need to pass in the [method EXT_background] from Ink's external function.
+## @experimental
 @export var backgrounds: Dictionary[String, Texture]
+
+## Internal [Dictionary] to store the character sprited loaded by [method add_all_characters].
+## [CharacterSprite] inherits from [TextureRect], so these sprites are useful to
+## make animations with the [method EXT_animate] method or the [method EXT_show_or_hide] method.
 var character_sprites: Dictionary[String, CharacterSprite]
 
 @export_group("Audio Assets")

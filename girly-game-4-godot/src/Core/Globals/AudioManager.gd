@@ -16,13 +16,14 @@ var sfx_volume : float = 0.0
 
 @export var sfx : Dictionary[String, AudioStream] = {}
 @export var music_array : Dictionary[String, AudioStreamMP3] = {
-	"main menu" : load("res://import/Music/Dijimmi_LearningJapanese_G maj_96.mp3"),
+	"main menu" : null,
 	"scene1" : null,
-	"scene2" : preload("res://import/Music/Dijimmi_FashionPresident_D min_82.mp3"),
-	"cutscene fashion" : load("res://import/Music/Dijimmi_VN-Reunion_84.mp3"),
+	"scene2" : null,
+	"cutscene fashion" : null,
 	"scene7-5" : load("uid://dbojthef2jt64"),
 	"outro" : load("uid://cg04kj8ggpg76")
 }
+
 func load_music(cue : String):
 	if cue in music_array.keys():
 		_change_music(music_array[cue])

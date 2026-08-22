@@ -11,10 +11,12 @@ extends Resource
 @export_category("Voicelines")
 @export var voicelines : Dictionary[String, AudioStream]
 
-func setup(cname, portrait, expressions):
+func setup(cname : String, portrait : Texture, expressions : Dictionary[String, Texture],
+ voices : Dictionary[String, AudioStream] = {}):
 	my_name = cname
 	base_portrait = portrait
 	expression_portraits = expressions
+	voicelines = voices
 
 
 func get_voiceline(key : String) -> AudioStream:

@@ -1,7 +1,7 @@
 === start5 ===
 
 ~ background("river_afternoon")
-~ play_music("scene2")
+~ play_music("reunion")
 
 ~ move("President", CENTER)
 ~ show_or_hide("President", true)
@@ -25,22 +25,23 @@ main_character: Possibly. #id:d0
 
 I wonder... where is Ayumi? #id:d1
 
-~ play_sfx("footsteps")
-(footsteps) #id:d2
+// ~ play_sfx("footsteps")
 
 ~ background("fullart1")
+~ play_music("date")
+// ~ animate("Ayumi", "sparkles")
 
+// ~ speak("Ayumi", "player_call")
 Ayumi: {PlayerName}! #id:d3 // @voice
 
 main_character: Ayumi! #id:d4
 
-// NOTE: en el .dtl estas 2 lineas estaban etiquetadas como "Ayumi" pero son narracion del MC
 Taking a look at her outfit, I feel my cheeks burning. #id:d5
 I was not expecting her to look so pretty… #id:d6
 At least Aoi isn't here. #id:d7
 I wouldn't want her to see me like this, how embarrassing. #id:d8
 
-// NOTE: en el .dtl esto era "main_character" pero el comentario JP dice Ayumi
+// ~ speak("Ayumi", "Genki")
 Ayumi (Smile): こんにちは, げんき です か? #id:d9
 
 main_character: げんき です! #id:da
@@ -86,9 +87,9 @@ Ayumi (Smile): Let's have a great time! #id:ec
 
 After a few group activities, the presdent says their goodbyes and the other members leave as well. #id:ee
 
-~ background("fullart1")
+~ background("river_evening")
 
-Ayumi (Happy): きょう　は　たのしかった！ #id:ef
+Ayumi (Happy): きょう は たのしかった！ #id:ef
 
 main_character: Yeah, definitely! #id:f0
 main_character: It's cool to learn about Japanese culture. #id:f1
@@ -217,5 +218,6 @@ main_character: See ya! #id:13f
 ~ show_or_hide("Ayumi", false)
 
 // [cue website 2 minigame] #id:140
-~ load_scene("website2")
--> start6
+// ~ load_scene("website2")
+-> END
+// -> start6

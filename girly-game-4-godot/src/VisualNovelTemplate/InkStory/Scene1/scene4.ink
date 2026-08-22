@@ -98,4 +98,4 @@ Ayumi (Smile): See you later! #id:c8
 ~ show_or_hide("Ayumi", false)
 
 // ~ load_scene("website1")
--> END
+-> start5

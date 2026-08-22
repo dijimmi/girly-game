@@ -11,10 +11,15 @@
 [ext_resource type="Texture2D" uid="uid://ix746sa326s5" path="res://import/Art/bg/bg_fashion_club.png" id="8_8lvqf"]
 [ext_resource type="PackedScene" uid="uid://delyravv8ivr2" path="res://src/VisualNovelTemplate/Main/Textbox/vn_text_box.tscn" id="8_gupco"]
 [ext_resource type="AudioStream" uid="uid://c8kgo8qunqcrp" path="res://import/Music/RecentTracks/LearningJapanese_G maj_96_(Intro).mp3" id="9_e7bd3"]
+[ext_resource type="Texture2D" uid="uid://65erhojr6ugs" path="res://import/Art/bg/bg_river_afternoon.png" id="9_taxy3"]
 [ext_resource type="AudioStream" uid="uid://bpo83krvq1bv5" path="res://import/Music/RecentTracks/FashionPresident_D min_82_(Reunion).mp3" id="10_45nfr"]
+[ext_resource type="Texture2D" uid="uid://d0sgyoowld5w3" path="res://import/Art/bg/bg_river_evening.png" id="10_elscf"]
 [ext_resource type="AudioStream" uid="uid://bg28q0q3uqcyr" path="res://import/Music/RecentTracks/DidYouSmile_EB maj_82_(DateOrReveal).mp3" id="11_6tfmv"]
+[ext_resource type="Texture2D" uid="uid://dy0c50ifxoq60" path="res://import/Art/bg/bg_corridor_evening.png" id="11_wyfuh"]
 [ext_resource type="AudioStream" uid="uid://b0i2oyxt5ik7u" path="res://import/Music/RecentTracks/Reunion_102_(Website).mp3" id="12_taxy3"]
+[ext_resource type="Texture2D" uid="uid://bx2eqhjhkbxfx" path="res://import/Art/full_art/Art 1/1_SpecialArtTopAlone.png" id="12_wyfuh"]
 [ext_resource type="AudioStream" uid="uid://cuq5sgn8qlh3x" path="res://import/Sounds/Dijimmi_Stinger_G maj_96.mp3" id="13_elscf"]
+[ext_resource type="Texture2D" uid="uid://d1480vkikl0nb" path="res://import/Art/full_art/Art 1/1_SpecialArtTop_WithAoi.png" id="13_w5fi3"]
 
 [node name="VisualNovel" type="Control" unique_id=1798825500 node_paths=PackedStringArray("background_img", "textbox", "choices_buttons")]
 layout_mode = 3
@@ -34,8 +39,13 @@ characters = Dictionary[String, ExtResource("2_8m5dr")]({
 })
 backgrounds = Dictionary[String, Texture]({
 "fashion_club": ExtResource("8_8lvqf"),
+"fullart1": ExtResource("12_wyfuh"),
+"fullart1_aoi": ExtResource("13_w5fi3"),
 "hallway": ExtResource("7_al86y"),
-"intro": ExtResource("4_ehddr")
+"hallway_evening": ExtResource("11_wyfuh"),
+"intro": ExtResource("4_ehddr"),
+"river_afternoon": ExtResource("9_taxy3"),
+"river_evening": ExtResource("10_elscf")
 })
 music_tracks = Dictionary[String, AudioStream]({
 "date": ExtResource("11_6tfmv"),
@@ -56,6 +66,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_ehddr")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="VNTextBox" parent="." unique_id=244194875 instance=ExtResource("8_gupco")]
 layout_mode = 1
