@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://40sd7yq5vc8y" path="res://src/VisualNovelTemplate/Main/Textbox/textbox.gd" id="1_7dbm2"]
 [ext_resource type="Script" uid="uid://m7fe5xfp0y7c" path="res://src/VisualNovelTemplate/Main/Textbox/character_name.gd" id="2_goxu7"]
 [ext_resource type="Script" uid="uid://c2hcfwhjl7p7c" path="res://src/VisualNovelTemplate/Main/Textbox/story_test.gd" id="4_tffni"]
+[ext_resource type="Shader" uid="uid://3if2go11uc7l" path="res://src/VisualNovelTemplate/Resources/scroller.gdshader" id="4_wf50m"]
 [ext_resource type="Script" uid="uid://crprd2ksceo3w" path="res://src/VisualNovelTemplate/Main/Textbox/bg.gd" id="4_wgulj"]
-[ext_resource type="Shader" uid="uid://ch1u5euemkya5" path="res://src/UI/inventory/scrolling.gdshader" id="5_wf50m"]
 [ext_resource type="Texture2D" uid="uid://tm63rd851xyn" path="res://import/Art/ui_tex/ui_tex_rabbit_solid.png" id="6_pnao0"]
 [ext_resource type="Script" uid="uid://7nmf26jiu4n" path="res://src/VisualNovelTemplate/Main/Textbox/history.gd" id="8_wgulj"]
 [ext_resource type="Texture2D" uid="uid://6l73nlxmtvk4" path="res://import/Art/ui_tex/website/ui_web_forward.png" id="8_yjncy"]
@@ -28,7 +28,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5y7bv"]
-shader = ExtResource("5_wf50m")
+shader = ExtResource("4_wf50m")
 shader_parameter/speed = 0.1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgulj"]

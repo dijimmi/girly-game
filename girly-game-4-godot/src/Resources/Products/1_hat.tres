@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://b3qllwfh67nhj"]
 
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_8gtbp"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Products/product_resource.gd" id="1_8gtbp"]
 [ext_resource type="Texture2D" uid="uid://by3r4gb7ywddx" path="res://import/Art/shop/hat/hat_base.png" id="2_fwn55"]
 [ext_resource type="Texture2D" uid="uid://tjoc0o6sbed6" path="res://import/Art/shop/hat/hat_tint.png" id="3_t7rkp"]
 [ext_resource type="Texture2D" uid="uid://ckkgsh27phlqp" path="res://import/Art/shop/hat/hat_lace.png" id="4_wa1w2"]

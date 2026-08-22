@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://bpcan81im5njq" path="res://src/Resources/Themes/theme.tres" id="1_6wl4a"]
 [ext_resource type="Script" uid="uid://gvuhitylof43" path="res://src/UI/MainMenuUI/name_selector.gd" id="1_vn2a0"]
 [ext_resource type="PackedScene" uid="uid://4ak7h6oyiwh5" path="res://src/UI/MainMenuUI/name_list.tscn" id="2_n24wy"]
+[ext_resource type="PackedScene" uid="uid://cr5hg1ju1vhq" path="res://src/VisualNovelTemplate/Main/testing_VN.tscn" id="3_3udq1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wenl1"]
 bg_color = Color(1, 1, 1, 1)
@@ -43,6 +44,7 @@ script = ExtResource("1_vn2a0")
 name_list = NodePath("VBoxContainer/NameList")
 confirmation_popup = NodePath("ConfirmationPopup")
 confirmation_label = NodePath("ConfirmationPopup/PopupBG/Vbox/ConfirmationText")
+scene = ExtResource("3_3udq1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=34097415]
 layout_mode = 1

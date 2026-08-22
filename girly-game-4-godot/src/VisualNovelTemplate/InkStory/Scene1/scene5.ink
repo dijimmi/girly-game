@@ -64,7 +64,7 @@ main_character: I think I said it right. #id:e2
 Ayumi (Smile): はい #id:e3
 
 // --- Aoi arrives ---
-~ background("fullart1_w_aoi")
+~ background("fullart1_aoi")
 
 ~ speak("Aoi", "sugoi")
 ~ animate("Aoi", "pulse")

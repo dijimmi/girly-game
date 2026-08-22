@@ -35,7 +35,7 @@ var songs = [
 		"title": "Website",
 		"artist": "OWMG",
 		"image": preload("uid://6jtbpbyxv7tt"), #icon.svg
-		"file": preload("uid://dy71tjj1kvkh3"), #Dijimmi_LearningJapanese_G maj_96.mp3
+		"file": preload("uid://b0i2oyxt5ik7u"), #Dijimmi_LearningJapanese_G maj_96.mp3
 	},
 ]
 

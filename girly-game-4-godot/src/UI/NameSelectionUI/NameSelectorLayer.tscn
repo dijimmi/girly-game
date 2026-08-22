@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bh2e4o3ve4lbn"]
+
+[ext_resource type="PackedScene" uid="uid://co20vnddnt84h" path="res://src/UI/MainMenuUI/name_selector.tscn" id="1_1xn4x"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1344901778]
+layer = 20
+
+[node name="NameSelector" parent="." unique_id=566193423 instance=ExtResource("1_1xn4x")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="Label" type="Label" parent="." unique_id=98027853]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -276.0
+offset_right = 74.0
+offset_bottom = -253.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "What's your name?"

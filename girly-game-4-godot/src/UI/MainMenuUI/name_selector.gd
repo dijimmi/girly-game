@@ -3,6 +3,7 @@ extends Control
 @export var name_list : PanelContainer
 @export var confirmation_popup : CanvasLayer
 @export var confirmation_label : RichTextLabel
+@export var scene : PackedScene
 
 var written_text : String = ""
 
@@ -38,9 +39,10 @@ func _is_name(cname : String) -> bool:
 
 
 func _on_submit_pressed() -> void:
-	confirmation_popup.visible = false
-	Dialogic.VAR.PlayerName = written_text 
-	EventBus.name_selected.emit()
+	get_tree().change_scene_to_packed(scene)
+	#confirmation_popup.visible = false
+	#Dialogic.VAR.PlayerName = written_text 
+	#EventBus.name_selected.emit()
 
 
 func _on_not_submit_pressed() -> void:

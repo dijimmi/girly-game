@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Product" format=3 uid="uid://b6uepykbi27af"]
 
-[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Autoloads/product_resource.gd" id="1_7nmcc"]
+[ext_resource type="Script" uid="uid://dmbyct2l438xp" path="res://src/Resources/Products/product_resource.gd" id="1_7nmcc"]
 [ext_resource type="Texture2D" uid="uid://dgjkpcjpr5r8k" path="res://import/Art/shop/capelet/capelet_base.png" id="2_ssds2"]
 [ext_resource type="Texture2D" uid="uid://rp2cxg6726hw" path="res://import/Art/shop/capelet/capelet_tint.png" id="3_8054o"]
 [ext_resource type="Texture2D" uid="uid://ckvedog1d7dqh" path="res://import/Art/shop/capelet/capelet_lace.png" id="4_scswk"]

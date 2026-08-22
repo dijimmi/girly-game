@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://coewybkmll6s4"]
 
 [ext_resource type="Script" uid="uid://cw2ru4khhs3fd" path="res://src/Core/Handlers/level_handler.gd" id="1_rnf1n"]
-[ext_resource type="PackedScene" uid="uid://cjya42uw7j128" path="res://src/Worlds/scene_1.tscn" id="2_q84wo"]
 [ext_resource type="PackedScene" uid="uid://b87xryrg3eybu" path="res://src/UI/MainMenuUI/main_menu.tscn" id="3_sipf8"]
 [ext_resource type="PackedScene" uid="uid://w0xct215t6of" path="res://src/Worlds/Cutscenes/cutscene_fashion_club.tscn" id="4_1yjvo"]
+[ext_resource type="PackedScene" uid="uid://bh2e4o3ve4lbn" path="res://src/UI/NameSelectionUI/NameSelectorLayer.tscn" id="4_epka4"]
 [ext_resource type="PackedScene" uid="uid://3gbqc8g1x28u" path="res://src/Worlds/website1.tscn" id="5_j1ikt"]
 [ext_resource type="PackedScene" uid="uid://c6ltsnf7brv0j" path="res://src/Worlds/Cutscenes/cutscene_website_placeholder.tscn" id="6_m66gv"]
 [ext_resource type="PackedScene" uid="uid://dbjofwn4i8ycc" path="res://src/Worlds/website_ender.tscn" id="7_qntjh"]
@@ -168,7 +168,7 @@ script = ExtResource("1_rnf1n")
 scene_array = Dictionary[String, PackedScene]({
 "cutscene fashion club": ExtResource("4_1yjvo"),
 "main menu": ExtResource("3_sipf8"),
-"scene1": ExtResource("2_q84wo"),
+"scene1": ExtResource("4_epka4"),
 "website1": ExtResource("5_j1ikt"),
 "website_ender": ExtResource("7_qntjh"),
 "website_placeholder": ExtResource("6_m66gv")
@@ -198,6 +198,8 @@ anchor_bottom = 1.0
 offset_top = -20.999998
 offset_right = 16.0
 offset_bottom = -1011.0
+grow_horizontal = 2
+grow_vertical = 2
 rotation = 0.004238013
 color = Color(0.92156863, 0.4117647, 0.53333336, 1)
 
